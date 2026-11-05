@@ -1,5 +1,7 @@
-* text=auto eol=lf
+# Nothing is line-ending normalised: every file here participates in a sha256 chain
+# (MANIFEST.md lists the bundle, numbers.csv records product hashes). A CRLF/LF
+# conversion would silently break both.
+* -text
 *.png binary
 *.docx binary
 *.sqlite binary
-*.graphml text
