@@ -1,0 +1,82 @@
+{
+ "at_utc": "2026-11-05T07:41:43Z",
+ "criterion_register": "D-107",
+ "role": "descriptive_decomposition_only",
+ "n_docs": 80,
+ "inputs": {
+  "sample_sha256": "f722dd114f0a0ab81b6e9bddf8273091c1859bc7e75124a14a676024def82634",
+  "coded_A_sha256": "5b1735b582fed2aeb60e39f227688020fa87fbe1185f7368f02726410dc68e9b",
+  "coded_B_sha256": "924c14695daf63474fcd1d181b104cb66fbb07a0a8fe75e72042adb5237c2a74",
+  "coded_C_sha256": "20908949df09e95a996415cb0d2d7137e61d058649f7010bdc0898f87c3d226e"
+ },
+ "other_share": {
+  "A": 0.575,
+  "B": 0.0375,
+  "C": 0.6125
+ },
+ "pairs": {
+  "A_B": {
+   "n_docs": 80,
+   "n_agree": 13,
+   "n_agree_other_other": 2,
+   "agreement": 0.1625,
+   "n_scored_substantive": 78,
+   "n_agree_substantive": 11,
+   "substantive_agreement": 0.141,
+   "other_share": {
+    "A": 0.575,
+    "B": 0.0375
+   }
+  },
+  "A_C": {
+   "n_docs": 80,
+   "n_agree": 64,
+   "n_agree_other_other": 42,
+   "agreement": 0.8,
+   "n_scored_substantive": 38,
+   "n_agree_substantive": 22,
+   "substantive_agreement": 0.5789,
+   "other_share": {
+    "A": 0.575,
+    "C": 0.6125
+   }
+  },
+  "B_C": {
+   "n_docs": 80,
+   "n_agree": 11,
+   "n_agree_other_other": 2,
+   "agreement": 0.1375,
+   "n_scored_substantive": 78,
+   "n_agree_substantive": 9,
+   "substantive_agreement": 0.1154,
+   "other_share": {
+    "B": 0.0375,
+    "C": 0.6125
+   }
+  }
+ },
+ "label_counts": {
+  "A": {
+   "FALSE_LABELING": 24,
+   "OTHER": 46,
+   "FORGED_INSPECTION_REPORT": 3,
+   "UNLICENSED_OPERATION": 5,
+   "FAKE_CERTIFICATION": 2
+  },
+  "B": {
+   "FORGED_INSPECTION_REPORT": 6,
+   "FALSE_LABELING": 33,
+   "TAMPERED_TRACEABILITY": 6,
+   "FAKE_CERTIFICATION": 26,
+   "UNLICENSED_OPERATION": 6,
+   "OTHER": 3
+  },
+  "C": {
+   "FALSE_LABELING": 25,
+   "OTHER": 49,
+   "UNLICENSED_OPERATION": 2,
+   "FORGED_INSPECTION_REPORT": 1,
+   "FAKE_CERTIFICATION": 3
+  }
+ }
+}

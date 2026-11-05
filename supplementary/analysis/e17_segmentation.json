@@ -1,0 +1,290 @@
+{
+ "at_utc": "2026-11-05T08:43:50Z",
+ "criterion_register": "D-127",
+ "role": "segmentation_sensitivity_two_directional",
+ "jieba": {
+  "version": "0.42.1",
+  "mode": "lcut default",
+  "user_dict": false,
+  "path": "/opt/foods/third_party"
+ },
+ "rule_r0": "literal substring over full text (frozen E12 rule)",
+ "rule_r1": "term must be assembled from consecutive jieba tokens (both ends on a boundary)",
+ "inputs": {
+  "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+  "index_sha256": "52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e",
+  "human_sha256": "11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8"
+ },
+ "baseline_self_check": {
+  "reproduced_frozen_counts": true,
+  "mismatch": {}
+ },
+ "per_category": {
+  "1": {
+   "name": "粮食及其制品",
+   "R0_docs": 111,
+   "R1_docs": 90,
+   "lost_docs": 21,
+   "gained_docs": 0,
+   "terms_lost": {
+    "小麦": 23,
+    "米粉": 7,
+    "玉米": 6,
+    "年糕": 1,
+    "面粉": 1,
+    "小米": 1
+   },
+   "terms_gained": {}
+  },
+  "2": {
+   "name": "食用油脂",
+   "R0_docs": 70,
+   "R1_docs": 67,
+   "lost_docs": 3,
+   "gained_docs": 0,
+   "terms_lost": {
+    "食用油": 4,
+    "植物油": 1
+   },
+   "terms_gained": {}
+  },
+  "3": {
+   "name": "生鲜肉",
+   "R0_docs": 137,
+   "R1_docs": 129,
+   "lost_docs": 8,
+   "gained_docs": 0,
+   "terms_lost": {
+    "羊肉": 5,
+    "牛肉": 4,
+    "鲜肉": 3,
+    "冻肉": 2
+   },
+   "terms_gained": {}
+  },
+  "4": {
+   "name": "肉制品",
+   "R0_docs": 72,
+   "R1_docs": 63,
+   "lost_docs": 9,
+   "gained_docs": 0,
+   "terms_lost": {
+    "卤肉": 7,
+    "肉干": 3,
+    "肉丸": 2,
+    "火腿": 2,
+    "熟食": 2,
+    "酱卤": 1
+   },
+   "terms_gained": {}
+  },
+  "5": {
+   "name": "水产及其制品",
+   "R0_docs": 100,
+   "R1_docs": 35,
+   "lost_docs": 65,
+   "gained_docs": 0,
+   "terms_lost": {
+    "鱼": 52,
+    "贝": 14,
+    "虾": 9,
+    "蟹": 5,
+    "鱼干": 2,
+    "鱿鱼": 1,
+    "鱼丸": 1
+   },
+   "terms_gained": {}
+  },
+  "6": {
+   "name": "蛋及蛋制品",
+   "R0_docs": 39,
+   "R1_docs": 39,
+   "lost_docs": 0,
+   "gained_docs": 0,
+   "terms_lost": {
+    "鸭蛋": 1,
+    "鸡蛋": 1
+   },
+   "terms_gained": {}
+  },
+  "7": {
+   "name": "乳及乳制品",
+   "R0_docs": 49,
+   "R1_docs": 46,
+   "lost_docs": 3,
+   "gained_docs": 0,
+   "terms_lost": {
+    "牛奶": 4,
+    "奶粉": 4,
+    "酸奶": 1,
+    "羊奶": 1
+   },
+   "terms_gained": {}
+  },
+  "8": {
+   "name": "蔬菜及其制品",
+   "R0_docs": 54,
+   "R1_docs": 37,
+   "lost_docs": 17,
+   "gained_docs": 0,
+   "terms_lost": {
+    "笋": 9,
+    "腌菜": 9,
+    "蔬菜": 5,
+    "豆芽": 1,
+    "白菜": 1
+   },
+   "terms_gained": {}
+  },
+  "9": {
+   "name": "水果及其制品",
+   "R0_docs": 69,
+   "R1_docs": 47,
+   "lost_docs": 22,
+   "gained_docs": 0,
+   "terms_lost": {
+    "葡萄": 17,
+    "水果": 7,
+    "苹果": 3,
+    "果干": 2
+   },
+   "terms_gained": {}
+  },
+  "10": {
+   "name": "豆制品",
+   "R0_docs": 35,
+   "R1_docs": 28,
+   "lost_docs": 7,
+   "gained_docs": 0,
+   "terms_lost": {
+    "豆腐": 8,
+    "豆干": 2,
+    "豆制品": 1,
+    "素鸡": 1
+   },
+   "terms_gained": {}
+  },
+  "11": {
+   "name": "糕点烘焙",
+   "R0_docs": 86,
+   "R1_docs": 70,
+   "lost_docs": 16,
+   "gained_docs": 0,
+   "terms_lost": {
+    "面包": 8,
+    "麻饼": 5,
+    "馍": 3,
+    "麻花": 1,
+    "桃酥": 1
+   },
+   "terms_gained": {}
+  },
+  "12": {
+   "name": "酒类",
+   "R0_docs": 82,
+   "R1_docs": 81,
+   "lost_docs": 1,
+   "gained_docs": 0,
+   "terms_lost": {
+    "酒类": 1,
+    "白酒": 1
+   },
+   "terms_gained": {}
+  },
+  "13": {
+   "name": "饮料及冷冻饮品",
+   "R0_docs": 56,
+   "R1_docs": 55,
+   "lost_docs": 1,
+   "gained_docs": 0,
+   "terms_lost": {
+    "饮料": 2
+   },
+   "terms_gained": {}
+  },
+  "14": {
+   "name": "茶叶",
+   "R0_docs": 24,
+   "R1_docs": 23,
+   "lost_docs": 1,
+   "gained_docs": 0,
+   "terms_lost": {
+    "花茶": 1,
+    "普洱": 1,
+    "红茶": 1
+   },
+   "terms_gained": {}
+  },
+  "15": {
+   "name": "调味品",
+   "R0_docs": 163,
+   "R1_docs": 154,
+   "lost_docs": 9,
+   "gained_docs": 0,
+   "terms_lost": {
+    "辣椒": 19,
+    "醋": 7,
+    "花椒": 4
+   },
+   "terms_gained": {}
+  },
+  "16": {
+   "name": "保健食品",
+   "R0_docs": 66,
+   "R1_docs": 66,
+   "lost_docs": 0,
+   "gained_docs": 0,
+   "terms_lost": {},
+   "terms_gained": {}
+  },
+  "17": {
+   "name": "糖果蜜饯及炒货",
+   "R0_docs": 85,
+   "R1_docs": 77,
+   "lost_docs": 8,
+   "gained_docs": 0,
+   "terms_lost": {
+    "花生": 7,
+    "瓜子": 3
+   },
+   "terms_gained": {}
+  },
+  "18": {
+   "name": "特殊膳食用食品",
+   "R0_docs": 32,
+   "R1_docs": 22,
+   "lost_docs": 10,
+   "gained_docs": 0,
+   "terms_lost": {
+    "辅食": 9,
+    "运动营养": 2
+   },
+   "terms_gained": {}
+  }
+ },
+ "totals": {
+  "R0_docs_any": 679,
+  "R1_docs_any": 634,
+  "frozen_any": 679
+ },
+ "adjudicated_270": {
+  "crosstab": {
+   "R0_pass_R1_pass": 232,
+   "R0_pass_R1_drop": 38,
+   "R0_drop_R1_pass": 0,
+   "both_drop": 0
+  },
+  "dropped_by_verdict": {
+   "S": 12,
+   "I": 13,
+   "T": 5,
+   "F": 8
+  },
+  "subject_cases_R0": 104,
+  "subject_cases_surviving_R1": 92,
+  "R1_pass_items": 232,
+  "subject_precision_R0": 0.3852,
+  "subject_precision_R1": 0.3966,
+  "note": "the frozen product reports 104/270 = 0.3852 for R0; R1's denominator is the items R1 still passes, so the two are not the same quantity unless the crosstab shows no drops"
+ }
+}
