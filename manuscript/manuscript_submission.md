@@ -2,7 +2,7 @@
 
 Yongjin Chen^1^, Chenrui Yang^1^, Ziying Xue^1^, Xiyuan Wang^1^ and Songze Zhu^1^,\*
 
-^1^ People’s Public Security University of China, Beijing, China
+^1^ People’s Public Security University of China, Beijing, China; 202420610006@stu.ppsuc.edu.cn (Y.C.); 2024111033@stu.ppsuc.edu.cn (C.Y.); 15620821066@163.com (Z.X.); 202321440020@stu.ppsuc.edu.cn (X.W.)
 
 \* Correspondence: 20196846@ppsuc.edu.cn
 
@@ -20,19 +20,19 @@ Administrative penalty decisions are the most abundant machine-readable record o
 
 ## 1. Introduction
 
-### 1.1 The record and the problem
+### 1.1. The record and the problem
 
 Food-safety fraud often takes a documentary form. Forged inspection reports, mislabelled ingredients, borrowed certification marks and fabricated traceability records attack the informational layer on which food-safety regulation relies, and they do so without necessarily producing a hazardous product. Scholarly attention to this class of conduct has not produced a commensurate empirical base: most studies rely on case collections, inspection statistics or survey instruments, each of which samples a different population and defines “fraud” differently.
 
 Administrative penalty decisions are one of the most abundant structured public records of these events in China. Enforcement agencies publish decisions containing the legal basis invoked, a narrative of facts and the sanction imposed. For research purposes the record has two attractive properties: it is produced for legal rather than scholarly purposes, so its categories are not researcher-imposed; and it is large enough to support distributional statements if it can be processed at scale. For a food journal the question is narrower and more demanding than whether this record is structured: it is whether the food a case concerns can be read out of it at all.
 
-### 1.2 Three obligations
+### 1.2. Three obligations
 
 Both properties come with obligations that the literature has not always discharged. Automated extraction from legal prose must be validated against something other than itself: agreement between two automated passes is a reliability statistic, not an accuracy statistic, and the two diverge sharply in our data. More consequentially, a genre constrains what can be inferred from it. A single-document penalty decision names the sanctioned party and the agency; it rarely describes the chain of intermediaries through which a forged certificate travelled. A publication portal that serves a fixed number of rows per query cannot support a prevalence estimate, however many documents it contains.
 
 A third obligation is specific to a food journal. Studies of food fraud want to know *which foods*; a text pipeline can only supply that if the food dimension is measured rather than assumed. Lexical food categories are usually attached to such corpora without any audit of what a match means — yet a term that occurs in a case is very often not the commodity the case is about. An ingredient list in a mislabelling decision mentions six commodities, and a quoted statutory provision mentions several more; both inflate a “food category” count while adding nothing to the question a food scientist is asking.
 
-### 1.3 Related work
+### 1.3. Related work
 
 Four strands of work bear on what this record can measure. None of them closes the question.
 
@@ -46,7 +46,7 @@ Four strands of work bear on what this record can measure. None of them closes t
 
 **The gap.** Taken together the four strands leave one question open: whether the text of penalty decisions can be used as a measurement instrument at all, and what its food dimension actually denotes. That is the question this paper answers, and it answers it by auditing rather than by assuming.
 
-### 1.4 This paper
+### 1.4. This paper
 
 This paper reports a baseline built under those three obligations, and it is organised around what the record can carry rather than around what a classifier can output. We describe a fully automated pipeline and report its measured performance, including where it fails. We audit the commodity dimension directly and report what a commodity term in these documents actually denotes. Finally, we report the joint distribution of violation category and food category that the record does support, while marking three questions it cannot answer and stating the measurement reason for each. We deliberately do not claim national prevalence, we do not describe change over time, and we do not compare fraud rates across jurisdictions, because in each case the instrument or the sampling frame, not the phenomenon, would be doing the work.
 
@@ -54,7 +54,7 @@ The result is a ladder, and the ladder is the contribution: composition within t
 
 ## 2. Materials and Methods
 
-### 2.1 Sources and sampling frame
+### 2.1. Sources and sampling frame
 
 Chinese documents were collected from the national food-safety penalty publication portal operated under the State Administration for Market Regulation. Collection was driven by 92 keyword queries built from the project’s fraud lexicon (forged, mislabelled, misuse of certification marks, tampered, substandard, unlicensed, and their combinations with “food”). The portal returns results in publication-date-descending order and serves at most four pages of fifty rows per query. Both properties are recorded as a product rather than asserted (`data/reports/portal_mechanics.json`, 2026-11-05T04:54:41Z): across three queries, pages 1–4 returned 50 rows each and pages 5 and 6 returned zero; the 50 publication dates on page 1 of one query ran from 2026-10-19 down to 2026-09-30 with no increase anywhere in the sequence, and page 4 of another query ended at 2026-01-15.
 
@@ -64,7 +64,7 @@ The document-level funnel is: 3,540 records entered the database; 2,091 were rem
 
 English-language documents are 253 recall records from the openFDA food-enforcement database, used only for the composition comparison in Section 3.8. They are a different genre: a recall record classifies a hazard and a recalling firm, and has no field for intentional falsification.
 
-### 2.2 Deterministic layer
+### 2.2. Deterministic layer
 
 Two rule systems run before any model. A statute-to-category map (version 2) assigns each document to one of nine fine-grained categories, which collapse deterministically into five coarse categories: data falsification (forged inspection report, tampered traceability, fake certification, false labelling), market order (trademark infringement, false advertising, product quality), unlicensed operation, procedural non-compliance, and undetermined. A food-category lexicon (version 1) assigns up to one primary and several secondary food categories from a 15-category vocabulary plus an unmatched bucket.
 
@@ -72,7 +72,7 @@ Both rule systems read only the penalty-clause paragraph and the fact paragraph,
 
 The deterministic layer was cross-checked against the LLM layer on a random 50-document slice (seed 20261104). This is an agreement check and not a validation: the LLM layer is the same model under a different prompt, not an independent gold standard, and no human annotation of these categories exists. Exact-category agreement was 0.28 against both LLM channels, compared with a same-model cross-channel agreement of 0.74 on the same slice — so the deterministic layer agrees with the LLM layer far less than the LLM layer agrees with itself. The pre-registered fallback rule said that a dimension with agreement below 0.75 should be reported only at the coarse level, which presumes that fine-grained disagreement largely collapses into agreement at the coarse level. We tested that presumption on the same slice with the already-frozen coarse map: it does not hold. The same 14 of 50 documents agree at fine and at coarse granularity, agreement conditional on the rule having decided anything is 14 of 32 (0.4375), and the 18 documents the rule declines to classify are all disagreements. Coarse reporting is therefore not validated either, and Section 3.2 reports the distribution as instrument output with the negative control attached rather than as an estimate.
 
-### 2.3 LLM annotation layer
+### 2.3. LLM annotation layer
 
 Annotation uses a locally served Qwen2.5-7B-Instruct model through vLLM, with two independently prompted channels (A, α-prompt; B, β-prompt) that label six entity types (service provider, end user, tactic, document, jurisdiction, penalty event) and a violation category. Input text is capped at 20,000 characters (no document exceeded the cap; labelled median 3,151, p99 9,705 characters here, against a median of 3,578 on the document-length column used in Section 2.1 — two different columns, not two measurements of the same quantity). Answer budgets were 3,000 and 4,000 tokens. Spans match at a character-level threshold τ = 0.5.
 
@@ -80,13 +80,13 @@ Agreement between the two channels is 0.7460 over the full corpus (n = 1128), 0.
 
 The annotation pipeline includes a type-shrinkage ladder: entity types are retained only if their per-type F1 reaches 0.75 with support of at least 20. Three types survive (END_USER, JURISDICTION, PENALTY_EVENT) and agreement on the restricted type set is 0.8610. All three of the present numbers — 0.7460, 0.8610 and 0.6966 — measure different things and are never substituted for one another.
 
-### 2.4 Statute-anchored evaluation
+### 2.4. Statute-anchored evaluation
 
 Agreement between two LLM channels cannot establish accuracy, so we built an anchor set: 423 documents in which the penalty clause cites a statute that appears in the mapping table. The anchor is external to the LLM channels and legible from the statute itself, but it is not independent of the deterministic layer, which reads the same penalty clause; it therefore measures the LLM channel and yields no accuracy estimate for the deterministic layer. A further 97 documents cite a statute but carry no rule-legible fact paragraph and are excluded from the anchor set; the exclusion is recorded in the evaluation product rather than dropped silently. Anchors are drawn from three bases: a penalty statute (232 documents), a cited statute (52) and a statute plus explicit facts (139). This set yields micro-F1 0.7825, macro-F1 over all classes 0.2693, and macro-F1 over classes with support ≥ 20 of 0.4195.
 
 Per-class performance is deliberately reported with support and prediction counts, because the macro figure is otherwise unreadable: FALSE_LABELING F1 0.8801 (support 326, predictions 383); UNLICENSED_OPERATION 0.3784 (52, 22); FORGED_INSPECTION_REPORT 0.3571 (11, 17); OTHER 0.0 (31, 0). Two classes have support below 3 and contribute zero. The zero for OTHER is not a rounding artefact: the instrument issued no OTHER predictions at all against 31 anchored documents.
 
-### 2.5 Commodity-term audit
+### 2.5. Commodity-term audit
 
 The food dimension of this corpus had never been measured, so we measured it. The audit is a document-level, literal presence test over the cleaned full texts of all 1,128 documents, not a classifier. Its lexicon of 18 commodity categories — grains and their products, edible oils, fresh meat, meat products, aquatic products, eggs, dairy, vegetables, fruit, soy products, bakery, alcoholic drinks, beverages and frozen desserts, tea, condiments, health food, confectionery and roasted nuts, and foods for special dietary uses — was fixed and registered before any count was taken, and the term list was not edited afterwards. Matching is a substring test on the raw text with no tokenisation, no regular-expression wildcards and no case or variant folding, which is the simplest rule that can be re-executed by a reader; Section 3.3 reports what that simplicity costs.
 
@@ -98,23 +98,23 @@ A negative control of three non-food terms (battery, boiler, platform scale), kn
 
 Because this audit measures precision only, we also tried to obtain the commodity role for every document, which is what a recall figure would require. Three constructs were registered on the deviation register before they ran, against a gate fixed before the first model call: agreement with the same 270 adjudicated items of at least κ 0.60 and balanced accuracy of at least 0.75, both chosen because the gold is imbalanced. The three constructs are a forced 18-way choice, eighteen per-category yes/no questions, and free-text extraction of the product name followed by a deterministic mapping through the same frozen lexicon. The third registration carried a cap: no further construct, model or format would be attempted after it. Section 3.4 reports all three, including the one that came closest, and the reason the gate was not moved to meet it.
 
-### 2.6 Human reliability check of the violation typology
+### 2.6. Human reliability check of the violation typology
 
 Six violation categories had never been checked against human readers either. Three readers — three separate administrations of the same codebook through the same session channel, so `n_coders = 3` and not three independent research teams — coded the same 80 documents. Fleiss’ κ over the three readers is the primary statistic, computed with a verdict rule fixed before the result was seen: a minimum pairwise agreement of 0.80 with a Wilson lower bound of 0.70 and Fleiss’ κ of 0.60 would support a shared reading; κ below 0.40 or a minimum pairwise agreement below 0.60 would support its absence. Because κ counts a pair of abstentions as an agreement, we also decompose each pairwise agreement into agreements in which both readers declined to classify and agreements on a substantive class.
 
-### 2.7 Reproducibility
+### 2.7. Reproducibility
 
 The pipeline is a single command set with per-stage receipts; the corpus is frozen and content-addressed; and every statistic quoted in this paper is generated by a script that records the product file, the JSON field, the product timestamp and the product’s sha256 into a machine-readable sheet. Design deviations discovered during execution, including every one that affected a reported number, are kept in an append-only register shipped with the supplementary material (`DEVIATIONS.md`). The provenance sheet that licenses every number in this paper is shipped alongside it (`numbers.csv`, each row naming a product path, JSON field, product timestamp and product sha256). We treat that register as a result, not as housekeeping: it is the evidence that the reported numbers were not selected after the fact. The register also records its own corrections, including that two consecutive new entries were first written under numbering already in use and were reassigned by a later entry rather than silently renumbered. Analyses run after the corpus was frozen name their input file, and the chain resolves to the frozen corpus: the negative-control product reads the E6 product, which stamps `silver.sha256 = a1deda2c…` and `n = 875`. A post-freeze analysis that weakens a claim rather than strengthening it — as the coarse-granularity negative control and the commodity audit both do — is reported for the same reason.
 
 ## 3. Results
 
-### 3.1 The measurement layer, with what each number measures
+### 3.1. The measurement layer, with what each number measures
 
 Table 1 summarises the measurement layer and is the paper’s spine: every subsequent claim is licensed by a row of it or is not made. Per-type F1 separates cleanly: END_USER 0.9105, JURISDICTION 0.8809 and PENALTY_EVENT 0.8606 are extracted consistently by both channels, while TACTIC (0.6279), DOCUMENT (0.4097) and SERVICE_PROVIDER (0.3356) are not. These are agreement figures, not correctness figures: no human adjudication of entity spans exists for this corpus, so consistency across two renderings of the same model is the strongest statement the per-type line can support. This is why the case-chain analysis in Section 3.7 fails for a measurable reason: the two entity types that a chain requires — the service provider and the document that was forged — are precisely the two the instrument cannot extract reliably.
 
 At the category level the same pattern holds. A single dominant category (FALSE_LABELING, 326 anchors) is recovered well; rare categories are not; and the residual class is never emitted. Macro-F1 over all classes (0.2693) is therefore not a statement about the instrument — it is dominated by two classes with support 1 and 2 — while macro-F1 over classes with support ≥ 20 (0.4195) is the more informative one. That figure still averages a structural zero: OTHER has support 31, receives no predictions, and enters the mean as 0. Dropping the never-emitted class raises the same statistic to 0.6292. We report all three (0.2693 / 0.4195 / 0.6292), always with the class list, because the gap between the last two is a property of the threshold and the instrument’s vocabulary rather than of its accuracy, and reporting one of them alone would hide that.
 
-### 3.2 Coarse composition of the Chinese corpus, as instrument output
+### 3.2. Coarse composition of the Chinese corpus, as instrument output
 
 Of 875 Chinese documents, 604 (0.6903) received a coarse category from the deterministic layer (Table 2). Data falsification was assigned to 412 (68.2% of categorised documents, 47.1% of all documents), market-order violations to 100, procedural non-compliance to 66 and unlicensed operation to 26. That coarse class is not homogeneous, and the composition matters for what the label means: 375 of the 412 are false labelling (0.9102), 33 forged inspection reports and 4 fake certification. The headline category therefore describes documentary mislabelling much more than forgery, and we report its composition here rather than letting the class name carry an interpretation it does not support. Every figure in this section is the output of that layer; the negative control for the layer is 14 of 50 documents at both fine and coarse granularity (Section 2.2), so the numbers describe what a documented instrument assigns, and no statement about the prevalence of these categories in the population is made or implied.
 
@@ -122,7 +122,7 @@ The remaining 271 documents are undetermined: their penalty clause cites no stat
 
 Extractable fines are available for 565 of 875 documents, with a median of 5,000 CNY (p25 1,700; p75 15,000; p90 55,000; maximum 805,231). We report the distribution without modelling it: the sanction amount in these decisions is set by a statutory band whose lower bound depends on the value of the goods, which the decisions rarely state in a machine-readable way.
 
-### 3.3 What a commodity term denotes: the audit
+### 3.3. What a commodity term denotes: the audit
 
 The commodity audit is the part of this study that speaks most directly to food research, and its result is a warning rather than a table of prevalence. Over all 1,128 documents, 679 contain at least one term from the 18-category lexicon and 449 contain none. The per-category counts are ordered by how often a category is mentioned at all, and they are not small: condiments appear in 163 documents, fresh meat in 137, grains in 111, aquatic products in 100 (Table 3).
 
@@ -140,7 +140,7 @@ The negative control confirms the corpus is not purely food-related: the three n
 
 Word segmentation does not rescue the lexicon, and the test that shows it is cheap. Re-running the same 18 term lists under a rule that counts a term only when both ends of the hit fall on a token boundary (jieba 0.42.1, default mode, no user dictionary) moves the corpus total from 679 documents to 634, with no document gained: the segmented rule is a strict subset of the literal one. On the 270 adjudicated hits it drops 38 — 8 of the 19 false matches, which is what segmentation is for, and also 12 of the 104 true subjects. Subject-matter precision moves from 0.3852 to 0.3966 (92 of 232), a gain of 0.0114. The losses concentrate in short terms, where jieba’s token is the longer word: the term for fish is lost in 52 documents because *carp* and *squid* are single tokens, and a case about carp is a case about an aquatic product. Segmentation is the right repair for the four cross-word-boundary artefacts and the wrong repair for the problem that dominates the table.
 
-### 3.4 Can the commodity role be automated? Three attempts, three registrations, no pass
+### 3.4. Can the commodity role be automated? Three attempts, three registrations, no pass
 
 The audit in Section 3.3 measures precision and nothing else. Recall, the share of cases about a given food that the lexicon recovers, needs the subject of every document rather than of 270 sampled hits. A lexicon that matches literal category terms cannot supply it: a decision that names only a brand, an alias or a product type outside the term list is invisible to it. We therefore tried to obtain the subject by asking a served 7B model, under a gate fixed before any call was made: agreement with the 270 adjudicated items of at least κ 0.60 and balanced accuracy of at least 0.75, because the human gold is imbalanced (104 of 270 are subjects) and raw accuracy would reward a model that answers “no” everywhere.
 
@@ -152,7 +152,7 @@ E16 fails at a different place, and saying where is the point of running it. The
 
 The consequence is a single sentence applied in the rest of this paper: **recall of the commodity axis is not estimable**, and no figure in it may be read as a share of cases. That is why Section 3.3 reports subject-matter precision per category and why its table is ordered by mentions rather than by a proportion of the corpus; why Section 3.6’s cross-tabulation is bookkeeping and not a finding; and why Figure 1 prints “measured” and “not measured” side by side on the commodity rung instead of one number. The 449 documents that contain no commodity term are the clearest case: an unknown share of them is about some food, none of them is invisible to a literal lexicon by accident, and no sample of them can be adjudicated by a single reader at the reliability this paper demands of three (Section 3.5). We register this as a negative measurement rather than as an open task, because a number produced by one reader on a task where three readers reached κ 0.0881 would enter the paper wearing the costume of a measurement.
 
-### 3.5 Human readers do not share the violation typology
+### 3.5. Human readers do not share the violation typology
 
 Because no human gold standard existed for the six violation categories, we built one and it failed. Fleiss’ κ over three readers coding the same 80 documents is 0.0881, with a minimum pairwise agreement of 0.1375; by the rule fixed in advance this is a verdict of no shared reading.
 
@@ -160,13 +160,13 @@ The pairwise figures must be read together, because they are not homogeneous. Re
 
 The consequence for the rest of the paper is stated once and applied throughout. The six-category typology is not jointly recoverable by three readers working from the same codebook on the same documents, so anything derived from it, including the behaviour–hazard sketch in Section 3.9, is reported as an exploratory instrument output and never as a human-validated category.
 
-### 3.6 Joint composition of violation and food category
+### 3.6. Joint composition of violation and food category
 
 The deterministic layer’s own food axis — a 15-category vocabulary read only from the penalty and fact paragraphs, and a different instrument from the full-text audit in Section 3.3 — can be crossed with the coarse violation category. Of the 875 Chinese documents, 603 (0.6891) matched at least one of those 15 food categories and 272 fell in the unmatched bucket. The joint distribution is not uniform in either margin: in the instrument’s output, food additives (57 of 85) and prepackaged food (46 of 74) are dominated by data falsification, whereas alcohol is the outlier on the other side (24 of 63 market order, 9 of 63 data falsification). The full cross-tabulation is supplied as Supplementary Table S1 rather than typeset here; the margins quoted in this paragraph are all that the text relies on.
 
 We report the contrast and do not interpret it, and Section 3.3 is the reason. With a commodity axis whose subject-matter precision is 0.3852, a row-level difference between food categories cannot be separated from a difference in how their decisions cite statutes and list ingredients. The tabulation is the bookkeeping, not the finding.
 
-### 3.7 Three questions the record cannot answer
+### 3.7. Three questions the record cannot answer
 
 **Case-chain structure.** The main corpus contains 128 Chinese documents in the top confidence tier, 125 of which name at least one actor. Only 9 of the 125 that name any actor (0.072) name two or more distinct ones; 134 actor nodes and 9 edges are extracted. Since a document with one actor cannot produce an edge, the structural maximum for this corpus is 9 edges, and the extracted graph contains exactly that. Saturation of 1.0 is therefore an identity of the extraction rule — one edge per two-actor document — and carries no information about intermediation; we state it so that the number is not read as a finding. The network is not sparse because intermediaries are rare; it is complete with respect to what the documents permit.
 
@@ -174,7 +174,7 @@ We report the contrast and do not interpret it, and Section 3.3 is the reason. W
 
 **Differential comparison across enforcement profiles.** A pre-registered comparison of violation profiles between the two jurisdiction samples returns not estimable: with a modal category share of 0.945 on one side, the contingency table is degenerate and the Fisher test is uninformative (p = 0.258).
 
-### 3.8 Cross-genre composition, not a cross-jurisdiction rate
+### 3.8. Cross-genre composition, not a cross-jurisdiction rate
 
 The comparison below is between two genres, and it is reported as such — and reported rather than dropped, because the frame-dependence of the odds ratio is itself the result: a reader shown one frame would take a coding artefact for a rate. On the Chinese side 438 documents fall inside the **fraud framework** — the four categories the comparison admits: false labelling 375, forged inspection report 33, unlicensed operation 26, fake certification 4. The other 437 Chinese documents are outside it for two different reasons: 271 are undetermined (no mapped statute in the penalty clause), and 166 fall in the two coarse categories the framework does not carry (market order 100, procedural non-compliance 66). Stating only the undetermined exclusion, as a shorter sentence would, misdescribes the denominator by 166 documents. On the US side all 253 recall records fall inside the framework, 156 of them only into the residual class.
 
@@ -182,11 +182,11 @@ Because the frame is the analyst’s choice, the contrast is reported under thre
 
 The test is statistically unambiguous and inferentially empty, and we say so in the same breath. The US record contains no field for intentional falsification: the count of records with an explicit deliberate-fraud marker is 0 of 253. A comparison of “false labelling” shares between a genre that codes labelling violations and a genre that does not is a comparison of coding schemes. We therefore return an estimability verdict of instrument mismatch and report the table as a description of what each record type records.
 
-### 3.9 Behaviour–hazard sketch, exploratory
+### 3.9. Behaviour–hazard sketch, exploratory
 
 On the 128 top-tier Chinese documents, dual-channel agreement for the behaviour–hazard codebook is 0.8203, with 23 documents requiring third-channel adjudication; 49 codebook entries were generated. Consumer deception is the dominant hazard (107 documents) against food-safety hazard (19), and mislabelling (117) dominates forged reports (52) as a tactic. These are multi-label counts over 128 documents and the whole section is exploratory: at this sample size a 0.82 agreement supports a typology sketch, not a distribution. Section 3.5 states why the category axis underneath it cannot be treated as human-validated.
 
-### 3.10 Figure 1 — the estimability ladder
+### 3.10. Figure 1 — the estimability ladder
 
 Figure 1 places each research question against the evidence that licenses it: composition within the frame (conditional — instrument output, negative control 14/50); the commodity dimension (precision only — subject-matter precision 0.3852 on 270 adjudicated hits, with recall not estimable after three pre-registered attempts); joint composition with food category (conditional, 68.9% matchable); violation typology by human readers (not established — Fleiss’ κ 0.0881); behaviour–hazard sketch (exploratory, n = 128); case-chain structure (not estimable: 9 of 128 documents, saturation 1.0); cross-genre comparison (not estimable: instrument mismatch); temporal trend (not estimable: sampling window). The figure’s purpose is procedural: a reader can see, before reading a number, whether the number is licensed.
 
@@ -314,17 +314,19 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 
 ## Statements
 
-**Author Contributions.** All authors have read and agreed to the published version of the manuscript. CRediT roles are to be assigned by the author team at submission.
+**Supplementary Materials:** The bundle `supplementary_20261105.zip` (twenty-five product files plus `MANIFEST.md`) carries the product files underlying every reported statistic: the commodity index and its 270-document adjudication sample, the crosstab behind Supplementary Table S1, the three-reader coding files, the per-document predictions of the three automated attempts in Table 4, the segmentation sensitivity of the lexicon, the analysis scripts and the deviation register. `MANIFEST.md` lists every file with its sha256 and a verification block that checks each one.
 
-**Funding.** Supported by 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market), 25CSH113.
+**Author Contributions:** All authors have read and agreed to the published version of the manuscript. CRediT roles are to be assigned by the author team at submission.
 
-**Institutional Review Board Statement.** Not applicable. The study analyses administrative documents published by government agencies; it involves no human participants, human material or animals.
+**Funding:** This research was funded by 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market), grant number 25CSH113.
 
-**Informed Consent Statement.** Not applicable.
+**Institutional Review Board Statement:** Not applicable. The study analyses administrative documents published by government agencies; it involves no human participants, human material or animals.
 
-**Data Availability.** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. Alongside it the supplementary material carries the product files underlying every reported statistic, the deviation register and the pipeline source. The product files include the commodity index, its 270-document adjudication sample, the crosstab behind Supplementary Table S1, the three-reader coding files, the per-document predictions of the three automated attempts in Table 4, and the segmentation sensitivity of the lexicon. The bundle’s `MANIFEST.md` lists all twenty-five files with their sha256 and a verification block that checks every one. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included.
+**Informed Consent Statement:** Not applicable.
 
-**Conflicts of Interest.** The authors declare no conflict of interest.
+**Data Availability Statement:** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included.
+
+**Conflicts of Interest:** The authors declare no conflict of interest.
 
 ---
 
