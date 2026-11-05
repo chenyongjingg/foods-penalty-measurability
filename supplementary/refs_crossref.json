@@ -1,126 +1,215 @@
 {
-  "10.2139/ssrn.3658748": {
-    "title": "Food Safety Regulatory Enforcement in China: A Data-Driven Approach",
-    "container": "SSRN Electronic Journal",
-    "year": "2020",
-    "volume": null,
-    "issue": null,
-    "page": null,
-    "authors": [
-      "Gao, Qihua",
-      "Huang, Yasheng",
-      "Liang, Qiao",
-      "Sui, Yuze",
-      "Zheng, Yanchong"
-    ],
-    "type": "journal-article",
-    "publisher": "Elsevier BV",
-    "url": "https://doi.org/10.2139/ssrn.3658748",
-    "license": false
-  },
-  "10.18653/v1/2025.justnlp-main.6": {
-    "title": "LLM Driven Legal Text Analytics: A Case Study For Food Safety Violation Cases",
-    "container": "Proceedings of the 1st Workshop on NLP for Empowering Justice (JUST-NLP 2025)",
-    "year": "2025",
-    "volume": null,
-    "issue": null,
-    "page": "41-52",
-    "authors": [
-      "Joshi, Suyog",
-      "Basu, Soumyajit",
-      "Dey, Lipika",
-      "Das, Partha Pratim"
-    ],
-    "type": "proceedings-article",
-    "publisher": "Association for Computational Linguistics",
-    "url": "https://doi.org/10.18653/v1/2025.justnlp-main.6",
-    "license": false
-  },
-  "10.4315/0362-028X.JFP-19-457": {
-    "title": "Regional Character, Restaurant Size, and Food Safety Risk: Evidence from Food Safety Violation Data in Gansu Province, China",
-    "container": "Journal of Food Protection",
-    "year": "2020",
-    "volume": "83",
-    "issue": "4",
-    "page": "677-685",
-    "authors": [
-      "Sha, Yongzhong",
-      "Song, Xiangrong",
-      "Zhan, Jian",
-      "Lu, Li",
-      "Zhang, Qingxia",
-      "Lu, Yao"
-    ],
-    "type": "journal-article",
-    "publisher": "Elsevier BV",
-    "url": "https://doi.org/10.4315/0362-028x.jfp-19-457",
-    "license": true
-  },
-  "10.1111/ajae.12484": {
-    "title": "Regulatory decentralization and food safety: evidence from China",
-    "container": "American Journal of Agricultural Economics",
-    "year": "2024",
-    "volume": "107",
-    "issue": "1",
-    "page": "54-80",
-    "authors": [
-      "Lin, Wen",
-      "Liang, Jiangyuan"
-    ],
-    "type": "journal-article",
-    "publisher": "Wiley",
-    "url": "https://doi.org/10.1111/ajae.12484",
-    "license": true
-  },
-  "10.1177/0020852321992110": {
-    "title": "Governance capacity and regulatory enforcement: street-level organizations in Beijing’s food safety reform",
-    "container": "International Review of Administrative Sciences",
-    "year": "2021",
-    "volume": "87",
-    "issue": "2",
-    "page": "256-274",
-    "authors": [
-      "Yee, Wai-Hang",
-      "Liu, Peng"
-    ],
-    "type": "journal-article",
-    "publisher": "SAGE Publications",
-    "url": "https://doi.org/10.1177/0020852321992110",
-    "license": true
-  },
-  "10.12677/ds.2022.83056": {
-    "title": "Administrative Penalty Decision Disclosure Limit",
-    "container": "Dispute Settlement",
-    "year": "2022",
-    "volume": "08",
-    "issue": "03",
-    "page": "424-430",
-    "authors": [
-      "刘, 文静"
-    ],
-    "type": "journal-article",
-    "publisher": "Hans Publishers",
-    "url": "https://doi.org/10.12677/ds.2022.83056",
-    "license": false
-  },
-  "10.1007/s12571-024-01461-0": {
-    "title": "How is food safety regulation implemented? The key role of meso-institutions assessed through a cross-country comparison",
-    "container": "Food Security",
-    "year": "2024",
-    "volume": "16",
-    "issue": "4",
-    "page": "1045-1058",
-    "authors": [
-      "Menard, Claude",
-      "Martino, Gaetano",
-      "de Oliveira, Gustavo Magalhães",
-      "Royer, Annie",
-      "Schnaider, Paula Sarita Bigio",
-      "Saes, Maria Sylvia Macchione"
-    ],
-    "type": "journal-article",
-    "publisher": "Springer Science and Business Media LLC",
-    "url": "https://doi.org/10.1007/s12571-024-01461-0",
-    "license": true
-  }
+ "10.2139/ssrn.3658748": {
+  "title": "Food Safety Regulatory Enforcement in China: A Data-Driven Approach",
+  "container": "SSRN Electronic Journal",
+  "year": "2020",
+  "volume": null,
+  "issue": null,
+  "page": null,
+  "authors": [
+   "Gao, Qihua",
+   "Huang, Yasheng",
+   "Liang, Qiao",
+   "Sui, Yuze",
+   "Zheng, Yanchong"
+  ],
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.2139/ssrn.3658748",
+  "license": false
+ },
+ "10.18653/v1/2025.justnlp-main.6": {
+  "title": "LLM Driven Legal Text Analytics: A Case Study For Food Safety Violation Cases",
+  "container": "Proceedings of the 1st Workshop on NLP for Empowering Justice (JUST-NLP 2025)",
+  "year": "2025",
+  "volume": null,
+  "issue": null,
+  "page": "41-52",
+  "authors": [
+   "Joshi, Suyog",
+   "Basu, Soumyajit",
+   "Dey, Lipika",
+   "Das, Partha Pratim"
+  ],
+  "type": "proceedings-article",
+  "publisher": "Association for Computational Linguistics",
+  "url": "https://doi.org/10.18653/v1/2025.justnlp-main.6",
+  "license": false
+ },
+ "10.4315/0362-028X.JFP-19-457": {
+  "title": "Regional Character, Restaurant Size, and Food Safety Risk: Evidence from Food Safety Violation Data in Gansu Province, China",
+  "container": "Journal of Food Protection",
+  "year": "2020",
+  "volume": "83",
+  "issue": "4",
+  "page": "677-685",
+  "authors": [
+   "Sha, Yongzhong",
+   "Song, Xiangrong",
+   "Zhan, Jian",
+   "Lu, Li",
+   "Zhang, Qingxia",
+   "Lu, Yao"
+  ],
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.4315/0362-028x.jfp-19-457",
+  "license": true
+ },
+ "10.1111/ajae.12484": {
+  "title": "Regulatory decentralization and food safety: evidence from China",
+  "container": "American Journal of Agricultural Economics",
+  "year": "2024",
+  "volume": "107",
+  "issue": "1",
+  "page": "54-80",
+  "authors": [
+   "Lin, Wen",
+   "Liang, Jiangyuan"
+  ],
+  "type": "journal-article",
+  "publisher": "Wiley",
+  "url": "https://doi.org/10.1111/ajae.12484",
+  "license": true
+ },
+ "10.1177/0020852321992110": {
+  "title": "Governance capacity and regulatory enforcement: street-level organizations in Beijing’s food safety reform",
+  "container": "International Review of Administrative Sciences",
+  "year": "2021",
+  "volume": "87",
+  "issue": "2",
+  "page": "256-274",
+  "authors": [
+   "Yee, Wai-Hang",
+   "Liu, Peng"
+  ],
+  "type": "journal-article",
+  "publisher": "SAGE Publications",
+  "url": "https://doi.org/10.1177/0020852321992110",
+  "license": true
+ },
+ "10.12677/ds.2022.83056": {
+  "title": "Administrative Penalty Decision Disclosure Limit",
+  "container": "Dispute Settlement",
+  "year": "2022",
+  "volume": "08",
+  "issue": "03",
+  "page": "424-430",
+  "authors": [
+   "刘, 文静"
+  ],
+  "type": "journal-article",
+  "publisher": "Hans Publishers",
+  "url": "https://doi.org/10.12677/ds.2022.83056",
+  "license": false
+ },
+ "10.1007/s12571-024-01461-0": {
+  "title": "How is food safety regulation implemented? The key role of meso-institutions assessed through a cross-country comparison",
+  "container": "Food Security",
+  "year": "2024",
+  "volume": "16",
+  "issue": "4",
+  "page": "1045-1058",
+  "authors": [
+   "Menard, Claude",
+   "Martino, Gaetano",
+   "de Oliveira, Gustavo Magalhães",
+   "Royer, Annie",
+   "Schnaider, Paula Sarita Bigio",
+   "Saes, Maria Sylvia Macchione"
+  ],
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "url": "https://doi.org/10.1007/s12571-024-01461-0",
+  "license": true
+ },
+ "10.1111/j.1750-3841.2011.02417.x": {
+  "title": "Defining the Public Health Threat of Food Fraud",
+  "container": "Journal of Food Science",
+  "year": "2011",
+  "volume": "76",
+  "issue": "9",
+  "page": null,
+  "authors": [
+   "Spink, John",
+   "Moyer, Douglas C."
+  ],
+  "type": "journal-article",
+  "publisher": "Wiley",
+  "url": "https://doi.org/10.1111/j.1750-3841.2011.02417.x",
+  "license": null
+ },
+ "10.1016/j.jfp.2024.100227": {
+  "title": "Database of Food Fraud Records: Summary of Data from 1980 to 2022",
+  "container": "Journal of Food Protection",
+  "year": "2024",
+  "volume": "87",
+  "issue": "3",
+  "page": "100227",
+  "authors": [
+   "Everstine, Karen D.",
+   "Chin, Henry B.",
+   "Lopes, Fernando A.",
+   "Moore, Jeffrey C."
+  ],
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.jfp.2024.100227",
+  "license": null
+ },
+ "10.1016/j.foohum.2026.101354": {
+  "title": "Food safety enforcement in Zimbabwe: Evidence from published judicial decisions and publicly documented enforcement records (1990–2025)",
+  "container": "Food and Humanity",
+  "year": "2026",
+  "volume": "7",
+  "issue": null,
+  "page": "101354",
+  "authors": [
+   "Macheka, Lesley",
+   "Mubaiwa, Juliet",
+   "Nyarugwe, Shingai Patrica",
+   "Mugadza, Desmond Tichaona",
+   "Chiwanza, Tafadzwa Yolanda",
+   "Ntuli, Victor",
+   "Manditsera, Faith Angeline"
+  ],
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.foohum.2026.101354",
+  "license": null
+ },
+ "10.1057/s41599-025-05834-4": {
+  "title": "LLMs as annotators: the effect of party cues on labelling decisions by large language models",
+  "container": "Humanities and Social Sciences Communications",
+  "year": "2025",
+  "volume": "12",
+  "issue": "1",
+  "page": "1530",
+  "authors": [
+   "Vallejo Vera, Sebastián",
+   "Driggers, Hunter"
+  ],
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "url": "https://doi.org/10.1057/s41599-025-05834-4",
+  "license": null
+ },
+ "10.1016/j.tifs.2020.04.002": {
+  "title": "Food fraud vulnerability assessment: Towards a global consensus on procedures to manage and mitigate food fraud",
+  "container": "Trends in Food Science & Technology",
+  "year": "2020",
+  "volume": "100",
+  "issue": null,
+  "page": "131-137",
+  "authors": [
+   "Barrere, Virginie",
+   "Everstine, Karen",
+   "Théolier, Jérémie",
+   "Godefroy, Samuel"
+  ],
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.tifs.2020.04.002",
+  "license": null
+ }
 }

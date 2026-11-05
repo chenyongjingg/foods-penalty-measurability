@@ -2,7 +2,18 @@
 
 Manuscript: *What Chinese Food-Safety Penalty Records Measure: An Audited Baseline, a Commodity-Term Audit, and an Estimability Ladder*
 Article type: Article (Foods)
-Bundle assembled: 2026-11-05
+Bundle assembled: 2026-11-05 ｜ **revised 2026-11-05** (see Revision below)
+
+## Revision
+
+One file was replaced after assembly: `refs_crossref.json` grew from 3,896 to 6,311
+bytes (seven DOIs → twelve; sha `081823a4…` → `0d970111…`) when five references were
+added to the related-work subsection of the manuscript. The added records were fetched
+from the Crossref API on 2026-11-05 and appended; **no existing record was rewritten**.
+Nothing else in this bundle changed, and no analysis product, script, threshold or
+number was touched. This note is written into the manifest rather than into the
+deviation register because it changes a shipped file's content and its recorded sha,
+not the design or any reported measurement.
 
 This bundle exists because Section 2.7 of the manuscript states that the deviation
 register is **published with the supplementary material** and that every quoted
@@ -17,7 +28,7 @@ ship here.
 |---|---:|---|---|
 | `DEVIATIONS.md` | 251972 | `11bd5349ca6a3c7cebe3a1aa0e78fe6d18e5227dc663e7349a1b1c5f5e8821c9` | Append-only register. **129 unique entry numbers** (`D-1 … D-131`, with `D-111` and `D-112` existing only as canonical labels assigned by D-110) in **137 headings**. Byte-identical to the register on the compute host at transfer time (`sha256sum` compared, not eyeballed). Numbering irregularity is disclosed in full below. |
 | `numbers.csv` | 120621 | `43255b10d98948a93992beba054ab58fd1f78befbe0f78785b6bc37df39cf896` | Number provenance sheet: **584 rows**. Each row carries `id,value,description,product,field,at_utc,sha256`. Every numeric token in the manuscript body is licensed by a row here or is explicitly structural (section numbers, protocol constants, calendar years). |
-| `refs_crossref.json` | 3896 | `081823a4b02659ad05e45213143e773d4f82d735ff6eec55c43fa2c6b631f908` | Crossref records for the seven cited DOIs, retrieved 2026-11-05. The reference list is reprinted from these records, not paraphrased (D-94). |
+| `refs_crossref.json` | 6311 | `0d970111834274d2b8ff138a6fa4830b279709ee52b3633f5fb566bd046e7ecd` | Crossref records for the **twelve** cited DOIs, retrieved 2026-11-05. The reference list is reprinted from these records, not paraphrased (D-94). Seven records were present at bundle assembly; five were fetched and appended when the related-work subsection was written, and existing records were never rewritten. |
 | `analysis/e12_commodity_index.json` | 66971 | `52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e` | Commodity-term presence index over all 1,128 cleaned full texts (D-111, D-113, D-114). Carries the lexicon, per-category counts, the negative control, the orphan-file list and the input shas. |
 | `analysis/e12_precision_sample.json` | 299726 | `85d90fed0b90890e299eb5aabbfa8235ef126ea792f9512f3a016de10f789e55` | The 270-item adjudication sample: 15 documents per category, selected in `sha256(document_id)` order, each with its ±120-character context windows (D-114). |
 | `analysis/e12_commodity_precision.json` | 57959 | `11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8` | Per-hit verdicts (`S`/`I`/`T`/`F`) and the two precision columns with Wilson intervals (D-115). Every verdict appears in the per-hit list, so the counts in Table 3 can be re-derived line by line. |
@@ -55,7 +66,7 @@ supplementary material rather than inside it.
 sha256sum -c <<'EOF'
 11bd5349ca6a3c7cebe3a1aa0e78fe6d18e5227dc663e7349a1b1c5f5e8821c9  DEVIATIONS.md
 43255b10d98948a93992beba054ab58fd1f78befbe0f78785b6bc37df39cf896  numbers.csv
-081823a4b02659ad05e45213143e773d4f82d735ff6eec55c43fa2c6b631f908  refs_crossref.json
+0d970111834274d2b8ff138a6fa4830b279709ee52b3633f5fb566bd046e7ecd  refs_crossref.json
 52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e  analysis/e12_commodity_index.json
 85d90fed0b90890e299eb5aabbfa8235ef126ea792f9512f3a016de10f789e55  analysis/e12_precision_sample.json
 11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8  analysis/e12_commodity_precision.json
