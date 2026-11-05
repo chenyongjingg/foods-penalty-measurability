@@ -1,0 +1,63 @@
+# Deterministic statute -> violation-category map (research design artifact).
+# Plan §5.2 channel ②: the mapping table is designed once, published with the
+# paper, and applied by a non-LLM rule engine. It is the anchor evidence.
+#
+# Keys are (law, article) as extracted from the document text. Only articles
+# whose legal content unambiguously implies the category are listed; anything
+# else resolves to OTHER and does not count as an anchor pass.
+
+law_aliases:
+  "食品安全法": ["中华人民共和国食品安全法", "食品安全法"]
+  "农产品质量安全法": ["中华人民共和国农产品质量安全法", "农产品质量安全法"]
+  "认证认可条例": ["中华人民共和国认证认可条例", "认证认可条例"]
+
+categories:
+  FORGED_INSPECTION_REPORT:
+    label_zh: 伪造/变造检验检测报告
+    label_en: forged or altered inspection/testing report
+    statutes:
+      - ["食品安全法", "第一百二十四条"]     # 生产经营未按规定检验/虚假标注等，含伪造检验结论的处罚基础
+      - ["农产品质量安全法", "第七十一条"]
+  TAMPERED_TRACEABILITY:
+    label_zh: 篡改/伪造溯源数据或溯源码
+    label_en: tampered traceability data or codes
+    statutes:
+      - ["食品安全法", "第一百二十四条"]
+      - ["农产品质量安全法", "第七十三条"]
+  FAKE_CERTIFICATION:
+    label_zh: 虚假认证/伪造认证材料
+    label_en: fraudulent certification materials
+    statutes:
+      - ["认证认可条例", "第五十九条"]
+      - ["认证认可条例", "第六十条"]
+      - ["食品安全法", "第一百二十四条"]
+  FALSE_LABELING:
+    label_zh: 标签虚假标注（非报告/认证类）
+    label_en: false labelling
+    statutes:
+      - ["食品安全法", "第一百二十五条"]
+      - ["食品安全法", "第七十一条"]
+      # 124条 also covers 标注虚假生产日期/保质期, which is a labelling offence.
+      # Without this entry a decision penalised under 124 for a false date could
+      # not be anchored at all (measured before adding it: 3/27 documents).
+      - ["食品安全法", "第一百二十四条"]
+  UNLICENSED_OPERATION:
+    label_zh: 无证/超范围生产经营
+    label_en: unlicensed operation
+    statutes:
+      - ["食品安全法", "第一百二十二条"]
+  OTHER:
+    label_zh: 其他
+    label_en: other
+    statutes: []
+
+# Ambiguity policy: when a document cites several mapped articles that imply
+# different categories, the anchor is considered NON-DISCRIMINATIVE and the
+# document is excluded from anchor-F1 (recorded as ambiguous), never guessed.
+ambiguity_policy: exclude_from_anchor
+
+# Deterministic format validators (also part of channel ②).
+format_rules:
+  case_no_regex: "[〔\\[（(]?20\\d{2}[〕\\]）)]?\\s*\\d{1,4}\\s*号"
+  date_regex: "(20\\d{2})\\s*[年./-]\\s*(\\d{1,2})\\s*[月./-]\\s*(\\d{1,2})"
+  money_regex: "(?:罚款|罚没|没收违法所得)?\\s*(?:人民币)?\\s*([0-9,，.]+)\\s*(万元|元)"

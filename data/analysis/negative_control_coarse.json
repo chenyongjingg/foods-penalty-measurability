@@ -1,0 +1,109 @@
+{
+ "product": "negative_control_coarse",
+ "source": "/opt/foods/data/analysis/e6_descriptive.json",
+ "coarse_map_source": "/opt/foods/data/analysis/table1_coarse_by_food.json",
+ "slice": {
+  "n": 50,
+  "seed": 20261104,
+  "doc_ids_sha_note": "identical slice as e6.negative_control"
+ },
+ "fine": {
+  "rule_vs_a": {
+   "n": 50,
+   "agree": 14,
+   "rate": 0.28
+  },
+  "rule_vs_b": {
+   "n": 50,
+   "agree": 14,
+   "rate": 0.28
+  }
+ },
+ "coarse": {
+  "rule_vs_a": {
+   "n": 50,
+   "agree": 14,
+   "rate": 0.28
+  },
+  "rule_vs_b": {
+   "n": 50,
+   "agree": 14,
+   "rate": 0.28
+  },
+  "a_vs_b": {
+   "n": 50,
+   "agree": 37,
+   "rate": 0.74
+  },
+  "rule_vs_a_on_decided": {
+   "n": 32,
+   "agree": 14,
+   "rate": 0.4375
+  }
+ },
+ "n_rule_undetermined": 18,
+ "confusion_rule_x_a": [
+  {
+   "rule": "DATA_FALSIFICATION",
+   "a": "DATA_FALSIFICATION",
+   "n": 11
+  },
+  {
+   "rule": "UNDETERMINED",
+   "a": "DATA_FALSIFICATION",
+   "n": 9
+  },
+  {
+   "rule": "UNDETERMINED",
+   "a": "MARKET_ORDER",
+   "n": 6
+  },
+  {
+   "rule": "DATA_FALSIFICATION",
+   "a": "MARKET_ORDER",
+   "n": 6
+  },
+  {
+   "rule": "MARKET_ORDER",
+   "a": "MARKET_ORDER",
+   "n": 3
+  },
+  {
+   "rule": "PROCEDURAL",
+   "a": "DATA_FALSIFICATION",
+   "n": 3
+  },
+  {
+   "rule": "PROCEDURAL",
+   "a": "MARKET_ORDER",
+   "n": 3
+  },
+  {
+   "rule": "UNDETERMINED",
+   "a": "UNLICENSED",
+   "n": 3
+  },
+  {
+   "rule": "UNLICENSED",
+   "a": "DATA_FALSIFICATION",
+   "n": 2
+  },
+  {
+   "rule": "DATA_FALSIFICATION",
+   "a": "UNLICENSED",
+   "n": 2
+  },
+  {
+   "rule": "MARKET_ORDER",
+   "a": "DATA_FALSIFICATION",
+   "n": 1
+  },
+  {
+   "rule": "PROCEDURAL",
+   "a": "UNLICENSED",
+   "n": 1
+  }
+ ],
+ "reading": "Coarse collapse does not change agreement: the same 14 of 50 documents agree at fine and at coarse granularity, so the pre-registered fallback to coarse categories is not licensed by the negative control either. The distribution in Table 1 is the output of a documented instrument, not an estimate of the population. Disagreement is concentrated where one side abstains (rule UNDETERMINED vs LLM category).",
+ "at_utc": "2026-11-05T04:57:07Z"
+}

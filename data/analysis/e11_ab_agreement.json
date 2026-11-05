@@ -1,0 +1,377 @@
+{
+ "at_utc": "2026-11-05T07:01:45Z",
+ "criterion_register": "D-98",
+ "inputs": {
+  "sample_sha256": "f722dd114f0a0ab81b6e9bddf8273091c1859bc7e75124a14a676024def82634",
+  "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+  "coded_A_sha256": "5b1735b582fed2aeb60e39f227688020fa87fbe1185f7368f02726410dc68e9b",
+  "coded_B_sha256": "924c14695daf63474fcd1d181b104cb66fbb07a0a8fe75e72042adb5237c2a74"
+ },
+ "status": "complete",
+ "H5_A_vs_B_all80": {
+  "_tag": "H5",
+  "n_pairs": 80,
+  "n_excluded_unresolved": 0,
+  "n_scored": 80,
+  "n_agree": 13,
+  "agreement": 0.1625,
+  "wilson95": [
+   0.0975,
+   0.2584
+  ],
+  "po": 0.1625,
+  "pe": 0.1609,
+  "kappa": 0.0019,
+  "ac1": 0.0172,
+  "pabak": -0.005,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.1125,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.025,
+   "FALSE_LABELING": 0.3,
+   "FORGED_INSPECTION_REPORT": 0.0375,
+   "OTHER": 0.575,
+   "TAMPERED_TRACEABILITY": 0.0,
+   "UNLICENSED_OPERATION": 0.0625
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 80,
+   "n_agree": 13,
+   "agreement": 0.1625,
+   "wilson95": [
+    0.0975,
+    0.2584
+   ],
+   "kappa": 0.0019
+  }
+ },
+ "H5_A_vs_B_s1": {
+  "_tag": "H5-S1",
+  "n_pairs": 60,
+  "n_excluded_unresolved": 0,
+  "n_scored": 60,
+  "n_agree": 12,
+  "agreement": 0.2,
+  "wilson95": [
+   0.1183,
+   0.3178
+  ],
+  "po": 0.2,
+  "pe": 0.195,
+  "kappa": 0.0062,
+  "ac1": 0.0625,
+  "pabak": 0.04,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.05,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0333,
+   "FALSE_LABELING": 0.3667,
+   "FORGED_INSPECTION_REPORT": 0.05,
+   "OTHER": 0.4833,
+   "TAMPERED_TRACEABILITY": 0.0,
+   "UNLICENSED_OPERATION": 0.0667
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 60,
+   "n_agree": 12,
+   "agreement": 0.2,
+   "wilson95": [
+    0.1183,
+    0.3178
+   ],
+   "kappa": 0.0062
+  }
+ },
+ "H5_A_vs_B_s2": {
+  "_tag": "H5-S2",
+  "n_pairs": 20,
+  "n_excluded_unresolved": 0,
+  "n_scored": 20,
+  "n_agree": 1,
+  "agreement": 0.05,
+  "wilson95": [
+   0.0089,
+   0.2361
+  ],
+  "po": 0.05,
+  "pe": 0.045,
+  "kappa": 0.0052,
+  "ac1": -0.1105,
+  "pabak": -0.14,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.85,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0,
+   "FALSE_LABELING": 0.1,
+   "FORGED_INSPECTION_REPORT": 0.0,
+   "OTHER": 0.85,
+   "TAMPERED_TRACEABILITY": 0.0,
+   "UNLICENSED_OPERATION": 0.05
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 20,
+   "n_agree": 1,
+   "agreement": 0.05,
+   "wilson95": [
+    0.0089,
+    0.2361
+   ],
+   "kappa": 0.0052
+  }
+ },
+ "confusion_A_rows_B_cols": {
+  "FAKE_CERTIFICATION": {
+   "TAMPERED_TRACEABILITY": 1,
+   "FAKE_CERTIFICATION": 1
+  },
+  "FALSE_LABELING": {
+   "FORGED_INSPECTION_REPORT": 2,
+   "UNLICENSED_OPERATION": 2,
+   "FALSE_LABELING": 10,
+   "FAKE_CERTIFICATION": 8,
+   "TAMPERED_TRACEABILITY": 1,
+   "OTHER": 1
+  },
+  "FORGED_INSPECTION_REPORT": {
+   "FAKE_CERTIFICATION": 1,
+   "FALSE_LABELING": 2
+  },
+  "OTHER": {
+   "FALSE_LABELING": 18,
+   "FORGED_INSPECTION_REPORT": 4,
+   "TAMPERED_TRACEABILITY": 4,
+   "FAKE_CERTIFICATION": 14,
+   "UNLICENSED_OPERATION": 4,
+   "OTHER": 2
+  },
+  "UNLICENSED_OPERATION": {
+   "FALSE_LABELING": 3,
+   "FAKE_CERTIFICATION": 2
+  }
+ },
+ "H6_I_vs_A": {
+  "_tag": "H6-IA",
+  "n_pairs": 80,
+  "n_excluded_unresolved": 0,
+  "n_scored": 80,
+  "n_agree": 42,
+  "agreement": 0.525,
+  "wilson95": [
+   0.417,
+   0.6308
+  ],
+  "po": 0.525,
+  "pe": 0.2913,
+  "kappa": 0.3298,
+  "ac1": 0.4546,
+  "pabak": 0.43,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.3,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0375,
+   "FALSE_LABELING": 0.6,
+   "FORGED_INSPECTION_REPORT": 0.05,
+   "OTHER": 0.175,
+   "TAMPERED_TRACEABILITY": 0.0125,
+   "UNLICENSED_OPERATION": 0.125
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 80,
+   "n_agree": 42,
+   "agreement": 0.525,
+   "wilson95": [
+    0.417,
+    0.6308
+   ],
+   "kappa": 0.3298
+  }
+ },
+ "H6_I_vs_B": {
+  "_tag": "H6-IB",
+  "n_pairs": 80,
+  "n_excluded_unresolved": 0,
+  "n_scored": 80,
+  "n_agree": 27,
+  "agreement": 0.3375,
+  "wilson95": [
+   0.2435,
+   0.4464
+  ],
+  "po": 0.3375,
+  "pe": 0.2803,
+  "kappa": 0.0795,
+  "ac1": 0.2326,
+  "pabak": 0.205,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.1875,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0375,
+   "FALSE_LABELING": 0.6,
+   "FORGED_INSPECTION_REPORT": 0.05,
+   "OTHER": 0.175,
+   "TAMPERED_TRACEABILITY": 0.0125,
+   "UNLICENSED_OPERATION": 0.125
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 80,
+   "n_agree": 27,
+   "agreement": 0.3375,
+   "wilson95": [
+    0.2435,
+    0.4464
+   ],
+   "kappa": 0.0795
+  }
+ },
+ "confusion_I_rows_A_cols": {
+  "FAKE_CERTIFICATION": {
+   "OTHER": 1,
+   "FORGED_INSPECTION_REPORT": 1,
+   "FAKE_CERTIFICATION": 1
+  },
+  "FALSE_LABELING": {
+   "FALSE_LABELING": 23,
+   "OTHER": 21,
+   "UNLICENSED_OPERATION": 3,
+   "FAKE_CERTIFICATION": 1
+  },
+  "FORGED_INSPECTION_REPORT": {
+   "FORGED_INSPECTION_REPORT": 2,
+   "OTHER": 2
+  },
+  "OTHER": {
+   "OTHER": 14
+  },
+  "TAMPERED_TRACEABILITY": {
+   "OTHER": 1
+  },
+  "UNLICENSED_OPERATION": {
+   "OTHER": 7,
+   "UNLICENSED_OPERATION": 2,
+   "FALSE_LABELING": 1
+  }
+ },
+ "confusion_I_rows_B_cols": {
+  "FAKE_CERTIFICATION": {
+   "TAMPERED_TRACEABILITY": 2,
+   "FALSE_LABELING": 1
+  },
+  "FALSE_LABELING": {
+   "FORGED_INSPECTION_REPORT": 2,
+   "FALSE_LABELING": 24,
+   "UNLICENSED_OPERATION": 2,
+   "FAKE_CERTIFICATION": 16,
+   "TAMPERED_TRACEABILITY": 3,
+   "OTHER": 1
+  },
+  "FORGED_INSPECTION_REPORT": {
+   "FAKE_CERTIFICATION": 2,
+   "FALSE_LABELING": 2
+  },
+  "OTHER": {
+   "FORGED_INSPECTION_REPORT": 3,
+   "UNLICENSED_OPERATION": 3,
+   "FAKE_CERTIFICATION": 4,
+   "FALSE_LABELING": 3,
+   "OTHER": 1
+  },
+  "TAMPERED_TRACEABILITY": {
+   "TAMPERED_TRACEABILITY": 1
+  },
+  "UNLICENSED_OPERATION": {
+   "FAKE_CERTIFICATION": 4,
+   "FALSE_LABELING": 3,
+   "UNLICENSED_OPERATION": 1,
+   "OTHER": 1,
+   "FORGED_INSPECTION_REPORT": 1
+  }
+ },
+ "H6_I_vs_A_s1": {
+  "_tag": "H6-IA-S1",
+  "n_pairs": 60,
+  "n_excluded_unresolved": 0,
+  "n_scored": 60,
+  "n_agree": 29,
+  "agreement": 0.4833,
+  "wilson95": [
+   0.3618,
+   0.6069
+  ],
+  "po": 0.4833,
+  "pe": 0.2997,
+  "kappa": 0.2622,
+  "ac1": 0.4101,
+  "pabak": 0.38,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.35,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0333,
+   "FALSE_LABELING": 0.7167,
+   "FORGED_INSPECTION_REPORT": 0.0333,
+   "OTHER": 0.05,
+   "TAMPERED_TRACEABILITY": 0.0167,
+   "UNLICENSED_OPERATION": 0.15
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 60,
+   "n_agree": 29,
+   "agreement": 0.4833,
+   "wilson95": [
+    0.3618,
+    0.6069
+   ],
+   "kappa": 0.2622
+  }
+ },
+ "H6_I_vs_B_s1": {
+  "_tag": "H6-IB-S1",
+  "n_pairs": 60,
+  "n_excluded_unresolved": 0,
+  "n_scored": 60,
+  "n_agree": 23,
+  "agreement": 0.3833,
+  "wilson95": [
+   0.2709,
+   0.5098
+  ],
+  "po": 0.3833,
+  "pe": 0.3253,
+  "kappa": 0.086,
+  "ac1": 0.2949,
+  "pabak": 0.26,
+  "n_classes_observed": 6,
+  "prevalence_index": 0.3,
+  "prevalence": {
+   "FAKE_CERTIFICATION": 0.0333,
+   "FALSE_LABELING": 0.7167,
+   "FORGED_INSPECTION_REPORT": 0.0333,
+   "OTHER": 0.05,
+   "TAMPERED_TRACEABILITY": 0.0167,
+   "UNLICENSED_OPERATION": 0.15
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 60,
+   "n_agree": 23,
+   "agreement": 0.3833,
+   "wilson95": [
+    0.2709,
+    0.5098
+   ],
+   "kappa": 0.086
+  }
+ },
+ "H6_other_share": {
+  "A": 0.575,
+  "B": 0.0375
+ },
+ "H6_p_IA_minus_p_IB": 0.1875,
+ "verdict": {
+  "p_AB": 0.1625,
+  "wilson_lo": 0.0975,
+  "kappa": 0.0019,
+  "human_recoverable": false,
+  "human_not_recoverable": true,
+  "verdict": "human_not_recoverable",
+  "instrument_systematic_deviation": false
+ }
+}

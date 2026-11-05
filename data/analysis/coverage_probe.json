@@ -1,0 +1,447 @@
+{
+ "page_cap_rows": 200,
+ "probes": [
+  {
+   "kw1": "伪造",
+   "kw2": null,
+   "result_count": 14886,
+   "rows_page1": 50,
+   "unseen_page1": 42,
+   "reachable": 200
+  },
+  {
+   "kw1": "虚假",
+   "kw2": null,
+   "result_count": 46941,
+   "rows_page1": 50,
+   "unseen_page1": 45,
+   "reachable": 200
+  },
+  {
+   "kw1": "篡改",
+   "kw2": null,
+   "result_count": 1059,
+   "rows_page1": 50,
+   "unseen_page1": 38,
+   "reachable": 200
+  },
+  {
+   "kw1": "变造",
+   "kw2": null,
+   "result_count": 285,
+   "rows_page1": 50,
+   "unseen_page1": 41,
+   "reachable": 200
+  },
+  {
+   "kw1": "冒用",
+   "kw2": null,
+   "result_count": 3466,
+   "rows_page1": 50,
+   "unseen_page1": 24,
+   "reachable": 200
+  },
+  {
+   "kw1": "买卖",
+   "kw2": null,
+   "result_count": 1047,
+   "rows_page1": 50,
+   "unseen_page1": 50,
+   "reachable": 200
+  },
+  {
+   "kw1": "购买",
+   "kw2": null,
+   "result_count": 44598,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "出售",
+   "kw2": null,
+   "result_count": 8153,
+   "rows_page1": 50,
+   "unseen_page1": 42,
+   "reachable": 200
+  },
+  {
+   "kw1": "套用",
+   "kw2": null,
+   "result_count": 228,
+   "rows_page1": 50,
+   "unseen_page1": 45,
+   "reachable": 200
+  },
+  {
+   "kw1": "出具虚假",
+   "kw2": null,
+   "result_count": 299,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "标注虚假",
+   "kw2": null,
+   "result_count": 31272,
+   "rows_page1": 50,
+   "unseen_page1": 46,
+   "reachable": 200
+  },
+  {
+   "kw1": "检验检测报告",
+   "kw2": null,
+   "result_count": 7371,
+   "rows_page1": 50,
+   "unseen_page1": 43,
+   "reachable": 200
+  },
+  {
+   "kw1": "检验报告",
+   "kw2": null,
+   "result_count": 66387,
+   "rows_page1": 50,
+   "unseen_page1": 48,
+   "reachable": 200
+  },
+  {
+   "kw1": "检测报告",
+   "kw2": null,
+   "result_count": 18938,
+   "rows_page1": 50,
+   "unseen_page1": 45,
+   "reachable": 200
+  },
+  {
+   "kw1": "认证证书",
+   "kw2": null,
+   "result_count": 3352,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "认证材料",
+   "kw2": null,
+   "result_count": 82,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 82
+  },
+  {
+   "kw1": "溯源码",
+   "kw2": null,
+   "result_count": 99,
+   "rows_page1": 50,
+   "unseen_page1": 0,
+   "reachable": 99
+  },
+  {
+   "kw1": "合格证明",
+   "kw2": null,
+   "result_count": 39300,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "合格证",
+   "kw2": null,
+   "result_count": 26180,
+   "rows_page1": 50,
+   "unseen_page1": 48,
+   "reachable": 200
+  },
+  {
+   "kw1": "检测数据",
+   "kw2": null,
+   "result_count": 445,
+   "rows_page1": 50,
+   "unseen_page1": 46,
+   "reachable": 200
+  },
+  {
+   "kw1": "检验数据",
+   "kw2": null,
+   "result_count": 320,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "检疫证明",
+   "kw2": null,
+   "result_count": 1829,
+   "rows_page1": 50,
+   "unseen_page1": 41,
+   "reachable": 200
+  },
+  {
+   "kw1": "生产日期",
+   "kw2": null,
+   "result_count": 79983,
+   "rows_page1": 50,
+   "unseen_page1": 47,
+   "reachable": 200
+  },
+  {
+   "kw1": "食品标签",
+   "kw2": null,
+   "result_count": 6137,
+   "rows_page1": 50,
+   "unseen_page1": 34,
+   "reachable": 200
+  },
+  {
+   "kw1": "厂名",
+   "kw2": null,
+   "result_count": 5293,
+   "rows_page1": 50,
+   "unseen_page1": 31,
+   "reachable": 200
+  },
+  {
+   "kw1": "产地",
+   "kw2": null,
+   "result_count": 16570,
+   "rows_page1": 50,
+   "unseen_page1": 44,
+   "reachable": 200
+  },
+  {
+   "kw1": "伪造检验报告",
+   "kw2": null,
+   "result_count": 18,
+   "rows_page1": 18,
+   "unseen_page1": 0,
+   "reachable": 18
+  },
+  {
+   "kw1": "伪造检测报告",
+   "kw2": null,
+   "result_count": 7,
+   "rows_page1": 7,
+   "unseen_page1": 0,
+   "reachable": 7
+  },
+  {
+   "kw1": "伪造认证证书",
+   "kw2": null,
+   "result_count": 10,
+   "rows_page1": 10,
+   "unseen_page1": 0,
+   "reachable": 10
+  },
+  {
+   "kw1": "伪造合格证明",
+   "kw2": null,
+   "result_count": 2,
+   "rows_page1": 2,
+   "unseen_page1": 0,
+   "reachable": 2
+  },
+  {
+   "kw1": "伪造溯源码",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "伪造检测数据",
+   "kw2": null,
+   "result_count": 1,
+   "rows_page1": 1,
+   "unseen_page1": 0,
+   "reachable": 1
+  },
+  {
+   "kw1": "虚假检验报告",
+   "kw2": null,
+   "result_count": 38,
+   "rows_page1": 38,
+   "unseen_page1": 0,
+   "reachable": 38
+  },
+  {
+   "kw1": "虚假检测报告",
+   "kw2": null,
+   "result_count": 43,
+   "rows_page1": 43,
+   "unseen_page1": 0,
+   "reachable": 43
+  },
+  {
+   "kw1": "虚假认证证书",
+   "kw2": null,
+   "result_count": 1,
+   "rows_page1": 1,
+   "unseen_page1": 0,
+   "reachable": 1
+  },
+  {
+   "kw1": "虚假合格证明",
+   "kw2": null,
+   "result_count": 1,
+   "rows_page1": 1,
+   "unseen_page1": 0,
+   "reachable": 1
+  },
+  {
+   "kw1": "虚假溯源码",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "虚假检测数据",
+   "kw2": null,
+   "result_count": 1,
+   "rows_page1": 1,
+   "unseen_page1": 0,
+   "reachable": 1
+  },
+  {
+   "kw1": "篡改检验报告",
+   "kw2": null,
+   "result_count": 1,
+   "rows_page1": 1,
+   "unseen_page1": 0,
+   "reachable": 1
+  },
+  {
+   "kw1": "篡改检测报告",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "篡改认证证书",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "篡改合格证明",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "篡改溯源码",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "篡改检测数据",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "买卖检验报告",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "买卖检测报告",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "买卖认证证书",
+   "kw2": null,
+   "result_count": 64,
+   "rows_page1": 50,
+   "unseen_page1": 40,
+   "reachable": 64
+  },
+  {
+   "kw1": "买卖合格证明",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "买卖溯源码",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  },
+  {
+   "kw1": "买卖检测数据",
+   "kw2": null,
+   "result_count": 0,
+   "rows_page1": 0,
+   "unseen_page1": 0,
+   "reachable": 0
+  }
+ ],
+ "ceiling_check": {
+  "kw": [
+   "伪造",
+   "食品"
+  ],
+  "pages": [
+   {
+    "page": 1,
+    "result_count": 721,
+    "rows": 50
+   },
+   {
+    "page": 2,
+    "result_count": 721,
+    "rows": 50
+   },
+   {
+    "page": 3,
+    "result_count": 721,
+    "rows": 50
+   },
+   {
+    "page": 4,
+    "result_count": 721,
+    "rows": 50
+   },
+   {
+    "page": 5,
+    "result_count": 0,
+    "rows": 0
+   }
+  ]
+ },
+ "summary": {
+  "n_probes": 50,
+  "n_zero": 12,
+  "n_fully_reachable": 26,
+  "n_capped": 24,
+  "reported_universe_sum": 424707,
+  "reachable_sum": 5168,
+  "unseen_page1_sum": 1122
+ }
+}

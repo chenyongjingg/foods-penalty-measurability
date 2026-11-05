@@ -1,0 +1,14 @@
+# Corpus originals are not redistributed (see README).
+data/raw/
+data/clean/
+data/extracted/
+data/archive/
+# Never commit
+venv/
+third_party/
+*.pyc
+__pycache__/
+*.tgz
+*.tar.gz
+.pod.env
+*.env

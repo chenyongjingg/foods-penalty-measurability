@@ -1,0 +1,150 @@
+{
+  "counts": {
+    "cn": {
+      "FALSE_LABELING": 121,
+      "UNLICENSED_OPERATION": 4,
+      "FORGED_INSPECTION_REPORT": 3
+    },
+    "us": {
+      "FALSE_LABELING": 96,
+      "OTHER": 4
+    }
+  },
+  "tier": "high",
+  "selection": {
+    "cn": {
+      "n_labelled": 875,
+      "n_high": 128,
+      "high_rate": 0.1463
+    },
+    "us": {
+      "n_labelled": 253,
+      "n_high": 100,
+      "high_rate": 0.3953
+    }
+  },
+  "selection_diagnostic": {
+    "cn": {
+      "high_vs_all_tvd": 0.3133,
+      "high_counts": {
+        "FALSE_LABELING": 121,
+        "UNLICENSED_OPERATION": 4,
+        "FORGED_INSPECTION_REPORT": 3
+      },
+      "all_counts": {
+        "OTHER": 95,
+        "FORGED_INSPECTION_REPORT": 51,
+        "FALSE_LABELING": 553,
+        "UNLICENSED_OPERATION": 158,
+        "FAKE_CERTIFICATION": 14,
+        "TAMPERED_TRACEABILITY": 4
+      }
+    },
+    "us": {
+      "high_vs_all_tvd": 0.0084,
+      "high_counts": {
+        "FALSE_LABELING": 96,
+        "OTHER": 4
+      },
+      "all_counts": {
+        "FALSE_LABELING": 245,
+        "OTHER": 8
+      }
+    }
+  },
+  "selection_asymmetry": 2.702,
+  "selection_note": "The two jurisdictions are filtered into the main corpus at different rates (D-49); the category comparison is conditional on agreement-selected document genre on each side. Report these rates beside the test, not instead of it.",
+  "sensitivity_tiers": {
+    "high": {
+      "cn": {
+        "FALSE_LABELING": 121,
+        "UNLICENSED_OPERATION": 4,
+        "FORGED_INSPECTION_REPORT": 3
+      },
+      "us": {
+        "FALSE_LABELING": 96,
+        "OTHER": 4
+      }
+    },
+    "high_medium": {
+      "cn": {
+        "OTHER": 47,
+        "FALSE_LABELING": 321,
+        "UNLICENSED_OPERATION": 80,
+        "FAKE_CERTIFICATION": 9,
+        "FORGED_INSPECTION_REPORT": 22,
+        "TAMPERED_TRACEABILITY": 3
+      },
+      "us": {
+        "FALSE_LABELING": 137,
+        "OTHER": 7
+      }
+    },
+    "all": {
+      "cn": {
+        "OTHER": 95,
+        "FORGED_INSPECTION_REPORT": 51,
+        "FALSE_LABELING": 553,
+        "UNLICENSED_OPERATION": 158,
+        "FAKE_CERTIFICATION": 14,
+        "TAMPERED_TRACEABILITY": 4
+      },
+      "us": {
+        "FALSE_LABELING": 245,
+        "OTHER": 8
+      }
+    }
+  },
+  "at_utc": "2026-11-05T03:54:12Z",
+  "main_corpus_profile": {
+    "cn": {
+      "n": 128,
+      "modal_category": "FALSE_LABELING",
+      "modal_share": 0.9453,
+      "n_categories_ge5": 1
+    },
+    "us": {
+      "n": 100,
+      "modal_category": "FALSE_LABELING",
+      "modal_share": 0.96,
+      "n_categories_ge5": 1
+    }
+  },
+  "main_corpus_estimable": false,
+  "min_expected": 1.316,
+  "status": "not_estimable_degenerate_main_corpus",
+  "status_on_main_corpus": "ok_fisher_collapsed",
+  "test_on_degenerate_table": {
+    "primary_test": "fisher_collapsed",
+    "collapsed_fisher": {
+      "odds_ratio": Infinity,
+      "p": 0.25805703686529097,
+      "table": [
+        [
+          3,
+          125
+        ],
+        [
+          0,
+          100
+        ]
+      ]
+    },
+    "chi2_unreliable": {
+      "chi2": 10.601474654377881,
+      "p": 0.014088101943001871,
+      "dof": 3,
+      "note": "min expected count < 5; not the test of record"
+    },
+    "note": "computed but not the test of record (D-51)"
+  },
+  "not_estimable": {
+    "reason": "main-corpus category distribution is degenerate",
+    "degenerate_jurisdictions": [
+      "cn",
+      "us"
+    ],
+    "criterion": "modal category >= 90% of documents, or fewer than two categories with >= 5 documents",
+    "exploratory_alternative": "all-tier distributions in sensitivity_tiers.all are descriptive only; they are not selected for annotation confidence"
+  }
+}

@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d1" for="node" attr.name="docs" attr.type="string"/>
+<key id="d0" for="node" attr.name="ntype" attr.type="string"/>
+<graph edgedefault="undirected"><node id="凌源市河坎子乡莉莉杂货小铺">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:e535a28a2a3a4e4780cc3c8292b381cf</data>
+</node>
+<node id="进贤县国平食品超市">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:f5db95f7ed304827a881a71248c3adda</data>
+</node>
+<node id="黄山思昱食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:38e23b212ef9035d17222f1f16acec9d</data>
+</node>
+<node id="利辛县城南远拓食品配送部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:642d1ec4e885e3e935022607198787f6</data>
+</node>
+<node id="荆州元亚食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:421022202604020001</data>
+</node>
+<node id="浔阳区菊枝食品批发部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:0fda5078483146fd8f0a0aee83ec43df</data>
+</node>
+<node id="宁波市海曙石碶乐发食品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3302030020250400013302273001022191</data>
+</node>
+<node id="樊城区袁伟东食品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:420606202507210001</data>
+</node>
+<node id="巢湖市吕婆粮油食品坊">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:915b67367cd4cb147593ea7c2d9c2264</data>
+</node>
+<node id="漳州涵洋食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:8b98751ba75bf934efe461ad7dfc6c4e</data>
+</node>
+<node id="厦门市福茂喜鹊食品有限公司">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:8b98751ba75bf934efe461ad7dfc6c4e</data>
+</node>
+<node id="沙市区李连玉冷冻食品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:421002202411050012</data>
+</node>
+<node id="合肥正创食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:d781b9fe01c24705165770bc8dd89b71</data>
+</node>
+<node id="成都欢友食品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:409d8f868f8727b2019009bdabdf599c</data>
+</node>
+<node id="义乌市嘉辰食品商行">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3307820820240800453307823004330836</data>
+</node>
+<node id="四川熙懿益商贸有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ac578ad8891c40838a821464b2a6276b</data>
+</node>
+<node id="吴中区城区启航食品商行">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309514652</data>
+</node>
+<node id="辽宁华联商厦有限公司超市站前店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:577c10014490444cb2a9445cdf222ef2</data>
+</node>
+<node id="遵义市福利源食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:520100019097250654</data>
+</node>
+<node id="遵义市产品质量检验检测院">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:520100019097250654</data>
+</node>
+<node id="四川川厨汇食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:9bbbf07936de44738ec7fbed7015e28f</data>
+</node>
+<node id="上杭翁氏食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:32cd1fd8dc4e627a322fd1e5c3a41616</data>
+</node>
+<node id="灌南百鲜食品商贸有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309388144</data>
+</node>
+<node id="宁陵县佳成食品加工坊">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:bc819b2b5c747378ec7ada0b7256e610</data>
+</node>
+<node id="安徽三争食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:bc819b2b5c747378ec7ada0b7256e610</data>
+</node>
+<node id="张掖市第一中学">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:62C202600000005983</data>
+</node>
+<node id="张掖市福豆豆商贸有限公司">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:62C202600000005983</data>
+</node>
+<node id="云南佳品源食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2056182381317160960</data>
+</node>
+<node id="辽宁鑫盛食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:6158e47099d3406c8b9adfa04203723d</data>
+</node>
+<node id="福建康之味食品工业有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ebf9ea8c1d0f0285b038fc64650acf70</data>
+</node>
+<node id="云南金味食品制造有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2058718405654142976</data>
+</node>
+<node id="萧县官桥汉运食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:4a4dc3c7ea6d18adb3a8330af7d6f2d4</data>
+</node>
+<node id="江西赣康食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:44d583fd1da7463b97a68f9fdcb6fc2a</data>
+</node>
+<node id="黄山市黄山区瑞华笋业食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:c3d97a7234cbf2820552f65a13f173fd</data>
+</node>
+<node id="旬阳市棕溪镇三明食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:1ba5203652534a07b2d917fadabbc8d0</data>
+</node>
+<node id="广元市顺华食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:fce72942aca540679cf6e22f7338ffe0</data>
+</node>
+<node id="广***泉州有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:e9c3e95af925d3bb06e10fa12580f8ef</data>
+</node>
+<node id="福建省晶鑫食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:30dc6038e4ebf72aeeace5095b55b9ac</data>
+</node>
+<node id="辽宁明耀食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:7543b9a1df0d4ea787d38f6ee786c972</data>
+</node>
+<node id="宣城市枣花香食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:a8a0a8264765a7ba4d77e514d90b097d</data>
+</node>
+<node id="东河区张显玉食品加工厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:b04becb5-b4d5-4faa-9eac-e2d97b2866d1</data>
+</node>
+<node id="科尔沁区丰田镇溪水塘村亮合食品加工厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2505e937-325b-4635-aacd-33dfa7b4dfd6</data>
+</node>
+<node id="淮北市谷穗园食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:e047db5a7b13f7dc9693e5843a55e401</data>
+</node>
+<node id="内蒙古乌兰察布市草原肉食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:eb3283b2-4b75-4103-a7ce-93b1e02f8caf</data>
+</node>
+<node id="宿迁鑫嘉潼食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000751820825</data>
+</node>
+<node id="四川省大邑县天龙食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ef6fd3cd91eb43818def0da8a17d93e1</data>
+</node>
+<node id="六安市卓尔食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:80e21abdc0d546da5dd58027e0edc12a</data>
+</node>
+<node id="资阳市蜀滋味食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:d732cca4d92440518bf962377ee623c8</data>
+</node>
+<node id="内蒙古特乳乐食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:0db50168-cdfd-490c-8abc-59113cc4421b</data>
+</node>
+<node id="巢湖市扬帆食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:16bae97c50139d73a3d28911ae3b4f01</data>
+</node>
+<node id="漳州市华鹭食品有限公司">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:37c3d4beebaf51c795e49e78ea643f45</data>
+</node>
+<node id="福建省双龙食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:37c3d4beebaf51c795e49e78ea643f45</data>
+</node>
+<node id="自贡市睿庆食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:5393e0fbb57c44abb4c3a5bac4571d57</data>
+</node>
+<node id="临河区连德食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:f48cfafb-7cf5-4a89-9830-8c15e5d02a5e</data>
+</node>
+<node id="淮北市迎盛食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:9a205f65e7169c7447045280897ae956</data>
+</node>
+<node id="湖北鸿洋食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:421088202510150007</data>
+</node>
+<node id="绿园区侨鹤食品加工坊">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:CASE8bab8febe3e942f69d1a4a7de4ba67ed</data>
+</node>
+<node id="四川佳意美食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:6ed6789e63ec4618a31f02d0d626a6fb</data>
+</node>
+<node id="东***来食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:a47829c7b3df5636f4f1dbdc8ed34714</data>
+</node>
+<node id="合肥徽菜佬食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:81fa194f38318b4d127b9c624c0a97a9</data>
+</node>
+<node id="肥东儒林食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:164dbd5654a6faaeb4aac38e02415d87</data>
+</node>
+<node id="杭州临安年享食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3301850320251100093301850000358505</data>
+</node>
+<node id="巴彦淖尔市一畦春食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:295f221b-4b92-4487-ae2e-54b49d601e60</data>
+</node>
+<node id="成都和谐天兴食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ada41953a5194a5b92b26640272de6c1</data>
+</node>
+<node id="遂宁高新区盛世应豪食品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:5aafaa0dac3b4dc3ad9847e2c3a9e80e</data>
+</node>
+<node id="南通市一家人副食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309484055</data>
+</node>
+<node id="安徽冠味食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:1f85428d99d0e3447293183f0631226e</data>
+</node>
+<node id="六安市金安区马头镇许亮瓜籽厂">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:1f85428d99d0e3447293183f0631226e</data>
+</node>
+<node id="安徽省徽之韵食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ac498af2477cc399a0c3edf028601ed1</data>
+</node>
+<node id="泉州南安市和百厨食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:f35410ce95eb4cd96925819be7e21e0b</data>
+</node>
+<node id="四川味府食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:188f413f095b43d19f955f7615c94424</data>
+</node>
+<node id="洪湖市老曹家水产食品股份有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:421083202607060004</data>
+</node>
+<node id="安徽巧缘食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:e5c9682051fbbf6054b76eb893fabf65</data>
+</node>
+<node id="甘肃巨味源食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:62C202600000023119</data>
+</node>
+<node id="巴中身修堂食品科技有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:c588acf3b89f4bd696ec6e61ab0f0636</data>
+</node>
+<node id="肥东县美味云仓食品商行">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:d7fff9728f59c1a71532d86db3e4c75e</data>
+</node>
+<node id="广德市优莎蜜尔食品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:1fb394114c54f1aa4fdfec6010e9937e</data>
+</node>
+<node id="福建海贝食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:1ee1a065bc7d0bfdaebb89feead03852</data>
+</node>
+<node id="黄石市楚香食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:420200202605080002</data>
+</node>
+<node id="红河滇牛佳食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2059108750686609408</data>
+</node>
+<node id="安徽好果子食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:8956537a5ef135537a6fde188307e646</data>
+</node>
+<node id="陆良县中枢**食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2088092368788238336</data>
+</node>
+<node id="福州市富浓香食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:70326f1f915293cdbdd6b6ea883792e4</data>
+</node>
+<node id="通辽市科沁甄选食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:40368e11-159d-4c81-9a68-836d34f17ce3</data>
+</node>
+<node id="四川信隆食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:56f25d7a1dfa4f3abbd906c237db84bb</data>
+</node>
+<node id="安岳川合食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:2b8a72c135204e20bd3c2d671a00b440</data>
+</node>
+<node id="成都市鑫顶峰食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:4c4bdfb3b885425586ba073e85acce22</data>
+</node>
+<node id="睢宁县官山镇立诚食品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309422972</data>
+</node>
+<node id="巧之榄食品福州有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:35f87a8195a80e4c7b68acbcb4dcb8d4</data>
+</node>
+<node id="广安国平食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:c3105460f30b4e568435474c8a5ab049</data>
+</node>
+<node id="泉州添顺食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3031943d9e0100dd7efed12927e50ba0</data>
+</node>
+<node id="惠安美娜子食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:0d033ce48c329730fcc5d5be4893115f</data>
+</node>
+<node id="罗源县松山镇三头牛食品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:02b194f5adce5685797cc50eadf204fc</data>
+</node>
+<node id="河南米顺食品科技有限公司">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:02b194f5adce5685797cc50eadf204fc</data>
+</node>
+<node id="萧县美姿食品销售">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:d4d0767d10d5d55460699dfc0311f17d</data>
+</node>
+<node id="福建启佳佳食品科技有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:130e7117dae3108636ddbf6c16561ea9</data>
+</node>
+<node id="锡山区东北塘妙春堂参茸保健食品商行">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309361040</data>
+</node>
+<node id="福清市音西毛姣餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:a830e55d46737a534284daff8e163d5a</data>
+</node>
+<node id="枣阳市火炉山餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:420683202510220001</data>
+</node>
+<node id="莆田市城厢区晓峰农产品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:1138f27f9d8b52b4c10e021c30f89011</data>
+</node>
+<node id="仙桃市念乡农产品门市部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:429004202607160001</data>
+</node>
+<node id="西安旭阳红农产品开发有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:cc2a5acb7f15430d85cda47ed724c6fa</data>
+</node>
+<node id="陕西佰卡弗农产品加工有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:cdd8dcab4ed343688362bf361719d239</data>
+</node>
+<node id="桐城市麻山村胡大姑农产品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:b44c2be6bda97c706a0fd102877e17af</data>
+</node>
+<node id="岳西县锄老头食品厂">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:b44c2be6bda97c706a0fd102877e17af</data>
+</node>
+<node id="南陵县松琴农产品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:90a896076df762f6784c26f91fe33a40</data>
+</node>
+<node id="萧县惠农农产品加工厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:7f2e2cdc858fba1096c5971134309cc8</data>
+</node>
+<node id="杭州余杭区良渚街道**农产品商行">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3301101320241200493301843000372328</data>
+</node>
+<node id="贾汪区梓旭农产品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:230712000000309478598</data>
+</node>
+<node id="太湖县海宝农产品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:8c95a439f6040419599f0cb760f0a829</data>
+</node>
+<node id="赣州串亿食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:6ddefa78eb0b475eb9dc7d066d736d68</data>
+</node>
+<node id="阳新县绝妙铜锣湾烘焙食品店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:420222202607220003</data>
+</node>
+<node id="成都大双发食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:b5f51c53cc6a4a638d6135f3ae2dd23e</data>
+</node>
+<node id="砀山润梨食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:8e20925b1cc5b62ac6eaf93c91e3b92d</data>
+</node>
+<node id="合肥市蓝塔食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:dd1aa01320dad4388ddea28908530048</data>
+</node>
+<node id="兴城市大霞万象百货副食品经营部">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:56d1c6913bad46a19aa3f59630497af8</data>
+</node>
+<node id="滁州市良波食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:4f2bb605a88bcd007c954caf9928a585</data>
+</node>
+<node id="察右前旗祥顺园食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:bcc62598-9525-4ccf-b911-01b7f3c40b68</data>
+</node>
+<node id="宣城市志达食品加工厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:687275f362a7e13fdd60edbb8065a651</data>
+</node>
+<node id="高县源兴食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:e89d5fbf07e3400ca19b6b070d381213</data>
+</node>
+<node id="连江县新一湘食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:c72da8410e26bbb2e24c14e23a6ad38e</data>
+</node>
+<node id="四川串达人供应链管理有限公司">
+  <data key="d0">SERVICE_PROVIDER</data>
+  <data key="d1">cfws:c72da8410e26bbb2e24c14e23a6ad38e</data>
+</node>
+<node id="四川蓉小俊食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:00be11a2178f43309a4e9a9442fa591c</data>
+</node>
+<node id="宜宾思龙食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:ad3549c4e64940b1a32d049a9a37d55e</data>
+</node>
+<node id="临洮县新怡香园食品厂">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:62C202500000032618</data>
+</node>
+<node id="南昌稷丰食品加工有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:4fd2d5f807ba4f06913f3f0902712909</data>
+</node>
+<node id="四川省双美食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:492376a0cc4e41238118f41a476c445b</data>
+</node>
+<node id="泉州星东照食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:a3cfe9472a88d7faf8684d4bbdecd7c7</data>
+</node>
+<node id="泉州市食宅鲜食品有限公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:a1abfe4955fd01c46c32eaf5fad6f18a</data>
+</node>
+<node id="青川大朴食品有限责任公司">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:c9cca52cf967427595a691e1510e0fb9</data>
+</node>
+<node id="鹰潭市月湖区疆之味餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:dd7cdb57bcb444b1b4a53bd897665506</data>
+</node>
+<node id="于都县黄兄餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:bc82d0d212754e978e464d796f84fe5f</data>
+</node>
+<node id="南昌县象湖食佳客餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:20240903132945210217</data>
+</node>
+<node id="龙港市聚财堂餐饮店">
+  <data key="d0">END_USER</data>
+  <data key="d1">cfws:3303830020241200133303833000286861</data>
+</node>
+<edge source="漳州涵洋食品有限公司" target="厦门市福茂喜鹊食品有限公司">
+  <data key="d2">1</data>
+</edge>
+<edge source="遵义市福利源食品有限公司" target="遵义市产品质量检验检测院">
+  <data key="d2">1</data>
+</edge>
+<edge source="宁陵县佳成食品加工坊" target="安徽三争食品有限公司">
+  <data key="d2">1</data>
+</edge>
+<edge source="张掖市第一中学" target="张掖市福豆豆商贸有限公司">
+  <data key="d2">1</data>
+</edge>
+<edge source="漳州市华鹭食品有限公司" target="福建省双龙食品有限责任公司">
+  <data key="d2">1</data>
+</edge>
+<edge source="安徽冠味食品有限公司" target="六安市金安区马头镇许亮瓜籽厂">
+  <data key="d2">1</data>
+</edge>
+<edge source="罗源县松山镇三头牛食品店" target="河南米顺食品科技有限公司">
+  <data key="d2">1</data>
+</edge>
+<edge source="桐城市麻山村胡大姑农产品经营部" target="岳西县锄老头食品厂">
+  <data key="d2">1</data>
+</edge>
+<edge source="连江县新一湘食品有限公司" target="四川串达人供应链管理有限公司">
+  <data key="d2">1</data>
+</edge>
+</graph></graphml>

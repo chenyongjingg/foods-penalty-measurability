@@ -1,0 +1,28 @@
+{
+  "n_events": 875,
+  "at_utc": "2026-11-05T03:53:33Z",
+  "status": "degenerate_fit",
+  "mu": 0.3370480678424117,
+  "alpha": 9021849.119219212,
+  "beta": 14749502.050590862,
+  "branching_ratio": 0.6116714373322046,
+  "kernel_timescale_days": 6.779889901164088e-08,
+  "loglik": 7308.85250353313,
+  "loglik_poisson": -1056.7469427613694,
+  "lr_stat": 16731.198892589,
+  "lr_p": 0.0,
+  "self_exciting": false,
+  "note": "alpha/beta are not identified at this event resolution; report as inconclusive, not as self-excitation",
+  "nonparametric": {
+    "tie_share": 0.5858,
+    "ks_stat": 0.28546182113112206,
+    "ks_p": 1.3336982648483503e-26,
+    "ks_n": 362,
+    "dispersion_index": 3.5402,
+    "dispersion_p_mc": 0.0,
+    "dispersion_mc_reps": 1000,
+    "dispersion_days": 1078,
+    "dispersion_mean_per_day": 0.8117,
+    "note": "KS uses positive gaps only; zero gaps (same-day penalties) are reported separately as tie_share"
+  }
+}

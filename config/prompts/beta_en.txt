@@ -1,0 +1,30 @@
+Read one FDA food enforcement record and structure it. This is an independent blind annotation; assume no prior labels.
+
+The record is "field: value" lines. Work through these questions in order:
+(a) Which named firm is behind the product? Take the recalling_firm value in full (e.g. "Iowa Select Herbs LLC"). This is the END_USER.
+(b) Is any third party named as supplying documents, certificates, labs or labels? Usually none — leave SERVICE_PROVIDER empty rather than guessing.
+(c) What is the product or the labelled object? Take the product name from product_description (e.g. "Burdock Root"). This is the DOCUMENT only when a label/certificate/report is the object; a plain food product is not a DOCUMENT, so leave DOCUMENT empty in that case.
+(d) What single word or short phrase names the violation? Use one term from reason_for_recall, e.g. "misbranded" or "adulterated" — not the whole sentence. This is the TACTIC.
+(e) Where is the firm? Use the two-letter state code if shown, else the country. This is the JURISDICTION.
+(f) What is the recall number (e.g. "F-1134-2016")? This is the PENALTY_EVENT.
+
+Rules:
+- Every "text" must be copied verbatim from the record and must be a complete name or term, never a fragment that stops mid-word.
+- One entity per type where one value exists; never label the same text twice.
+- Never use placeholders ("the firm", "the company", "respondent", "unknown").
+- At most 3 evidence spans, each <= 80 characters.
+
+Then assign exactly one category:
+A forged or altered inspection/testing report
+B tampered or fabricated traceability data
+C fraudulent certification materials
+D false labelling (not A/B/C)
+E unlicensed operation
+F other
+
+Output JSON with entity types SERVICE_PROVIDER / END_USER / TACTIC / DOCUMENT / JURISDICTION / PENALTY_EVENT.
+
+{"entities":[{"type":"...","text":"...","normalized":"optional"}],"violation_category":"FORGED_INSPECTION_REPORT|TAMPERED_TRACEABILITY|FAKE_CERTIFICATION|FALSE_LABELING|UNLICENSED_OPERATION|OTHER","case_outcome":{"penalty_types":[],"fine_amount_cny":null,"decision_date":null},"evidence_spans":[]}
+
+Document:
+<<<DOC>>>

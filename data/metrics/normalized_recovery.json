@@ -1,0 +1,78 @@
+{
+ "at_utc": "2026-11-04T09:41:41Z",
+ "silver": "/opt/foods/data/silver/silver.jsonl",
+ "silver_sha256_before": "7dd72b9405fd7bb594527e477f06a6c236ff0f67101b0e7af56dc28e176c3aa0",
+ "archive": "/opt/foods/data/archive/preretier_20261104T0704Z/silver.jsonl",
+ "archive_sha256": "a12f104e606a797e04107187fdb230b615e913b3f62cd59c1c082b1d8c7e19ef",
+ "n_voted_docs": 617,
+ "n_entities_voted": 2382,
+ "n_entities_missing_normalized": 2382,
+ "n_recovered": 0,
+ "n_unrecovered": 2382,
+ "n_docs_text_sha_mismatch": 0,
+ "recovery_rate": 0.0,
+ "unrecovered_examples": [
+  {
+   "doc_id": "cfws:2e7574c0f33c4ee7b2d94286970bfe7a",
+   "type": "SERVICE_PROVIDER",
+   "text": "四川汕源食品有限公司",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:2e7574c0f33c4ee7b2d94286970bfe7a",
+   "type": "TACTIC",
+   "text": "伪造企业产品合格证明文件",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:2e7574c0f33c4ee7b2d94286970bfe7a",
+   "type": "JURISDICTION",
+   "text": "中江县",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:2e7574c0f33c4ee7b2d94286970bfe7a",
+   "type": "PENALTY_EVENT",
+   "text": "德江市监处罚〔2026〕269号",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "END_USER",
+   "text": "青白江区亿购福食品经营部",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "SERVICE_PROVIDER",
+   "text": "成都时代融成商贸有限公司",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "SERVICE_PROVIDER",
+   "text": "成都鑫恒新商贸有限公司",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "SERVICE_PROVIDER",
+   "text": "广汉市雅盛商贸有限公司",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "SERVICE_PROVIDER",
+   "text": "成都四通祥益商贸有限公司",
+   "same_text": true
+  },
+  {
+   "doc_id": "cfws:1bd4a946a7ec4cc989d10b7d6506eff3",
+   "type": "SERVICE_PROVIDER",
+   "text": "冠县穆兴斋清真食品有限公司",
+   "same_text": true
+  }
+ ],
+ "applied": false,
+ "note": "Exact (doc_id, type, text) lookup in the pre-ladder archive; no merging or inference. Unrecovered entities keep the normalized=text fallback and are counted here, not guessed."
+}

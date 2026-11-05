@@ -1,0 +1,322 @@
+[
+ {
+  "doc_id": "cfws:3b6e179641d638c80501c1d37c40911f",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:62C202600000025213",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:1513c740d1164310b361ef1ba09dd154",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:e9935489-cd3b-4e3d-add6-ac6c6ad09c3b",
+  "label": "UNLICENSED_OPERATION"
+ },
+ {
+  "doc_id": "cfws:62C202600000006391",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:520100019047769050",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:d03fd211cd579f6e37f8fa45072cd0b7",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:69512bb87f1b43cc83d54b1b2b04abfe",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:520100019097250654",
+  "label": "FORGED_INSPECTION_REPORT"
+ },
+ {
+  "doc_id": "cfws:21BB52420F14B8B2E063BB831DAC7338",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:230712000000309400695",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:420704202607230001",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:5393e0fbb57c44abb4c3a5bac4571d57",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:506584f93e8b298a4188123f18448de9",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:81fa194f38318b4d127b9c624c0a97a9",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:520100019146711773",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:afd599f3b1634059b7fa56dd6c45166e",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:420116202604160009",
+  "label": "UNLICENSED_OPERATION"
+ },
+ {
+  "doc_id": "cfws:ac578ad8891c40838a821464b2a6276b",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:230712000000673753108",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:520100019209990964",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:e535a28a2a3a4e4780cc3c8292b381cf",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:7c88cacdd7ca004c8dae694fa3b205b8",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:0d033ce48c329730fcc5d5be4893115f",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:230712000000671328802",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:ada41953a5194a5b92b26640272de6c1",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:84cd5564de06470abcfdadac20520136",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:b50e8312242c41979d26d8f1155eac33",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:5c4b656c039bcd0f8ee8602f8810f640",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:11b5224a040e467ebdc048e30d756b85",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:b51e0430ce3d408293a9812a1869073e",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:cdd8dcab4ed343688362bf361719d239",
+  "label": "FAKE_CERTIFICATION"
+ },
+ {
+  "doc_id": "cfws:230712000000309524787",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:f82ab0314a76d84dcbaa8223ef680d2e",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:33e8cf2afebc1acd4c5270fb8f174c69",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:e0a7f0c3ba8a4f5c9e63581a7c8f7bde",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:a15855e2bf9615bd17a587d490c21c89",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:b08a68c989f54608b3fdf0888a9d8021",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:420111202606040002",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:11cf529abcf8496d85da35b55172829c",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:62C202500000027722",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:caf724cfb16242e08157bfaf9c99f581",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:174a54e2cd2a401c809e66fb14bee2a3",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:2505e937-325b-4635-aacd-33dfa7b4dfd6",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:930cc7ee6b8b4a9ebf40781d9b62a6d0",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:ef4a75edad01e67fef607cb91448901d",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:9dc8905f770649afb3716040bbb7a326",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:3301140120240100103301143000019894",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:be2a5ba6ceec027485cb4605d474b9e4",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:CASE8bab8febe3e942f69d1a4a7de4ba67ed",
+  "label": "FAKE_CERTIFICATION"
+ },
+ {
+  "doc_id": "cfws:f5087a8e5ef272626971a0713d2872af",
+  "label": "FAKE_CERTIFICATION"
+ },
+ {
+  "doc_id": "cfws:420116202604160002",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:9e919df29135236f01916b27d1841446",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:d69edb8353a1a6fd7b352c35ce8543fe",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:e13ca5341a539f586b57f7ec5b527005",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:38bbd9277eb1439a9969f18bda202020",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:98585b00bec7e868871c5255faa3b448",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:429004202312110015",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:420222202607290004",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:faeffacccc0348199fbfcd021c8e4772",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:aa904e87a74748fea7e038781d041212",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:43C202400000036805",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:6ed6789e63ec4618a31f02d0d626a6fb",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:68ed6d7332acef85f257cb9e97ef8fe6",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:f48cfafb-7cf5-4a89-9830-8c15e5d02a5e",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:421003202604170003",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:207a2fdd710e464fa4260bcdf2019717",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:d15d878724a1cbb8f8db56b060153db8",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:89a6a2b3471845dda142545545902f52",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:d4dece787fb31f4dc1be06f3b838e489",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:230712000000492543382",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:0cdd3eacee07a904a47631622f786bec",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:577c10014490444cb2a9445cdf222ef2",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:230712000000309409214",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:2068981631025405952",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:130e7117dae3108636ddbf6c16561ea9",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:642d1ec4e885e3e935022607198787f6",
+  "label": "FALSE_LABELING"
+ },
+ {
+  "doc_id": "cfws:26352ac7f2414c6699096405672e82e6",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:62C202600000018191",
+  "label": "OTHER"
+ },
+ {
+  "doc_id": "cfws:420200202605080002",
+  "label": "OTHER"
+ }
+]

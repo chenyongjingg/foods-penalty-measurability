@@ -1,0 +1,104 @@
+{
+ "at_utc": "2026-11-05T05:12:45Z",
+ "product": "E8 frame sensitivity + anchor macro sensitivity",
+ "inputs": {
+  "data/analysis/e8_us_cn.json": "bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949",
+  "data/analysis/e6_descriptive.json": "163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35",
+  "data/metrics/e1.json": "ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845"
+ },
+ "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+ "e8_frames": {
+  "cn_false_labelling": 375,
+  "cn_other_in_fraud_framework": 63,
+  "cn_market_order": 100,
+  "cn_procedural": 66,
+  "cn_unlicensed": 26,
+  "us_false_labelling": 97,
+  "us_other": 156,
+  "contrasts": {
+   "fraud_framework_as_published": {
+    "table": [
+     [
+      375,
+      63
+     ],
+     [
+      97,
+      156
+     ]
+    ],
+    "odds_ratio": 9.5729,
+    "fisher_p": 2.16194e-37,
+    "ci95_woolf": [
+     6.63,
+     13.83
+    ]
+   },
+   "plus_framework_excluded": {
+    "table": [
+     [
+      375,
+      229
+     ],
+     [
+      97,
+      156
+     ]
+    ],
+    "odds_ratio": 2.6336,
+    "fisher_p": 2.06803e-10,
+    "ci95_woolf": [
+     1.95,
+     3.56
+    ]
+   },
+   "fraud_framework_without_unlicensed": {
+    "table": [
+     [
+      375,
+      37
+     ],
+     [
+      97,
+      156
+     ]
+    ],
+    "odds_ratio": 16.2998,
+    "fisher_p": 3.19964e-48,
+    "ci95_woolf": [
+     10.69,
+     24.86
+    ]
+   }
+  },
+  "reading": "The direction and significance of the contrast survive every frame; the magnitude does not. Report the frame with the odds ratio, never the odds ratio alone."
+ },
+ "anchor_macro": {
+  "all_classes": 0.2693,
+  "ge20_classes": [
+   "FALSE_LABELING",
+   "OTHER",
+   "UNLICENSED_OPERATION"
+  ],
+  "macro_ge20": 0.4195,
+  "never_emitted_classes": [
+   "OTHER",
+   "TAMPERED_TRACEABILITY"
+  ],
+  "macro_ge20_excluding_never_emitted": 0.6292,
+  "classes_excluded": [
+   "OTHER"
+  ],
+  "per_class_used": {
+   "FALSE_LABELING": 0.8801,
+   "UNLICENSED_OPERATION": 0.3784
+  }
+ },
+ "coarse_data_falsification_composition": {
+  "total": 412,
+  "false_labelling": 375,
+  "forged_inspection_report": 33,
+  "fake_certification": 4,
+  "false_labelling_share": 0.9102
+ }
+}

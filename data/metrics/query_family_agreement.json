@@ -1,0 +1,997 @@
+{
+ "at_utc": "2026-11-05T03:54:17Z",
+ "input": "/opt/foods/data/silver/silver.jsonl",
+ "input_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+ "n_records": 1128,
+ "n_high": 228,
+ "f1_spread_across_families": 0.5055,
+ "families": [
+  {
+   "query_family": "reason_for_recall:adulterated",
+   "n": 156,
+   "mean_f1": 0.7479,
+   "median_f1": 0.6667,
+   "sd_f1": 0.1283,
+   "mean_entities_channel_a": 2.942,
+   "mean_document_entities": 0,
+   "tier_counts": {
+    "high": 33,
+    "medium": 21,
+    "low": 102
+   },
+   "high_rate": 0.2115,
+   "langs": {
+    "en": 156
+   }
+  },
+  {
+   "query_family": "虚假标注 + 食品",
+   "n": 114,
+   "mean_f1": 0.7552,
+   "median_f1": 0.8,
+   "sd_f1": 0.1764,
+   "mean_entities_channel_a": 4.395,
+   "mean_document_entities": 0.763,
+   "tier_counts": {
+    "high": 37,
+    "medium": 29,
+    "low": 48
+   },
+   "high_rate": 0.3246,
+   "langs": {
+    "zh": 114
+   }
+  },
+  {
+   "query_family": "reason_for_recall:misbranded",
+   "n": 97,
+   "mean_f1": 0.9251,
+   "median_f1": 1.0,
+   "sd_f1": 0.1215,
+   "mean_entities_channel_a": 2.938,
+   "mean_document_entities": 0.052,
+   "tier_counts": {
+    "high": 67,
+    "medium": 23,
+    "low": 7
+   },
+   "high_rate": 0.6907,
+   "langs": {
+    "en": 97
+   }
+  },
+  {
+   "query_family": "伪造 + 食品",
+   "n": 89,
+   "mean_f1": 0.709,
+   "median_f1": 0.75,
+   "sd_f1": 0.189,
+   "mean_entities_channel_a": 4.258,
+   "mean_document_entities": 0.618,
+   "tier_counts": {
+    "high": 4,
+    "medium": 45,
+    "low": 40
+   },
+   "high_rate": 0.0449,
+   "langs": {
+    "zh": 89
+   }
+  },
+  {
+   "query_family": "虚假 + 餐饮",
+   "n": 62,
+   "mean_f1": 0.751,
+   "median_f1": 0.7596,
+   "sd_f1": 0.1549,
+   "mean_entities_channel_a": 4.323,
+   "mean_document_entities": 0.71,
+   "tier_counts": {
+    "high": 2,
+    "medium": 35,
+    "low": 25
+   },
+   "high_rate": 0.0323,
+   "langs": {
+    "zh": 62
+   }
+  },
+  {
+   "query_family": "检测报告 + 食品",
+   "n": 51,
+   "mean_f1": 0.6794,
+   "median_f1": 0.75,
+   "sd_f1": 0.2476,
+   "mean_entities_channel_a": 4.176,
+   "mean_document_entities": 0.647,
+   "tier_counts": {
+    "high": 14,
+    "medium": 12,
+    "low": 25
+   },
+   "high_rate": 0.2745,
+   "langs": {
+    "zh": 51
+   }
+  },
+  {
+   "query_family": "虚假 + 农产品",
+   "n": 49,
+   "mean_f1": 0.7552,
+   "median_f1": 0.8,
+   "sd_f1": 0.2015,
+   "mean_entities_channel_a": 4.041,
+   "mean_document_entities": 0.735,
+   "tier_counts": {
+    "high": 10,
+    "medium": 20,
+    "low": 19
+   },
+   "high_rate": 0.2041,
+   "langs": {
+    "zh": 49
+   }
+  },
+  {
+   "query_family": "假冒 + 食品",
+   "n": 46,
+   "mean_f1": 0.6783,
+   "median_f1": 0.6667,
+   "sd_f1": 0.2076,
+   "mean_entities_channel_a": 4,
+   "mean_document_entities": 0.761,
+   "tier_counts": {
+    "high": 1,
+    "medium": 19,
+    "low": 26
+   },
+   "high_rate": 0.0217,
+   "langs": {
+    "zh": 46
+   }
+  },
+  {
+   "query_family": "溯源 + 食品",
+   "n": 46,
+   "mean_f1": 0.7203,
+   "median_f1": 0.75,
+   "sd_f1": 0.1931,
+   "mean_entities_channel_a": 4.13,
+   "mean_document_entities": 0.761,
+   "tier_counts": {
+    "high": 3,
+    "medium": 22,
+    "low": 21
+   },
+   "high_rate": 0.0652,
+   "langs": {
+    "zh": 46
+   }
+  },
+  {
+   "query_family": "篡改 + 食品",
+   "n": 40,
+   "mean_f1": 0.7722,
+   "median_f1": 0.775,
+   "sd_f1": 0.1774,
+   "mean_entities_channel_a": 4.65,
+   "mean_document_entities": 0.675,
+   "tier_counts": {
+    "high": 11,
+    "medium": 15,
+    "low": 14
+   },
+   "high_rate": 0.275,
+   "langs": {
+    "zh": 40
+   }
+  },
+  {
+   "query_family": "伪造 + 餐饮",
+   "n": 37,
+   "mean_f1": 0.7778,
+   "median_f1": 0.8,
+   "sd_f1": 0.1631,
+   "mean_entities_channel_a": 3.973,
+   "mean_document_entities": 0.568,
+   "tier_counts": {
+    "high": 2,
+    "medium": 23,
+    "low": 12
+   },
+   "high_rate": 0.0541,
+   "langs": {
+    "zh": 37
+   }
+  },
+  {
+   "query_family": "检验检测报告 + 食品",
+   "n": 36,
+   "mean_f1": 0.7494,
+   "median_f1": 0.8,
+   "sd_f1": 0.1901,
+   "mean_entities_channel_a": 4.194,
+   "mean_document_entities": 0.639,
+   "tier_counts": {
+    "high": 6,
+    "medium": 18,
+    "low": 12
+   },
+   "high_rate": 0.1667,
+   "langs": {
+    "zh": 36
+   }
+  },
+  {
+   "query_family": "冒用认证标志 + None",
+   "n": 35,
+   "mean_f1": 0.6863,
+   "median_f1": 0.75,
+   "sd_f1": 0.2103,
+   "mean_entities_channel_a": 5.314,
+   "mean_document_entities": 0.771,
+   "tier_counts": {
+    "high": 0,
+    "medium": 17,
+    "low": 18
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 35
+   }
+  },
+  {
+   "query_family": "检验报告 + 食品",
+   "n": 33,
+   "mean_f1": 0.7145,
+   "median_f1": 0.75,
+   "sd_f1": 0.1661,
+   "mean_entities_channel_a": 4.212,
+   "mean_document_entities": 0.606,
+   "tier_counts": {
+    "high": 6,
+    "medium": 9,
+    "low": 18
+   },
+   "high_rate": 0.1818,
+   "langs": {
+    "zh": 33
+   }
+  },
+  {
+   "query_family": "合格证明 + 食品",
+   "n": 29,
+   "mean_f1": 0.7731,
+   "median_f1": 0.8,
+   "sd_f1": 0.1807,
+   "mean_entities_channel_a": 4.138,
+   "mean_document_entities": 0.552,
+   "tier_counts": {
+    "high": 7,
+    "medium": 11,
+    "low": 11
+   },
+   "high_rate": 0.2414,
+   "langs": {
+    "zh": 29
+   }
+  },
+  {
+   "query_family": "检测报告 + 餐饮",
+   "n": 26,
+   "mean_f1": 0.8015,
+   "median_f1": 0.8,
+   "sd_f1": 0.1666,
+   "mean_entities_channel_a": 4.115,
+   "mean_document_entities": 0.5,
+   "tier_counts": {
+    "high": 0,
+    "medium": 19,
+    "low": 7
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 26
+   }
+  },
+  {
+   "query_family": "虚假 + 食品",
+   "n": 20,
+   "mean_f1": 0.8222,
+   "median_f1": 0.8,
+   "sd_f1": 0.1278,
+   "mean_entities_channel_a": 4.45,
+   "mean_document_entities": 0.85,
+   "tier_counts": {
+    "high": 7,
+    "medium": 8,
+    "low": 5
+   },
+   "high_rate": 0.35,
+   "langs": {
+    "zh": 20
+   }
+  },
+  {
+   "query_family": "溯源码 + None",
+   "n": 19,
+   "mean_f1": 0.6426,
+   "median_f1": 0.75,
+   "sd_f1": 0.263,
+   "mean_entities_channel_a": 4.158,
+   "mean_document_entities": 0.842,
+   "tier_counts": {
+    "high": 2,
+    "medium": 7,
+    "low": 10
+   },
+   "high_rate": 0.1053,
+   "langs": {
+    "zh": 19
+   }
+  },
+  {
+   "query_family": "合格证 + 食品",
+   "n": 16,
+   "mean_f1": 0.6812,
+   "median_f1": 0.6667,
+   "sd_f1": 0.1817,
+   "mean_entities_channel_a": 4,
+   "mean_document_entities": 0.812,
+   "tier_counts": {
+    "high": 2,
+    "medium": 3,
+    "low": 11
+   },
+   "high_rate": 0.125,
+   "langs": {
+    "zh": 16
+   }
+  },
+  {
+   "query_family": "检测数据 + 食品",
+   "n": 12,
+   "mean_f1": 0.7176,
+   "median_f1": 0.75,
+   "sd_f1": 0.15,
+   "mean_entities_channel_a": 4.917,
+   "mean_document_entities": 0.833,
+   "tier_counts": {
+    "high": 2,
+    "medium": 5,
+    "low": 5
+   },
+   "high_rate": 0.1667,
+   "langs": {
+    "zh": 12
+   }
+  },
+  {
+   "query_family": "冒用厂名 + 食品",
+   "n": 11,
+   "mean_f1": 0.7031,
+   "median_f1": 0.7273,
+   "sd_f1": 0.1848,
+   "mean_entities_channel_a": 5,
+   "mean_document_entities": 0.636,
+   "tier_counts": {
+    "high": 2,
+    "medium": 3,
+    "low": 6
+   },
+   "high_rate": 0.1818,
+   "langs": {
+    "zh": 11
+   }
+  },
+  {
+   "query_family": "虚假 + 保健食品",
+   "n": 11,
+   "mean_f1": 0.6857,
+   "median_f1": 0.6667,
+   "sd_f1": 0.1717,
+   "mean_entities_channel_a": 4.364,
+   "mean_document_entities": 0.818,
+   "tier_counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 7
+   },
+   "high_rate": 0.0909,
+   "langs": {
+    "zh": 11
+   }
+  },
+  {
+   "query_family": "认证证书 + 食品",
+   "n": 11,
+   "mean_f1": 0.7113,
+   "median_f1": 0.75,
+   "sd_f1": 0.1964,
+   "mean_entities_channel_a": 4.818,
+   "mean_document_entities": 1.091,
+   "tier_counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 7
+   },
+   "high_rate": 0.0909,
+   "langs": {
+    "zh": 11
+   }
+  },
+  {
+   "query_family": "虚假检验报告 + None",
+   "n": 10,
+   "mean_f1": 0.6114,
+   "median_f1": 0.619,
+   "sd_f1": 0.2175,
+   "mean_entities_channel_a": 4.9,
+   "mean_document_entities": 0.8,
+   "tier_counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 6
+   },
+   "high_rate": 0.1,
+   "langs": {
+    "zh": 10
+   }
+  },
+  {
+   "query_family": "买卖 + 食品",
+   "n": 9,
+   "mean_f1": 0.5172,
+   "median_f1": 0.6,
+   "sd_f1": 0.1773,
+   "mean_entities_channel_a": 4.222,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 8
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 9
+   }
+  },
+  {
+   "query_family": "检验报告 + 餐饮",
+   "n": 8,
+   "mean_f1": 0.7426,
+   "median_f1": 0.8,
+   "sd_f1": 0.198,
+   "mean_entities_channel_a": 3.375,
+   "mean_document_entities": 0.125,
+   "tier_counts": {
+    "high": 0,
+    "medium": 6,
+    "low": 2
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 8
+   }
+  },
+  {
+   "query_family": "篡改 + 餐饮",
+   "n": 7,
+   "mean_f1": 0.6293,
+   "median_f1": 0.75,
+   "sd_f1": 0.3309,
+   "mean_entities_channel_a": 3.714,
+   "mean_document_entities": 0.571,
+   "tier_counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 4
+   },
+   "high_rate": 0.2857,
+   "langs": {
+    "zh": 7
+   }
+  },
+  {
+   "query_family": "伪造 + 农产品",
+   "n": 6,
+   "mean_f1": 0.5833,
+   "median_f1": 0.65,
+   "sd_f1": 0.3287,
+   "mean_entities_channel_a": 3.333,
+   "mean_document_entities": 0.667,
+   "tier_counts": {
+    "high": 0,
+    "medium": 3,
+    "low": 3
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 6
+   }
+  },
+  {
+   "query_family": "伪造产地 + 食品",
+   "n": 6,
+   "mean_f1": 0.6844,
+   "median_f1": 0.6636,
+   "sd_f1": 0.1203,
+   "mean_entities_channel_a": 5.5,
+   "mean_document_entities": 0.667,
+   "tier_counts": {
+    "high": 1,
+    "medium": 0,
+    "low": 5
+   },
+   "high_rate": 0.1667,
+   "langs": {
+    "zh": 6
+   }
+  },
+  {
+   "query_family": "虚假检测报告 + None",
+   "n": 6,
+   "mean_f1": 0.671,
+   "median_f1": 0.7083,
+   "sd_f1": 0.1743,
+   "mean_entities_channel_a": 4.5,
+   "mean_document_entities": 0.833,
+   "tier_counts": {
+    "high": 1,
+    "medium": 1,
+    "low": 4
+   },
+   "high_rate": 0.1667,
+   "langs": {
+    "zh": 6
+   }
+  },
+  {
+   "query_family": "伪造检验报告 + None",
+   "n": 5,
+   "mean_f1": 0.7867,
+   "median_f1": 0.8,
+   "sd_f1": 0.1614,
+   "mean_entities_channel_a": 5,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 1
+   },
+   "high_rate": 0.2,
+   "langs": {
+    "zh": 5
+   }
+  },
+  {
+   "query_family": "变造 + 食品",
+   "n": 5,
+   "mean_f1": 0.7996,
+   "median_f1": 0.8,
+   "sd_f1": 0.1094,
+   "mean_entities_channel_a": 4.8,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 0,
+    "medium": 4,
+    "low": 1
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 5
+   }
+  },
+  {
+   "query_family": "虚假认证 + None",
+   "n": 4,
+   "mean_f1": 0.4945,
+   "median_f1": 0.4126,
+   "sd_f1": 0.1814,
+   "mean_entities_channel_a": 7,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 3
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 4
+   }
+  },
+  {
+   "query_family": "买卖 + 餐饮",
+   "n": 3,
+   "mean_f1": 0.7475,
+   "median_f1": 0.6667,
+   "sd_f1": 0.1143,
+   "mean_entities_channel_a": 4,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 2
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 3
+   }
+  },
+  {
+   "query_family": "伪造厂名 + 食品",
+   "n": 3,
+   "mean_f1": 0.5818,
+   "median_f1": 0.5455,
+   "sd_f1": 0.1653,
+   "mean_entities_channel_a": 7.333,
+   "mean_document_entities": 3.333,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 2
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 3
+   }
+  },
+  {
+   "query_family": "合格证明 + 餐饮",
+   "n": 3,
+   "mean_f1": 0.5873,
+   "median_f1": 0.5714,
+   "sd_f1": 0.2141,
+   "mean_entities_channel_a": 2.667,
+   "mean_document_entities": 0.333,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 2
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 3
+   }
+  },
+  {
+   "query_family": "检验数据 + 食品",
+   "n": 3,
+   "mean_f1": 0.65,
+   "median_f1": 0.75,
+   "sd_f1": 0.178,
+   "mean_entities_channel_a": 3.667,
+   "mean_document_entities": 0.333,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 2
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 3
+   }
+  },
+  {
+   "query_family": "伪造 + 预包装",
+   "n": 1,
+   "mean_f1": 0.8333,
+   "median_f1": 0.8333,
+   "sd_f1": 0.0,
+   "mean_entities_channel_a": 6,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 1
+   }
+  },
+  {
+   "query_family": "伪造检测报告 + None",
+   "n": 1,
+   "mean_f1": 0.6,
+   "median_f1": 0.6,
+   "sd_f1": 0.0,
+   "mean_entities_channel_a": 6,
+   "mean_document_entities": 2,
+   "tier_counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "high_rate": 0.0,
+   "langs": {
+    "zh": 1
+   }
+  },
+  {
+   "query_family": "伪造生产日期 + 食品",
+   "n": 1,
+   "mean_f1": 1.0,
+   "median_f1": 1.0,
+   "sd_f1": 0.0,
+   "mean_entities_channel_a": 5,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "high_rate": 1.0,
+   "langs": {
+    "zh": 1
+   }
+  },
+  {
+   "query_family": "虚假合格证明 + None",
+   "n": 1,
+   "mean_f1": 1.0,
+   "median_f1": 1.0,
+   "sd_f1": 0.0,
+   "mean_entities_channel_a": 4,
+   "mean_document_entities": 1,
+   "tier_counts": {
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "high_rate": 1.0,
+   "langs": {
+    "zh": 1
+   }
+  }
+ ],
+ "high_tier_balance": [
+  {
+   "query_family": "reason_for_recall:adulterated",
+   "share_corpus": 0.1383,
+   "share_high": 0.1447,
+   "ratio": 1.047
+  },
+  {
+   "query_family": "虚假标注 + 食品",
+   "share_corpus": 0.1011,
+   "share_high": 0.1623,
+   "ratio": 1.606
+  },
+  {
+   "query_family": "reason_for_recall:misbranded",
+   "share_corpus": 0.086,
+   "share_high": 0.2939,
+   "ratio": 3.417
+  },
+  {
+   "query_family": "伪造 + 食品",
+   "share_corpus": 0.0789,
+   "share_high": 0.0175,
+   "ratio": 0.222
+  },
+  {
+   "query_family": "虚假 + 餐饮",
+   "share_corpus": 0.055,
+   "share_high": 0.0088,
+   "ratio": 0.16
+  },
+  {
+   "query_family": "检测报告 + 食品",
+   "share_corpus": 0.0452,
+   "share_high": 0.0614,
+   "ratio": 1.358
+  },
+  {
+   "query_family": "虚假 + 农产品",
+   "share_corpus": 0.0434,
+   "share_high": 0.0439,
+   "ratio": 1.01
+  },
+  {
+   "query_family": "溯源 + 食品",
+   "share_corpus": 0.0408,
+   "share_high": 0.0132,
+   "ratio": 0.323
+  },
+  {
+   "query_family": "假冒 + 食品",
+   "share_corpus": 0.0408,
+   "share_high": 0.0044,
+   "ratio": 0.108
+  },
+  {
+   "query_family": "篡改 + 食品",
+   "share_corpus": 0.0355,
+   "share_high": 0.0482,
+   "ratio": 1.361
+  },
+  {
+   "query_family": "伪造 + 餐饮",
+   "share_corpus": 0.0328,
+   "share_high": 0.0088,
+   "ratio": 0.267
+  },
+  {
+   "query_family": "检验检测报告 + 食品",
+   "share_corpus": 0.0319,
+   "share_high": 0.0263,
+   "ratio": 0.825
+  },
+  {
+   "query_family": "冒用认证标志 + None",
+   "share_corpus": 0.031,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "检验报告 + 食品",
+   "share_corpus": 0.0293,
+   "share_high": 0.0263,
+   "ratio": 0.9
+  },
+  {
+   "query_family": "合格证明 + 食品",
+   "share_corpus": 0.0257,
+   "share_high": 0.0307,
+   "ratio": 1.194
+  },
+  {
+   "query_family": "检测报告 + 餐饮",
+   "share_corpus": 0.023,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "虚假 + 食品",
+   "share_corpus": 0.0177,
+   "share_high": 0.0307,
+   "ratio": 1.732
+  },
+  {
+   "query_family": "溯源码 + None",
+   "share_corpus": 0.0168,
+   "share_high": 0.0088,
+   "ratio": 0.521
+  },
+  {
+   "query_family": "合格证 + 食品",
+   "share_corpus": 0.0142,
+   "share_high": 0.0088,
+   "ratio": 0.618
+  },
+  {
+   "query_family": "检测数据 + 食品",
+   "share_corpus": 0.0106,
+   "share_high": 0.0088,
+   "ratio": 0.825
+  },
+  {
+   "query_family": "冒用厂名 + 食品",
+   "share_corpus": 0.0098,
+   "share_high": 0.0088,
+   "ratio": 0.9
+  },
+  {
+   "query_family": "认证证书 + 食品",
+   "share_corpus": 0.0098,
+   "share_high": 0.0044,
+   "ratio": 0.45
+  },
+  {
+   "query_family": "虚假 + 保健食品",
+   "share_corpus": 0.0098,
+   "share_high": 0.0044,
+   "ratio": 0.45
+  },
+  {
+   "query_family": "虚假检验报告 + None",
+   "share_corpus": 0.0089,
+   "share_high": 0.0044,
+   "ratio": 0.495
+  },
+  {
+   "query_family": "买卖 + 食品",
+   "share_corpus": 0.008,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "检验报告 + 餐饮",
+   "share_corpus": 0.0071,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "篡改 + 餐饮",
+   "share_corpus": 0.0062,
+   "share_high": 0.0088,
+   "ratio": 1.414
+  },
+  {
+   "query_family": "虚假检测报告 + None",
+   "share_corpus": 0.0053,
+   "share_high": 0.0044,
+   "ratio": 0.825
+  },
+  {
+   "query_family": "伪造产地 + 食品",
+   "share_corpus": 0.0053,
+   "share_high": 0.0044,
+   "ratio": 0.825
+  },
+  {
+   "query_family": "伪造 + 农产品",
+   "share_corpus": 0.0053,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "伪造检验报告 + None",
+   "share_corpus": 0.0044,
+   "share_high": 0.0044,
+   "ratio": 0.989
+  },
+  {
+   "query_family": "变造 + 食品",
+   "share_corpus": 0.0044,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "虚假认证 + None",
+   "share_corpus": 0.0035,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "伪造厂名 + 食品",
+   "share_corpus": 0.0027,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "检验数据 + 食品",
+   "share_corpus": 0.0027,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "买卖 + 餐饮",
+   "share_corpus": 0.0027,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "合格证明 + 餐饮",
+   "share_corpus": 0.0027,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "伪造检测报告 + None",
+   "share_corpus": 0.0009,
+   "share_high": 0.0,
+   "ratio": 0.0
+  },
+  {
+   "query_family": "虚假合格证明 + None",
+   "share_corpus": 0.0009,
+   "share_high": 0.0044,
+   "ratio": 4.947
+  },
+  {
+   "query_family": "伪造生产日期 + 食品",
+   "share_corpus": 0.0009,
+   "share_high": 0.0044,
+   "ratio": 4.947
+  },
+  {
+   "query_family": "伪造 + 预包装",
+   "share_corpus": 0.0009,
+   "share_high": 0.0,
+   "ratio": 0.0
+  }
+ ],
+ "note": "High tier = main corpus. A ratio above 1 means the family is over-represented in the main corpus relative to the full labelled set; this is agreement-driven, not a sampling design. Report in the paper's limitations (D-48)."
+}

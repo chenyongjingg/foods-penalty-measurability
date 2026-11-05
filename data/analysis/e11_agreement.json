@@ -1,0 +1,186 @@
+{
+ "at_utc": "2026-11-05T06:22:48Z",
+ "inputs": {
+  "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+  "sample_sha256": "f722dd114f0a0ab81b6e9bddf8273091c1859bc7e75124a14a676024def82634"
+ },
+ "H1_S1": {
+  "n_coded": 60,
+  "n_unresolved": 0,
+  "n_scored": 60,
+  "n_agree": 29,
+  "agreement": 0.4833,
+  "wilson95": [
+   0.3618,
+   0.6069
+  ],
+  "_po": 0.4833,
+  "_pe": 0.2997,
+  "_kappa": 0.2622,
+  "_ac1": 0.4101,
+  "_pabak": 0.38,
+  "_n_classes_observed": 6,
+  "_prevalence": {
+   "FAKE_CERTIFICATION": 0.0333,
+   "FALSE_LABELING": 0.7167,
+   "FORGED_INSPECTION_REPORT": 0.0333,
+   "OTHER": 0.05,
+   "TAMPERED_TRACEABILITY": 0.0167,
+   "UNLICENSED_OPERATION": 0.15
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 60,
+   "n_agree": 29,
+   "agreement": 0.4833,
+   "wilson95": [
+    0.3618,
+    0.6069
+   ],
+   "kappa": 0.2622
+  },
+  "confusion_I_rows": {
+   "FAKE_CERTIFICATION": {
+    "FORGED_INSPECTION_REPORT": 1,
+    "FAKE_CERTIFICATION": 1
+   },
+   "FALSE_LABELING": {
+    "FALSE_LABELING": 21,
+    "OTHER": 19,
+    "UNLICENSED_OPERATION": 2,
+    "FAKE_CERTIFICATION": 1
+   },
+   "FORGED_INSPECTION_REPORT": {
+    "FORGED_INSPECTION_REPORT": 2
+   },
+   "OTHER": {
+    "OTHER": 3
+   },
+   "TAMPERED_TRACEABILITY": {
+    "OTHER": 1
+   },
+   "UNLICENSED_OPERATION": {
+    "UNLICENSED_OPERATION": 2,
+    "FALSE_LABELING": 1,
+    "OTHER": 6
+   }
+  },
+  "_tag": "H1"
+ },
+ "H2_S2": {
+  "n_coded": 20,
+  "n_unresolved": 0,
+  "n_scored": 20,
+  "n_agree": 13,
+  "agreement": 0.65,
+  "wilson95": [
+   0.4329,
+   0.8188
+  ],
+  "_po": 0.65,
+  "_pe": 0.495,
+  "_kappa": 0.3069,
+  "_ac1": 0.603,
+  "_pabak": 0.5625,
+  "_n_classes_observed": 5,
+  "_prevalence": {
+   "FAKE_CERTIFICATION": 0.05,
+   "FALSE_LABELING": 0.25,
+   "FORGED_INSPECTION_REPORT": 0.1,
+   "OTHER": 0.55,
+   "UNLICENSED_OPERATION": 0.05
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 20,
+   "n_agree": 13,
+   "agreement": 0.65,
+   "wilson95": [
+    0.4329,
+    0.8188
+   ],
+   "kappa": 0.3069
+  },
+  "confusion_I_rows": {
+   "FAKE_CERTIFICATION": {
+    "OTHER": 1
+   },
+   "FALSE_LABELING": {
+    "FALSE_LABELING": 2,
+    "UNLICENSED_OPERATION": 1,
+    "OTHER": 2
+   },
+   "FORGED_INSPECTION_REPORT": {
+    "OTHER": 2
+   },
+   "OTHER": {
+    "OTHER": 11
+   },
+   "UNLICENSED_OPERATION": {
+    "OTHER": 1
+   }
+  },
+  "_tag": "H2"
+ },
+ "H2_contrast_S2_minus_S1": {
+  "diff": 0.16666666666666669,
+  "lo": -0.08318608779430417,
+  "hi": 0.3747017280077168,
+  "p1": 0.65,
+  "p2": 0.48333333333333334,
+  "n1": 20,
+  "n2": 60
+ },
+ "H3_fraud_subset": {
+  "n_coded": 5,
+  "n_unresolved": 0,
+  "n_scored": 5,
+  "n_agree": 3,
+  "agreement": 0.6,
+  "wilson95": [
+   0.2307,
+   0.8824
+  ],
+  "_po": 0.6,
+  "_pe": 0.32,
+  "_kappa": 0.4118,
+  "_ac1": 0.4915,
+  "_pabak": 0.4667,
+  "_n_classes_observed": 4,
+  "_prevalence": {
+   "FAKE_CERTIFICATION": 0.4,
+   "FORGED_INSPECTION_REPORT": 0.4,
+   "OTHER": 0.0,
+   "TAMPERED_TRACEABILITY": 0.2
+  },
+  "sensitivity_unresolved_as_other": {
+   "n": 5,
+   "n_agree": 3,
+   "agreement": 0.6,
+   "wilson95": [
+    0.2307,
+    0.8824
+   ],
+   "kappa": 0.4118
+  },
+  "confusion_I_rows": {
+   "FAKE_CERTIFICATION": {
+    "FORGED_INSPECTION_REPORT": 1,
+    "FAKE_CERTIFICATION": 1
+   },
+   "FORGED_INSPECTION_REPORT": {
+    "FORGED_INSPECTION_REPORT": 2
+   },
+   "TAMPERED_TRACEABILITY": {
+    "OTHER": 1
+   }
+  },
+  "_tag": "H3"
+ },
+ "verdict": {
+  "H1_supported": false,
+  "H4_1_agreement_below_0.70": true,
+  "H4_2_unresolved_gt_12": false,
+  "H4_3_human_classes_lt_3": false,
+  "H3_estimable": false,
+  "rescue_failed": true
+ }
+}

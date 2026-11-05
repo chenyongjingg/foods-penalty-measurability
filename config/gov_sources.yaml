@@ -1,0 +1,39 @@
+# D4 governance-event timeline sources (Plan Table 2, D4).
+# Only pages the plan names as lawful, static, public listings are used.
+# `follow_articles: true` means the listing carries titles but no dates on the
+# server-rendered HTML (the page is JS-driven); the date is then read from the
+# article page itself. No access control is bypassed anywhere.
+
+sources:
+  - name: court_cases
+    site: court.gov.cn
+    note: 最高人民法院“典型案例发布”聚合栏目（静态分页 104.html / 104_{n}.html）
+    url: https://www.court.gov.cn/zixun/gengduo/104.html
+    page_url: https://www.court.gov.cn/zixun/gengduo/104_{n}.html
+    max_pages: 80
+    encoding: utf-8
+
+  - name: spp_guiding_cases
+    site: spp.gov.cn
+    note: 最高人民检察院指导性案例栏目
+    url: https://www.spp.gov.cn/spp/jczdal/index.shtml
+    page_url: https://www.spp.gov.cn/spp/jczdal/index_{n}.shtml
+    max_pages: 30
+    encoding: utf-8
+
+  - name: spp_top_work
+    site: spp.gov.cn
+    note: 最高人民检察院重点工作（含专项部署、典型案例发布）
+    url: https://www.spp.gov.cn/spp/zdgz/index.shtml
+    page_url: https://www.spp.gov.cn/spp/zdgz/index_{n}.shtml
+    max_pages: 30
+    encoding: utf-8
+
+  - name: samr_food_inspection
+    site: samr.gov.cn
+    note: 市场监管总局食品抽检司（栏目页服务端渲染，子栏目为 JS 外壳）
+    url: https://www.samr.gov.cn/spcjs/index.html
+    max_pages: 1
+    encoding: utf-8
+    follow_articles: true
+    article_max: 25

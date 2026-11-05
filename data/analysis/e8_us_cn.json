@@ -1,0 +1,113 @@
+{
+  "at_utc": "2026-11-05T03:57:03Z",
+  "cn": {
+    "n": 438,
+    "frame_total": 875,
+    "unresolved": 271,
+    "source": "E6 deterministic v2, fraud framework only",
+    "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+    "counts": {
+      "FALSE_LABELING": 375,
+      "FORGED_INSPECTION_REPORT": 33,
+      "UNLICENSED_OPERATION": 26,
+      "FAKE_CERTIFICATION": 4
+    }
+  },
+  "us": {
+    "n": 253,
+    "source": "openFDA food enforcement, reason_for_recall keyword map",
+    "files": 253,
+    "counts": {
+      "FALSE_LABELING": 97,
+      "OTHER": 156
+    },
+    "deliberate_falsification_n": 0,
+    "deliberate_falsification_share": 0.0,
+    "map_version": 1
+  },
+  "table_rows": [
+    "FORGED_INSPECTION_REPORT",
+    "FAKE_CERTIFICATION",
+    "FALSE_LABELING",
+    "UNLICENSED_OPERATION",
+    "OTHER"
+  ],
+  "table": [
+    [
+      33,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      375,
+      97
+    ],
+    [
+      26,
+      0
+    ],
+    [
+      0,
+      156
+    ]
+  ],
+  "test": {
+    "chi2": 358.9355,
+    "p": 2.0632363435613882e-76,
+    "dof": 4,
+    "min_expected": 1.465,
+    "cramers_v": 0.7207,
+    "n": 691,
+    "primary_test": "fisher_collapsed",
+    "collapsed_fisher": {
+      "odds_ratio": 9.572901325478645,
+      "p": 2.1619402872328067e-37,
+      "table_cn_label_vs_rest": [
+        375,
+        63
+      ],
+      "table_us_label_vs_rest": [
+        97,
+        156
+      ]
+    },
+    "chi2_unreliable": {
+      "min_expected": 1.465
+    }
+  },
+  "estimability": "not_estimable_instrument_mismatch",
+  "estimability_note": "An FDA recall reason is a market-withdrawal ground, not a finding of deliberate falsification; 'misbranded' is a regulatory label defect. The comparison is therefore of two document genres' violation compositions, and a difference in composition is not evidence of a difference in fraud prevalence.",
+  "samples": {
+    "OTHER": [
+      {
+        "recall_number": "F-0373-2016",
+        "reason": "Product adulterated. End user found a wingnut inside their canister; the firm determined that it came from the outside of the magnet unit attached to the blender. The wingnut looks bent out of shape a"
+      },
+      {
+        "recall_number": "F-0610-2025",
+        "reason": "Product's easy-pull lid was not secured properly and may cause the product to become adulterated with the hazard clostridium botulinum."
+      },
+      {
+        "recall_number": "F-0611-2025",
+        "reason": "Product's easy-pull lid was not secured properly and may cause the product to become adulterated with the hazard clostridium botulinum."
+      }
+    ],
+    "FALSE_LABELING": [
+      {
+        "recall_number": "F-0718-2025",
+        "reason": "Misbranded - label states 2g total carbohydrates instead of 27g"
+      },
+      {
+        "recall_number": "F-0970-2020",
+        "reason": "Cherry Pie packages were recalled due to being misbranded.  The actual product inside clamshell package is Raspberry Rhubarb Pie, but it was mislabeled as Cherry Pie.  Raspberry Rhubarb Pie does NOT c"
+      },
+      {
+        "recall_number": "F-1383-2015",
+        "reason": "The firm was notified by their customer that the ingredient statement on their packets of LaRosa Creamy Garlic Dressing and LaRosa Italian Dressing were switched.  Therefore, rendering them to be misb"
+      }
+    ]
+  }
+}

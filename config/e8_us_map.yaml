@@ -1,0 +1,43 @@
+# openFDA `reason_for_recall` -> shared violation category (E8, Plan v7).
+#
+# Designed once, before the map is applied (DEVIATIONS D-79). The patterns are
+# matched case-insensitively against reason_for_recall. A reason that fires for
+# two different fraud categories is reported as OTHER, not resolved by a
+# tie-break: one sentence can carry two claims and the sample is small.
+#
+# Interpretation limit (written into the product): "misbranded" is an FDA
+# regulatory label defect, not a finding that anyone deliberately falsified a
+# label. The map exists so that the *composition* of two document genres can be
+# read side by side, not to equate the two constructs.
+version: 1
+rules:
+  FALSE_LABELING:
+    - "misbrand"
+    - "mislabel"
+    - "labeling?\\s+(error|violat|inaccurate|incorrect)"
+    - "incorrect(ly)? label"
+    - "undeclared\\s+(allergen|milk|soy|wheat|egg|peanut|sesame|tree nut|sulfite)"
+  UNLICENSED_OPERATION:
+    - "unapproved\\s+new\\s+drug"
+    - "without\\s+(prior\\s+)?approval"
+    - "not\\s+approved"
+    - "unregistered\\s+(facility|food)"
+  FORGED_INSPECTION_REPORT:
+    - "falsif"
+    - "forged\\s+(inspection|test|record)"
+  FAKE_CERTIFICATION:
+    - "forged?\\s+certificat"
+    - "fake\\s+certificat"
+  TAMPERED_TRACEABILITY:
+    - "tamper"
+    - "traceabilit"
+
+# Records whose reason names deliberate deception. Used only to decide whether
+# a fraud-rate comparison is estimable at all, never as a category.
+deliberate_falsification:
+  - "counterfeit"
+  - "fraud"
+  - "forged"
+  - "falsif"
+  - "intentional"
+  - "fake"

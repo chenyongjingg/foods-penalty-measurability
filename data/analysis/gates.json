@@ -1,0 +1,249 @@
+{
+  "gates": {
+    "E1": {
+      "status": "failed",
+      "mean_agreement": 0.746,
+      "by_lang": {
+        "en": 0.8158,
+        "zh": 0.7257
+      },
+      "tau_sensitivity": {
+        "0.3": 0.7487,
+        "0.5": 0.746,
+        "0.7": 0.7276
+      },
+      "ladder": {
+        "triggered": true,
+        "rule": "keep types with per-type F1 >= 0.75 and support >= 20",
+        "stable_types": [
+          "END_USER",
+          "JURISDICTION",
+          "PENALTY_EVENT"
+        ],
+        "agreement_shrunk": 0.861,
+        "note": "Plan P095 type shrinkage; status above is full-type"
+      },
+      "anchor_f1": 0.2693,
+      "thresholds": {
+        "agreement_target": 0.85,
+        "agreement_floor": 0.75,
+        "anchor_target": 0.8,
+        "anchor_floor": 0.7
+      },
+      "anchor_support": {
+        "n": 423,
+        "per_class": {
+          "FAKE_CERTIFICATION": {
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "FALSE_LABELING": {
+            "f1": 0.8801,
+            "support": 326,
+            "predicted": 383
+          },
+          "FORGED_INSPECTION_REPORT": {
+            "f1": 0.3571,
+            "support": 11,
+            "predicted": 17
+          },
+          "OTHER": {
+            "f1": 0.0,
+            "support": 31,
+            "predicted": 0
+          },
+          "TAMPERED_TRACEABILITY": {
+            "f1": 0.0,
+            "support": 2,
+            "predicted": 0
+          },
+          "UNLICENSED_OPERATION": {
+            "f1": 0.3784,
+            "support": 52,
+            "predicted": 22
+          }
+        },
+        "macro_all_classes": 0.2693,
+        "macro_classes_support_ge20": 0.4195,
+        "micro": 0.7825,
+        "min_class_support": 1,
+        "n_classes_support_lt3": 2,
+        "note": "A macro figure over classes with almost no support is not a statement about extraction quality; read it with this block (D-18, D-58). The gated statistic is unchanged.",
+        "fact_only_docs": 97
+      },
+      "pre_registered": {
+        "mean_agreement": 0.6962,
+        "status": "failed",
+        "by_lang": {
+          "en": 0.8083,
+          "zh": 0.6609
+        },
+        "n_scored": 1033,
+        "n_substituted_from_archive": 636,
+        "n_voted_without_archive": 91,
+        "as_of": "2026-11-05T03:23:18Z",
+        "note": "single-shot channels for every document; voted documents scored on their archived pre-ladder channels. This is the pre-registered E1; the headline figure above is the post-ladder mixture (D-63)."
+      }
+    },
+    "E2": {
+      "n_nodes": 134,
+      "status": "downgraded",
+      "note": "case-chain typology replaces network metrics",
+      "n_edges": 9,
+      "binding_constraint": {
+        "main_corpus_docs": 128,
+        "docs_with_two_or_more_actor_nodes": 9,
+        "docs_with_provider": 9,
+        "docs_with_provider_and_end_user": 9,
+        "max_edges_possible_by_structure": 9,
+        "multi_actor_doc_share": 0.0703,
+        "edge_saturation": 1.0,
+        "note": "Edges are bounded by documents that name two actors. Saturation 1.0 means the graph already contains every edge the corpus permits (D-49)."
+      },
+      "dataset_lag_s": 0,
+      "stale_dataset": false,
+      "expansion": {
+        "action": "skip",
+        "batch": null,
+        "reason": "pre-registered expansion list exhausted",
+        "batches_done": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ]
+      }
+    },
+    "E3": {
+      "attack": "insufficient_nodes",
+      "h1_supported": null,
+      "h3_supported": null,
+      "survival": "inconclusive",
+      "hawkes": "degenerate_fit",
+      "hawkes_p": 0.0,
+      "branching_ratio": 0.6116714373322046,
+      "hawkes_nonparametric": {
+        "tie_share": 0.5858,
+        "ks_stat": 0.28546182113112206,
+        "ks_p": 1.3336982648483503e-26,
+        "ks_n": 362,
+        "dispersion_index": 3.5402,
+        "dispersion_p_mc": 0.0,
+        "dispersion_mc_reps": 1000,
+        "dispersion_days": 1078,
+        "dispersion_mean_per_day": 0.8117,
+        "note": "KS uses positive gaps only; zero gaps (same-day penalties) are reported separately as tie_share"
+      },
+      "note": "negative or inconclusive results are reported, not hidden"
+    },
+    "H2": {
+      "n_gov_events": 16,
+      "n_gov_events_raw": 19,
+      "n_evaluable": 11,
+      "status": "ok",
+      "note": null
+    },
+    "sensitivity": {
+      "high": 134,
+      "high_medium": 530,
+      "all_tiers": 1030
+    },
+    "keywords": {
+      "frame": 3277,
+      "admitted_share": 0.2746,
+      "variants": {
+        "plan_rule": {
+          "admitted": 900,
+          "jaccard": 1.0,
+          "high_tier_retained": 1.0
+        },
+        "drop_jiamao": {
+          "admitted": 879,
+          "jaccard": 0.9767,
+          "high_tier_retained": 0.9844
+        },
+        "widen_fraud": {
+          "admitted": 1119,
+          "jaccard": 0.8043,
+          "high_tier_retained": 1.0
+        },
+        "strict_documents": {
+          "admitted": 847,
+          "jaccard": 0.9411,
+          "high_tier_retained": 0.9609
+        },
+        "proximity_80": {
+          "admitted": 245,
+          "jaccard": 0.2722,
+          "high_tier_retained": 0.3047
+        }
+      }
+    },
+    "E4": {
+      "n_events": 0,
+      "status": "downgraded_to_qualitative",
+      "note": "merged into qualitative discussion (Plan §6.2 E4)"
+    },
+    "E5": {
+      "status": "not_estimable_degenerate_main_corpus",
+      "primary_test": "fisher_collapsed",
+      "chi2": null,
+      "p": null,
+      "fisher": {
+        "odds_ratio": Infinity,
+        "p": 0.25805703686529097,
+        "table": [
+          [
+            3,
+            125
+          ],
+          [
+            0,
+            100
+          ]
+        ]
+      },
+      "chi2_unreliable": {
+        "chi2": 10.601474654377881,
+        "p": 0.014088101943001871,
+        "dof": 3,
+        "note": "min expected count < 5; not the test of record"
+      },
+      "estimable": false,
+      "profile": {
+        "cn": {
+          "n": 128,
+          "modal_category": "FALSE_LABELING",
+          "modal_share": 0.9453,
+          "n_categories_ge5": 1
+        },
+        "us": {
+          "n": 100,
+          "modal_category": "FALSE_LABELING",
+          "modal_share": 0.96,
+          "n_categories_ge5": 1
+        }
+      },
+      "selection_asymmetry": 2.702
+    },
+    "module_status": {
+      "failed_modules": {},
+      "receipt_present": true,
+      "as_of": "2026-11-05T03:54:13Z",
+      "note": "A module listed here did not run this cycle; the gate numbers below it are from an older file and must not be quoted as current."
+    }
+  },
+  "actions": [
+    "E1 fallback: self-consistency -> self-training / entity shrinkage (see state kv actions:ladder)",
+    "P095 type shrinkage: stable types ['END_USER', 'JURISDICTION', 'PENALTY_EVENT'], agreement on them 0.861",
+    "E1 anchor macro is decided by 2 classes with <3 documents (macro 0.2693 vs micro 0.7825, n=423). Report per-class F1 and support; do not quote macro alone (D-58).",
+    "pre-registered E1 excludes 91 voted documents whose single-shot channels were overwritten before any archive was taken; the ladder now snapshots the corpus first (D-68).",
+    "E2 network is structurally bounded: only 9 of 128 main-corpus documents name two actors, allowing at most 9 edges. Expansion raises n_nodes but not this count — report Plan §6 as not_estimable rather than expanding further for the network (D-50).",
+    "E2 below floor (134/400): automatic expansion -> skip  (pre-registered expansion list exhausted)",
+    "E5 main-corpus comparison is degenerate (D-51): cn modal FALSE_LABELING 95%, us modal FALSE_LABELING 96%. Report E5 as not_estimable on the main corpus; all-tier distributions are descriptive only.",
+    "GLOBAL FALLBACK: dataset + baseline + method-evaluation Communication (Plan §6.2 全局兜底)"
+  ],
+  "at_utc": "2026-11-05T03:54:14Z"
+}

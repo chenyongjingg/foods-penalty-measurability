@@ -1,0 +1,168 @@
+{
+ "n_records": 1015,
+ "changed": 0,
+ "tiers": {
+  "high": 223,
+  "medium": 335,
+  "low": 457
+ },
+ "missing_text": 0,
+ "category_changed": 0,
+ "anchor_pass_flipped": 0,
+ "f1_recomputed_from_channels": 1015,
+ "f1_from_stored_rounded": 0,
+ "f1_boundary_docs": 91,
+ "f1_boundary_examples": [
+  {
+   "doc_id": "cfws:11c426b98fa5c2df95e2ac1f4ed7547e",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:6eaccab054754cc88ab66dca73dac46b",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:3a8419507c964419a1d4c6a25cd1418d",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:3776809df5123d30d6c32312d1bb65ab",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:CASE480a7b444b774498a28241b12eb9b5ef",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:bbbede933f3bffbf3cb0523911ee9825",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:fb018ffc008f4478bc99d9194f767363",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:2823b6ef92ec4137b647e3be962e5774",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:90b3e0d84061e581acada726609e3524",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:1dd38c290a6b4e94890417b40b7b5616",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:4c49f284e52787b071251a15c56e7df7",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:a1a014ad667a463f9b9f8c6cd5a9f096",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:7884e03b1a1e42a6931c75c6c37a410a",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:01f6f266ceea0840bce422e60626ef6b",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:13060ee6-0ae0-4642-9468-a7080edcc3ad",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:3304240120251100043304240000350329",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:d2ad9ed7b0544f82a3ee3a576c2b2d8f",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:230712000000646138374",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:d4bfebf4b37d4effa340635e04062839",
+   "f1": 0.75,
+   "stored": 0.75
+  },
+  {
+   "doc_id": "cfws:aa69d9ecf5024fe8aa5d694741c96028",
+   "f1": 0.75,
+   "stored": 0.75
+  }
+ ],
+ "f1_exact_stale_docs": 0,
+ "f1_exact_stale_examples": [],
+ "basis_before": {
+  "null": 436,
+  "penalty_statute": 226,
+  "cited_statute": 51,
+  "fact_only": 81,
+  "ambiguous_facts": 86,
+  "statute+fact": 111,
+  "ambiguous_statute": 24
+ },
+ "basis_after": {
+  "null": 436,
+  "penalty_statute": 226,
+  "cited_statute": 51,
+  "fact_only": 81,
+  "ambiguous_facts": 86,
+  "statute+fact": 111,
+  "ambiguous_statute": 24
+ },
+ "basis_counts": {
+  "before": {
+   "null": 436,
+   "penalty_statute": 226,
+   "cited_statute": 51,
+   "fact_only": 81,
+   "ambiguous_facts": 86,
+   "statute+fact": 111,
+   "ambiguous_statute": 24
+  },
+  "after": {
+   "null": 436,
+   "penalty_statute": 226,
+   "cited_statute": 51,
+   "fact_only": 81,
+   "ambiguous_facts": 86,
+   "statute+fact": 111,
+   "ambiguous_statute": 24
+  }
+ },
+ "tier_transitions": {
+  "high->high": 223,
+  "low->low": 457,
+  "medium->medium": 335
+ },
+ "high_by_lang": {
+  "zh": 124,
+  "en": 99
+ },
+ "at_utc": "2026-11-04T15:29:18Z",
+ "archive": "/opt/foods/data/archive/preretier_20261104T1529Z/silver.jsonl"
+}

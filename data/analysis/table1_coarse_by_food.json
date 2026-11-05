@@ -1,0 +1,188 @@
+{
+ "at_utc": "2026-11-05T04:22:13Z",
+ "product": "table1_coarse_by_food",
+ "silver": {
+  "path": "/opt/foods/data/silver/silver.jsonl",
+  "sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+  "n": 875
+ },
+ "frame": "Chinese penalty decisions (silver lang=zh, frozen corpus)",
+ "coarse_order": [
+  "DATA_FALSIFICATION",
+  "MARKET_ORDER",
+  "UNLICENSED",
+  "PROCEDURAL",
+  "UNDETERMINED"
+ ],
+ "coarse_map": {
+  "FORGED_INSPECTION_REPORT": "DATA_FALSIFICATION",
+  "TAMPERED_TRACEABILITY": "DATA_FALSIFICATION",
+  "FAKE_CERTIFICATION": "DATA_FALSIFICATION",
+  "FALSE_LABELING": "DATA_FALSIFICATION",
+  "UNLICENSED_OPERATION": "UNLICENSED",
+  "TRADEMARK_INFRINGEMENT": "MARKET_ORDER",
+  "FALSE_ADVERTISING": "MARKET_ORDER",
+  "PRODUCT_QUALITY": "MARKET_ORDER",
+  "PROCEDURAL_NONCOMPLIANCE": "PROCEDURAL",
+  "UNRESOLVED": "UNDETERMINED"
+ },
+ "food_dict_version": 1,
+ "map_version": 2,
+ "rows": [
+  {
+   "food": "UNMATCHED",
+   "n": 272,
+   "DATA_FALSIFICATION": 108,
+   "MARKET_ORDER": 48,
+   "UNLICENSED": 7,
+   "PROCEDURAL": 19,
+   "UNDETERMINED": 90
+  },
+  {
+   "food": "FOOD_ADDITIVE",
+   "n": 85,
+   "DATA_FALSIFICATION": 57,
+   "MARKET_ORDER": 0,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 8,
+   "UNDETERMINED": 18
+  },
+  {
+   "food": "PREPACKAGED_FOOD",
+   "n": 74,
+   "DATA_FALSIFICATION": 46,
+   "MARKET_ORDER": 4,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 7,
+   "UNDETERMINED": 15
+  },
+  {
+   "food": "MEAT_PRODUCT",
+   "n": 66,
+   "DATA_FALSIFICATION": 41,
+   "MARKET_ORDER": 2,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 5,
+   "UNDETERMINED": 16
+  },
+  {
+   "food": "ALCOHOL",
+   "n": 63,
+   "DATA_FALSIFICATION": 9,
+   "MARKET_ORDER": 24,
+   "UNLICENSED": 1,
+   "PROCEDURAL": 7,
+   "UNDETERMINED": 22
+  },
+  {
+   "food": "GRAIN_BAKERY",
+   "n": 61,
+   "DATA_FALSIFICATION": 38,
+   "MARKET_ORDER": 3,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 0,
+   "UNDETERMINED": 18
+  },
+  {
+   "food": "CONDIMENT",
+   "n": 44,
+   "DATA_FALSIFICATION": 19,
+   "MARKET_ORDER": 5,
+   "UNLICENSED": 0,
+   "PROCEDURAL": 3,
+   "UNDETERMINED": 17
+  },
+  {
+   "food": "EDIBLE_AGRICULTURAL",
+   "n": 42,
+   "DATA_FALSIFICATION": 21,
+   "MARKET_ORDER": 4,
+   "UNLICENSED": 1,
+   "PROCEDURAL": 5,
+   "UNDETERMINED": 11
+  },
+  {
+   "food": "BEVERAGE",
+   "n": 36,
+   "DATA_FALSIFICATION": 15,
+   "MARKET_ORDER": 1,
+   "UNLICENSED": 3,
+   "PROCEDURAL": 2,
+   "UNDETERMINED": 15
+  },
+  {
+   "food": "DAIRY",
+   "n": 28,
+   "DATA_FALSIFICATION": 13,
+   "MARKET_ORDER": 3,
+   "UNLICENSED": 1,
+   "PROCEDURAL": 4,
+   "UNDETERMINED": 7
+  },
+  {
+   "food": "OIL",
+   "n": 28,
+   "DATA_FALSIFICATION": 17,
+   "MARKET_ORDER": 0,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 1,
+   "UNDETERMINED": 8
+  },
+  {
+   "food": "HEALTH_FOOD",
+   "n": 22,
+   "DATA_FALSIFICATION": 5,
+   "MARKET_ORDER": 3,
+   "UNLICENSED": 0,
+   "PROCEDURAL": 0,
+   "UNDETERMINED": 14
+  },
+  {
+   "food": "FROZEN",
+   "n": 18,
+   "DATA_FALSIFICATION": 9,
+   "MARKET_ORDER": 0,
+   "UNLICENSED": 1,
+   "PROCEDURAL": 1,
+   "UNDETERMINED": 7
+  },
+  {
+   "food": "CATERING_RAW_MATERIAL",
+   "n": 17,
+   "DATA_FALSIFICATION": 5,
+   "MARKET_ORDER": 2,
+   "UNLICENSED": 2,
+   "PROCEDURAL": 3,
+   "UNDETERMINED": 5
+  },
+  {
+   "food": "TEA",
+   "n": 12,
+   "DATA_FALSIFICATION": 5,
+   "MARKET_ORDER": 0,
+   "UNLICENSED": 0,
+   "PROCEDURAL": 1,
+   "UNDETERMINED": 6
+  },
+  {
+   "food": "INFANT_FOOD",
+   "n": 7,
+   "DATA_FALSIFICATION": 4,
+   "MARKET_ORDER": 1,
+   "UNLICENSED": 0,
+   "PROCEDURAL": 0,
+   "UNDETERMINED": 2
+  }
+ ],
+ "column_totals": {
+  "DATA_FALSIFICATION": 412,
+  "MARKET_ORDER": 100,
+  "UNLICENSED": 26,
+  "PROCEDURAL": 66,
+  "UNDETERMINED": 271
+ },
+ "n_total": 875,
+ "matchable_n": 603,
+ "matchable_rate": 0.6891,
+ "note": "Joint distribution of the deterministic coarse category and the primary food category, re-derived from the frozen silver with the same functions e6_descriptive.py uses. UNMATCHED is a food-category miss, not a misclassification: the statutes still decide the coarse category. Cell counts are descriptive; no test is run on them."
+}

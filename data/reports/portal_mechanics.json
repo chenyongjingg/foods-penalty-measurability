@@ -1,0 +1,206 @@
+{
+ "product": "portal_mechanics",
+ "at_utc": "2026-11-05T04:54:41Z",
+ "page_size": 50,
+ "queries": [
+  {
+   "query": [
+    "检验报告",
+    "食品"
+   ],
+   "pages": [
+    {
+     "page": 1,
+     "result_count": 6760,
+     "rows": 50,
+     "first_date": "2026-10-19",
+     "last_date": "2026-09-30",
+     "n_dated": 50,
+     "dates_non_increasing": true
+    },
+    {
+     "page": 2,
+     "result_count": 6760,
+     "rows": 50,
+     "first_date": "2026-09-30",
+     "last_date": "2026-09-22",
+     "n_dated": 50
+    },
+    {
+     "page": 3,
+     "result_count": 6760,
+     "rows": 50,
+     "first_date": "2026-09-22",
+     "last_date": "2026-09-17",
+     "n_dated": 50
+    },
+    {
+     "page": 4,
+     "result_count": 6760,
+     "rows": 50,
+     "first_date": "2026-09-17",
+     "last_date": "2026-09-11",
+     "n_dated": 50
+    },
+    {
+     "page": 5,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    },
+    {
+     "page": 6,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    }
+   ],
+   "first_page_date_span": [
+    "2026-09-30",
+    "2026-10-19"
+   ],
+   "max_rows_served_in_one_page": 50,
+   "pages_with_zero_rows": [
+    5,
+    6
+   ]
+  },
+  {
+   "query": [
+    "伪造",
+    "食品"
+   ],
+   "pages": [
+    {
+     "page": 1,
+     "result_count": 720,
+     "rows": 50,
+     "first_date": "2026-10-16",
+     "last_date": "2026-07-28",
+     "n_dated": 50,
+     "dates_non_increasing": true
+    },
+    {
+     "page": 2,
+     "result_count": 720,
+     "rows": 50,
+     "first_date": "2026-07-24",
+     "last_date": "2026-05-13",
+     "n_dated": 50
+    },
+    {
+     "page": 3,
+     "result_count": 720,
+     "rows": 50,
+     "first_date": "2026-05-13",
+     "last_date": "2026-03-20",
+     "n_dated": 50
+    },
+    {
+     "page": 4,
+     "result_count": 720,
+     "rows": 50,
+     "first_date": "2026-03-20",
+     "last_date": "2026-01-15",
+     "n_dated": 50
+    },
+    {
+     "page": 5,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    },
+    {
+     "page": 6,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    }
+   ],
+   "first_page_date_span": [
+    "2026-07-28",
+    "2026-10-16"
+   ],
+   "max_rows_served_in_one_page": 50,
+   "pages_with_zero_rows": [
+    5,
+    6
+   ]
+  },
+  {
+   "query": [
+    "冒用认证标志",
+    null
+   ],
+   "pages": [
+    {
+     "page": 1,
+     "result_count": 1471,
+     "rows": 50,
+     "first_date": "2026-10-16",
+     "last_date": "2026-08-27",
+     "n_dated": 50,
+     "dates_non_increasing": true
+    },
+    {
+     "page": 2,
+     "result_count": 1471,
+     "rows": 50,
+     "first_date": "2026-08-26",
+     "last_date": "2026-07-27",
+     "n_dated": 50
+    },
+    {
+     "page": 3,
+     "result_count": 1471,
+     "rows": 50,
+     "first_date": "2026-07-23",
+     "last_date": "2026-06-08",
+     "n_dated": 50
+    },
+    {
+     "page": 4,
+     "result_count": 1471,
+     "rows": 50,
+     "first_date": "2026-06-08",
+     "last_date": "2026-05-09",
+     "n_dated": 50
+    },
+    {
+     "page": 5,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    },
+    {
+     "page": 6,
+     "result_count": 0,
+     "rows": 0,
+     "first_date": null,
+     "last_date": null,
+     "n_dated": 0
+    }
+   ],
+   "first_page_date_span": [
+    "2026-08-27",
+    "2026-10-16"
+   ],
+   "max_rows_served_in_one_page": 50,
+   "pages_with_zero_rows": [
+    5,
+    6
+   ]
+  }
+ ],
+ "note": "sortFields is empty, i.e. the portal's default ordering. Row count per page and the date sequence on page 1 are recorded verbatim so that the sampling window claim (D-90) has a product behind it."
+}

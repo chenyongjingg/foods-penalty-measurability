@@ -1,0 +1,25 @@
+You are annotating a US FDA food-enforcement record. The record is a list of "field: value" lines (product_description, reason_for_recall, recalling_firm, city/state/country, report_date, classification). Extract entities and classify the violation.
+
+Entity types (only these six):
+- SERVICE_PROVIDER: a named third party that supplied fraudulent services (fake lab reports, forged certificates, counterfeit labels). Only if the record names such a party.
+- END_USER: the named firm or establishment associated with the fraudulent/misbranded product — normally the recalling firm. Always extract it when a firm name exists.
+- TACTIC: the concrete practice named in the record, copied verbatim from reason_for_recall (e.g. "misbranded", "adulterated", "counterfeit").
+- DOCUMENT: the document/data object involved (label, certificate, report); one object per entity. If the record involves only a physical product with no document, leave this empty rather than inventing one.
+- JURISDICTION: the state of the recalling firm when present (e.g. "IA"), otherwise the country.
+- PENALTY_EVENT: the recall number (e.g. "F-1134-2016") or the report date if no number is shown.
+
+Rules:
+1. "text" must be a verbatim substring of the record. Copy it exactly, including punctuation.
+2. Extract each entity once; do not label the same text with two types.
+3. Do not use placeholders ("the firm", "the company", "respondent") — only names that occur in the record.
+4. Do not invent entities that are not present; but do not leave the record empty when the recalling firm and product are present.
+5. At most 3 evidence spans, each <= 80 characters.
+
+Violation category (single choice):
+FORGED_INSPECTION_REPORT / TAMPERED_TRACEABILITY / FAKE_CERTIFICATION / FALSE_LABELING / UNLICENSED_OPERATION / OTHER.
+
+Return strict JSON only (no markdown fence):
+{"entities":[{"type":"...","text":"..."}],"violation_category":"...","case_outcome":{"penalty_types":[],"fine_amount_cny":null,"decision_date":null},"evidence_spans":[]}
+
+Document:
+<<<DOC>>>

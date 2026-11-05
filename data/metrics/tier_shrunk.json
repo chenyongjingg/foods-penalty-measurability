@@ -1,0 +1,184 @@
+{
+ "at_utc": "2026-11-05T03:54:17Z",
+ "input": "/opt/foods/data/silver/silver.jsonl",
+ "input_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+ "n_records": 1128,
+ "rule": {
+  "min_type_f1": 0.75,
+  "min_type_support": 20,
+  "tau": 0.5,
+  "target": 0.85,
+  "floor": 0.75
+ },
+ "full_set": {
+  "mean_agreement": 0.746,
+  "n_scored": 1127,
+  "per_type": {
+   "DOCUMENT": {
+    "f1": 0.4097,
+    "n_a": 630,
+    "n_b": 488,
+    "tp": 229,
+    "support": 1118
+   },
+   "TACTIC": {
+    "f1": 0.6279,
+    "n_a": 952,
+    "n_b": 682,
+    "tp": 513,
+    "support": 1634
+   },
+   "SERVICE_PROVIDER": {
+    "f1": 0.3356,
+    "n_a": 316,
+    "n_b": 274,
+    "tp": 99,
+    "support": 590
+   },
+   "JURISDICTION": {
+    "f1": 0.8809,
+    "n_a": 971,
+    "n_b": 1095,
+    "tp": 910,
+    "support": 2066
+   },
+   "PENALTY_EVENT": {
+    "f1": 0.8606,
+    "n_a": 674,
+    "n_b": 804,
+    "tp": 636,
+    "support": 1478
+   },
+   "END_USER": {
+    "f1": 0.9105,
+    "n_a": 988,
+    "n_b": 1123,
+    "tp": 961,
+    "support": 2111
+   }
+  }
+ },
+ "stable_types": [
+  "END_USER",
+  "JURISDICTION",
+  "PENALTY_EVENT"
+ ],
+ "dropped_types": [
+  "DOCUMENT",
+  "SERVICE_PROVIDER",
+  "TACTIC"
+ ],
+ "shrunk_set": {
+  "mean_agreement": 0.861,
+  "n_scored": 1127
+ },
+ "tier_counts": {
+  "stored": {
+   "high": 228,
+   "medium": 398,
+   "low": 502
+  },
+  "shrunk": {
+   "high": 353,
+   "medium": 503,
+   "low": 271
+  }
+ },
+ "tier_transitions": [
+  {
+   "from": "high",
+   "to": "high",
+   "n": 218
+  },
+  {
+   "from": "high",
+   "to": "medium",
+   "n": 10
+  },
+  {
+   "from": "low",
+   "to": "high",
+   "n": 59
+  },
+  {
+   "from": "low",
+   "to": "low",
+   "n": 230
+  },
+  {
+   "from": "low",
+   "to": "medium",
+   "n": 212
+  },
+  {
+   "from": "low",
+   "to": "unscored",
+   "n": 1
+  },
+  {
+   "from": "medium",
+   "to": "high",
+   "n": 76
+  },
+  {
+   "from": "medium",
+   "to": "low",
+   "n": 41
+  },
+  {
+   "from": "medium",
+   "to": "medium",
+   "n": 281
+  }
+ ],
+ "by_lang": {
+  "zh": {
+   "n": 875,
+   "stored": {
+    "medium": 354,
+    "low": 393,
+    "high": 128
+   },
+   "shrunk": {
+    "medium": 501,
+    "low": 132,
+    "high": 241,
+    "null": 1
+   }
+  },
+  "en": {
+   "n": 253,
+   "stored": {
+    "medium": 44,
+    "low": 109,
+    "high": 100
+   },
+   "shrunk": {
+    "low": 139,
+    "high": 112,
+    "medium": 2
+   }
+  }
+ },
+ "actor_structure": {
+  "stored_high": {
+   "docs": 128,
+   "docs_with_any_actor_node": 125,
+   "docs_with_two_or_more_actor_nodes": 16,
+   "docs_with_provider": 16,
+   "docs_with_provider_and_end_user": 16,
+   "max_edges_possible_by_structure": 16
+  },
+  "shrunk_high": {
+   "docs": 241,
+   "docs_with_any_actor_node": 240,
+   "docs_with_two_or_more_actor_nodes": 42,
+   "docs_with_provider": 40,
+   "docs_with_provider_and_end_user": 40,
+   "max_edges_possible_by_structure": 42
+  },
+  "scope": "Chinese high-tier documents only, channel a, node identity = normalised name deduplicated within the document. This is an upper bound reconstructed from silver channels, NOT the extracted graph: grounding and the matched-intersection rule on voted documents (D-64) only remove mentions, so it can exceed network_metrics.actor_coverage. Quote that block for the §6 structural ceiling (D-54, D-66)."
+ },
+ "e1_status_unchanged": true,
+ "note": "This is a corpus variant mandated by plan P095, not a new E1 result. E1 stays graded on the full type set so that a post-hoc type selection cannot masquerade as agreement. Shrinkage redefines the question; it must never be reported as an improvement. Every downstream estimate that depends on entity types must be given on both corpora, labelled (D-53)."
+}

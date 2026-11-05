@@ -1,0 +1,7 @@
+[2026-11-05T08:43:38Z] autopilot start pid=255779
+[2026-11-05T08:43:39Z] stage1 preflight: frozen corpus OK
+[2026-11-05T08:43:39Z] stage2 E17 starting
+[2026-11-05T08:43:50Z] stage2 E17 exited rc=0
+[2026-11-05T08:43:50Z] stage3 provenance verification starting
+[2026-11-05T08:43:50Z] stage3 exited rc=0
+[2026-11-05T08:43:50Z] stage4 receipt written: /opt/foods/runs/autopilot/RECEIPT.md

@@ -1,0 +1,125 @@
+# Pre-registered corpus-expansion ladder (Plan §6.2: "扩年份/扩站点由管线自动执行").
+#
+# Why a fixed list: the expansion has to be automatic *and* auditable. If the
+# pipeline invented new search terms whenever E2 came in low, the corpus
+# definition would become a function of the observed result. These batches were
+# written down before the second labelling wave; the pipeline takes them in
+# order and records which batch produced which document.
+#
+# Scope: every term stays inside the Plan §4.1 D1' families — a fraud term
+# (伪造/虚假/篡改/变造/冒用/买卖/套用) AND a document-type term (检验检测报告/
+# 认证证书/溯源码/合格证明) AND a food context. Queries only *retrieve*; the
+# inclusion rule in clean/normalize.py is unchanged and remains the filter.
+#
+# The portal serves at most ~200 rows per query (page 5 is empty even when
+# resultCount is larger), so coverage comes from distinct query wording.
+batches:
+  - id: B1
+    rationale: >-
+      fraud verbs that appear in decisions but were missing from the first
+      query list (变造/冒用/买卖/购买/套用), crossed with the main document types
+    queries:
+      - ["变造", "检验报告"]
+      - ["变造", "认证证书"]
+      - ["冒用", "认证标志"]
+      - ["买卖", "认证证书"]
+      - ["购买", "检验报告"]
+      - ["套用", "检验报告"]
+      - ["伪造", "检验检测报告"]
+      - ["虚假", "检验检测报告"]
+  - id: B2
+    rationale: >-
+      traceability and conformity-certificate objects, which the first list
+      covered mostly through the broad 溯源/合格证 terms
+    queries:
+      - ["篡改", "溯源码"]
+      - ["伪造", "溯源码"]
+      - ["虚假", "溯源码"]
+      - ["伪造", "合格证明"]
+      - ["虚假", "合格证"]
+      - ["篡改", "检测报告"]
+      - ["伪造", "检测数据"]
+      - ["虚假", "检验报告"]
+  - id: B3
+    rationale: >-
+      food segments named in the plan (预包装食品/保健食品/餐饮/食用农产品)
+      crossed with the fraud terms, to reach decisions phrased around a product
+      category rather than the word 食品
+    queries:
+      - ["伪造", "预包装"]
+      - ["虚假", "保健食品"]
+      - ["伪造", "餐饮"]
+      - ["伪造", "农产品"]
+      - ["虚假", "农产品"]
+      - ["伪造", "食用农产品"]
+      - ["虚假", "食用农产品"]
+      - ["篡改", "生产日期"]
+  # --- B4 onwards: corrected query semantics (DEVIATIONS.md D-36) -----------
+  # Probing the portal (2026-11-04, scripts/_coverage_probe.py) showed the two
+  # query slots are NOT two full-text fields: `queryCondition.key` "quanwen_1"
+  # is a free-text match and "quanwen_2" is a *facet* (product/food category).
+  # Evidence: ["检验报告", "餐饮"] = 1,544 hits while ["食品", "检验报告"] = 0 and
+  # ["伪造", "检验报告"] = 0 — a document-type term in the second slot returns
+  # nothing, a food category in the second slot works. Every B1–B3 query puts a
+  # document-type term in the second slot, so that ladder can only ever return
+  # zero; B1 was run first and returned 0 new documents, as predicted.
+  # B4+ therefore keep the conjunction in the *first* slot (free text: a single
+  # term, or the exact adjacent phrase) and use the second slot for the food
+  # facet. The term inventory is the D1' vocabulary in settings.yaml, enumerated
+  # mechanically — no query was added or dropped after seeing its yield.
+  - id: B4
+    rationale: >-
+      D1' vocabulary crossed with the 食品 facet, single terms only: every
+      fraud term and every document-type term as free text, restricted to food
+      decisions. This is the first batch whose second slot is a facet value.
+    queries:
+      - ["伪造", "食品"]
+      - ["虚假", "食品"]
+      - ["篡改", "食品"]
+      - ["变造", "食品"]
+      - ["假冒", "食品"]
+      - ["买卖", "食品"]
+      - ["出具虚假", "食品"]
+      - ["检验检测报告", "食品"]
+      - ["检验报告", "食品"]
+      - ["检测报告", "食品"]
+      - ["认证证书", "食品"]
+      - ["认证材料", "食品"]
+      - ["溯源码", "食品"]
+      - ["溯源", "食品"]
+      - ["合格证明", "食品"]
+      - ["合格证", "食品"]
+      - ["检测数据", "食品"]
+      - ["检验数据", "食品"]
+  - id: B5
+    rationale: >-
+      same D1' vocabulary against the other food facets named in Plan §4.1
+      (餐饮/农产品/保健食品/预包装), which reach decisions phrased around a
+      product category instead of the word 食品
+    queries:
+      - ["伪造", "餐饮"]
+      - ["虚假", "餐饮"]
+      - ["篡改", "餐饮"]
+      - ["变造", "餐饮"]
+      - ["买卖", "餐饮"]
+      - ["检验报告", "餐饮"]
+      - ["检测报告", "餐饮"]
+      - ["合格证明", "餐饮"]
+      - ["伪造", "农产品"]
+      - ["虚假", "农产品"]
+      - ["篡改", "农产品"]
+      - ["检验报告", "农产品"]
+      - ["检测报告", "农产品"]
+      - ["合格证明", "农产品"]
+      - ["伪造", "保健食品"]
+      - ["虚假", "保健食品"]
+      - ["篡改", "保健食品"]
+      - ["检验报告", "保健食品"]
+      - ["检测报告", "保健食品"]
+      - ["合格证明", "保健食品"]
+      - ["伪造", "预包装"]
+      - ["虚假", "预包装"]
+      - ["篡改", "预包装"]
+      - ["检验报告", "预包装"]
+      - ["检测报告", "预包装"]
+      - ["合格证明", "预包装"]

@@ -1,0 +1,20 @@
+docs 1128
+Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+Loading model cost 0.608 seconds.
+Prefix dict has been built successfully.
+[e17] 100/1128 2s
+[e17] 200/1128 3s
+[e17] 300/1128 4s
+[e17] 400/1128 6s
+[e17] 500/1128 7s
+[e17] 600/1128 8s
+[e17] 700/1128 9s
+[e17] 800/1128 10s
+[e17] 900/1128 11s
+[e17] 1000/1128 11s
+[e17] 1100/1128 11s
+crosstab {'R0_pass_R1_pass': 232, 'R0_pass_R1_drop': 38, 'R0_drop_R1_pass': 0, 'both_drop': 0}
+dropped by verdict {'S': 12, 'I': 13, 'T': 5, 'F': 8}
+subject precision R0/R1 0.3852 0.3966
+sha 9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3

@@ -1,0 +1,101 @@
+{
+ "at_utc": "2026-11-05T07:40:17Z",
+ "criterion_register": "D-102",
+ "inputs": {
+  "sample_sha256": "f722dd114f0a0ab81b6e9bddf8273091c1859bc7e75124a14a676024def82634",
+  "coded_A_sha256": "5b1735b582fed2aeb60e39f227688020fa87fbe1185f7368f02726410dc68e9b",
+  "coded_B_sha256": "924c14695daf63474fcd1d181b104cb66fbb07a0a8fe75e72042adb5237c2a74",
+  "coded_C_sha256": "20908949df09e95a996415cb0d2d7137e61d058649f7010bdc0898f87c3d226e"
+ },
+ "status": "complete",
+ "n_docs": 80,
+ "pairwise": {
+  "A_B": {
+   "n_scored": 80,
+   "n_agree": 13,
+   "agreement": 0.1625,
+   "wilson95": [
+    0.0975,
+    0.2584
+   ],
+   "kappa": 0.0019,
+   "ac1": 0.0172,
+   "pabak": -0.005,
+   "n_classes": 6
+  },
+  "A_C": {
+   "n_scored": 80,
+   "n_agree": 64,
+   "agreement": 0.8,
+   "wilson95": [
+    0.6995,
+    0.873
+   ],
+   "kappa": 0.6371,
+   "ac1": 0.7681,
+   "pabak": 0.75,
+   "n_classes": 5
+  },
+  "B_C": {
+   "n_scored": 80,
+   "n_agree": 11,
+   "agreement": 0.1375,
+   "wilson95": [
+    0.0785,
+    0.2297
+   ],
+   "kappa": -0.0353,
+   "ac1": -0.0086,
+   "pabak": -0.035,
+   "n_classes": 6
+  }
+ },
+ "fleiss": {
+  "n_subjects": 80,
+  "m_raters": 3,
+  "p_bar": 0.3667,
+  "p_e": 0.3055,
+  "fleiss_kappa": 0.0881,
+  "per_category_agreement": {
+   "FAKE_CERTIFICATION": 0.0646,
+   "FALSE_LABELING": 0.2708,
+   "FORGED_INSPECTION_REPORT": 0.0241,
+   "OTHER": 0.3125,
+   "TAMPERED_TRACEABILITY": 0.0122,
+   "UNLICENSED_OPERATION": 0.0298
+  }
+ },
+ "n_excluded_unresolved": 0,
+ "distribution": {
+  "A": {
+   "OTHER": 0.575,
+   "FALSE_LABELING": 0.3,
+   "UNLICENSED_OPERATION": 0.0625,
+   "FORGED_INSPECTION_REPORT": 0.0375,
+   "FAKE_CERTIFICATION": 0.025
+  },
+  "B": {
+   "FALSE_LABELING": 0.4125,
+   "FAKE_CERTIFICATION": 0.325,
+   "FORGED_INSPECTION_REPORT": 0.075,
+   "TAMPERED_TRACEABILITY": 0.075,
+   "UNLICENSED_OPERATION": 0.075,
+   "OTHER": 0.0375
+  },
+  "C": {
+   "OTHER": 0.6125,
+   "FALSE_LABELING": 0.3125,
+   "FAKE_CERTIFICATION": 0.0375,
+   "UNLICENSED_OPERATION": 0.025,
+   "FORGED_INSPECTION_REPORT": 0.0125
+  }
+ },
+ "verdict": {
+  "fleiss_kappa": 0.0881,
+  "min_pairwise_agreement": 0.1375,
+  "min_pairwise_wilson_lo": 0.0785,
+  "typology_shared_reading": false,
+  "typology_no_shared_reading": true,
+  "verdict": "no_shared_reading"
+ }
+}

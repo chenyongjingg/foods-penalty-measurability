@@ -1,0 +1,42 @@
+{
+ "n_records": 987,
+ "changed": 741,
+ "tiers": {
+  "high": 170,
+  "medium": 200,
+  "low": 617
+ },
+ "missing_text": 0,
+ "category_changed": 1,
+ "anchor_pass_flipped": 0,
+ "basis_before": {
+  "null": 428,
+  "penalty_statute": 205,
+  "cited_statute": 63,
+  "fact_only": 83,
+  "ambiguous_facts": 81,
+  "statute+fact": 104,
+  "ambiguous_statute": 23
+ },
+ "basis_after": {
+  "null": 427,
+  "penalty_statute": 218,
+  "cited_statute": 51,
+  "fact_only": 81,
+  "ambiguous_facts": 82,
+  "statute+fact": 104,
+  "ambiguous_statute": 24
+ },
+ "tier_transitions": {
+  "high->high": 170,
+  "low->low": 617,
+  "low->medium": 21,
+  "medium->medium": 179
+ },
+ "high_by_lang": {
+  "zh": 79,
+  "en": 91
+ },
+ "at_utc": "2026-11-04T07:04:21Z",
+ "archive": "/opt/foods/data/archive/preretier_20261104T0704Z/silver.jsonl"
+}

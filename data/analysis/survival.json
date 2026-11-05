@@ -1,0 +1,7 @@
+{
+  "n_nodes": 134,
+  "at_utc": "2026-11-05T03:53:33Z",
+  "n_events": 0,
+  "status": "inconclusive",
+  "note": "events=0 < min=20; reported as inconclusive per Plan §6.2 E3"
+}

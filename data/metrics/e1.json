@@ -1,0 +1,278 @@
+{
+  "n": 1128,
+  "mean_agreement": 0.746,
+  "by_lang": {
+    "en": {
+      "n": 253,
+      "mean_agreement": 0.8158,
+      "pooled_micro_f1": 0.8182,
+      "stable_types": [
+        "END_USER",
+        "TACTIC"
+      ],
+      "tiers": {
+        "medium": 44,
+        "low": 109,
+        "high": 100
+      }
+    },
+    "zh": {
+      "n": 875,
+      "mean_agreement": 0.7257,
+      "pooled_micro_f1": 0.7298,
+      "stable_types": [
+        "END_USER",
+        "JURISDICTION",
+        "PENALTY_EVENT"
+      ],
+      "tiers": {
+        "medium": 354,
+        "low": 393,
+        "high": 128
+      }
+    }
+  },
+  "n_zero_entities": 1,
+  "n_scored_agreement": 1127,
+  "pooled_micro_f1": 0.7442,
+  "literature_calibration": {
+    "source": "CAEC_LLM (ISPRS Int. J. Geo-Inf. 2026; Plan §2.1)",
+    "reported_zero_shot_f1": 0.7,
+    "reported_finetuned_f1": 0.82,
+    "our_pooled_micro_f1": 0.7442,
+    "note": "context only — published F1 is against a human gold standard on a different task; ours is dual-channel agreement and is not numerically comparable"
+  },
+  "protocol": {
+    "prompt_version": {
+      "alpha_zh.txt": "10af78aa6a9e",
+      "alpha_en.txt": "ba3a643ad2fa",
+      "beta_zh.txt": "5270be412102",
+      "beta_en.txt": "faed1c58f132",
+      "adjudicate.txt": "7bd622c6ddbe"
+    },
+    "doc_text_chars": 20000,
+    "max_tokens": {
+      "channel_a": 3000,
+      "channel_b": 4000,
+      "adjudicator": 4000
+    },
+    "model": "qwen2.5-7b-instruct",
+    "span_tau": 0.5,
+    "entity_types": [
+      "DOCUMENT",
+      "END_USER",
+      "JURISDICTION",
+      "PENALTY_EVENT",
+      "SERVICE_PROVIDER",
+      "TACTIC"
+    ]
+  },
+  "input_chars": {
+    "cap": 20000,
+    "labelled_n": 1128,
+    "labelled_p50": 3151,
+    "labelled_p99": 9705,
+    "labelled_max": 12742,
+    "over_cap": 0,
+    "parse_failed_n": 25,
+    "parse_failed_p50": 6136,
+    "parse_failed_p90": 10227
+  },
+  "mean_agreement_shrunk": 0.861,
+  "stable_types": [
+    "END_USER",
+    "JURISDICTION",
+    "PENALTY_EVENT"
+  ],
+  "tau_sensitivity": {
+    "0.3": {
+      "mean_agreement": 0.7487,
+      "n": 1128
+    },
+    "0.5": {
+      "mean_agreement": 0.746,
+      "n": 1128
+    },
+    "0.7": {
+      "mean_agreement": 0.7276,
+      "n": 1128
+    }
+  },
+  "ladder": {
+    "triggered": true,
+    "rule": "keep types with per-type F1 >= 0.75 and support >= 20",
+    "stable_types": [
+      "END_USER",
+      "JURISDICTION",
+      "PENALTY_EVENT"
+    ],
+    "agreement_shrunk": 0.861,
+    "note": "Plan P095 type shrinkage; status above is full-type"
+  },
+  "per_type": {
+    "JURISDICTION": {
+      "f1": 0.8809,
+      "n_a": 971,
+      "n_b": 1095,
+      "tp": 910
+    },
+    "SERVICE_PROVIDER": {
+      "f1": 0.3356,
+      "n_a": 316,
+      "n_b": 274,
+      "tp": 99
+    },
+    "END_USER": {
+      "f1": 0.9105,
+      "n_a": 988,
+      "n_b": 1123,
+      "tp": 961
+    },
+    "DOCUMENT": {
+      "f1": 0.4097,
+      "n_a": 630,
+      "n_b": 488,
+      "tp": 229
+    },
+    "PENALTY_EVENT": {
+      "f1": 0.8606,
+      "n_a": 674,
+      "n_b": 804,
+      "tp": 636
+    },
+    "TACTIC": {
+      "f1": 0.6279,
+      "n_a": 952,
+      "n_b": 682,
+      "tp": 513
+    }
+  },
+  "per_type_shrunk": {
+    "JURISDICTION": {
+      "f1": 0.8809,
+      "n_a": 971,
+      "n_b": 1095,
+      "tp": 910
+    },
+    "END_USER": {
+      "f1": 0.9105,
+      "n_a": 988,
+      "n_b": 1123,
+      "tp": 961
+    },
+    "PENALTY_EVENT": {
+      "f1": 0.8606,
+      "n_a": 674,
+      "n_b": 804,
+      "tp": 636
+    }
+  },
+  "anchor_f1": {
+    "n": 423,
+    "f1": 0.2693,
+    "macro_f1": 0.2693,
+    "micro_f1": 0.7825,
+    "per_class_f1": {
+      "FAKE_CERTIFICATION": 0.0,
+      "FALSE_LABELING": 0.8801,
+      "FORGED_INSPECTION_REPORT": 0.3571,
+      "OTHER": 0.0,
+      "TAMPERED_TRACEABILITY": 0.0,
+      "UNLICENSED_OPERATION": 0.3784
+    },
+    "support": {
+      "n": 423,
+      "per_class": {
+        "FAKE_CERTIFICATION": {
+          "f1": 0.0,
+          "support": 1,
+          "predicted": 1
+        },
+        "FALSE_LABELING": {
+          "f1": 0.8801,
+          "support": 326,
+          "predicted": 383
+        },
+        "FORGED_INSPECTION_REPORT": {
+          "f1": 0.3571,
+          "support": 11,
+          "predicted": 17
+        },
+        "OTHER": {
+          "f1": 0.0,
+          "support": 31,
+          "predicted": 0
+        },
+        "TAMPERED_TRACEABILITY": {
+          "f1": 0.0,
+          "support": 2,
+          "predicted": 0
+        },
+        "UNLICENSED_OPERATION": {
+          "f1": 0.3784,
+          "support": 52,
+          "predicted": 22
+        }
+      },
+      "macro_all_classes": 0.2693,
+      "macro_classes_support_ge20": 0.4195,
+      "micro": 0.7825,
+      "min_class_support": 1,
+      "n_classes_support_lt3": 2,
+      "note": "A macro figure over classes with almost no support is not a statement about extraction quality; read it with this block (D-18, D-58). The gated statistic is unchanged."
+    },
+    "fact_only_docs": 97,
+    "basis_counts": {
+      "ambiguous_facts": 88,
+      "ambiguous_statute": 27,
+      "cited_statute": 52,
+      "fact_only": 97,
+      "none": 493,
+      "penalty_statute": 232,
+      "statute+fact": 139
+    },
+    "extraction": {
+      "party": {
+        "hit": 669,
+        "docs": 872,
+        "rate": 0.7672
+      },
+      "case_no": {
+        "hit": 582,
+        "docs": 793,
+        "rate": 0.7339
+      }
+    }
+  },
+  "status": "failed",
+  "thresholds": {
+    "agreement_target": 0.85,
+    "agreement_floor": 0.75,
+    "anchor_target": 0.8,
+    "anchor_floor": 0.7
+  },
+  "tier_counts": {
+    "medium": 398,
+    "low": 502,
+    "high": 228
+  },
+  "coverage": {
+    "labelled": 1128,
+    "pending_clean": 0,
+    "label_parse_failed": 5,
+    "label_truncated_output": 20,
+    "label_no_consensus_category": 0,
+    "rate": 1.0
+  },
+  "align_ground_malformed": {
+    "non_dict_entity": 0,
+    "non_string_text": 0,
+    "non_string_type": 0
+  },
+  "at_utc": "2026-11-05T03:53:30Z",
+  "decoding_mix": {
+    "self_consistency": 729,
+    "single_shot": 399,
+    "note": "The headline agreement pools these two regimes; report the mixture with it. Only single_shot documents are measured on the pre-registered protocol."
+  }
+}

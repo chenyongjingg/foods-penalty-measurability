@@ -1,0 +1,44 @@
+{
+ "product": "length_bias",
+ "at_utc": "2026-11-05T04:48:55Z",
+ "labelled_zh": {
+  "n_rows": 875,
+  "n_with_len": 875,
+  "p50": 3578,
+  "p90": 5698,
+  "max": 12742
+ },
+ "labelled_en": {
+  "n_rows": 253,
+  "n_with_len": 253,
+  "p50": 719,
+  "p90": 812,
+  "max": 2919
+ },
+ "clean_unlabelled": {
+  "n_rows": 25,
+  "n_with_len": 25,
+  "p50": 6136,
+  "p90": 9964,
+  "max": 16263
+ },
+ "failed_no_text": {
+  "n_rows": 296,
+  "n_with_len": 0,
+  "p50": null,
+  "p90": null,
+  "max": null
+ },
+ "ratio_clean_over_labelled_zh": 1.71,
+ "per_error": {
+  "label_truncated_output": {
+   "n": 20,
+   "p50": 6136
+  },
+  "label_parse_failed": {
+   "n": 5,
+   "p50": 2976
+  }
+ },
+ "note": "All quantiles use the same column (docs.n_chars). stage='failed' rows have no n_chars at all -- they never received text -- so they cannot enter a length comparison and are reported as n_with_len=0 rather than imputed."
+}

@@ -1,0 +1,59 @@
+{
+  "at_utc": "2026-11-05T03:54:15Z",
+  "dir": "/opt/foods/reports/figures",
+  "panels": {
+    "fig1_corpus_flow": {
+      "file": "/opt/foods/reports/figures/fig1_corpus_flow.png",
+      "panel": "corpus flow",
+      "counts": {
+        "cfws": {
+          "clean": 25,
+          "extracted": 875,
+          "failed": 296,
+          "filtered_out": 2090
+        },
+        "municipal": {
+          "filtered_out": 1
+        },
+        "openfda": {
+          "extracted": 253
+        }
+      }
+    },
+    "fig2_e1_agreement": {
+      "file": "/opt/foods/reports/figures/fig2_e1_agreement.png",
+      "panel": "E1 agreement",
+      "n": 1128,
+      "tiers": {
+        "high": 228,
+        "medium": 398,
+        "low": 502
+      }
+    },
+    "fig3_actor_network": {
+      "file": "/opt/foods/reports/figures/fig3_actor_network.png",
+      "panel": "network",
+      "n_nodes": 134,
+      "n_edges": 9,
+      "structural_max_edges": 9,
+      "docs_with_two_or_more_actor_nodes": 9,
+      "main_corpus_docs": 128,
+      "note": "node/edge counts are bounded by document structure (D-49)"
+    },
+    "fig4_attack_tolerance": {
+      "file": "/opt/foods/reports/figures/fig4_attack_tolerance.png",
+      "panel": "attack",
+      "status": "insufficient_nodes"
+    },
+    "fig5_displacement": {
+      "file": "/opt/foods/reports/figures/fig5_displacement.png",
+      "panel": "displacement",
+      "n_events": 0
+    },
+    "fig6_cn_us_compare": {
+      "file": "/opt/foods/reports/figures/fig6_cn_us_compare.png",
+      "panel": "compare",
+      "status": "not_estimable_degenerate_main_corpus"
+    }
+  }
+}

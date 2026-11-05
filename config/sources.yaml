@@ -1,0 +1,68 @@
+# Registry of the 50 municipal market-regulation sites (Plan §4.1, D1').
+# Status semantics:
+#   verified   — list_url fetched during build and returned parsable links
+#   calibrate  — URL known, list structure not yet verified; adapter probes it
+#   pending    — only the homepage is registered; needs manual calibration
+# The pipeline NEVER fabricates records for a site that fails; failures are
+# recorded in state (kv source_status:<slug>) and surfaced in the daily report.
+#
+# NOTE: the national penalty-document portal (collect.cfws) covers the same
+# genre across all provinces and is the primary D1' intake; this registry is the
+# planned municipal expansion layer (Plan: "先 10 个重点站后扩展").
+
+defaults:
+  link_keywords: ["处罚", "行政处罚", "食品", "公示"]
+  detail_link_regex: "(?:art|content|t20\\d{6}|/\\d{4}/|show|detail)"
+  list_item_limit: 60
+
+sites:
+  - {slug: beijing,  name: 北京市市场监督管理局,   home: "https://scjgj.beijing.gov.cn/",            list_url: "https://scjgj.beijing.gov.cn/bsfw/fwdy/xygs/", status: calibrate}
+  - {slug: shanghai, name: 上海市市场监督管理局,   home: "https://scjgj.sh.gov.cn/",                 list_url: "", status: calibrate}
+  - {slug: tianjin,  name: 天津市市场监督管理委员会, home: "https://scjg.tj.gov.cn/",                list_url: "", status: pending}
+  - {slug: chongqing,name: 重庆市市场监督管理局,   home: "https://scjgj.cq.gov.cn/",                 list_url: "", status: pending}
+  - {slug: hebei,    name: 河北省市场监督管理局,   home: "https://scjg.hebei.gov.cn/",               list_url: "", status: pending}
+  - {slug: shanxi,   name: 山西省市场监督管理局,   home: "https://scjgj.shanxi.gov.cn/",             list_url: "", status: pending}
+  - {slug: liaoning, name: 辽宁省市场监督管理局,   home: "https://scjg.ln.gov.cn/",                  list_url: "", status: pending}
+  - {slug: jilin,    name: 吉林省市场监督管理厅,   home: "https://scjgj.jl.gov.cn/",                 list_url: "", status: pending}
+  - {slug: heilongjiang, name: 黑龙江省市场监督管理局, home: "https://amr.hlj.gov.cn/",              list_url: "", status: pending}
+  - {slug: jiangsu,  name: 江苏省市场监督管理局,   home: "https://scjgj.jiangsu.gov.cn/",            list_url: "", status: pending}
+  - {slug: zhejiang, name: 浙江省市场监督管理局,   home: "https://zjamr.zj.gov.cn/",                 list_url: "", status: pending}
+  - {slug: anhui,    name: 安徽省市场监督管理局,   home: "https://amr.ah.gov.cn/",                   list_url: "", status: pending}
+  - {slug: fujian,   name: 福建省市场监督管理局,   home: "https://scjgj.fujian.gov.cn/",             list_url: "", status: pending}
+  - {slug: jiangxi,  name: 江西省市场监督管理局,   home: "https://amr.jiangxi.gov.cn/",              list_url: "", status: pending}
+  - {slug: shandong, name: 山东省市场监督管理局,   home: "https://amr.shandong.gov.cn/",             list_url: "", status: pending}
+  - {slug: henan,    name: 河南省市场监督管理局,   home: "https://scjg.henan.gov.cn/",               list_url: "", status: pending}
+  - {slug: hubei,    name: 湖北省市场监督管理局,   home: "https://scjg.hubei.gov.cn/",               list_url: "", status: pending}
+  - {slug: hunan,    name: 湖南省市场监督管理局,   home: "https://amr.hunan.gov.cn/",                list_url: "", status: pending}
+  - {slug: guangdong,name: 广东省市场监督管理局,   home: "https://amr.gd.gov.cn/",                   list_url: "", status: pending}
+  - {slug: hainan,   name: 海南省市场监督管理局,   home: "https://amr.hainan.gov.cn/",               list_url: "", status: pending}
+  - {slug: sichuan,  name: 四川省市场监督管理局,   home: "https://scjgj.sc.gov.cn/",                 list_url: "", status: pending}
+  - {slug: guizhou,  name: 贵州省市场监督管理局,   home: "https://amr.guizhou.gov.cn/",              list_url: "", status: pending}
+  - {slug: yunnan,   name: 云南省市场监督管理局,   home: "https://amr.yn.gov.cn/",                   list_url: "", status: pending}
+  - {slug: shaanxi,  name: 陕西省市场监督管理局,   home: "https://scjg.shaanxi.gov.cn/",             list_url: "", status: pending}
+  - {slug: gansu,    name: 甘肃省市场监督管理局,   home: "https://scjg.gansu.gov.cn/",               list_url: "", status: pending}
+  - {slug: qinghai,  name: 青海省市场监督管理局,   home: "https://scjg.qinghai.gov.cn/",             list_url: "", status: pending}
+  - {slug: neimenggu,name: 内蒙古自治区市场监督管理局, home: "https://amr.nmg.gov.cn/",              list_url: "", status: pending}
+  - {slug: guangxi,  name: 广西壮族自治区市场监督管理局, home: "https://scjdglj.gxzf.gov.cn/",        list_url: "", status: pending}
+  - {slug: xizang,   name: 西藏自治区市场监督管理局, home: "https://amr.xizang.gov.cn/",             list_url: "", status: pending}
+  - {slug: ningxia,  name: 宁夏回族自治区市场监督管理厅, home: "https://scjg.nx.gov.cn/",            list_url: "", status: pending}
+  - {slug: xinjiang, name: 新疆维吾尔自治区市场监督管理局, home: "https://scjgj.xinjiang.gov.cn/",    list_url: "", status: pending}
+  - {slug: dalian,   name: 大连市市场监督管理局,   home: "https://scjgj.dl.gov.cn/",                 list_url: "", status: pending}
+  - {slug: qingdao,  name: 青岛市市场监督管理局,   home: "https://amr.qingdao.gov.cn/",              list_url: "", status: pending}
+  - {slug: ningbo,   name: 宁波市市场监督管理局,   home: "https://scjgj.ningbo.gov.cn/",             list_url: "", status: pending}
+  - {slug: xiamen,   name: 厦门市市场监督管理局,   home: "https://scjg.xm.gov.cn/",                  list_url: "", status: pending}
+  - {slug: shenzhen, name: 深圳市市场监督管理局,   home: "https://amr.sz.gov.cn/",                   list_url: "", status: pending}
+  - {slug: shenyang, name: 沈阳市市场监督管理局,   home: "https://scj.shenyang.gov.cn/",             list_url: "", status: pending}
+  - {slug: changchun,name: 长春市市场监督管理局,   home: "https://ccscjg.changchun.gov.cn/",         list_url: "", status: pending}
+  - {slug: haerbin,  name: 哈尔滨市市场监督管理局, home: "https://scjgj.harbin.gov.cn/",             list_url: "", status: pending}
+  - {slug: nanjing,  name: 南京市市场监督管理局,   home: "https://scjgj.nanjing.gov.cn/",            list_url: "", status: pending}
+  - {slug: hangzhou, name: 杭州市市场监督管理局,   home: "https://scjg.hangzhou.gov.cn/",            list_url: "", status: pending}
+  - {slug: jinan,    name: 济南市市场监督管理局,   home: "https://scjgj.jinan.gov.cn/",              list_url: "", status: pending}
+  - {slug: wuhan,    name: 武汉市市场监督管理局,   home: "https://scjgj.wuhan.gov.cn/",              list_url: "", status: pending}
+  - {slug: guangzhou,name: 广州市市场监督管理局,   home: "https://scjgj.gz.gov.cn/",                 list_url: "", status: pending}
+  - {slug: chengdu,  name: 成都市市场监督管理局,   home: "https://scjg.chengdu.gov.cn/",             list_url: "", status: pending}
+  - {slug: xian,     name: 西安市市场监督管理局,   home: "https://scjg.xa.gov.cn/",                  list_url: "", status: pending}
+  - {slug: suzhou,   name: 苏州市市场监督管理局,   home: "https://scjgj.suzhou.gov.cn/",             list_url: "", status: pending}
+  - {slug: wuxi,     name: 无锡市市场监督管理局,   home: "https://scjgj.wuxi.gov.cn/",               list_url: "", status: pending}
+  - {slug: foshan,   name: 佛山市市场监督管理局,   home: "https://fsamr.foshan.gov.cn/",             list_url: "", status: pending}
+  - {slug: dongguan, name: 东莞市市场监督管理局,   home: "https://dgamr.dg.gov.cn/",                 list_url: "", status: pending}

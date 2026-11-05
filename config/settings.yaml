@@ -1,0 +1,251 @@
+# Foods pipeline — global settings.
+# Scientific thresholds follow the plan (Plan §5.2, §6.1). Do not tune silently:
+# any change here must be recorded in DEVIATIONS.md with a reason.
+
+paths:
+  root: /opt/foods
+  data: /opt/foods/data
+  state: /opt/foods/state
+  logs: /opt/foods/logs
+  reports: /opt/foods/reports
+
+runtime:
+  timezone_report: UTC          # all timestamps stored UTC; pod clock is authoritative
+  max_workers: 4
+  http_timeout: 30
+  user_agent: "Mozilla/5.0 (compatible; FoodsResearchBot/1.0; academic research; contact: 25CSH113)"
+  # Plan §5.3: government sites <= 1 req / 2 s, exponential backoff.
+  gov_rate_seconds: 2.0
+  api_rate_seconds: 0.35       # openFDA: free key allows 240 req/min; keyless lower
+  retries: 3
+  backoff_base: 2.0
+  disk_warn_pct: 80
+  disk_clean_pct: 95
+  lock_timeout: 3600
+
+collect:
+  # D4 governance-event timeline (Plan Table 2). Listings only; see
+  # config/gov_sources.yaml for the exact pages and per-site page caps.
+  gov_events:
+    enabled: true
+  cfws:
+    enabled: true
+    base: https://cfws.samr.gov.cn
+    page_size: 50
+    max_pages_per_query: 40      # 40*50 = 2000 records/query ceiling
+    # PDFs are the expensive request (~2 s each). Metadata-only rows are kept
+    # and backfilled at this budget on every later run.
+    pdf_budget_per_run: 1500
+    # Resume runs see their own first pages as duplicates; only allow the
+    # two-empty-pages stopping rule after this depth.
+    min_pages_before_stop: 5
+    # Query slots are NOT two full-text fields (corrected 2026-11-04, D-36):
+    # `quanwen_1` is a free-text match, `quanwen_2` is a product/food *facet*.
+    # A document-type term in slot 2 returns nothing — ["检验报告","餐饮"] =
+    # 1,544 hits but ["食品","检验报告"] = 0 and ["伪造","检验报告"] = 0. Every
+    # query below that puts a document type in slot 2 is therefore a structural
+    # zero; they are kept (they document the first pass) but the expansion
+    # ladder carries the corrected form.
+    # The portal serves at most 200 rows per query (pages 1-4 at size 50;
+    # page 5 returns an empty list even when resultCount is larger). Coverage
+    # therefore comes from query breadth, not pagination depth.
+    queries:
+      - ["伪造", "食品"]
+      - ["篡改", "食品"]
+      - ["溯源码", null]
+      - ["溯源", "食品"]
+      - ["虚假认证", null]
+      - ["伪造认证证书", null]
+      - ["虚假认证证书", null]
+      - ["冒用认证标志", null]
+      - ["虚假检验报告", null]
+      - ["伪造检验报告", null]
+      - ["出具虚假检验报告", null]
+      - ["伪造检测报告", null]
+      - ["虚假检测报告", null]
+      - ["篡改检验报告", null]
+      - ["篡改检测数据", null]
+      - ["伪造检测数据", null]
+      - ["伪造合格证明", null]
+      - ["虚假合格证明", null]
+      - ["伪造合格证", null]
+      - ["伪造检验报告", "食品"]
+      - ["虚假检测报告", "食品"]
+      - ["伪造认证证书", "食品"]
+      - ["伪造溯源", "食品"]
+      - ["篡改生产日期", "食品"]
+      - ["虚假标注", "食品"]
+      - ["伪造生产日期", "食品"]
+      - ["伪造厂名", "食品"]
+      - ["冒用厂名", "食品"]
+      - ["伪造产地", "食品"]
+      - ["买卖检验报告", null]
+      - ["出售检验报告", null]
+      - ["伪造检疫证明", null]
+      - ["检验报告", "食品"]
+      - ["检测报告", "食品"]
+      - ["认证证书", "食品"]
+      - ["合格证明", "食品"]
+  openfda:
+    enabled: true
+    base: https://api.fda.gov/food/enforcement.json
+    limit: 100
+    # D3a is a comparison corpus (E5 CN vs US), not the network sample.
+    # 150 records/query keeps the four reason categories roughly balanced
+    # without letting openFDA dominate labelling volume. Recorded in
+    # DEVIATIONS.md (D-8).
+    max_records: 150
+    queries:
+      - 'reason_for_recall:adulterated'
+      - 'reason_for_recall:misbranded'
+      - 'reason_for_recall:"labeling fraud"'
+      - 'reason_for_recall:counterfeit'
+  rasff:
+    enabled: true              # attempt; failure is non-blocking (Plan §4.2)
+    dataset_api: https://data.europa.eu/api/hub/search/datasets/restored_rasff
+  municipal:
+    enabled: true
+    registry: config/sources.yaml
+    enable_playwright: false   # flip on after browser install is verified
+    detail_max_per_site: 30
+    detail_max_bytes: 4000000
+    # D1' calibration (D-38): when a site has no verified list_url, the adapter
+    # looks for the penalty column (双公示/行政处罚/处罚公示) on the homepage and
+    # tries at most this many candidate columns before recording the site as
+    # uncalibrated. Bounded so a 50-site sweep stays inside the request budget.
+    max_column_candidates: 3
+
+llm:
+  base_url: http://127.0.0.1:8000/v1
+  api_key: EMPTY
+  # Channel A/B share weights but use independently written prompts and
+  # different temperatures (Plan §5.2 explicitly permits this form of
+  # independence; the anchor channel is fully independent).
+  channel_a:
+    model: qwen2.5-7b-instruct
+    prompt: alpha
+    temperature: 0.0
+    max_tokens: 3000
+  channel_b:
+    model: qwen2.5-7b-instruct
+    prompt: beta
+    temperature: 0.3
+    max_tokens: 4000
+  # Third channel: Plan §5.2 allows "更强模型单次 / 5 次温度采样多数投票".
+  # We use the 5-sample majority-vote form, which needs no second GPU model
+  # and is fully reproducible; the stronger-model option remains configurable.
+  adjudicator:
+    model: qwen2.5-7b-instruct
+    temperature: 0.7
+    samples: 5
+    max_tokens: 4000
+  selfconsistency:
+    samples: 5
+    temperature: 0.7
+
+label:
+  # Concurrent in-flight documents against the local vLLM server. Purely a
+  # throughput setting: each document is labelled independently, so results
+  # do not depend on worker count.
+  workers: 4
+  span_match: iou            # IoU >= tau. Sensitivity at .3/.5/.7 reported.
+  span_tau: 0.5
+  # Protocol v2 (DEVIATIONS.md D-30). The old 6,000-char cap truncated 53 of
+  # 780 clean documents and, because the penalty clause sits at the end of a
+  # decision, also cut off the deterministic anchor for 27 of them; the 25
+  # documents that failed JSON parsing were the longest ones (median 5,559
+  # chars vs 2,629 labelled). 20,000 chars covers the whole observed corpus
+  # (max 16,263 chars ≈ 11.3k tokens with the Qwen tokenizer), leaving room
+  # for a 2.5k-token answer inside a 32,768-token context. No document is
+  # truncated at this setting; `extract` records the longest input actually
+  # seen and flags any document that exceeds the cap.
+  doc_text_chars: 20000
+  # Plan §6.1 E1
+  agreement_target: 0.85
+  agreement_floor: 0.75
+  anchor_target: 0.80
+  anchor_floor: 0.70
+  # Macro-F1 needs enough anchor-eligible documents to be estimable; below this
+  # the anchor threshold is not read and E1 is graded on agreement alone with
+  # the status suffix `_anchor_insufficient` (DEVIATIONS.md D-18).
+  anchor_min_n: 30
+  # Entity types eligible for main analysis; auto-shrink ladder per Plan §6.2.
+  entity_types: [SERVICE_PROVIDER, END_USER, TACTIC, DOCUMENT, JURISDICTION, PENALTY_EVENT]
+  tier_confidence: {high: 0.95, medium: 0.8, low: 0.6}
+
+analysis:
+  e2_nodes_target: 800
+  e2_nodes_floor: 400
+  e4_events_target: 15
+  e4_events_floor: 8
+  bootstrap: 200
+  random_reps: 100
+  seed: 20261104
+  hawkes_fallback: nonparametric
+  survival_min_events: 20
+  chi2_min_expected: 5
+  # Main ecosystem graph nodes (D-26). Actors only: the plan's H1/H3 are about
+  # service providers and food operators. TACTIC/DOCUMENT/JURISDICTION nodes
+  # are type-level terms or administrative units and enter the taxonomy
+  # sensitivity variant only.
+  network_node_types: [SERVICE_PROVIDER, END_USER]
+  # H2 anchoring on the D4 governance timeline (analyze/shocks.py). Fixed
+  # before looking at the corpus: 90-day windows and at least 5 events on each
+  # side, otherwise the contrast is reported as insufficient rather than read
+  # as a null result.
+  shock_window_days: 90
+  shock_min_window_events: 5
+  # Plan §6.2: "扩年份/扩站点由管线自动执行". The expansion is automatic but
+  # not open-ended: it draws from a pre-registered, ordered list of query
+  # batches (config/expansion_queries.yaml) and stops when the E2 floor is met
+  # or the list is exhausted. Each batch that runs is recorded in the manifest
+  # kv and tagged on the collected documents.
+  expansion:
+    enabled: true
+    # Operational rate limit, not a corpus-definition knob: it bounds how much
+    # is scraped per day, not which queries exist (those are pre-registered in
+    # config/expansion_queries.yaml). Raised 2 -> 4 on 2026-11-04 (D-36) so the
+    # corrected batches B4/B5 could follow B1-B3 the same day; the per-batch PDF
+    # budget and the government-site rate limit are unchanged.
+    max_batches_per_day: 4
+    pdf_budget_per_batch: 600
+    # Extra collection runs are only launched while E2 is below its floor.
+    trigger_below_nodes: 400
+  # P115 keyword sensitivity: D1' term variants are fixed here, not chosen
+  # after seeing which variant produces a larger corpus.
+  keyword_variants:
+    - id: plan_rule
+      note: "D1' as written: fraud ∧ document ∧ food"
+    - id: drop_jiamao
+      drop_fraud: ["假冒"]
+      note: "drops the weakest fraud term (假冒 is also used for non-fraud counterfeiting)"
+    - id: widen_fraud
+      add_fraud: ["变造", "冒用", "套用", "买卖", "购买"]
+      note: "adds fraud verbs the decision texts use for the same conduct"
+    - id: strict_documents
+      document_terms: ["检验检测报告", "检验报告", "检测报告", "认证证书", "认证材料",
+                        "溯源码", "合格证明"]
+      note: "document-type list without the broader 溯源/检测数据 terms"
+    - id: proximity_80
+      require_proximity: true
+      note: "pilot rule: fraud and document term within 80 chars"
+
+intake:
+  # D1' inclusion rule (Plan §4.1): fraud term AND document-type term AND food context.
+  fraud_terms: ["伪造", "虚假", "篡改", "变造", "假冒", "买卖", "出具虚假"]
+  document_terms: ["检验检测报告", "检验报告", "检测报告", "认证证书", "认证材料", "溯源码", "溯源", "合格证明", "合格证", "检测数据", "检验数据"]
+  food_terms: ["食品", "食用农产品", "餐饮", "预包装", "保健食品", "食品添加剂", "农产品"]
+  # English counterparts for D3a/D3b text (openFDA records are included by
+  # their API query; this list guards RASFF and any English municipal pages).
+  en_fraud_terms: ["adulterat", "misbrand", "counterfeit", "fraud", "falsif",
+                   "mislabel", "economic adulteration", "substitut"]
+  en_food_terms: ["food", "beverage", "dietary supplement", "product"]
+  # Plan D1' is conjunctive keyword presence. A proximity window was tried
+  # during the pilot; measured on 399 filtered documents it removed 115 that
+  # contained all three term families (term families split across sections of
+  # the decision). Precision is the labelling stage's job, so proximity is off.
+  require_proximity: false
+  # 80 chars: the earlier 20-char window falsely dropped genuine cases where
+  # "伪造" and "检验报告" appear in different clauses. The LLM labeling stage is
+  # the precision filter, so intake favors recall.
+  window_chars: 80

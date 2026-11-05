@@ -1,0 +1,337 @@
+{
+  "n_gov_events_raw": 19,
+  "n_gov_events": 16,
+  "n_corpus_events": 875,
+  "window_days": 90,
+  "at_utc": "2026-11-05T03:54:11Z",
+  "status": "ok",
+  "n_tested": 16,
+  "n_evaluable": 11,
+  "monthly_series": {
+    "2015-12": 1,
+    "2020-12": 1,
+    "2021-12": 1,
+    "2023-11": 2,
+    "2024-03": 1,
+    "2024-09": 1,
+    "2025-09": 1,
+    "2026-04": 1,
+    "2026-06": 2,
+    "2026-08": 1,
+    "2026-09": 3,
+    "2026-10": 1
+  },
+  "corpus_monthly": {
+    "2023-11": 4,
+    "2023-12": 2,
+    "2024-01": 6,
+    "2024-02": 4,
+    "2024-03": 2,
+    "2024-04": 5,
+    "2024-05": 8,
+    "2024-06": 10,
+    "2024-07": 11,
+    "2024-08": 10,
+    "2024-09": 10,
+    "2024-10": 9,
+    "2024-11": 9,
+    "2024-12": 10,
+    "2025-01": 12,
+    "2025-02": 6,
+    "2025-03": 6,
+    "2025-04": 6,
+    "2025-05": 5,
+    "2025-06": 8,
+    "2025-07": 16,
+    "2025-08": 20,
+    "2025-09": 23,
+    "2025-10": 28,
+    "2025-11": 16,
+    "2025-12": 21,
+    "2026-01": 35,
+    "2026-02": 38,
+    "2026-03": 32,
+    "2026-04": 42,
+    "2026-05": 46,
+    "2026-06": 49,
+    "2026-07": 56,
+    "2026-08": 120,
+    "2026-09": 161,
+    "2026-10": 29
+  },
+  "tests": [
+    {
+      "event_id": "gov:a0b593c8b54159ec8f7e5044",
+      "date": "2015-12-04",
+      "title": "最高人民法院12月4日公布打击危害食品、药品安全违法犯罪典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 0,
+      "n_after": 0,
+      "status": "insufficient"
+    },
+    {
+      "event_id": "gov:0bb37aedd60e2205e544a1df",
+      "date": "2020-12-09",
+      "title": "食品安全民事纠纷典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 0,
+      "n_after": 0,
+      "status": "insufficient"
+    },
+    {
+      "event_id": "gov:7d3d4c9dd15d38380e388287",
+      "date": "2021-12-31",
+      "title": "最高法、最高检联合发布危害食品安全刑事典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 0,
+      "n_after": 0,
+      "status": "insufficient"
+    },
+    {
+      "event_id": "gov:06b4197e57bf5aaca5887dbc",
+      "date": "2023-11-28",
+      "title": "“两高”联合发布危害食品安全犯罪典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 4,
+      "n_after": 12,
+      "status": "insufficient"
+    },
+    {
+      "event_id": "gov:33ecbd9ac56a63146b83414e",
+      "date": "2023-11-30",
+      "title": "食品安全惩罚性赔偿典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 4,
+      "n_after": 12,
+      "status": "insufficient"
+    },
+    {
+      "event_id": "gov:20a2e1b1f8529bfa92ad3a78",
+      "date": "2024-03-15",
+      "title": "最高法发布涉未成年人食品安全司法保护典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 13,
+      "n_after": 20,
+      "status": "ok",
+      "rate_ratio": 1.5385,
+      "p_value": 0.296206368599087,
+      "ratio_ci95": [
+        0.7283,
+        3.3655
+      ],
+      "direction": "no_detectable_change"
+    },
+    {
+      "event_id": "gov:862869a9500e94283984e1c3",
+      "date": "2024-09-25",
+      "title": "“两高”联合发布依法严惩危害食用农产品安全犯罪典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 30,
+      "n_after": 28,
+      "status": "ok",
+      "rate_ratio": 0.9333,
+      "p_value": 0.8956832138895906,
+      "ratio_ci95": [
+        0.5373,
+        1.6166
+      ],
+      "direction": "no_detectable_change"
+    },
+    {
+      "event_id": "gov:770fbfed1706a1a570e4b60b",
+      "date": "2025-09-11",
+      "title": "最高人民法院发布校园食品安全典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn"
+      ],
+      "n_before": 48,
+      "n_after": 68,
+      "status": "ok",
+      "rate_ratio": 1.4167,
+      "p_value": 0.07726226461070679,
+      "ratio_ci95": [
+        0.9648,
+        2.0947
+      ],
+      "direction": "no_detectable_change"
+    },
+    {
+      "event_id": "gov:44c78848df5d51b9be01d022",
+      "date": "2026-04-15",
+      "title": "市场监管总局关于废止《食品中氯酸盐和高氯酸盐的测定》等4项食品补充检验方法和食品快速检测方法的公告",
+      "type": "policy",
+      "sites": [
+        "samr.gov.cn"
+      ],
+      "n_before": 117,
+      "n_after": 142,
+      "status": "ok",
+      "rate_ratio": 1.2137,
+      "p_value": 0.13573207941367005,
+      "ratio_ci95": [
+        0.9435,
+        1.5637
+      ],
+      "direction": "no_detectable_change"
+    },
+    {
+      "event_id": "gov:00452e892633d09120316495",
+      "date": "2026-06-25",
+      "title": "2026年第一季度市场监管部门食品安全 监督抽检情况通报",
+      "type": "inspection",
+      "sites": [
+        "samr.gov.cn"
+      ],
+      "n_before": 130,
+      "n_after": 327,
+      "status": "ok",
+      "rate_ratio": 2.5154,
+      "p_value": 1.190823439029295e-20,
+      "ratio_ci95": [
+        2.0467,
+        3.1065
+      ],
+      "direction": "regenerated"
+    },
+    {
+      "event_id": "gov:b7495716a5d6324a9434c51c",
+      "date": "2026-06-26",
+      "title": "市场监管总局关于发布《食品中布噻嗪和美布噻嗪的测定》等6项食品补充检验方法的公告（2026年第24号）",
+      "type": "policy",
+      "sites": [
+        "samr.gov.cn"
+      ],
+      "n_before": 129,
+      "n_after": 327,
+      "status": "ok",
+      "rate_ratio": 2.5349,
+      "p_value": 6.7414685629636045e-21,
+      "ratio_ci95": [
+        2.0614,
+        3.1325
+      ],
+      "direction": "regenerated"
+    },
+    {
+      "event_id": "gov:2ec2e5abb35a347f979c3e40",
+      "date": "2026-08-04",
+      "title": "2026年上半年市场监管部门食品安全监督抽检情况通报",
+      "type": "inspection",
+      "sites": [
+        "samr.gov.cn"
+      ],
+      "n_before": 151,
+      "n_after": 305,
+      "status": "ok",
+      "rate_ratio": 2.0199,
+      "p_value": 4.702561663764574e-13,
+      "ratio_ci95": [
+        1.6566,
+        2.4714
+      ],
+      "direction": "regenerated"
+    },
+    {
+      "event_id": "gov:6ed51581d69c7253b555188b",
+      "date": "2026-09-22",
+      "title": "“两高”联合发布依法惩治网络食品安全犯罪典型案例",
+      "type": "case_series",
+      "sites": [
+        "court.gov.cn",
+        "spp.gov.cn"
+      ],
+      "n_before": 321,
+      "n_after": 54,
+      "status": "ok",
+      "rate_ratio": 0.1682,
+      "p_value": 2.4336826196461466e-47,
+      "ratio_ci95": [
+        0.1237,
+        0.225
+      ],
+      "direction": "suppressed"
+    },
+    {
+      "event_id": "gov:57b7976ffed64c788a5d13e0",
+      "date": "2026-09-24",
+      "title": "最高人民检察院发布“食品安全宣传周”检察公益诉讼典型案例",
+      "type": "case_series",
+      "sites": [
+        "spp.gov.cn"
+      ],
+      "n_before": 327,
+      "n_after": 48,
+      "status": "ok",
+      "rate_ratio": 0.1468,
+      "p_value": 3.779990988321104e-52,
+      "ratio_ci95": [
+        0.1061,
+        0.1992
+      ],
+      "direction": "suppressed"
+    },
+    {
+      "event_id": "gov:9a1f6724bdf142448a041328",
+      "date": "2026-09-28",
+      "title": "市场监管总局关于发布《蔬菜水果中三唑磷的快速检测 胶体金免疫层析法》等13项食品快速检测方法的公告",
+      "type": "policy",
+      "sites": [
+        "samr.gov.cn"
+      ],
+      "n_before": 320,
+      "n_after": 40,
+      "status": "ok",
+      "rate_ratio": 0.125,
+      "p_value": 2.243017539780263e-55,
+      "ratio_ci95": [
+        0.0876,
+        0.174
+      ],
+      "direction": "suppressed"
+    },
+    {
+      "event_id": "gov:37bcdd35fa0bcd010c8dc099",
+      "date": "2026-10-12",
+      "title": "中央政法委有关负责同志解读《关于依法从严查处危害食品安全违法犯罪的意见》",
+      "type": "policy",
+      "sites": [
+        "spp.gov.cn"
+      ],
+      "n_before": 325,
+      "n_after": 17,
+      "status": "ok",
+      "rate_ratio": 0.0523,
+      "p_value": 5.293917645891316e-75,
+      "ratio_ci95": [
+        0.0301,
+        0.0851
+      ],
+      "direction": "suppressed"
+    }
+  ],
+  "interpretation": "Per-shock before/after contrasts only. A suppression or regeneration verdict at p<0.05 is a rate change, not proof of the three-phase H2 trajectory; the regeneration phase requires events after the window to be observable.",
+  "caveat": "windows of 90 days, min 5 events per side",
+  "design_caveat": "Corpus exposure is not uniform: the CFWS portal returns at most 200 rows per query, so the newest documents are over-represented. A before/after rate change can therefore reflect collection coverage, not governance. Read the contrast together with corpus_monthly. Windows of nearby events overlap and are not independent tests."
+}

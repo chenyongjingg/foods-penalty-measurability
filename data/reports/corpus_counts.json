@@ -1,0 +1,55 @@
+{
+ "at_utc": "2026-11-05T04:22:43Z",
+ "product": "corpus_counts",
+ "silver": {
+  "path": "/opt/foods/data/silver/silver.jsonl",
+  "sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+  "n": 1128,
+  "by_lang": {
+   "en": 253,
+   "zh": 875
+  },
+  "by_tier": {
+   "high": 228,
+   "low": 502,
+   "medium": 398
+  },
+  "tier_x_lang": {
+   "high/en": 100,
+   "high/zh": 128,
+   "low/en": 109,
+   "low/zh": 393,
+   "medium/en": 44,
+   "medium/zh": 354
+  }
+ },
+ "dataset": {
+  "path": "/opt/foods/data/extracted/dataset.jsonl",
+  "sha256": "884c203e3a783d9b0e46bbf7706a40b06c7f6310276964130aea6fc4b1061d37",
+  "lines": 4400
+ },
+ "docs_by_source_stage": {
+  "cfws/filtered_out": 2090,
+  "cfws/extracted": 875,
+  "cfws/failed": 296,
+  "openfda/extracted": 253,
+  "cfws/clean": 25,
+  "municipal/filtered_out": 1
+ },
+ "docs_by_stage_lang": {
+  "clean/zh": 25,
+  "extracted/en": 253,
+  "extracted/zh": 875,
+  "failed/None": 296,
+  "filtered_out/None": 2091
+ },
+ "failed_by_error": {
+  "awaiting_pdf": 296
+ },
+ "queries": {
+  "silver_rows": "wc -l data/silver/silver.jsonl",
+  "docs_by_source_stage": "SELECT source, stage, count(*) FROM docs GROUP BY 1,2",
+  "failed_by_error": "SELECT error, count(*) FROM docs WHERE stage='failed' GROUP BY 1"
+ },
+ "note": "Counts only; no labels, no thresholds. `failed` is not one class -- group by error before calling it a failure (D-84)."
+}

@@ -1,0 +1,585 @@
+﻿id,value,description,product,json_path,at_utc,product_sha256
+corpus.silver_n,1128,冻结语料行数,data/reports/corpus_counts.json,silver.n,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.zh_n,875,中文文书数,data/reports/corpus_counts.json,silver.by_lang.zh,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.en_n,253,英文文书数(openFDA),data/reports/corpus_counts.json,silver.by_lang.en,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.tier_high,228,tier=high 篇数,data/reports/corpus_counts.json,silver.by_tier.high,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.tier_medium,398,tier=medium 篇数,data/reports/corpus_counts.json,silver.by_tier.medium,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.tier_low,502,tier=low 篇数,data/reports/corpus_counts.json,silver.by_tier.low,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.high_zh,128,high 中文篇数,data/reports/corpus_counts.json,silver.tier_x_lang.high/zh,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.high_en,100,high 英文篇数,data/reports/corpus_counts.json,silver.tier_x_lang.high/en,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.dataset_lines,4400,dataset.jsonl 行数,data/reports/corpus_counts.json,dataset.lines,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+corpus.silver_sha,a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e,冻结 silver 的 sha256,data/reports/corpus_counts.json,silver.sha256,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+excl.awaiting_pdf,296,stage=failed 且 error=awaiting_pdf（无正文）,data/reports/corpus_counts.json,failed_by_error.awaiting_pdf,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+excl.filtered_out_cfws,2090,cfws filtered_out 篇数,data/reports/corpus_counts.json,docs_by_source_stage.cfws/filtered_out,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+excl.filtered_out_municipal,1,municipal filtered_out 篇数,data/reports/corpus_counts.json,docs_by_source_stage.municipal/filtered_out,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+excl.clean_unlabelable,25,协议层不可标篇数(clean),data/reports/corpus_counts.json,docs_by_source_stage.cfws/clean,2026-11-05T04:22:43Z,ed3ad7c9033a64c46739c83d2501461522f15d2ed162ea52500a743a6ac97bce
+e1.n,1128,E1 双通道一致率分母,data/metrics/e1.json,n,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.mean_agreement,0.746,E1 双通道一致率(阶梯后混合),data/metrics/e1.json,mean_agreement,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.n_scored,1127,E1 计分篇数,data/metrics/e1.json,n_scored_agreement,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.n_zero_entities,1,零实体篇数,data/metrics/e1.json,n_zero_entities,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.micro,0.7442,E1 合并 micro-F1,data/metrics/e1.json,pooled_micro_f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.zh_mean,0.7257,E1 中文一致率,data/metrics/e1.json,by_lang.zh.mean_agreement,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.en_mean,0.8158,E1 英文一致率,data/metrics/e1.json,by_lang.en.mean_agreement,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.shrunk,0.861,E1 稳定类型子集一致率,data/metrics/e1.json,mean_agreement_shrunk,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.tau03,0.7487,tau=0.3 敏感性,data/metrics/e1.json,"tau_sensitivity.""0.3"".mean_agreement",2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.tau05,0.746,tau=0.5 敏感性,data/metrics/e1.json,"tau_sensitivity.""0.5"".mean_agreement",2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.tau07,0.7276,tau=0.7 敏感性,data/metrics/e1.json,"tau_sensitivity.""0.7"".mean_agreement",2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.status,failed,E1 门状态,data/metrics/e1.json,status,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.decode_selfconsistency,729,自一致解码篇数,data/metrics/e1.json,decoding_mix.self_consistency,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.decode_singleshot,399,单次解码篇数,data/metrics/e1.json,decoding_mix.single_shot,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1p.n,1037,E1 预注册口径分母,data/metrics/e1_preladder.json,e1.n,2026-11-05T03:54:17Z,3783e855d7bb89c1dafd5d82a7499497ba1060e33cc471dec52eb2de663313d9
+e1p.mean_agreement,0.6966,E1 预注册单次口径一致率,data/metrics/e1_preladder.json,e1.mean_agreement,2026-11-05T03:54:17Z,3783e855d7bb89c1dafd5d82a7499497ba1060e33cc471dec52eb2de663313d9
+e1p.n_lost,91,预注册口径丢失篇数,data/metrics/e1_preladder.json,provenance.n_voted_without_archive,2026-11-05T03:54:17Z,3783e855d7bb89c1dafd5d82a7499497ba1060e33cc471dec52eb2de663313d9
+e1p.n_substituted,638,从归档替换的篇数,data/metrics/e1_preladder.json,provenance.n_substituted_from_archive,2026-11-05T03:54:17Z,3783e855d7bb89c1dafd5d82a7499497ba1060e33cc471dec52eb2de663313d9
+anchor.n,423,锚点评测集篇数,data/metrics/e1.json,anchor_f1.n,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.micro,0.7825,锚点 micro-F1,data/metrics/e1.json,anchor_f1.micro_f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.macro_all,0.2693,锚点 macro-F1(全部类),data/metrics/e1.json,anchor_f1.macro_f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.f1_false_labeling,0.8801,锚点 FALSE_LABELING F1,data/metrics/e1.json,anchor_f1.per_class_f1.FALSE_LABELING,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.sup_false_labeling,326,FALSE_LABELING support,data/metrics/e1.json,anchor_f1.support.per_class.FALSE_LABELING.support,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.f1_unlicensed,0.3784,锚点 UNLICENSED F1,data/metrics/e1.json,anchor_f1.per_class_f1.UNLICENSED_OPERATION,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.sup_unlicensed,52,UNLICENSED support,data/metrics/e1.json,anchor_f1.support.per_class.UNLICENSED_OPERATION.support,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.f1_other,0.0,锚点 OTHER F1,data/metrics/e1.json,anchor_f1.per_class_f1.OTHER,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.sup_other,31,OTHER support,data/metrics/e1.json,anchor_f1.support.per_class.OTHER.support,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.f1_forged,0.3571,锚点 FORGED_INSPECTION_REPORT F1,data/metrics/e1.json,anchor_f1.per_class_f1.FORGED_INSPECTION_REPORT,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.sup_forged,11,FORGED support,data/metrics/e1.json,anchor_f1.support.per_class.FORGED_INSPECTION_REPORT.support,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.macro_ge20,0.4195,锚点 macro(仅 support>=20 的类，预注册线),data/metrics/e1.json,anchor_f1.support.macro_classes_support_ge20,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.fact_only_docs,97,无锚点(仅事实)被排除的篇数,data/metrics/e1.json,anchor_f1.fact_only_docs,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.pred_false_labeling,383,锚点 FALSE_LABELING 被预测篇数,data/metrics/e1.json,anchor_f1.support.per_class.FALSE_LABELING.predicted,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.pred_unlicensed,22,锚点 UNLICENSED 被预测篇数,data/metrics/e1.json,anchor_f1.support.per_class.UNLICENSED_OPERATION.predicted,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.pred_other,0,锚点 OTHER 被预测篇数,data/metrics/e1.json,anchor_f1.support.per_class.OTHER.predicted,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.pred_forged,17,锚点 FORGED 被预测篇数,data/metrics/e1.json,anchor_f1.support.per_class.FORGED_INSPECTION_REPORT.predicted,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.basis_penalty,232,锚点 basis=penalty_statute,data/metrics/e1.json,anchor_f1.basis_counts.penalty_statute,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.basis_cited,52,锚点 basis=cited_statute,data/metrics/e1.json,anchor_f1.basis_counts.cited_statute,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.basis_statute_fact,139,锚点 basis=statute+fact,data/metrics/e1.json,anchor_f1.basis_counts.statute+fact,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.n_classes_lt3,2,support<3 的类别数,data/metrics/e1.json,anchor_f1.support.n_classes_support_lt3,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_end_user,0.9105,类型 END_USER F1,data/metrics/e1.json,per_type.END_USER.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_jurisdiction,0.8809,类型 JURISDICTION F1,data/metrics/e1.json,per_type.JURISDICTION.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_penalty_event,0.8606,类型 PENALTY_EVENT F1,data/metrics/e1.json,per_type.PENALTY_EVENT.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_tactic,0.6279,类型 TACTIC F1,data/metrics/e1.json,per_type.TACTIC.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_document,0.4097,类型 DOCUMENT F1,data/metrics/e1.json,per_type.DOCUMENT.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.f1_service_provider,0.3356,类型 SERVICE_PROVIDER F1,data/metrics/e1.json,per_type.SERVICE_PROVIDER.f1,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.type.n_types,6,协议定义的实体类型数,data/metrics/e1.json,protocol.entity_types,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.protocol.model,qwen2.5-7b-instruct,标注模型,data/metrics/e1.json,protocol.model,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.protocol.doc_text_chars,20000,标注输入字符上限,data/metrics/e1.json,protocol.doc_text_chars,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.protocol.max_tokens_a,3000,通道A 答案 token 上限,data/metrics/e1.json,protocol.max_tokens.channel_a,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.protocol.max_tokens_b,4000,通道B 答案 token 上限,data/metrics/e1.json,protocol.max_tokens.channel_b,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.protocol.span_tau,0.5,span 匹配阈值 tau,data/metrics/e1.json,protocol.span_tau,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.input_p50,3151,已标文书字符数中位数,data/metrics/e1.json,input_chars.labelled_p50,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.input_p99,9705,已标文书字符数 p99,data/metrics/e1.json,input_chars.labelled_p99,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.input_over_cap,0,超过输入上限的篇数,data/metrics/e1.json,input_chars.over_cap,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.parse_failed_n,25,协议层解析失败篇数,data/metrics/e1.json,input_chars.parse_failed_n,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e1.parse_failed_p50,6136,解析失败文书字符数中位数,data/metrics/e1.json,input_chars.parse_failed_p50,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+e6.n,875,E6 中文文书数,data/analysis/e6_descriptive.json,n_docs,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.resolved_share,0.6903,规则可判定比例,data/analysis/e6_descriptive.json,resolved_share,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.unresolved,271,UNRESOLVED 篇数,data/analysis/e6_descriptive.json,category_distribution.UNRESOLVED,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.coarse.data_falsification,412,粗粒度 DATA_FALSIFICATION,data/analysis/e6_descriptive.json,coarse_distribution.DATA_FALSIFICATION,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.coarse.undetermined,271,粗粒度 UNDETERMINED,data/analysis/e6_descriptive.json,coarse_distribution.UNDETERMINED,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.coarse.market_order,100,粗粒度 MARKET_ORDER,data/analysis/e6_descriptive.json,coarse_distribution.MARKET_ORDER,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.coarse.procedural,66,粗粒度 PROCEDURAL,data/analysis/e6_descriptive.json,coarse_distribution.PROCEDURAL,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.coarse.unlicensed,26,粗粒度 UNLICENSED,data/analysis/e6_descriptive.json,coarse_distribution.UNLICENSED,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.false_labeling,375,细粒度 FALSE_LABELING,data/analysis/e6_descriptive.json,category_distribution.FALSE_LABELING,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.procedural,66,细粒度 PROCEDURAL_NONCOMPLIANCE,data/analysis/e6_descriptive.json,category_distribution.PROCEDURAL_NONCOMPLIANCE,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.trademark,57,细粒度 TRADEMARK_INFRINGEMENT,data/analysis/e6_descriptive.json,category_distribution.TRADEMARK_INFRINGEMENT,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.false_advertising,38,细粒度 FALSE_ADVERTISING,data/analysis/e6_descriptive.json,category_distribution.FALSE_ADVERTISING,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.forged,33,细粒度 FORGED_INSPECTION_REPORT,data/analysis/e6_descriptive.json,category_distribution.FORGED_INSPECTION_REPORT,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.unlicensed,26,细粒度 UNLICENSED_OPERATION,data/analysis/e6_descriptive.json,category_distribution.UNLICENSED_OPERATION,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.product_quality,5,细粒度 PRODUCT_QUALITY,data/analysis/e6_descriptive.json,category_distribution.PRODUCT_QUALITY,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.fake_cert,4,细粒度 FAKE_CERTIFICATION,data/analysis/e6_descriptive.json,category_distribution.FAKE_CERTIFICATION,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.unmatched_share,0.3109,食品类别 UNMATCHED 比例,data/analysis/e6_descriptive.json,food_category.unmatched_share,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.basis.penalty_statute,322,basis=penalty_statute,data/analysis/e6_descriptive.json,basis_distribution.penalty_statute,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.basis.none,100,basis=none 残差,data/analysis/e6_descriptive.json,basis_distribution.none,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.none_appl,19,basis=none 中仅援引《行政处罚法》,data/analysis/e6_descriptive.json,unresolved_none.penalty_clause_only_administrative_penalty_law,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.nc.rule_vs_a,0.28,负对照一致率(规则 vs 通道A),data/analysis/e6_descriptive.json,negative_control.rule_vs_a,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.nc.llm_a_vs_b,0.74,负对照基线(通道A vs B),data/analysis/e6_descriptive.json,negative_control.llm_a_vs_b,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.nc.status,below_floor,负对照判定,data/analysis/e6_descriptive.json,negative_control.status,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.n,565,可抽罚款中位数分母,data/analysis/e6_descriptive.json,penalty.fine_quantiles.n,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.median,5000.0,罚款中位数(元),data/analysis/e6_descriptive.json,penalty.fine_quantiles.median,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.p25,1700.0,罚款 p25(元),data/analysis/e6_descriptive.json,penalty.fine_quantiles.p25,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.p75,15000.0,罚款 p75(元),data/analysis/e6_descriptive.json,penalty.fine_quantiles.p75,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.p90,55000.0,罚款 p90(元),data/analysis/e6_descriptive.json,penalty.fine_quantiles.p90,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.fine.max,805231.0,罚款 max(元),data/analysis/e6_descriptive.json,penalty.fine_quantiles.max,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.year.2024,94,published 年份 2024,data/analysis/e6_descriptive.json,year_distribution.2024,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.year.2025,167,published 年份 2025,data/analysis/e6_descriptive.json,year_distribution.2025,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.year.2026,608,published 年份 2026（采样窗口产物，D-90）,data/analysis/e6_descriptive.json,year_distribution.2026,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e6.granularity,coarse,报告粒度,data/analysis/e6_descriptive.json,granularity,2026-11-05T03:54:28Z,163f325c4f752db110ded07c71c2533a38a46b01775392d41ec0af6da280ce35
+e7.n,128,"E7 对象篇数(high,zh)",data/analysis/e7_typology.json,corpus.n,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.agreement,0.8203,E7 双通道一致率,data/analysis/e7_typology.json,dual_channel_agreement,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.n_adjudicated,23,E7 第三通道裁决篇数,data/analysis/e7_typology.json,n_adjudicated,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.status,target_met,E7 门状态,data/analysis/e7_typology.json,status,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.n_entries,49,E7 codebook 条目数,data/analysis/e7_typology.json,entries,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.hazard.consumer_deception,107,E7 危害=消费者欺骗,data/analysis/e7_typology.json,hazard_distribution.CONSUMER_DECEPTION,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.hazard.food_safety,19,E7 危害=食品安全,data/analysis/e7_typology.json,hazard_distribution.FOOD_SAFETY,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.method.forged_report,52,E7 手法=伪造报告,data/analysis/e7_typology.json,method_distribution.FORGED_REPORT,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e7.method.false_labeling,117,E7 手法=虚假标注,data/analysis/e7_typology.json,method_distribution.FALSE_LABELING,2026-11-05T03:57:02Z,e9b503c37476decdc69f9ea651ccad4c2f5ad6228792030658bf13ca96da30f0
+e8.cn_n,438,E8 中国侧篇数(已定型),data/analysis/e8_us_cn.json,cn.n,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cn_frame,875,E8 中国侧 frame 总数,data/analysis/e8_us_cn.json,cn.frame_total,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cn_unresolved,271,E8 中国侧 UNRESOLVED(不进表),data/analysis/e8_us_cn.json,cn.unresolved,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.us_n,253,E8 美国侧篇数,data/analysis/e8_us_cn.json,us.n,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.us_deliberate_n,0,美国侧明示造假线索篇数,data/analysis/e8_us_cn.json,us.deliberate_falsification_n,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.us_deliberate_share,0.0,美国侧明示造假线索比例,data/analysis/e8_us_cn.json,us.deliberate_falsification_share,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.fisher_or,9.572901325478645,折叠 Fisher 优势比,data/analysis/e8_us_cn.json,test.collapsed_fisher.odds_ratio,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.fisher_p,2.1619402872328067e-37,折叠 Fisher p 值,data/analysis/e8_us_cn.json,test.collapsed_fisher.p,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.chi2,358.9355,χ²（不作数的辅证）,data/analysis/e8_us_cn.json,test.chi2,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cramers_v,0.7207,Cramér's V（辅证）,data/analysis/e8_us_cn.json,test.cramers_v,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.min_expected,1.465,最小期望频数,data/analysis/e8_us_cn.json,test.min_expected,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.estimability,not_estimable_instrument_mismatch,E8 可估计性判定,data/analysis/e8_us_cn.json,estimability,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8f.or.fraud,9.5729,OR：欺诈框架（已发表口径）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_as_published.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.or.plus,2.6336,OR：并入框架外 100+66,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.or.nounlic,16.2998,OR：欺诈框架去掉未许可,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.p.plus,2.06803e-10,Fisher p：并入框架外,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.fisher_p,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.p.nounlic,3.19964e-48,Fisher p：去掉未许可,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.fisher_p,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.cn_other_fraud,63,中国侧框架内非 FL 数,data/analysis/metric_sensitivity.json,e8_frames.cn_other_in_fraud_framework,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.cn_market_order,100,中国侧市场秩序（框架外）,data/analysis/metric_sensitivity.json,e8_frames.cn_market_order,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.cn_procedural,66,中国侧程序性（框架外）,data/analysis/metric_sensitivity.json,e8_frames.cn_procedural,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+anchor.macro_ge20_excl_never,0.6292,anchor macro≥20 且剔除从不发射类,data/analysis/metric_sensitivity.json,anchor_macro.macro_ge20_excluding_never_emitted,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e6.df.false_labeling,375,粗类 DATA_FALSIFICATION 中 FALSE_LABELING 数,data/analysis/metric_sensitivity.json,coarse_data_falsification_composition.false_labelling,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e6.df.forged,33,粗类中伪造检验报告数,data/analysis/metric_sensitivity.json,coarse_data_falsification_composition.forged_inspection_report,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e6.df.fake_cert,4,粗类中虚假认证数,data/analysis/metric_sensitivity.json,coarse_data_falsification_composition.fake_certification,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e6.df.false_labeling_share,0.9102,粗类中 FALSE_LABELING 占比,data/analysis/metric_sensitivity.json,coarse_data_falsification_composition.false_labelling_share,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.ci.fraud.lo,6.63,OR 95%CI 下限（欺诈框架）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_as_published.ci95_woolf.0,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.ci.fraud.hi,13.83,OR 95%CI 上限（欺诈框架）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_as_published.ci95_woolf.1,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.ci.plus.lo,1.95,OR 95%CI 下限（并入框架外）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.ci95_woolf.0,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.ci.plus.hi,3.56,OR 95%CI 上限（并入框架外）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.ci95_woolf.1,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8f.ci.nounlic.lo,10.69,OR 95%CI 下限（去掉未许可）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.ci95_woolf.0,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e9split.n_train,228,E9 训练集篇数,data/analysis/e9_split.json,n_train,2026-11-05T05:14:45Z,4ae648077b5ab4eb813c7428c0e2cf2c9ae9b6a8f1b7424e695aa581ef0e6513
+e9split.n_eval,423,E9 评测集篇数,data/analysis/e9_split.json,n_eval,2026-11-05T05:14:45Z,4ae648077b5ab4eb813c7428c0e2cf2c9ae9b6a8f1b7424e695aa581ef0e6513
+e9split.n_overlap,112,E9 训练∩评测,data/analysis/e9_split.json,n_overlap,2026-11-05T05:14:45Z,4ae648077b5ab4eb813c7428c0e2cf2c9ae9b6a8f1b7424e695aa581ef0e6513
+e9split.n_clean,311,E9 干净评测子集,data/analysis/e9_split.json,n_clean_eval,2026-11-05T05:14:45Z,4ae648077b5ab4eb813c7428c0e2cf2c9ae9b6a8f1b7424e695aa581ef0e6513
+e8f.ci.nounlic.hi,24.86,OR 95%CI 上限（去掉未许可）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.ci95_woolf.1,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.cat.false_labeling.cn,375,构成表 FALSE_LABELING 中国侧,data/analysis/e8_us_cn.json,cn.counts.FALSE_LABELING,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.false_labeling.us,97,构成表 FALSE_LABELING 美国侧,data/analysis/e8_us_cn.json,us.counts.FALSE_LABELING,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.forged.cn,33,构成表 FORGED 中国侧,data/analysis/e8_us_cn.json,cn.counts.FORGED_INSPECTION_REPORT,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.forged.us,0,构成表 FORGED 美国侧,data/analysis/e8_us_cn.json,table.0.1,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.fake_cert.cn,4,构成表 FAKE_CERT 中国侧,data/analysis/e8_us_cn.json,cn.counts.FAKE_CERTIFICATION,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.unlicensed.cn,26,构成表 UNLICENSED 中国侧,data/analysis/e8_us_cn.json,cn.counts.UNLICENSED_OPERATION,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.other.cn,0,构成表 OTHER 中国侧,data/analysis/e8_us_cn.json,table.4.0,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e8.cat.other.us,156,构成表 OTHER 美国侧,data/analysis/e8_us_cn.json,us.counts.OTHER,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+t1.n_queries,92,探测查询数,data/reports/t1_coverage_probe.json,n_queries,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.n_over_200,16,resultCount>200 的查询数,data/reports/t1_coverage_probe.json,n_over_200,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.n_fully_covered,47,完整覆盖的查询数,data/reports/t1_coverage_probe.json,n_fully_covered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.max_registered,201,单查询登记数最大值,data/reports/t1_coverage_probe.json,max_registered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.sum_result_counts_over_200,27850,16 个超 200 查询的 resultCount 合计,data/reports/t1_coverage_probe.json,queries,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+e2.status,downgraded,E2 门状态,data/analysis/gates.json,gates.E2.status,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.n_nodes,134,E2 网络节点数,data/analysis/gates.json,gates.E2.n_nodes,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.n_edges,9,E2 网络边数,data/analysis/gates.json,gates.E2.n_edges,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.main_docs,128,E2 主语料篇数,data/analysis/gates.json,gates.E2.binding_constraint.main_corpus_docs,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.multi_actor_docs,9,E2 有 >=2 个 actor 节点的篇数,data/analysis/gates.json,gates.E2.binding_constraint.docs_with_two_or_more_actor_nodes,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.docs_with_any_actor,125,E2 至少命名一个 actor 的篇数,data/analysis/network_metrics.json,actor_coverage.docs_with_any_actor,2026-11-05T03:53:32Z,a49c7be0817b3a6ce801493d02997bd0f5a81b95248a206145963fe579c88d11
+e2.max_edges,9,E2 结构上可能的最大边数,data/analysis/gates.json,gates.E2.binding_constraint.max_edges_possible_by_structure,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.multi_actor_share,0.0703,E2 多主体文书占比,data/analysis/gates.json,gates.E2.binding_constraint.multi_actor_doc_share,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e2.saturation,1.0,E2 边饱和率,data/analysis/gates.json,gates.E2.binding_constraint.edge_saturation,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e3.survival,inconclusive,E3 生存分析判定,data/analysis/gates.json,gates.E3.survival,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e3.n_events,0,E3 事件数,data/analysis/survival.json,n_events,2026-11-05T03:53:33Z,3ec9e1f2641a5deef8eb58e0ff1dc2e4820875845a9da27b193b003edd4551b6
+e4.status,downgraded_to_qualitative,E4 门状态,data/analysis/gates.json,gates.E4.status,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e4.n_events,0,E4 事件数,data/analysis/gates.json,gates.E4.n_events,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e5.status,not_estimable_degenerate_main_corpus,E5 门状态,data/analysis/gates.json,gates.E5.status,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e5.fisher_p,0.25805703686529097,E5 Fisher p,data/analysis/gates.json,gates.E5.fisher.p,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+e5.cn_modal_share,0.9453,E5 中国侧模态类别占比,data/analysis/gates.json,gates.E5.profile.cn.modal_share,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+h2.status,ok,H2 门状态,data/analysis/gates.json,gates.H2.status,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+h2.gov_events,16,H2 政府事件数,data/analysis/gates.json,gates.H2.n_gov_events,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+h2.n_evaluable,11,H2 可评估数,data/analysis/gates.json,gates.H2.n_evaluable,2026-11-05T03:54:14Z,b2535f539a78d92c3199ec9c0b05cedd573c2b648456caa22b65574a461f1b9c
+nc.coarse.n,50,粗粒度负对照分母,data/analysis/negative_control_coarse.json,coarse.rule_vs_a.n,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.agree,14,粗粒度一致篇数,data/analysis/negative_control_coarse.json,coarse.rule_vs_a.agree,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.rate,0.28,粗粒度一致率,data/analysis/negative_control_coarse.json,coarse.rule_vs_a.rate,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.rate_b,0.28,粗粒度一致率(通道B),data/analysis/negative_control_coarse.json,coarse.rule_vs_b.rate,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.ab,0.74,粗粒度 A vs B 一致率,data/analysis/negative_control_coarse.json,coarse.a_vs_b.rate,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.decided_n,32,规则已判定子集篇数,data/analysis/negative_control_coarse.json,coarse.rule_vs_a_on_decided.n,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.coarse.decided_rate,0.4375,规则已判定子集上的一致率,data/analysis/negative_control_coarse.json,coarse.rule_vs_a_on_decided.rate,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.rule_undetermined,18,负对照中规则判 UNDETERMINED 篇数,data/analysis/negative_control_coarse.json,n_rule_undetermined,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+nc.fine.rate,0.28,细粒度一致率(同一批),data/analysis/negative_control_coarse.json,fine.rule_vs_a.rate,2026-11-05T04:57:07Z,0586988ddb8f1669906eb8d5457ff9e537c62ed43f844b0c575671016b8e475c
+pm.page_size,50,门户每页行数,data/reports/portal_mechanics.json,page_size,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.rows_page1,50,检验报告/食品 第1页行数,data/reports/portal_mechanics.json,queries.0.pages.0.rows,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.rows_page4,50,检验报告/食品 第4页行数,data/reports/portal_mechanics.json,queries.0.pages.3.rows,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.rows_page5,0,检验报告/食品 第5页行数（应为 0）,data/reports/portal_mechanics.json,queries.0.pages.4.rows,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.page1_first_date,2026-10-19,检验报告/食品 第1页首行发布日期,data/reports/portal_mechanics.json,queries.0.pages.0.first_date,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.page1_last_date,2026-09-30,检验报告/食品 第1页末行发布日期,data/reports/portal_mechanics.json,queries.0.pages.0.last_date,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.page1_non_increasing,True,第1页日期是否单调不增（证明默认按发布日期倒序）,data/reports/portal_mechanics.json,queries.0.pages.0.dates_non_increasing,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+pm.fake_page4_last_date,2026-01-15,伪造/食品 第4页末行发布日期（窗口下界）,data/reports/portal_mechanics.json,queries.1.pages.3.last_date,2026-11-05T04:54:41Z,b74f12661e0f028be674526fe7611b6813f2d9c8aa61a420d8c9a91a4e41ba33
+lenb.labelled_zh_p50,3578,已标中文文书 docs.n_chars 中位数,data/reports/length_bias.json,labelled_zh.p50,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+lenb.labelled_zh_n,875,已标中文文书数,data/reports/length_bias.json,labelled_zh.n_rows,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+lenb.clean_p50,6136,可标而未标 25 篇 n_chars 中位数,data/reports/length_bias.json,clean_unlabelled.p50,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+lenb.clean_n,25,可标而未标篇数,data/reports/length_bias.json,clean_unlabelled.n_rows,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+lenb.ratio,1.71,长度比（同一列 docs.n_chars）,data/reports/length_bias.json,ratio_clean_over_labelled_zh,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+lenb.failed_with_len,0,awaiting_pdf 中有长度的篇数（应为 0）,data/reports/length_bias.json,failed_no_text.n_with_len,2026-11-05T04:48:55Z,fba9244973621fb47488f38ea9a0ffa7cb342196ded054287f642832c71e32e2
+t1tab.n,875,表1 总篇数,data/analysis/table1_coarse_by_food.json,n_total,2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+t1tab.matchable_n,603,匹配到食品类别的篇数,data/analysis/table1_coarse_by_food.json,matchable_n,2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+t1tab.matchable_rate,0.6891,食品可归类率,data/analysis/table1_coarse_by_food.json,matchable_rate,2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+t1tab.rows,16,表1 行数,data/analysis/table1_coarse_by_food.json,rows,2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+t1.q.jianyan_result,6760,查询 检验报告/食品 的 resultCount,data/reports/t1_coverage_probe.json,queries[检验报告/食品].result_count,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.jianyan_registered,174,查询 检验报告/食品 的登记数,data/reports/t1_coverage_probe.json,queries[检验报告/食品].registered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.xujia_result,5260,查询 虚假/食品 的 resultCount,data/reports/t1_coverage_probe.json,queries[虚假/食品].result_count,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.xujia_registered,88,查询 虚假/食品 的登记数,data/reports/t1_coverage_probe.json,queries[虚假/食品].registered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.maoyong_result,1471,查询 冒用认证标志 的 resultCount,data/reports/t1_coverage_probe.json,queries[冒用认证标志/None].result_count,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.maoyong_registered,197,查询 冒用认证标志 的登记数,data/reports/t1_coverage_probe.json,queries[冒用认证标志/None].registered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.cuangai_result,80,查询 篡改/食品 的 resultCount,data/reports/t1_coverage_probe.json,queries[篡改/食品].result_count,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+t1.q.cuangai_registered,76,查询 篡改/食品 的登记数,data/reports/t1_coverage_probe.json,queries[篡改/食品].registered,2026-11-05T04:14:40Z,ca3c9d2493618c960631a5f23fde71f3cf093596b9ab5f81a78c709f0241bcbc
+anchor.macro_ge20_computed,0.4195,锚点 macro(支持>=20) —— 由 per_class 现算，独立复核 e1.json 的 macro_ge20,data/metrics/e1.json,"anchor_f1.support.per_class{:.f1,,support>=20}",2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.ge20_classes,FALSE_LABELING(326);OTHER(31);UNLICENSED_OPERATION(52),参与 macro(>=20) 的类与 support,data/metrics/e1.json,anchor_f1.support.per_class,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+anchor.ge20_support_sum,409,参与 macro(>=20) 的锚点合计篇数,data/metrics/e1.json,anchor_f1.support.per_class,2026-11-05T03:53:30Z,ff4e536515c3b9ee3da291644d37b921bfef39f27a9055409cd1648f0d66f845
+t1tab.body,UNMATCHED:272:108:48:7:19:90;FOOD_ADDITIVE:85:57:0:2:8:18;PREPACKAGED_FOOD:74:46:4:2:7:15;MEAT_PRODUCT:66:41:2:2:5:16;ALCOHOL:63:9:24:1:7:22;GRAIN_BAKERY:61:38:3:2:0:18;CONDIMENT:44:19:5:0:3:17;EDIBLE_AGRICULTURAL:42:21:4:1:5:11;BEVERAGE:36:15:1:3:2:15;DAIRY:28:13:3:1:4:7;OIL:28:17:0:2:1:8;HEALTH_FOOD:22:5:3:0:0:14;FROZEN:18:9:0:1:1:7;CATERING_RAW_MATERIAL:17:5:2:2:3:5;TEA:12:5:0:0:1:6;INFANT_FOOD:7:4:1:0:0:2,表1 全表（行=食品类别: n: DATA_FALSIFICATION:MARKET_ORDER:UNLICENSED:PROCEDURAL:UNDETERMINED）,data/analysis/table1_coarse_by_food.json,rows[],2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+t1tab.totals,DATA_FALSIFICATION=412:MARKET_ORDER=100:UNLICENSED=26:PROCEDURAL=66:UNDETERMINED=271,表1 列合计,data/analysis/table1_coarse_by_food.json,column_totals,2026-11-05T04:22:13Z,6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3
+corpus.share_zh,0.7757,中文占语料比例,"derived from corpus.zh_n,corpus.silver_n",arithmetic over ids above,,
+e6.resolved_n,604,获得粗粒度类别的篇数,"derived from e6.n,e6.unresolved",arithmetic over ids above,,
+e6.df_share_of_resolved,0.6821,DATA_FALSIFICATION 在有类别文书中的占比,"derived from e6.coarse.data_falsification,e6.n,e6.unresolved",arithmetic over ids above,,
+e6.df_share_of_all,0.4709,DATA_FALSIFICATION 在全部中文文书中的占比,"derived from e6.coarse.data_falsification,e6.n",arithmetic over ids above,,
+e8f.cn_framework_excluded,166,中国侧框架外篇数（市场秩序 + 程序性）,"derived from e8f.cn_market_order,e8f.cn_procedural",arithmetic over ids above,,
+e8f.cn_outside,437,中国侧不在欺诈框架内的总篇数（未定 + 两框架外粗类）,"derived from e8.cn_unresolved,e8f.cn_market_order,e8f.cn_procedural",arithmetic over ids above,,
+e8.cn_share,0.6339,中国侧在对照表内占比,"derived from e8.cn_n,e8.us_n",arithmetic over ids above,,
+excl.filtered_out_total,2091,filtered_out 合计（cfws + municipal）,"derived from excl.filtered_out_cfws,excl.filtered_out_municipal",arithmetic over ids above,,
+t1tab.food_categories,15,表1 中具名食品类别数（行数 − UNMATCHED）,derived from t1tab.rows,arithmetic over ids above,,
+corpus.docs_total,3540,数据库内文书总数（六类去向之和）,"derived from corpus.zh_n,corpus.en_n,excl.awaiting_pdf,excl.clean_unlabelable,excl.filtered_out_cfws,excl.filtered_out_municipal",arithmetic over ids above,,
+e11.n_coded_s1,60,人工编码篇数（S1，简单随机层）,data/analysis/e11_agreement.json,H1_S1.n_coded,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.n_agree_s1,29,仪器与人工一致篇数（S1，6 类）,data/analysis/e11_agreement.json,H1_S1.n_agree,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.agreement_s1,0.4833,一致率 p̂（S1，n=60，UNRESOLVED 剔除 0 篇）,data/analysis/e11_agreement.json,H1_S1.agreement,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.wilson_lo_s1,0.3618,Wilson 95% 下界（S1）,data/analysis/e11_agreement.json,H1_S1.wilson95[0],2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.wilson_hi_s1,0.6069,Wilson 95% 上界（S1）,data/analysis/e11_agreement.json,H1_S1.wilson95[1],2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.kappa_s1,0.2622,Cohen's κ（S1）,data/analysis/e11_agreement.json,H1_S1._kappa,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.ac1_s1,0.4101,Gwet's AC1（S1）,data/analysis/e11_agreement.json,H1_S1._ac1,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.pabak_s1,0.3800,PABAK（S1）,data/analysis/e11_agreement.json,H1_S1._pabak,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.n_coded_s2,20,人工编码篇数（S2，分歧富集层）,data/analysis/e11_agreement.json,H2_S2.n_coded,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.agreement_s2,0.6500,一致率（S2，13/20）,data/analysis/e11_agreement.json,H2_S2.agreement,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.contrast_diff,0.1667,S2 − S1 一致率之差（方向与 H2 假设相反）,data/analysis/e11_agreement.json,H2_contrast_S2_minus_S1.diff,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.contrast_lo,-0.0832,Newcombe 95% 下界（跨 0 ⇒ not_estimable）,data/analysis/e11_agreement.json,H2_contrast_S2_minus_S1.lo,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.contrast_hi,0.3747,Newcombe 95% 上界,data/analysis/e11_agreement.json,H2_contrast_S2_minus_S1.hi,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.h3_n,5,S1 中仪器属三细类子集 n（<10 ⇒ not_estimable）,data/analysis/e11_agreement.json,H3_fraud_subset.n_coded,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.human_other_share_s1,0.5750,人工判为 OTHER 的份额（S1，全 80 篇为 46/80=0.5750）,human/coded.json,count(label=OTHER)/80,2026-11-05T06:22:48Z,5b1735b582fed2aeb60e39f227688020fa87fbe1185f7368f02726410dc68e9b
+e11.rescue_failed,1,预注册 H4 判据 1 触发（p̂<0.70）⇒ 本次救援判为失败,data/analysis/e11_agreement.json,verdict.rescue_failed,2026-11-05T06:22:48Z,5864703ad1a14f43d8b6bb686fcf6561a066ad327b3a9b27f58801d008544bf6
+e11.n_coders,1,实际编码者人数（预注册设想 2 名，见 D-97）,human/coded.json,n_authors_of_file,2026-11-05T06:22:48Z,5b1735b582fed2aeb60e39f227688020fa87fbe1185f7368f02726410dc68e9b
+e11.ab_n_pairs,80,A↔B 配对篇数（全部 80 篇，D-98 H5 口径甲）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.n_pairs,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_n_agree,13,A↔B 一致篇数（全部 80 篇）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.n_agree,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_agreement,0.1625,A↔B 一致率 p̂（全部 80 篇；D-98 判据 p̂≥0.80 不成立）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_wilson_lo,0.0975,A↔B 一致率 Wilson 95% 下界,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.wilson95[0],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_wilson_hi,0.2584,A↔B 一致率 Wilson 95% 上界,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.wilson95[1],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_kappa,0.0019,A↔B Cohen's κ（≈0；D-98 判据 κ≥0.60 不成立）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.kappa,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_ac1,0.0172,A↔B Gwet's AC1,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.ac1,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_pabak,-0.005,A↔B PABAK（6 类）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.pabak,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_prev_index_custom,0.1125,A↔B 众数类份额差（自定义指数，非 Byrt 患病率指数）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_all80.prevalence_index,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s1_n_agree,12,A↔B 一致篇数（S1，n=60）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s1.n_agree,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s1_agreement,0.2,A↔B 一致率（S1）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s1.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s1_wilson_lo,0.1183,A↔B 一致率 Wilson 95% 下界（S1）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s1.wilson95[0],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s1_wilson_hi,0.3178,A↔B 一致率 Wilson 95% 上界（S1）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s1.wilson95[1],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s1_kappa,0.0062,A↔B Cohen's κ（S1）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s1.kappa,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s2_n_agree,1,A↔B 一致篇数（S2，n=20）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s2.n_agree,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s2_agreement,0.05,A↔B 一致率（S2）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s2.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s2_wilson_lo,0.0089,A↔B 一致率 Wilson 95% 下界（S2）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s2.wilson95[0],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.ab_s2_wilson_hi,0.2361,A↔B 一致率 Wilson 95% 上界（S2）,data/analysis/e11_ab_agreement.json,H5_A_vs_B_s2.wilson95[1],2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_p_ia_all80,0.525,仪器↔A 一致率（全部 80 篇；D-99 口径甲）,data/analysis/e11_ab_agreement.json,H6_I_vs_A.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_kappa_ia_all80,0.3298,仪器↔A Cohen's κ（全部 80 篇）,data/analysis/e11_ab_agreement.json,H6_I_vs_A.kappa,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_p_ib_all80,0.3375,仪器↔B 一致率（全部 80 篇；D-99 口径甲）,data/analysis/e11_ab_agreement.json,H6_I_vs_B.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_kappa_ib_all80,0.0795,仪器↔B Cohen's κ（全部 80 篇）,data/analysis/e11_ab_agreement.json,H6_I_vs_B.kappa,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_p_ia_s1,0.4833,仪器↔A 一致率（S1，与预注册 H1 同一数字；D-99 口径乙）,data/analysis/e11_ab_agreement.json,H6_I_vs_A_s1.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_p_ib_s1,0.3833,仪器↔B 一致率（S1；D-99 口径乙）,data/analysis/e11_ab_agreement.json,H6_I_vs_B_s1.agreement,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_kappa_ib_s1,0.086,仪器↔B Cohen's κ（S1）,data/analysis/e11_ab_agreement.json,H6_I_vs_B_s1.kappa,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_p_ia_minus_p_ib,0.1875,|仪器↔A − 仪器↔B|（口径甲；D-98 归因判据 ≤0.10 不成立）,data/analysis/e11_ab_agreement.json,H6_p_IA_minus_p_IB,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.other_share_a,0.575,编码者 A 的 OTHER 份额（46/80）,data/analysis/e11_ab_agreement.json,H6_other_share.A,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.other_share_b,0.0375,编码者 B 的 OTHER 份额（3/80）,data/analysis/e11_ab_agreement.json,H6_other_share.B,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.n_coders_total,2,实际完成编码的人数（A、B 各 80 篇）,data/analysis/e11_ab_agreement.json,verdict,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.coders_independent_branches,0,两名编码者是否分道独立施测（0=否，同一会话通道；见 D-100）,data/analysis/e11_ab_agreement.json,verdict,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.leak_guard_triggered,0,D-100 泄漏守卫是否触发（p̂≥0.95 且 OTHER 份额差<0.05 才触发；实测 p̂=0.1625、差=0.5375）,data/analysis/e11_ab_agreement.json,verdict,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h5_human_recoverable,0,D-98 H5：标签可由独立人类判读者复原（0=否）,data/analysis/e11_ab_agreement.json,verdict.human_recoverable,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h5_human_not_recoverable,1,D-98 H5：标签不可由独立人类判读者复原（1=是，p̂=0.1625<0.60 且 κ=0.0019<0.40）,data/analysis/e11_ab_agreement.json,verdict.human_not_recoverable,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11.h6_instrument_systematic_deviation,0,D-98 H6：仪器系统性偏离（0=不可判定，因 human_recoverable=false，前置条件不满足）,data/analysis/e11_ab_agreement.json,verdict.instrument_systematic_deviation,2026-11-05T07:01:45Z,4f0a023ec977a5403c91b8599be05998f4a252f4cd1737708ac8f468861ee127
+e11c.a_b_agree,13,三人信度（D-102）：A↔B 一致篇数（n=80，无 UNRESOLVED）,data/analysis/e11c_three_coder.json,pairwise.A_B.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_b_agreement,0.1625,三人信度：A↔B 一致率 p̂,data/analysis/e11c_three_coder.json,pairwise.A_B.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_b_wilson_lo,0.0975,三人信度：A↔B Wilson 95% 下界,data/analysis/e11c_three_coder.json,pairwise.A_B.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_b_wilson_hi,0.2584,三人信度：A↔B Wilson 95% 上界,data/analysis/e11c_three_coder.json,pairwise.A_B.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_b_kappa,0.0019,三人信度：A↔B Cohen's κ（边际分布不同，不可横比）,data/analysis/e11c_three_coder.json,pairwise.A_B.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_c_agree,64,三人信度（D-102）：A↔C 一致篇数（n=80，无 UNRESOLVED）,data/analysis/e11c_three_coder.json,pairwise.A_C.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_c_agreement,0.8,三人信度：A↔C 一致率 p̂,data/analysis/e11c_three_coder.json,pairwise.A_C.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_c_wilson_lo,0.6995,三人信度：A↔C Wilson 95% 下界,data/analysis/e11c_three_coder.json,pairwise.A_C.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_c_wilson_hi,0.873,三人信度：A↔C Wilson 95% 上界,data/analysis/e11c_three_coder.json,pairwise.A_C.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.a_c_kappa,0.6371,三人信度：A↔C Cohen's κ（边际分布不同，不可横比）,data/analysis/e11c_three_coder.json,pairwise.A_C.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.b_c_agree,11,三人信度（D-102）：B↔C 一致篇数（n=80，无 UNRESOLVED）,data/analysis/e11c_three_coder.json,pairwise.B_C.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.b_c_agreement,0.1375,三人信度：B↔C 一致率 p̂,data/analysis/e11c_three_coder.json,pairwise.B_C.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.b_c_wilson_lo,0.0785,三人信度：B↔C Wilson 95% 下界,data/analysis/e11c_three_coder.json,pairwise.B_C.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.b_c_wilson_hi,0.2297,三人信度：B↔C Wilson 95% 上界,data/analysis/e11c_three_coder.json,pairwise.B_C.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.b_c_kappa,-0.0353,三人信度：B↔C Cohen's κ（边际分布不同，不可横比）,data/analysis/e11c_three_coder.json,pairwise.B_C.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.fleiss_kappa,0.0881,三人信度：Fleiss' κ（80 篇 × 3 人 × 6 类；D-102 主统计量）,data/analysis/e11c_three_coder.json,fleiss.fleiss_kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.fleiss_p_bar,0.3667,三人信度：Fleiss p̄,data/analysis/e11c_three_coder.json,fleiss.p_bar,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.fleiss_p_e,0.3055,三人信度：Fleiss p_e,data/analysis/e11c_three_coder.json,fleiss.p_e,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.n_docs,80,三人信度：纳入篇数,data/analysis/e11c_three_coder.json,n_docs,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.n_excluded_unresolved,0,三人信度：因 UNRESOLVED 剔除篇数（0）,data/analysis/e11c_three_coder.json,n_excluded_unresolved,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.min_pairwise_agreement,0.1375,三人信度：最小两两一致率（D-102 否定判据 <0.60 触发）,data/analysis/e11c_three_coder.json,verdict.min_pairwise_agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.min_pairwise_wilson_lo,0.0785,三人信度：最小两两 Wilson 下界,data/analysis/e11c_three_coder.json,verdict.min_pairwise_wilson_lo,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.typology_shared_reading,0,D-102：类型学可共同判读（0=否）,data/analysis/e11c_three_coder.json,verdict.typology_shared_reading,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.typology_no_shared_reading,1,D-102：类型学不可共同判读（1=是，触发）,data/analysis/e11c_three_coder.json,verdict.typology_no_shared_reading,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.FAKE_CERTIFICATION,0.0646,三人信度：分类别一致度 FAKE_CERTIFICATION,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.FAKE_CERTIFICATION,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.FALSE_LABELING,0.2708,三人信度：分类别一致度 FALSE_LABELING,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.FALSE_LABELING,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.FORGED_INSPECTION_REPORT,0.0241,三人信度：分类别一致度 FORGED_INSPECTION_REPORT,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.FORGED_INSPECTION_REPORT,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.OTHER,0.3125,三人信度：分类别一致度 OTHER,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.OTHER,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.TAMPERED_TRACEABILITY,0.0122,三人信度：分类别一致度 TAMPERED_TRACEABILITY,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.TAMPERED_TRACEABILITY,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pcat.UNLICENSED_OPERATION,0.0298,三人信度：分类别一致度 UNLICENSED_OPERATION,data/analysis/e11c_three_coder.json,fleiss.per_category_agreement.UNLICENSED_OPERATION,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.decomp.a_b_agree_other_other,2,弃权分解（D-107）：A↔B 一致中双方均判 OTHER 的篇数,data/analysis/e11c_decomposition.json,pairs.A_B.n_agree_other_other,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_b_n_substantive,78,弃权分解：A↔B 实质类可评分篇数（剔除双方均 OTHER）,data/analysis/e11c_decomposition.json,pairs.A_B.n_scored_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_b_agree_substantive,11,弃权分解：A↔B 实质类一致篇数,data/analysis/e11c_decomposition.json,pairs.A_B.n_agree_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_b_substantive_agreement,0.141,弃权分解：A↔B 实质类一致率,data/analysis/e11c_decomposition.json,pairs.A_B.substantive_agreement,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_c_agree_other_other,42,弃权分解（D-107）：A↔C 一致中双方均判 OTHER 的篇数,data/analysis/e11c_decomposition.json,pairs.A_C.n_agree_other_other,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_c_n_substantive,38,弃权分解：A↔C 实质类可评分篇数（剔除双方均 OTHER）,data/analysis/e11c_decomposition.json,pairs.A_C.n_scored_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_c_agree_substantive,22,弃权分解：A↔C 实质类一致篇数,data/analysis/e11c_decomposition.json,pairs.A_C.n_agree_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.a_c_substantive_agreement,0.5789,弃权分解：A↔C 实质类一致率,data/analysis/e11c_decomposition.json,pairs.A_C.substantive_agreement,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.b_c_agree_other_other,2,弃权分解（D-107）：B↔C 一致中双方均判 OTHER 的篇数,data/analysis/e11c_decomposition.json,pairs.B_C.n_agree_other_other,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.b_c_n_substantive,78,弃权分解：B↔C 实质类可评分篇数（剔除双方均 OTHER）,data/analysis/e11c_decomposition.json,pairs.B_C.n_scored_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.b_c_agree_substantive,9,弃权分解：B↔C 实质类一致篇数,data/analysis/e11c_decomposition.json,pairs.B_C.n_agree_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.b_c_substantive_agreement,0.1154,弃权分解：B↔C 实质类一致率,data/analysis/e11c_decomposition.json,pairs.B_C.substantive_agreement,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_share_A,0.575,弃权分解：编码者 A 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.A,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_share_B,0.0375,弃权分解：编码者 B 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.B,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_share_C,0.6125,弃权分解：编码者 C 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.C,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e12.n_docs_total,1128,品类词出现谱：文书总数,data/analysis/e12_commodity_index.json,n_docs_total,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.any_hit,679,至少命中一个品类词的文书数,data/analysis/e12_commodity_index.json,n_docs_any_commodity_term,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.no_hit,449,零品类命中文书数,data/analysis/e12_commodity_index.json,n_docs_no_commodity_term,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.files_on_disk,1153,清洁全文目录文件数,data/analysis/e12_commodity_index.json,inputs.n_files_on_disk,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.orphans,25,无对应 doc_id 的孤儿文件数,data/analysis/e12_commodity_index.json,inputs.n_orphan_files_not_in_silver,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.neg.battery,2,阴性对照：电池 命中篇数,data/analysis/e12_commodity_index.json,negative_control.n_docs_per_term.电池,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.neg.boiler,2,阴性对照：锅炉 命中篇数,data/analysis/e12_commodity_index.json,negative_control.n_docs_per_term.锅炉,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.neg.scale,1,阴性对照：计量秤 命中篇数,data/analysis/e12_commodity_index.json,negative_control.n_docs_per_term.计量秤,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.neg_only,3,仅命中非食品词、无品类词的文书数,data/analysis/e12_commodity_index.json,negative_control.n_docs_with_negative_term_and_no_category_hit,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat1.n,111,品类出现：粮食及其制品 篇数,data/analysis/e12_commodity_index.json,categories.1.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat1.share,0.0984,品类出现：粮食及其制品 占窗份额,data/analysis/e12_commodity_index.json,categories.1.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat2.n,70,品类出现：食用油脂 篇数,data/analysis/e12_commodity_index.json,categories.2.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat2.share,0.0621,品类出现：食用油脂 占窗份额,data/analysis/e12_commodity_index.json,categories.2.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat3.n,137,品类出现：生鲜肉 篇数,data/analysis/e12_commodity_index.json,categories.3.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat3.share,0.1215,品类出现：生鲜肉 占窗份额,data/analysis/e12_commodity_index.json,categories.3.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat4.n,72,品类出现：肉制品 篇数,data/analysis/e12_commodity_index.json,categories.4.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat4.share,0.0638,品类出现：肉制品 占窗份额,data/analysis/e12_commodity_index.json,categories.4.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat5.n,100,品类出现：水产及其制品 篇数,data/analysis/e12_commodity_index.json,categories.5.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat5.share,0.0887,品类出现：水产及其制品 占窗份额,data/analysis/e12_commodity_index.json,categories.5.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat6.n,39,品类出现：蛋及蛋制品 篇数,data/analysis/e12_commodity_index.json,categories.6.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat6.share,0.0346,品类出现：蛋及蛋制品 占窗份额,data/analysis/e12_commodity_index.json,categories.6.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat7.n,49,品类出现：乳及乳制品 篇数,data/analysis/e12_commodity_index.json,categories.7.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat7.share,0.0434,品类出现：乳及乳制品 占窗份额,data/analysis/e12_commodity_index.json,categories.7.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat8.n,54,品类出现：蔬菜及其制品 篇数,data/analysis/e12_commodity_index.json,categories.8.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat8.share,0.0479,品类出现：蔬菜及其制品 占窗份额,data/analysis/e12_commodity_index.json,categories.8.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat9.n,69,品类出现：水果及其制品 篇数,data/analysis/e12_commodity_index.json,categories.9.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat9.share,0.0612,品类出现：水果及其制品 占窗份额,data/analysis/e12_commodity_index.json,categories.9.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat10.n,35,品类出现：豆制品 篇数,data/analysis/e12_commodity_index.json,categories.10.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat10.share,0.031,品类出现：豆制品 占窗份额,data/analysis/e12_commodity_index.json,categories.10.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat11.n,86,品类出现：糕点烘焙 篇数,data/analysis/e12_commodity_index.json,categories.11.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat11.share,0.0762,品类出现：糕点烘焙 占窗份额,data/analysis/e12_commodity_index.json,categories.11.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat12.n,82,品类出现：酒类 篇数,data/analysis/e12_commodity_index.json,categories.12.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat12.share,0.0727,品类出现：酒类 占窗份额,data/analysis/e12_commodity_index.json,categories.12.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat13.n,56,品类出现：饮料及冷冻饮品 篇数,data/analysis/e12_commodity_index.json,categories.13.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat13.share,0.0496,品类出现：饮料及冷冻饮品 占窗份额,data/analysis/e12_commodity_index.json,categories.13.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat14.n,24,品类出现：茶叶 篇数,data/analysis/e12_commodity_index.json,categories.14.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat14.share,0.0213,品类出现：茶叶 占窗份额,data/analysis/e12_commodity_index.json,categories.14.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat15.n,163,品类出现：调味品 篇数,data/analysis/e12_commodity_index.json,categories.15.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat15.share,0.1445,品类出现：调味品 占窗份额,data/analysis/e12_commodity_index.json,categories.15.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat16.n,66,品类出现：保健食品 篇数,data/analysis/e12_commodity_index.json,categories.16.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat16.share,0.0585,品类出现：保健食品 占窗份额,data/analysis/e12_commodity_index.json,categories.16.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat17.n,85,品类出现：糖果蜜饯及炒货 篇数,data/analysis/e12_commodity_index.json,categories.17.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat17.share,0.0754,品类出现：糖果蜜饯及炒货 占窗份额,data/analysis/e12_commodity_index.json,categories.17.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat18.n,32,品类出现：特殊膳食用食品 篇数,data/analysis/e12_commodity_index.json,categories.18.n_docs,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.cat18.share,0.0284,品类出现：特殊膳食用食品 占窗份额,data/analysis/e12_commodity_index.json,categories.18.share_of_window,2026-11-05T07:50:39Z,52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e
+e12.prec.n,270,人工判读样本条数,data/analysis/e12_commodity_precision.json,n_items,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.S,104,判读：subject 条数,data/analysis/e12_commodity_precision.json,counts.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.I,121,判读：mention 条数,data/analysis/e12_commodity_precision.json,counts.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.T,26,判读：仅法条/标准文本 条数,data/analysis/e12_commodity_precision.json,counts.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.F,19,判读：伪命中 条数,data/analysis/e12_commodity_precision.json,counts.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.any,0.9296,any-mention 精确率（等额分配）,data/analysis/e12_commodity_precision.json,overall.equal_allocation_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.any.lo,0.8927,any-mention Wilson 下界,data/analysis/e12_commodity_precision.json,overall.equal_allocation_wilson_any_mention[0],2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.any.hi,0.9545,any-mention Wilson 上界,data/analysis/e12_commodity_precision.json,overall.equal_allocation_wilson_any_mention[1],2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.subj,0.3852,subject 精确率（等额分配）,data/analysis/e12_commodity_precision.json,overall.equal_allocation_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.subj.lo,0.3291,subject Wilson 下界,data/analysis/e12_commodity_precision.json,overall.equal_allocation_wilson_subject[0],2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.subj.hi,0.4445,subject Wilson 上界,data/analysis/e12_commodity_precision.json,overall.equal_allocation_wilson_subject[1],2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.post.any,0.9404,any-mention 精确率（按类规模事后分层）,data/analysis/e12_commodity_precision.json,overall.poststratified_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.post.subj,0.3636,subject 精确率（按类规模事后分层）,data/analysis/e12_commodity_precision.json,overall.poststratified_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.s,4,判读 粮食及其制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.1.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.i,11,判读 粮食及其制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.1.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.t,0,判读 粮食及其制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.1.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.f,0,判读 粮食及其制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.1.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.n,15,判读 粮食及其制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.1.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.any,1.0,判读 粮食及其制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.1.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat1.subj,0.2667,判读 粮食及其制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.1.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.s,3,判读 食用油脂：subject 条数,data/analysis/e12_commodity_precision.json,per_category.2.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.i,12,判读 食用油脂：mention 条数,data/analysis/e12_commodity_precision.json,per_category.2.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.t,0,判读 食用油脂：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.2.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.f,0,判读 食用油脂：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.2.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.n,15,判读 食用油脂：抽样条数,data/analysis/e12_commodity_precision.json,per_category.2.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.any,1.0,判读 食用油脂：any 精确率,data/analysis/e12_commodity_precision.json,per_category.2.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat2.subj,0.2,判读 食用油脂：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.2.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.s,4,判读 生鲜肉：subject 条数,data/analysis/e12_commodity_precision.json,per_category.3.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.i,11,判读 生鲜肉：mention 条数,data/analysis/e12_commodity_precision.json,per_category.3.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.t,0,判读 生鲜肉：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.3.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.f,0,判读 生鲜肉：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.3.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.n,15,判读 生鲜肉：抽样条数,data/analysis/e12_commodity_precision.json,per_category.3.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.any,1.0,判读 生鲜肉：any 精确率,data/analysis/e12_commodity_precision.json,per_category.3.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat3.subj,0.2667,判读 生鲜肉：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.3.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.s,9,判读 肉制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.4.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.i,6,判读 肉制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.4.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.t,0,判读 肉制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.4.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.f,0,判读 肉制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.4.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.n,15,判读 肉制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.4.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.any,1.0,判读 肉制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.4.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat4.subj,0.6,判读 肉制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.4.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.s,5,判读 水产及其制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.5.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.i,7,判读 水产及其制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.5.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.t,0,判读 水产及其制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.5.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.f,3,判读 水产及其制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.5.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.n,15,判读 水产及其制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.5.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.any,0.8,判读 水产及其制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.5.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat5.subj,0.3333,判读 水产及其制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.5.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.s,6,判读 蛋及蛋制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.6.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.i,9,判读 蛋及蛋制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.6.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.t,0,判读 蛋及蛋制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.6.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.f,0,判读 蛋及蛋制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.6.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.n,15,判读 蛋及蛋制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.6.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.any,1.0,判读 蛋及蛋制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.6.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat6.subj,0.4,判读 蛋及蛋制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.6.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.s,5,判读 乳及乳制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.7.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.i,4,判读 乳及乳制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.7.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.t,2,判读 乳及乳制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.7.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.f,4,判读 乳及乳制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.7.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.n,15,判读 乳及乳制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.7.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.any,0.7333,判读 乳及乳制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.7.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat7.subj,0.3333,判读 乳及乳制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.7.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.s,4,判读 蔬菜及其制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.8.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.i,7,判读 蔬菜及其制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.8.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.t,1,判读 蔬菜及其制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.8.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.f,3,判读 蔬菜及其制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.8.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.n,15,判读 蔬菜及其制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.8.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.any,0.8,判读 蔬菜及其制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.8.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat8.subj,0.2667,判读 蔬菜及其制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.8.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.s,3,判读 水果及其制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.9.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.i,7,判读 水果及其制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.9.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.t,1,判读 水果及其制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.9.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.f,4,判读 水果及其制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.9.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.n,15,判读 水果及其制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.9.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.any,0.7333,判读 水果及其制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.9.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat9.subj,0.2,判读 水果及其制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.9.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.s,14,判读 豆制品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.10.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.i,0,判读 豆制品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.10.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.t,0,判读 豆制品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.10.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.f,1,判读 豆制品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.10.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.n,15,判读 豆制品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.10.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.any,0.9333,判读 豆制品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.10.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat10.subj,0.9333,判读 豆制品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.10.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.s,9,判读 糕点烘焙：subject 条数,data/analysis/e12_commodity_precision.json,per_category.11.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.i,5,判读 糕点烘焙：mention 条数,data/analysis/e12_commodity_precision.json,per_category.11.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.t,0,判读 糕点烘焙：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.11.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.f,1,判读 糕点烘焙：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.11.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.n,15,判读 糕点烘焙：抽样条数,data/analysis/e12_commodity_precision.json,per_category.11.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.any,0.9333,判读 糕点烘焙：any 精确率,data/analysis/e12_commodity_precision.json,per_category.11.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat11.subj,0.6,判读 糕点烘焙：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.11.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.s,13,判读 酒类：subject 条数,data/analysis/e12_commodity_precision.json,per_category.12.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.i,2,判读 酒类：mention 条数,data/analysis/e12_commodity_precision.json,per_category.12.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.t,0,判读 酒类：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.12.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.f,0,判读 酒类：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.12.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.n,15,判读 酒类：抽样条数,data/analysis/e12_commodity_precision.json,per_category.12.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.any,1.0,判读 酒类：any 精确率,data/analysis/e12_commodity_precision.json,per_category.12.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat12.subj,0.8667,判读 酒类：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.12.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.s,8,判读 饮料及冷冻饮品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.13.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.i,4,判读 饮料及冷冻饮品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.13.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.t,3,判读 饮料及冷冻饮品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.13.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.f,0,判读 饮料及冷冻饮品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.13.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.n,15,判读 饮料及冷冻饮品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.13.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.any,1.0,判读 饮料及冷冻饮品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.13.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat13.subj,0.5333,判读 饮料及冷冻饮品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.13.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.s,5,判读 茶叶：subject 条数,data/analysis/e12_commodity_precision.json,per_category.14.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.i,7,判读 茶叶：mention 条数,data/analysis/e12_commodity_precision.json,per_category.14.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.t,1,判读 茶叶：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.14.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.f,2,判读 茶叶：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.14.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.n,15,判读 茶叶：抽样条数,data/analysis/e12_commodity_precision.json,per_category.14.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.any,0.8667,判读 茶叶：any 精确率,data/analysis/e12_commodity_precision.json,per_category.14.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat14.subj,0.3333,判读 茶叶：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.14.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.s,2,判读 调味品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.15.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.i,12,判读 调味品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.15.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.t,1,判读 调味品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.15.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.f,0,判读 调味品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.15.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.n,15,判读 调味品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.15.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.any,1.0,判读 调味品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.15.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat15.subj,0.1333,判读 调味品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.15.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.s,1,判读 保健食品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.16.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.i,10,判读 保健食品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.16.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.t,4,判读 保健食品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.16.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.f,0,判读 保健食品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.16.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.n,15,判读 保健食品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.16.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.any,1.0,判读 保健食品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.16.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat16.subj,0.0667,判读 保健食品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.16.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.s,8,判读 糖果蜜饯及炒货：subject 条数,data/analysis/e12_commodity_precision.json,per_category.17.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.i,6,判读 糖果蜜饯及炒货：mention 条数,data/analysis/e12_commodity_precision.json,per_category.17.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.t,0,判读 糖果蜜饯及炒货：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.17.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.f,1,判读 糖果蜜饯及炒货：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.17.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.n,15,判读 糖果蜜饯及炒货：抽样条数,data/analysis/e12_commodity_precision.json,per_category.17.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.any,0.9333,判读 糖果蜜饯及炒货：any 精确率,data/analysis/e12_commodity_precision.json,per_category.17.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat17.subj,0.5333,判读 糖果蜜饯及炒货：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.17.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.s,1,判读 特殊膳食用食品：subject 条数,data/analysis/e12_commodity_precision.json,per_category.18.S,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.i,1,判读 特殊膳食用食品：mention 条数,data/analysis/e12_commodity_precision.json,per_category.18.I,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.t,13,判读 特殊膳食用食品：法条文本条数,data/analysis/e12_commodity_precision.json,per_category.18.T,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.f,0,判读 特殊膳食用食品：伪命中条数,data/analysis/e12_commodity_precision.json,per_category.18.F,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.n,15,判读 特殊膳食用食品：抽样条数,data/analysis/e12_commodity_precision.json,per_category.18.n_sampled,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.any,1.0,判读 特殊膳食用食品：any 精确率,data/analysis/e12_commodity_precision.json,per_category.18.precision_any_mention,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e12.prec.cat18.subj,0.0667,判读 特殊膳食用食品：subject 精确率,data/analysis/e12_commodity_precision.json,per_category.18.precision_subject,2026-11-05T07:54:11Z,11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8
+e11c.fleiss.kappa,0.0881,Fleiss κ,data/analysis/e11c_three_coder.json,fleiss.fleiss_kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.fleiss.p_bar,0.3667,Fleiss 平均一致度,data/analysis/e11c_three_coder.json,fleiss.p_bar,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.fleiss.p_e,0.3055,Fleiss 期望一致度,data/analysis/e11c_three_coder.json,fleiss.p_e,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.min_pairwise,0.1375,最小两两一致率,data/analysis/e11c_three_coder.json,verdict.min_pairwise_agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AB,0.1625,A↔B 一致率,data/analysis/e11c_three_coder.json,pairwise.A_B.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AB.agree,13,A↔B 一致篇数,data/analysis/e11c_three_coder.json,pairwise.A_B.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AB.kappa,0.0019,A↔B Cohen κ,data/analysis/e11c_three_coder.json,pairwise.A_B.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AC,0.8,A↔C 一致率,data/analysis/e11c_three_coder.json,pairwise.A_C.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AC.agree,64,A↔C 一致篇数,data/analysis/e11c_three_coder.json,pairwise.A_C.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.AC.kappa,0.6371,A↔C Cohen κ,data/analysis/e11c_three_coder.json,pairwise.A_C.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.BC,0.1375,B↔C 一致率,data/analysis/e11c_three_coder.json,pairwise.B_C.agreement,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.BC.agree,11,B↔C 一致篇数,data/analysis/e11c_three_coder.json,pairwise.B_C.n_agree,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.BC.kappa,-0.0353,B↔C Cohen κ,data/analysis/e11c_three_coder.json,pairwise.B_C.kappa,2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.A_B.wilson0,0.0975,A_B Wilson 下界,data/analysis/e11c_three_coder.json,pairwise.A_B.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.A_B.wilson1,0.2584,A_B Wilson 上界,data/analysis/e11c_three_coder.json,pairwise.A_B.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.A_C.wilson0,0.6995,A_C Wilson 下界,data/analysis/e11c_three_coder.json,pairwise.A_C.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.A_C.wilson1,0.873,A_C Wilson 上界,data/analysis/e11c_three_coder.json,pairwise.A_C.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.B_C.wilson0,0.0785,B_C Wilson 下界,data/analysis/e11c_three_coder.json,pairwise.B_C.wilson95[0],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.pair.B_C.wilson1,0.2297,B_C Wilson 上界,data/analysis/e11c_three_coder.json,pairwise.B_C.wilson95[1],2026-11-05T07:40:17Z,24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4
+e11c.decomp.AC.other_other,42,A↔C 一致中双方同判 OTHER 数,data/analysis/e11c_decomposition.json,pairs.A_C.n_agree_other_other,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.AC.sub.n,38,A↔C 剔除 OTHER↔OTHER 后篇数,data/analysis/e11c_decomposition.json,pairs.A_C.n_scored_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.AC.sub.agree,22,A↔C 实质一致篇数,data/analysis/e11c_decomposition.json,pairs.A_C.n_agree_substantive,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.AC.sub,0.5789,A↔C 实质一致率,data/analysis/e11c_decomposition.json,pairs.A_C.substantive_agreement,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_A,0.575,编码者 A 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.A,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_B,0.0375,编码者 B 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.B,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e11c.decomp.other_C,0.6125,编码者 C 的 OTHER 份额,data/analysis/e11c_decomposition.json,other_share.C,2026-11-05T07:41:43Z,cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0
+e13.kappa,0.3241,E13 商品角色判读 κ,data/analysis/e13_commodity_subject.json,s1_validation.kappa,2026-11-05T08:17:16Z,fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7
+e13.ba,0.6519,E13 平衡准确率,data/analysis/e13_commodity_subject.json,s1_validation.balanced_accuracy,2026-11-05T08:17:16Z,fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7
+e13.tpr,0.4423,E13 敏感度,data/analysis/e13_commodity_subject.json,s1_validation.tpr,2026-11-05T08:17:16Z,fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7
+e13.tnr,0.8614,E13 特异度,data/analysis/e13_commodity_subject.json,s1_validation.tnr,2026-11-05T08:17:16Z,fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7
+e13.n_items,270,E13 验证条目数,data/analysis/e13_commodity_subject.json,s1_validation.n_items,2026-11-05T08:17:16Z,fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7
+e15.kappa,0.4885,E15 商品角色判读 κ,data/analysis/e15_validation.json,kappa,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+e15.ba,0.739,E15 平衡准确率,data/analysis/e15_validation.json,balanced_accuracy,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+e15.tpr,0.6346,E15 敏感度,data/analysis/e15_validation.json,tpr,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+e15.tnr,0.8434,E15 特异度,data/analysis/e15_validation.json,tnr,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+e15.n_items,270,E15 验证条目数,data/analysis/e15_validation.json,n_items,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+e16.kappa,0.3888,E16 商品角色判读 κ,data/analysis/e16_validation.json,kappa,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.ba,0.6766,E16 平衡准确率,data/analysis/e16_validation.json,balanced_accuracy,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.tpr,0.4135,E16 敏感度,data/analysis/e16_validation.json,tpr,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.tnr,0.9398,E16 特异度,data/analysis/e16_validation.json,tnr,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.n_items,270,E16 验证条目数,data/analysis/e16_validation.json,n_items,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.n_unmapped,818,E16 抽取短语无任何 lexicon 词条命中的篇数,data/analysis/e16_validation.json,n_unmapped,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.n_empty,0,"E16 模型答""无""的篇数",data/analysis/e16_validation.json,n_empty_extraction,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.n_docs,1128,E16 抽取覆盖篇数,data/analysis/e16_validation.json,n_docs_extracted,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.mapped,310,E16 成功映射到某一类的篇数（派生）,data/analysis/e16_validation.json,n_docs_extracted-n_unmapped,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+e16.unmapped_share,0.7252,E16 未映射份额（派生）,data/analysis/e16_validation.json,n_unmapped/n_docs_extracted,2026-11-05T08:33:56Z,0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e
+d.e15_e13.kappa,0.1644,E15 相对 E13 的 κ 变化（派生）,data/analysis/e15_validation.json,kappa - e13.s1_validation.kappa,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+d.e15_e13.tpr,0.1923,E15 相对 E13 的敏感度变化（派生）,data/analysis/e15_validation.json,tpr - e13.s1_validation.tpr,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+d.e15_e13.tnr,0.018,E15 相对 E13 的特异度下降（派生）,data/analysis/e15_validation.json,e13.s1_validation.tnr - tnr,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+d.gate.kappa,0.1115,最佳尝试距 κ 门槛之差（派生）,data/analysis/e15_validation.json,0.60 - kappa,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+d.gate.ba,0.011,最佳尝试距 BA 门槛之差（派生）,data/analysis/e15_validation.json,0.75 - balanced_accuracy,2026-11-05T08:28:06Z,5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9
+gate.kappa,0.6,商品角色判读的 κ 门槛（D-117 预注册）,DEVIATIONS.md,D-117,2026-11-05T00:00:00Z,85d3c1caee87fed23d96757c941ee064c4a75bd5d9362dc2b33b3f9b8b4f0fbe
+gate.ba,0.75,商品角色判读的 BA 门槛（D-117 预注册）,DEVIATIONS.md,D-117,2026-11-05T00:00:00Z,85d3c1caee87fed23d96757c941ee064c4a75bd5d9362dc2b33b3f9b8b4f0fbe
+e8.or.published,9.5729,跨体裁 OR（原样框架）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_as_published.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.p.published,2.16194e-37,跨体裁 Fisher p（原样框架）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_as_published.fisher_p,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.or.excluded,2.6336,跨体裁 OR（含框架外）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.p.excluded,2.06803e-10,跨体裁 Fisher p（含框架外）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.plus_framework_excluded.fisher_p,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.or.nounlicensed,16.2998,跨体裁 OR（去无证经营）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.odds_ratio,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.p.nounlicensed,3.19964e-48,跨体裁 Fisher p（去无证经营）,data/analysis/metric_sensitivity.json,e8_frames.contrasts.fraud_framework_without_unlicensed.fisher_p,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e8.chi2,358.9355,五分类表 χ²,data/analysis/e8_us_cn.json,test.chi2,2026-11-05T03:57:03Z,bca90ef5d9b1f9f3658441d52afb97dfd8fcc91c41b23f4fb7fe16134a615949
+e6.share_market,0.1656,市场秩序占已分类份额（100/604，派生）,data/analysis/metric_sensitivity.json,e8_frames.cn_market_order/604,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+e6.share_procedural,0.1093,程序违规占已分类份额（66/604，派生）,data/analysis/metric_sensitivity.json,e8_frames.cn_procedural/604,2026-11-05T05:12:45Z,8369eda9cab8b9ebbdff7fc94f2c7014da8780a971f73ce2a62203dce451eace
+net.docs_two_plus,9,具两名以上行为人的文书数,data/analysis/network_metrics.json,actor_coverage.docs_with_two_or_more_actor_nodes,2026-11-05T03:53:32Z,a49c7be0817b3a6ce801493d02997bd0f5a81b95248a206145963fe579c88d11
+net.docs_any_actor,125,具任一行为人的文书数,data/analysis/network_metrics.json,actor_coverage.docs_with_any_actor,2026-11-05T03:53:32Z,a49c7be0817b3a6ce801493d02997bd0f5a81b95248a206145963fe579c88d11
+net.share_two_plus,0.072,双行为人文书份额（9/125，派生）,data/analysis/network_metrics.json,actor_coverage.docs_with_two_or_more_actor_nodes/docs_with_any_actor,2026-11-05T03:53:32Z,a49c7be0817b3a6ce801493d02997bd0f5a81b95248a206145963fe579c88d11
+e17.R0_docs,679,分词实验 R0（字面）任何词条命中的篇数,data/analysis/e17_segmentation.json,totals.R0_docs_any,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.R1_docs,634,分词实验 R1（词界）任何词条命中的篇数,data/analysis/e17_segmentation.json,totals.R1_docs_any,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.R1_pass_items,232,270 条中被 R1 通过的条数,data/analysis/e17_segmentation.json,adjudicated_270.R1_pass_items,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.dropped,38,被 R1 删掉的判读条目数,data/analysis/e17_segmentation.json,adjudicated_270.crosstab.R0_pass_R1_drop,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.dropped_S,12,被 R1 删掉的真主体条数,data/analysis/e17_segmentation.json,adjudicated_270.dropped_by_verdict.S,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.dropped_F,8,被 R1 删掉的假匹配条数,data/analysis/e17_segmentation.json,adjudicated_270.dropped_by_verdict.F,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.subject_prec_R1,0.3966,R1 下的 subject 精确率,data/analysis/e17_segmentation.json,adjudicated_270.subject_precision_R1,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.lost_docs,201,逐类合计的文档层面损失（派生，18 类相加）,data/analysis/e17_segmentation.json,sum(per_category.lost_docs),2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.delta_subject_prec,0.0114,E17 相对 E12 的 subject 精确率变化（派生）,data/analysis/e17_segmentation.json,0.3966-0.3852,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e17.fish_lost,52,R1 下词条「鱼」丢失的篇数（被并进草鱼/鱿鱼等词）,data/analysis/e17_segmentation.json,per_category.5.terms_lost,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3

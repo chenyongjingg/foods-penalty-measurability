@@ -1,0 +1,361 @@
+{
+ "at_utc": "2026-11-05T03:54:17Z",
+ "silver": "/opt/foods/data/silver/silver.jsonl",
+ "silver_sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+ "e1": {
+  "n": 1037,
+  "mean_agreement": 0.6966,
+  "by_lang": {
+   "en": {
+    "n": 248,
+    "mean_agreement": 0.8091,
+    "pooled_micro_f1": 0.8125,
+    "stable_types": [
+     "END_USER",
+     "TACTIC"
+    ],
+    "tiers": {
+     "medium": 41,
+     "low": 112,
+     "high": 95
+    }
+   },
+   "zh": {
+    "n": 789,
+    "mean_agreement": 0.6612,
+    "pooled_micro_f1": 0.6419,
+    "stable_types": [
+     "END_USER",
+     "JURISDICTION",
+     "PENALTY_EVENT"
+    ],
+    "tiers": {
+     "medium": 207,
+     "low": 497,
+     "high": 85
+    }
+   }
+  },
+  "n_zero_entities": 0,
+  "n_scored_agreement": 1037,
+  "pooled_micro_f1": 0.6677,
+  "literature_calibration": {
+   "source": "CAEC_LLM (ISPRS Int. J. Geo-Inf. 2026; Plan §2.1)",
+   "reported_zero_shot_f1": 0.7,
+   "reported_finetuned_f1": 0.82,
+   "our_pooled_micro_f1": 0.6677,
+   "note": "context only — published F1 is against a human gold standard on a different task; ours is dual-channel agreement and is not numerically comparable"
+  },
+  "protocol": {
+   "prompt_version": {
+    "alpha_zh.txt": "10af78aa6a9e",
+    "alpha_en.txt": "ba3a643ad2fa",
+    "beta_zh.txt": "5270be412102",
+    "beta_en.txt": "faed1c58f132",
+    "adjudicate.txt": "7bd622c6ddbe"
+   },
+   "doc_text_chars": 20000,
+   "max_tokens": {
+    "channel_a": 3000,
+    "channel_b": 4000,
+    "adjudicator": 4000
+   },
+   "model": "qwen2.5-7b-instruct",
+   "span_tau": 0.5,
+   "entity_types": [
+    "DOCUMENT",
+    "END_USER",
+    "JURISDICTION",
+    "PENALTY_EVENT",
+    "SERVICE_PROVIDER",
+    "TACTIC"
+   ]
+  },
+  "input_chars": {
+   "cap": 20000,
+   "labelled_n": 1128,
+   "labelled_p50": 3151,
+   "labelled_p99": 9705,
+   "labelled_max": 12742,
+   "over_cap": 0,
+   "parse_failed_n": 25,
+   "parse_failed_p50": 6136,
+   "parse_failed_p90": 10227
+  },
+  "mean_agreement_shrunk": 0.8558,
+  "stable_types": [
+   "END_USER",
+   "JURISDICTION",
+   "PENALTY_EVENT"
+  ],
+  "tau_sensitivity": {
+   "0.3": {
+    "mean_agreement": 0.7023,
+    "n": 1037
+   },
+   "0.5": {
+    "mean_agreement": 0.6966,
+    "n": 1037
+   },
+   "0.7": {
+    "mean_agreement": 0.6765,
+    "n": 1037
+   }
+  },
+  "ladder": {
+   "triggered": true,
+   "rule": "keep types with per-type F1 >= 0.75 and support >= 20",
+   "stable_types": [
+    "END_USER",
+    "JURISDICTION",
+    "PENALTY_EVENT"
+   ],
+   "agreement_shrunk": 0.8558,
+   "note": "Plan P095 type shrinkage; status above is full-type"
+  },
+  "per_type": {
+   "PENALTY_EVENT": {
+    "f1": 0.8812,
+    "n_a": 635,
+    "n_b": 720,
+    "tp": 597
+   },
+   "END_USER": {
+    "f1": 0.888,
+    "n_a": 906,
+    "n_b": 1031,
+    "tp": 860
+   },
+   "JURISDICTION": {
+    "f1": 0.8645,
+    "n_a": 912,
+    "n_b": 1022,
+    "tp": 836
+   },
+   "DOCUMENT": {
+    "f1": 0.3008,
+    "n_a": 1083,
+    "n_b": 639,
+    "tp": 259
+   },
+   "TACTIC": {
+    "f1": 0.546,
+    "n_a": 1161,
+    "n_b": 861,
+    "tp": 552
+   },
+   "SERVICE_PROVIDER": {
+    "f1": 0.2902,
+    "n_a": 299,
+    "n_b": 280,
+    "tp": 84
+   }
+  },
+  "per_type_shrunk": {
+   "PENALTY_EVENT": {
+    "f1": 0.8812,
+    "n_a": 635,
+    "n_b": 720,
+    "tp": 597
+   },
+   "END_USER": {
+    "f1": 0.888,
+    "n_a": 906,
+    "n_b": 1031,
+    "tp": 860
+   },
+   "JURISDICTION": {
+    "f1": 0.8645,
+    "n_a": 912,
+    "n_b": 1022,
+    "tp": 836
+   }
+  },
+  "anchor_f1": {
+   "n": 386,
+   "f1": 0.2365,
+   "macro_f1": 0.2365,
+   "micro_f1": 0.7953,
+   "per_class_f1": {
+    "FAKE_CERTIFICATION": 0.0,
+    "FALSE_LABELING": 0.8943,
+    "FORGED_INSPECTION_REPORT": 0.087,
+    "OTHER": 0.0,
+    "TAMPERED_TRACEABILITY": 0.0,
+    "UNLICENSED_OPERATION": 0.4375
+   },
+   "support": {
+    "n": 386,
+    "per_class": {
+     "FAKE_CERTIFICATION": {
+      "f1": 0.0,
+      "support": 1,
+      "predicted": 1
+     },
+     "FALSE_LABELING": {
+      "f1": 0.8943,
+      "support": 305,
+      "predicted": 348
+     },
+     "FORGED_INSPECTION_REPORT": {
+      "f1": 0.087,
+      "support": 8,
+      "predicted": 15
+     },
+     "OTHER": {
+      "f1": 0.0,
+      "support": 28,
+      "predicted": 0
+     },
+     "TAMPERED_TRACEABILITY": {
+      "f1": 0.0,
+      "support": 2,
+      "predicted": 0
+     },
+     "UNLICENSED_OPERATION": {
+      "f1": 0.4375,
+      "support": 42,
+      "predicted": 22
+     }
+    },
+    "macro_all_classes": 0.2365,
+    "macro_classes_support_ge20": 0.4439,
+    "micro": 0.7953,
+    "min_class_support": 1,
+    "n_classes_support_lt3": 2,
+    "note": "A macro figure over classes with almost no support is not a statement about extraction quality; read it with this block (D-18, D-58). The gated statistic is unchanged."
+   },
+   "fact_only_docs": 85,
+   "basis_counts": {
+    "ambiguous_facts": 82,
+    "ambiguous_statute": 23,
+    "cited_statute": 59,
+    "fact_only": 85,
+    "none": 461,
+    "penalty_statute": 217,
+    "statute+fact": 110
+   },
+   "extraction": {
+    "party": {
+     "hit": 584,
+     "docs": 786,
+     "rate": 0.743
+    },
+    "case_no": {
+     "hit": 531,
+     "docs": 711,
+     "rate": 0.7468
+    }
+   }
+  },
+  "status": "failed",
+  "thresholds": {
+   "agreement_target": 0.85,
+   "agreement_floor": 0.75,
+   "anchor_target": 0.8,
+   "anchor_floor": 0.7
+  },
+  "tier_counts": {
+   "medium": 248,
+   "low": 609,
+   "high": 180
+  },
+  "coverage": {
+   "labelled": 1037,
+   "pending_clean": 0,
+   "label_parse_failed": 5,
+   "label_truncated_output": 20,
+   "label_no_consensus_category": 0,
+   "rate": 1.0
+  },
+  "align_ground_malformed": {
+   "non_dict_entity": 0,
+   "non_string_text": 0,
+   "non_string_type": 0
+  },
+  "at_utc": "2026-11-05T03:54:17Z"
+ },
+ "provenance": {
+  "n_silver": 1128,
+  "n_voted_in_silver": 729,
+  "n_substituted_from_archive": 638,
+  "n_voted_without_archive": 91,
+  "n_scored": 1037,
+  "archives": [
+   {
+    "path": "/opt/foods/data/archive/v1_20261104T0235Z/silver.jsonl",
+    "sha256": "fa93625f09dc36334f5a8ff8381a749b05947687e81d7b000ab9527aa83a0d06",
+    "n": 644,
+    "n_usable_single_shot": 248
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261104T0704Z/silver.jsonl",
+    "sha256": "a12f104e606a797e04107187fdb230b615e913b3f62cd59c1c082b1d8c7e19ef",
+    "n": 987,
+    "n_usable_single_shot": 987
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261104T0940Z/silver.jsonl",
+    "sha256": "ec6ea207aaf994041211b6f59d5370f63c39f95e941ae91e9af88915aa6cd1ea",
+    "n": 987,
+    "n_usable_single_shot": 370
+   },
+   {
+    "path": "/opt/foods/data/archive/pre_entity_rule_20261104T0941Z/silver.jsonl",
+    "sha256": "4c9094fba29369e5ee0c9dedfced9d6a51af312083d50216960dcd246b31e23f",
+    "n": 987,
+    "n_usable_single_shot": 370
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261104T1451Z/silver.jsonl",
+    "sha256": "b4685bd77cc2b3e750b40dd692ea62bce1d7c5ea8bffb1a34d4040172e3927b9",
+    "n": 1015,
+    "n_usable_single_shot": 355
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261104T1508Z/silver.jsonl",
+    "sha256": "b4685bd77cc2b3e750b40dd692ea62bce1d7c5ea8bffb1a34d4040172e3927b9",
+    "n": 1015,
+    "n_usable_single_shot": 355
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261104T1529Z/silver.jsonl",
+    "sha256": "b4685bd77cc2b3e750b40dd692ea62bce1d7c5ea8bffb1a34d4040172e3927b9",
+    "n": 1015,
+    "n_usable_single_shot": 355
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261105T0322Z/silver.jsonl",
+    "sha256": "2ab5da68be353a00173cf9e64ffbc537e8e59fb5116ff8f88cb6fd280aa874b9",
+    "n": 1124,
+    "n_usable_single_shot": 397
+   },
+   {
+    "path": "/opt/foods/data/archive/preladder_20261105T0341Z/silver.jsonl",
+    "sha256": "7a2f02832133fb32ce408832d07ee543d190a8b5ddf7667953c7d976d08fb419",
+    "n": 1128,
+    "n_usable_single_shot": 401
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261105T0341Z/silver.jsonl",
+    "sha256": "7a2f02832133fb32ce408832d07ee543d190a8b5ddf7667953c7d976d08fb419",
+    "n": 1128,
+    "n_usable_single_shot": 401
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261105T0352Z/silver.jsonl",
+    "sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+    "n": 1128,
+    "n_usable_single_shot": 399
+   },
+   {
+    "path": "/opt/foods/data/archive/preretier_20261105T0353Z/silver.jsonl",
+    "sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+    "n": 1128,
+    "n_usable_single_shot": 399
+   }
+  ],
+  "rule": "voted document -> archived record with identical text_sha (channels, anchor, category); unchanged document -> silver record; no archive -> excluded and counted",
+  "why": "the pre-registered E1 is defined on the single-shot channels; the ladder replaced them in silver (D-63/D-65)"
+ }
+}

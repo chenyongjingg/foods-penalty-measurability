@@ -1,0 +1,112 @@
+# Deterministic statute -> violation-category map, **version 2** (E6, Plan v7).
+#
+# IMPORTANT -- why this is a second file and not an edit of v1:
+# `config/statute_map.yaml` (v1) is the table the *anchor* engine uses to score
+# E1.  E1's anchor F1 is frozen (D-58/D-71); extending the anchor table would
+# change which documents are anchor-eligible and therefore refresh a frozen
+# statistic.  Plan v7 §E6 asks for "the published table, coverage extended,
+# version number +1, existing mappings unchanged".  The extension therefore
+# lives here, v1's entries are copied verbatim (checked by
+# `scripts/e6_descriptive.py --check-superset`), and only E6/E8 read this file.
+# The paper must say which table produced which number: E1 anchor = v1,
+# Results 1 descriptive distribution = v2.
+#
+# Nothing below alters an existing v1 mapping.  New categories are marked
+# `descriptive_only: true`; they are outside the fraud framework and are
+# excluded from the E8 China-US comparison.
+version: 2
+supersedes: 1
+
+law_aliases:                      # v1 entries, unchanged
+  "食品安全法": ["中华人民共和国食品安全法", "食品安全法"]
+  "农产品质量安全法": ["中华人民共和国农产品质量安全法", "农产品质量安全法"]
+  "认证认可条例": ["中华人民共和国认证认可条例", "认证认可条例"]
+  # v2 additions: instruments that appear in penalty clauses of admitted
+  # documents but were not in v1.  Aliases only normalise formatting; they do
+  # not change what a cited article means.
+  "商标法": ["中华人民共和国商标法", "商标法"]
+  "产品质量法": ["中华人民共和国产品质量法", "产品质量法"]
+  "广告法": ["中华人民共和国广告法", "广告法"]
+  "反不正当竞争法": ["中华人民共和国反不正当竞争法", "反不正当竞争法", "反法"]
+  "计量法实施细则": ["中华人民共和国计量法实施细则", "计量法实施细则"]
+
+categories:
+  # ---- v1 fraud framework: statutes copied verbatim from v1 --------------
+  FORGED_INSPECTION_REPORT:
+    label_zh: 伪造/变造检验检测报告
+    label_en: forged or altered inspection/testing report
+    statutes:
+      - ["食品安全法", "第一百二十四条"]
+      - ["农产品质量安全法", "第七十一条"]
+  TAMPERED_TRACEABILITY:
+    label_zh: 篡改/伪造溯源数据或溯源码
+    label_en: tampered traceability data or codes
+    statutes:
+      - ["食品安全法", "第一百二十四条"]
+      - ["农产品质量安全法", "第七十三条"]
+  FAKE_CERTIFICATION:
+    label_zh: 虚假认证/伪造认证材料
+    label_en: fraudulent certification materials
+    statutes:
+      - ["认证认可条例", "第五十九条"]
+      - ["认证认可条例", "第六十条"]
+      - ["食品安全法", "第一百二十四条"]
+  FALSE_LABELING:
+    label_zh: 标签虚假标注（非报告/认证类）
+    label_en: false labelling
+    statutes:
+      - ["食品安全法", "第一百二十五条"]
+      - ["食品安全法", "第七十一条"]
+      - ["食品安全法", "第一百二十四条"]
+  UNLICENSED_OPERATION:
+    label_zh: 无证/超范围生产经营
+    label_en: unlicensed operation
+    statutes:
+      - ["食品安全法", "第一百二十二条"]
+  OTHER:
+    label_zh: 其他
+    label_en: other
+    statutes: []
+
+  # ---- v2 descriptive-only extensions (outside the fraud framework) ------
+  # Every (law, article) below was read out of the corpus's own penalty
+  # clauses before being written here; frequency in parentheses is the number
+  # of unresolved documents whose penalty clause cites it (n=1015 corpus,
+  # measured 2026-11-05T01:0xZ, recorded in DEVIATIONS D-73).
+  TRADEMARK_INFRINGEMENT:
+    label_zh: 侵犯注册商标专用权
+    label_en: trademark infringement
+    descriptive_only: true
+    statutes:
+      - ["商标法", "第五十七条"]      # 侵犯注册商标专用权的行为（quoted in 99 docs' penalty clauses）
+      - ["商标法", "第六十条"]        # 处理/处罚条款（same documents）
+  FALSE_ADVERTISING:
+    label_zh: 虚假广告/虚假宣传
+    label_en: false advertising
+    descriptive_only: true
+    statutes:
+      - ["广告法", "第五十五条"]      # 发布虚假广告的处罚（23）
+      - ["反不正当竞争法", "第二十条"]  # 第八条虚假宣传的罚则（11）
+      # 反不正当竞争法第二十五条 (19) is deliberately NOT mapped: the corpus
+      # quotes it once as a discretion rule ("从轻或者减轻行政处罚"), not as a
+      # 虚假宣传 penalty. The article number moved between revisions and the
+      # documents do not identify which revision they cite, so mapping it would
+      # be a guess. Unmapped articles stay unresolved (D-73).
+  PRODUCT_QUALITY:
+    label_zh: 产品质量不合格（非食品标签/认证类）
+    label_en: product quality violation
+    descriptive_only: true
+    statutes:
+      - ["产品质量法", "第四十九条"]   # 生产销售不符合安全标准的产品的罚则
+      - ["产品质量法", "第五十条"]     # 掺杂掺假、以假充真、以次充好的罚则
+  PROCEDURAL_NONCOMPLIANCE:
+    label_zh: 程序性违规（进货查验/记录/贮存等，非造假）
+    label_en: procedural non-compliance (records, storage; not falsification)
+    descriptive_only: true
+    statutes:
+      - ["食品安全法", "第一百二十六条"]   # 未按规定建立并遵守查验记录/贮存等（70）
+      - ["计量法实施细则", "第四十六条"]   # 计量器具/定量包装（12）
+
+# v1 policy, unchanged: several mapped articles implying different categories
+# makes the document ambiguous; it is reported as ambiguous, never guessed.
+ambiguity_policy: exclude_from_anchor

@@ -1,0 +1,92 @@
+# Food-category dictionary, version 1 (E6, Plan v7 §E6).
+#
+# Designed once, before it is applied to the corpus, and published with the
+# paper. Every later change increments `version` and is registered in
+# DEVIATIONS.md before it can affect a reported figure.
+#
+# Matching is deterministic substring matching, no stemming, no model:
+#   - fields are tried in `match_fields` order; the first field with at least
+#     one hit decides `match_source` for the document (so a hit in the penalty
+#     text is stronger evidence than one in the full document body);
+#   - a document may match several categories (multi-label counts are reported);
+#   - the single-label table uses `primary_priority` (first matching category).
+#
+# Deliberately excluded terms: 食品 / 食品原料 / 原料 / 产品 / 冷冻 alone. They
+# match boilerplate in nearly every decision, so they would turn the table into
+# a measure of document template rather than of product.
+version: 1
+# `fact_segment` is the case-specific part of the decision (between 经查/查明
+# and 上述事实/证据), see e6_descriptive.fact_segment. Matching against the
+# whole document was measured to match legal boilerplate instead of the
+# product: the quoted text of 食品安全法 routinely contains "食品、食品添加剂"
+# (498 of 763 documents), so full-text matching returned 540 additive
+# documents. The fact segment removes the statute quotes; matching is now
+# 523/763 (68.5%) with 161 additive documents.
+match_fields: [penalty_content, fact_segment]
+primary_priority: [INFANT_FOOD, HEALTH_FOOD, DAIRY, MEAT_PRODUCT, BEVERAGE,
+                   ALCOHOL, TEA, CONDIMENT, OIL, GRAIN_BAKERY, FROZEN,
+                   FOOD_ADDITIVE, PREPACKAGED_FOOD, EDIBLE_AGRICULTURAL,
+                   CATERING_RAW_MATERIAL]
+
+categories:
+  INFANT_FOOD:
+    label_zh: 婴幼儿食品/特殊医学用途配方食品
+    label_en: infant formula and foods for special medical purposes
+    terms: [婴幼儿配方乳粉, 婴幼儿配方食品, 婴幼儿配方奶粉, 婴儿配方, 婴幼儿辅食,
+            婴幼儿谷类辅助食品, 特殊医学用途配方食品, 特医食品]
+  HEALTH_FOOD:
+    label_zh: 保健食品
+    label_en: health food
+    terms: [保健食品, 保健品, 膳食补充剂, 蓝帽子]
+  FOOD_ADDITIVE:
+    label_zh: 食品添加剂
+    label_en: food additives
+    terms: [食品添加剂, 复配添加剂, 防腐剂, 甜味剂, 着色剂]
+  DAIRY:
+    label_zh: 乳制品
+    label_en: dairy products
+    terms: [乳制品, 奶粉, 牛奶, 酸奶, 液态奶, 乳粉]
+  MEAT_PRODUCT:
+    label_zh: 肉制品
+    label_en: meat products
+    terms: [肉制品, 熟食, 香肠, 腊肉, 火腿, 卤肉]
+  BEVERAGE:
+    label_zh: 饮料
+    label_en: beverages
+    terms: [饮料, 矿泉水, 纯净水, 果汁, 奶茶, 包装饮用水]
+  ALCOHOL:
+    label_zh: 酒类
+    label_en: alcoholic beverages
+    terms: [白酒, 啤酒, 葡萄酒, 黄酒, 酒精度]
+  CONDIMENT:
+    label_zh: 调味品
+    label_en: condiments
+    terms: [调味品, 酱油, 食醋, 食盐, 味精]
+  OIL:
+    label_zh: 食用油
+    label_en: edible oils
+    terms: [食用油, 植物油, 花生油, 调和油, 菜籽油]
+  GRAIN_BAKERY:
+    label_zh: 粮食加工品/糕点
+    label_en: grain products and bakery
+    terms: [糕点, 面包, 饼干, 面粉, 大米, 米粉, 挂面]
+  TEA:
+    label_zh: 茶叶
+    label_en: tea
+    terms: [茶叶, 红茶, 绿茶, 普洱茶]
+  FROZEN:
+    label_zh: 速冻/冷冻食品
+    label_en: frozen food
+    terms: [速冻食品, 冷冻食品, 速冻面米]
+  PREPACKAGED_FOOD:
+    label_zh: 预包装食品
+    label_en: prepackaged food
+    terms: [预包装食品, 定量包装, 包装食品]
+  EDIBLE_AGRICULTURAL:
+    label_zh: 食用农产品
+    label_en: edible agricultural products
+    terms: [食用农产品, 农产品, 蔬菜, 水果, 生鲜, 畜禽, 生猪, 水产品, 禽蛋]
+  CATERING_RAW_MATERIAL:
+    label_zh: 餐饮原料/餐饮服务
+    label_en: catering and raw materials for catering
+    terms: [餐饮服务, 食堂, 食材, 中央厨房]

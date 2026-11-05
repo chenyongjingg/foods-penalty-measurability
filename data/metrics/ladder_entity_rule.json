@@ -1,0 +1,17 @@
+{
+ "at_utc": "2026-11-04T09:41:03Z",
+ "silver": "/opt/foods/data/silver/silver.jsonl",
+ "silver_sha256_before": "4c9094fba29369e5ee0c9dedfced9d6a51af312083d50216960dcd246b31e23f",
+ "tau": 0.5,
+ "agreement_target": 0.85,
+ "n_voted_docs": 617,
+ "n_docs_changed": 66,
+ "n_docs_skipped_no_channels": 0,
+ "n_high_tier_changed": 44,
+ "entities_before_on_changed": 262,
+ "entities_after_on_changed": 235,
+ "applied": true,
+ "rule": "f1 >= target and cat_a == cat_b -> matched intersection of the two voted channels; otherwise channel A's vote (D-64)",
+ "backup_dir": "/opt/foods/data/archive/pre_entity_rule_20261104T0941Z",
+ "silver_sha256_after": "7dd72b9405fd7bb594527e477f06a6c236ff0f67101b0e7af56dc28e176c3aa0"
+}

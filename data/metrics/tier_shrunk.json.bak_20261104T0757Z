@@ -1,0 +1,178 @@
+{
+ "at_utc": "2026-11-04T07:57:59Z",
+ "input": "/opt/foods/data/silver/silver.jsonl",
+ "input_sha256": "2922e3eaedac110a5d6bd84f67ec479e4697c71c54ab6d1014195ce456d2dd43",
+ "n_records": 987,
+ "rule": {
+  "min_type_f1": 0.75,
+  "min_type_support": 20,
+  "tau": 0.5,
+  "target": 0.85,
+  "floor": 0.75
+ },
+ "full_set": {
+  "mean_agreement": 0.6828,
+  "n_scored": 987,
+  "per_type": {
+   "SERVICE_PROVIDER": {
+    "f1": 0.2847,
+    "n_a": 300,
+    "n_b": 269,
+    "tp": 81,
+    "support": 569
+   },
+   "JURISDICTION": {
+    "f1": 0.8526,
+    "n_a": 866,
+    "n_b": 973,
+    "tp": 784,
+    "support": 1839
+   },
+   "END_USER": {
+    "f1": 0.8825,
+    "n_a": 858,
+    "n_b": 980,
+    "tp": 811,
+    "support": 1838
+   },
+   "PENALTY_EVENT": {
+    "f1": 0.8723,
+    "n_a": 588,
+    "n_b": 673,
+    "tp": 550,
+    "support": 1261
+   },
+   "TACTIC": {
+    "f1": 0.5239,
+    "n_a": 1115,
+    "n_b": 813,
+    "tp": 505,
+    "support": 1928
+   },
+   "DOCUMENT": {
+    "f1": 0.2805,
+    "n_a": 1045,
+    "n_b": 602,
+    "tp": 231,
+    "support": 1647
+   }
+  }
+ },
+ "stable_types": [
+  "END_USER",
+  "JURISDICTION",
+  "PENALTY_EVENT"
+ ],
+ "dropped_types": [
+  "DOCUMENT",
+  "SERVICE_PROVIDER",
+  "TACTIC"
+ ],
+ "shrunk_set": {
+  "mean_agreement": 0.8471,
+  "n_scored": 987
+ },
+ "tier_counts": {
+  "stored": {
+   "high": 170,
+   "medium": 200,
+   "low": 617
+  },
+  "shrunk": {
+   "high": 319,
+   "medium": 396,
+   "low": 272
+  }
+ },
+ "tier_transitions": [
+  {
+   "from": "high",
+   "to": "high",
+   "n": 162
+  },
+  {
+   "from": "high",
+   "to": "medium",
+   "n": 8
+  },
+  {
+   "from": "low",
+   "to": "high",
+   "n": 104
+  },
+  {
+   "from": "low",
+   "to": "low",
+   "n": 239
+  },
+  {
+   "from": "low",
+   "to": "medium",
+   "n": 274
+  },
+  {
+   "from": "medium",
+   "to": "high",
+   "n": 53
+  },
+  {
+   "from": "medium",
+   "to": "low",
+   "n": 33
+  },
+  {
+   "from": "medium",
+   "to": "medium",
+   "n": 114
+  }
+ ],
+ "by_lang": {
+  "zh": {
+   "n": 742,
+   "stored": {
+    "medium": 163,
+    "low": 500,
+    "high": 79
+   },
+   "shrunk": {
+    "medium": 390,
+    "low": 131,
+    "high": 221
+   }
+  },
+  "en": {
+   "n": 245,
+   "stored": {
+    "medium": 37,
+    "low": 117,
+    "high": 91
+   },
+   "shrunk": {
+    "low": 141,
+    "high": 98,
+    "medium": 6
+   }
+  }
+ },
+ "actor_structure": {
+  "stored_high": {
+   "docs": 79,
+   "docs_with_any_actor_node": 78,
+   "docs_with_two_or_more_actor_nodes": 7,
+   "docs_with_provider": 7,
+   "docs_with_provider_and_end_user": 7,
+   "max_edges_possible_by_structure": 7
+  },
+  "shrunk_high": {
+   "docs": 221,
+   "docs_with_any_actor_node": 220,
+   "docs_with_two_or_more_actor_nodes": 41,
+   "docs_with_provider": 37,
+   "docs_with_provider_and_end_user": 36,
+   "max_edges_possible_by_structure": 55
+  },
+  "scope": "Chinese high-tier documents only, channel a, node identity = normalised name deduplicated within the document (matches analyze/network.build)."
+ },
+ "e1_status_unchanged": true,
+ "note": "This is a corpus variant mandated by plan P095, not a new E1 result. E1 stays graded on the full type set so that a post-hoc type selection cannot masquerade as agreement. Shrinkage redefines the question; it must never be reported as an improvement. Every downstream estimate that depends on entity types must be given on both corpora, labelled (D-53)."
+}

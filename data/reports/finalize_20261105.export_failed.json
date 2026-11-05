@@ -1,0 +1,83 @@
+{
+ "at_utc": "2026-11-05T03:22:00Z",
+ "stamp": "20261105",
+ "dry_run": false,
+ "steps": [
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/chain_locked.py retier extract analyze report",
+   "rc": 0,
+   "seconds": 77.2,
+   "stdout_tail": "[chain] 2026-11-05T03:22:00Z waiting for cycle lock (retier,extract,analyze,report)\n[chain] 2026-11-05T03:22:00Z lock acquired\n[chain] 2026-11-05T03:22:28Z retier rc=0 28s :: written /opt/foods/data/silver/silver.jsonl\n[chain] 2026-11-05T03:22:29Z extract rc=0 2s :: {\"docs\": 1124, \"entity_rows\": 4382, \"e1\": \"failed\", \"actions\": [{\"action\": \"self_consistency\", \"docs\": 0, \"stats\": {\"docs\": 0, \"entity_density_before\": null, \"entity_density_after\": null, \"note\": \"Density is entities per document summed over both channels. Read the post-ladder agreement next to thes\n[chain] 2026-11-05T03:23:15Z analyze rc=0 46s :: {\"network\": {\"status\": \"ok\", \"n_nodes\": 134, \"n_edges\": 9, \"density\": 0.00101, \"n_components\": 125, \"gcc_size\": 2, \"gcc_frac\": 0.0149}, \"attack\": {\"n_nodes\": 134, \"steps\": 20, \"at_utc\": \"2026-11-05T03:22:30Z\", \"status\": \"insufficient_nodes\", \"note\": \"E2 below floor -> case-chain typology replaces ne\n[chain] 2026-11-05T03:23:17Z report rc=0 2s :: {\"path\": \"/opt/foods/reports/daily/report_2026-11-05.md\", \"chars\": 8678, \"at_utc\": \"2026-11-05T03:23:17Z\", \"figures\": {\"fig1_corpus_flow\": \"corpus flow\", \"fig2_e1_agreement\": \"E1 agreement\", \"fig3_actor_network\": \"network\", \"fig4_attack_tolerance\": \"attack\", \"fig5_displacement\": \"displacement\", \"fig\n[chain] 2026-11-05T03:23:17Z done\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/e1_preladder.py",
+   "rc": 0,
+   "seconds": 0.9,
+   "stdout_tail": "{\"status\": \"failed\", \"mean\": 0.6962, \"n\": 1033, \"n_substituted\": 636, \"n_lost\": 91, \"by_lang\": {\"en\": 0.8083, \"zh\": 0.6609}, \"anchor_f1\": 0.2365}\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/tier_shrunk.py",
+   "rc": 0,
+   "seconds": 0.3,
+   "stdout_tail": "wrote /opt/foods/data/metrics/tier_shrunk.json\ninput sha=2ab5da68be353a00 n=1124\nfull agreement 0.7456 -> shrunk 0.8607 on ['END_USER', 'JURISDICTION', 'PENALTY_EVENT']\ndropped: ['DOCUMENT', 'SERVICE_PROVIDER', 'TACTIC']\ntiers stored {'high': 227, 'medium': 397, 'low': 500} -> shrunk {'high': 352, 'medium': 500, 'low': 271}\nactor structure (zh high): {\"stored_high\": {\"docs\": 128, \"docs_with_any_actor_node\": 125, \"docs_with_two_or_more_actor_nodes\": 16, \"docs_with_provider\": 16, \"docs_with_provider_and_end_user\": 16, \"max_edges_possible_by_structure\": 16}, \"shrunk_high\": {\"docs\": 241, \"docs_with_any_actor_node\": 240, \"docs_with_two_or_more_actor_nodes\": 42, \"docs_with_provider\": 40, \"docs_with_provider_and_end_user\": 40, \"max_edges_possible_by_structure\": 42}, \"scope\": \"Chinese high-tier documents only, channel a, node identity = normalised name deduplicated within the document. This is an upper bound reconstructed from silver channels, NOT the extracted graph: grounding and the matched-intersection rule on voted documents (D-64) only remove mentions, so it can exceed network_metrics.actor_coverage. Quote that block for the §6 structural ceiling (D-54, D-66).\"}\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/query_family_agreement.py",
+   "rc": 0,
+   "seconds": 0.3,
+   "stdout_tail": "wrote /opt/foods/data/metrics/query_family_agreement.json  families=41  n=1124  high=227\n  reason_for_recall:adulterated  n= 156 f1=0.7479 DOC=0.00 high= 33 (21%)\n  虚假标注 + 食品                      n= 114 f1=0.7552 DOC=0.76 high= 37 (32%)\n  reason_for_recall:misbranded   n=  96 f1=0.9243 DOC=0.05 high= 66 (69%)\n  伪造 + 食品                        n=  89 f1=0.7090 DOC=0.62 high=  4 (4%)\n  虚假 + 餐饮                        n=  62 f1=0.7510 DOC=0.71 high=  2 (3%)\n  检测报告 + 食品                      n=  51 f1=0.6794 DOC=0.65 high= 14 (27%)\n  虚假 + 农产品                       n=  49 f1=0.7552 DOC=0.73 high= 10 (20%)\n  假冒 + 食品                        n=  46 f1=0.6783 DOC=0.76 high=  1 (2%)\n  溯源 + 食品                        n=  45 f1=0.7215 DOC=0.78 high=  3 (7%)\n  篡改 + 食品                        n=  40 f1=0.7722 DOC=0.68 high= 11 (28%)\n  伪造 + 餐饮                        n=  37 f1=0.7778 DOC=0.57 high=  2 (5%)\n  检验检测报告 + 食品                    n=  36 f1=0.7494 DOC=0.64 high=  6 (17%)\nhigh-tier representativeness (share_high / share_corpus):\n  reason_for_recall:adulterated  corpus=13.9% high=14.5% ratio=1.047\n  虚假标注 + 食品                      corpus=10.1% high=16.3% ratio=1.607\n  reason_for_recall:misbranded   corpus= 8.5% high=29.1% ratio=3.404\n  伪造 + 食品                        corpus= 7.9% high= 1.8% ratio=0.223\n  虚假 + 餐饮                        corpus= 5.5% high= 0.9% ratio=0.16\n  检测报告 + 食品                      corpus= 4.5% high= 6.2% ratio=1.359\n  虚假 + 农产品                       corpus= 4.4% high= 4.4% ratio=1.011\n  假冒 + 食品                        corpus= 4.1% high= 0.4% ratio=0.108\n  溯源 + 食品                        corpus= 4.0% high= 1.3% ratio=0.33\n  篡改 + 食品                        corpus= 3.6% high= 4.9% ratio=1.362\n  伪造 + 餐饮                        corpus= 3.3% high= 0.9% ratio=0.268\n  检验检测报告 + 食品                    corpus= 3.2% high= 2.6% ratio=0.825\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/e6_descriptive.py",
+   "rc": 0,
+   "seconds": 48.3,
+   "stdout_tail": "{\"e6\": \"ok\", \"n_docs\": 872, \"granularity\": \"coarse\", \"control\": 0.48, \"out\": \"/opt/foods/data/analysis/e6_descriptive.json\"}\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/e7_typology.py",
+   "rc": 0,
+   "seconds": 117.2,
+   "stdout_tail": "{\"e7\": \"ok\", \"n\": 128, \"agreement\": 0.8203, \"status\": \"target_met\", \"entries\": 7, \"out\": \"/opt/foods/data/analysis/e7_typology.json\"}\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/e8_us_cn.py",
+   "rc": 0,
+   "seconds": 0.6,
+   "stdout_tail": "{\"e8\": \"ok\", \"cn_n\": 438, \"us_n\": 253, \"estimability\": \"not_estimable_instrument_mismatch\", \"test\": \"fisher_collapsed\"}\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/verify_products.py",
+   "rc": 0,
+   "seconds": 0.1,
+   "stdout_tail": "silver 2ab5da68be353a00 2026-11-05T03:22:28Z\n  PASS e1 scored denominator = 1123\n  PASS e1 zero-entity count = 1\n  PASS e1 malformed count = ['non_dict_entity', 'non_string_text', 'non_string_type']\n  PASS e1 ladder decision = True\n  PASS e1 shrunk agreement = 0.8607\n  PASS e1 status full-type = failed\n  PASS e1 decoding mix = ['self_consistency', 'single_shot', 'note']\n  PASS pre-registered E1 = 0.6962\n  PASS anchor basis counts = ['before', 'after']\n  PASS anchor F1 stale guard = 0\n  PASS compare estimability = False\n  PASS compare selection diagnostic = ['cn', 'us']\n  PASS compare profile = ['cn', 'us']\n  PASS compare test of record\n  PASS network graphml receipt = True\n  PASS network actor coverage = 9\n  PASS network provider coverage = 9\n  PASS network dataset staleness = False\n  PASS displacement denominator = ['n_docs_in_scope', 'n_docs_scanned']\n  PASS gate E1 = ['status', 'mean_agreement', 'by_lang', 'tau_sensitivity', 'ladder', 'anchor_f1', 'thresholds', 'anchor_support']\n  PASS gate E2 = ['n_nodes', 'status', 'note', 'n_edges', 'binding_constraint', 'dataset_lag_s', 'stale_dataset', 'expansion']\n  PASS gate E3 = ['attack', 'h1_supported', 'h3_supported', 'survival', 'hawkes', 'hawkes_p', 'branching_ratio', 'hawkes_nonparametric']\n  PASS gate E4 = ['n_events', 'status', 'note']\n  PASS gate E5 = ['status', 'primary_test', 'chi2', 'p', 'fisher', 'chi2_unreliable', 'estimable', 'profile']\n  PASS analyze modules all ran = {}\n  PASS shrunk corpus variant = ['high', 'medium', 'low']\n  PASS shrunk corpus e1 untouched = True\n  PASS query-family balance = 41 items\n  PASS E6 category distribution = ['FALSE_LABELING', 'UNRESOLVED', 'PROCEDURAL_NONCOMPLIANCE', 'TRADEMARK_INFRINGEMENT', 'FALSE_ADVERTISING', 'FORGED_INSPECTION_REPORT', 'UNLICENSED_OPERATION', 'PRODUCT_QUALITY']\n  PASS E6 negative control = below_floor\n  PASS E6 statute map version = 2\n  PASS E7 dual-channel agreement = 0.8203\n  PASS E7 typology entries = 49 items\n  PASS E7 corpus size = 128\n  PASS E8 estimability = not_estimable_instrument_mismatch\n  PASS E8 test of record = fisher_collapsed\n  PASS E8 built on the same corpus as E6 = 2ab5da68be353a00173cf9e64ffbc537e8e59fb5116ff8f88cb6fd280aa874b9\n\n37/37 pass, 0 stale\n",
+   "stderr_tail": ""
+  },
+  {
+   "cmd": "/opt/foods/venv/bin/python scripts/export_release.py",
+   "rc": 1,
+   "seconds": 0.2,
+   "stdout_tail": "",
+   "stderr_tail": "Traceback (most recent call last):\n  File \"/opt/foods/scripts/export_release.py\", line 170, in <module>\n    raise SystemExit(main())\n  File \"/opt/foods/scripts/export_release.py\", line 72, in main\n    out.mkdir(parents=True)\n  File \"/usr/lib/python3.10/pathlib.py\", line 1175, in mkdir\n    self._accessor.mkdir(self, mode)\nPermissionError: [Errno 13] Permission denied: '/opt/foods/release/foods_silver_20261105'\n"
+  }
+ ],
+ "checks": {
+  "silver_sha_before": "2ab5da68be353a00173cf9e64ffbc537e8e59fb5116ff8f88cb6fd280aa874b9",
+  "silver_sha_after": "2ab5da68be353a00173cf9e64ffbc537e8e59fb5116ff8f88cb6fd280aa874b9",
+  "verify_products": {
+   "n_checks": 37,
+   "n_failed": 0,
+   "n_stale": 0,
+   "status": "pass",
+   "silver": "2ab5da68be353a00173cf9e64ffbc537e8e59fb5116ff8f88cb6fd280aa874b9"
+  }
+ },
+ "status": "export_failed",
+ "finished_utc": "2026-11-05T03:26:05Z"
+}

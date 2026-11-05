@@ -1,0 +1,1000 @@
+{
+ "at_utc": "2026-11-05T04:14:40Z",
+ "note": "per-query coverage of the cfws result window; portal sorts by recency",
+ "n_queries": 92,
+ "n_ok": 92,
+ "n_over_200": 16,
+ "n_fully_covered": 47,
+ "max_registered": 201,
+ "median_coverage": 0.42857142857142855,
+ "min_coverage": 0.0,
+ "max_coverage": 1.0,
+ "largest_result_counts": [
+  [
+   6760,
+   174,
+   [
+    "检验报告",
+    "食品"
+   ]
+  ],
+  [
+   5260,
+   88,
+   [
+    "虚假",
+    "食品"
+   ]
+  ],
+  [
+   2764,
+   123,
+   [
+    "合格证明",
+    "食品"
+   ]
+  ],
+  [
+   2004,
+   131,
+   [
+    "检测报告",
+    "食品"
+   ]
+  ],
+  [
+   1948,
+   76,
+   [
+    "合格证",
+    "食品"
+   ]
+  ],
+  [
+   1543,
+   174,
+   [
+    "检验报告",
+    "餐饮"
+   ]
+  ],
+  [
+   1471,
+   197,
+   [
+    "冒用认证标志",
+    null
+   ]
+  ],
+  [
+   1454,
+   91,
+   [
+    "合格证明",
+    "餐饮"
+   ]
+  ]
+ ],
+ "queries": [
+  {
+   "query": [
+    "伪造",
+    "食品"
+   ],
+   "result_count": 720,
+   "page1_rows": 50,
+   "registered": 201,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "食品"
+   ],
+   "result_count": 80,
+   "page1_rows": 50,
+   "registered": 76,
+   "error": null
+  },
+  {
+   "query": [
+    "溯源码",
+    null
+   ],
+   "result_count": 99,
+   "page1_rows": 50,
+   "registered": 99,
+   "error": null
+  },
+  {
+   "query": [
+    "溯源",
+    "食品"
+   ],
+   "result_count": 212,
+   "page1_rows": 50,
+   "registered": 193,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假认证",
+    null
+   ],
+   "result_count": 15,
+   "page1_rows": 15,
+   "registered": 15,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造认证证书",
+    null
+   ],
+   "result_count": 10,
+   "page1_rows": 10,
+   "registered": 10,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假认证证书",
+    null
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "冒用认证标志",
+    null
+   ],
+   "result_count": 1471,
+   "page1_rows": 50,
+   "registered": 197,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假检验报告",
+    null
+   ],
+   "result_count": 38,
+   "page1_rows": 38,
+   "registered": 37,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造检验报告",
+    null
+   ],
+   "result_count": 18,
+   "page1_rows": 18,
+   "registered": 14,
+   "error": null
+  },
+  {
+   "query": [
+    "出具虚假检验报告",
+    null
+   ],
+   "result_count": 21,
+   "page1_rows": 21,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造检测报告",
+    null
+   ],
+   "result_count": 7,
+   "page1_rows": 7,
+   "registered": 3,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假检测报告",
+    null
+   ],
+   "result_count": 43,
+   "page1_rows": 43,
+   "registered": 38,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改检验报告",
+    null
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改检测数据",
+    null
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造检测数据",
+    null
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造合格证明",
+    null
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 2,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假合格证明",
+    null
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 1,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造合格证",
+    null
+   ],
+   "result_count": 6,
+   "page1_rows": 6,
+   "registered": 4,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造检验报告",
+    "食品"
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假检测报告",
+    "食品"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造认证证书",
+    "食品"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造溯源",
+    "食品"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改生产日期",
+    "食品"
+   ],
+   "result_count": 33,
+   "page1_rows": 33,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假标注",
+    "食品"
+   ],
+   "result_count": 590,
+   "page1_rows": 50,
+   "registered": 183,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造生产日期",
+    "食品"
+   ],
+   "result_count": 3,
+   "page1_rows": 3,
+   "registered": 2,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造厂名",
+    "食品"
+   ],
+   "result_count": 8,
+   "page1_rows": 8,
+   "registered": 4,
+   "error": null
+  },
+  {
+   "query": [
+    "冒用厂名",
+    "食品"
+   ],
+   "result_count": 18,
+   "page1_rows": 18,
+   "registered": 17,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造产地",
+    "食品"
+   ],
+   "result_count": 23,
+   "page1_rows": 23,
+   "registered": 14,
+   "error": null
+  },
+  {
+   "query": [
+    "买卖检验报告",
+    null
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "出售检验报告",
+    null
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造检疫证明",
+    null
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 2,
+   "error": null
+  },
+  {
+   "query": [
+    "检验报告",
+    "食品"
+   ],
+   "result_count": 6760,
+   "page1_rows": 50,
+   "registered": 174,
+   "error": null
+  },
+  {
+   "query": [
+    "检测报告",
+    "食品"
+   ],
+   "result_count": 2004,
+   "page1_rows": 50,
+   "registered": 131,
+   "error": null
+  },
+  {
+   "query": [
+    "认证证书",
+    "食品"
+   ],
+   "result_count": 31,
+   "page1_rows": 31,
+   "registered": 30,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证明",
+    "食品"
+   ],
+   "result_count": 2764,
+   "page1_rows": 50,
+   "registered": 123,
+   "error": null
+  },
+  {
+   "query": [
+    "变造",
+    "检验报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "变造",
+    "认证证书"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "冒用",
+    "认证标志"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "买卖",
+    "认证证书"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "购买",
+    "检验报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "套用",
+    "检验报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "检验检测报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "检验检测报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "溯源码"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "溯源码"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "溯源码"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "合格证明"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "合格证"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "检测报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "检测数据"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "检验报告"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "预包装"
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 2,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "保健食品"
+   ],
+   "result_count": 32,
+   "page1_rows": 32,
+   "registered": 30,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "餐饮"
+   ],
+   "result_count": 195,
+   "page1_rows": 50,
+   "registered": 194,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "农产品"
+   ],
+   "result_count": 19,
+   "page1_rows": 19,
+   "registered": 17,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "农产品"
+   ],
+   "result_count": 116,
+   "page1_rows": 50,
+   "registered": 112,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "食用农产品"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "食用农产品"
+   ],
+   "result_count": 4,
+   "page1_rows": 4,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "生产日期"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "食品"
+   ],
+   "result_count": 5260,
+   "page1_rows": 50,
+   "registered": 88,
+   "error": null
+  },
+  {
+   "query": [
+    "变造",
+    "食品"
+   ],
+   "result_count": 16,
+   "page1_rows": 16,
+   "registered": 9,
+   "error": null
+  },
+  {
+   "query": [
+    "假冒",
+    "食品"
+   ],
+   "result_count": 412,
+   "page1_rows": 50,
+   "registered": 119,
+   "error": null
+  },
+  {
+   "query": [
+    "买卖",
+    "食品"
+   ],
+   "result_count": 18,
+   "page1_rows": 18,
+   "registered": 15,
+   "error": null
+  },
+  {
+   "query": [
+    "出具虚假",
+    "食品"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "检验检测报告",
+    "食品"
+   ],
+   "result_count": 526,
+   "page1_rows": 50,
+   "registered": 127,
+   "error": null
+  },
+  {
+   "query": [
+    "认证材料",
+    "食品"
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 1,
+   "error": null
+  },
+  {
+   "query": [
+    "溯源码",
+    "食品"
+   ],
+   "result_count": 4,
+   "page1_rows": 4,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证",
+    "食品"
+   ],
+   "result_count": 1948,
+   "page1_rows": 50,
+   "registered": 76,
+   "error": null
+  },
+  {
+   "query": [
+    "检测数据",
+    "食品"
+   ],
+   "result_count": 27,
+   "page1_rows": 27,
+   "registered": 22,
+   "error": null
+  },
+  {
+   "query": [
+    "检验数据",
+    "食品"
+   ],
+   "result_count": 11,
+   "page1_rows": 11,
+   "registered": 8,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "餐饮"
+   ],
+   "result_count": 1383,
+   "page1_rows": 50,
+   "registered": 171,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "餐饮"
+   ],
+   "result_count": 22,
+   "page1_rows": 22,
+   "registered": 12,
+   "error": null
+  },
+  {
+   "query": [
+    "变造",
+    "餐饮"
+   ],
+   "result_count": 14,
+   "page1_rows": 14,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "买卖",
+    "餐饮"
+   ],
+   "result_count": 16,
+   "page1_rows": 16,
+   "registered": 10,
+   "error": null
+  },
+  {
+   "query": [
+    "检验报告",
+    "餐饮"
+   ],
+   "result_count": 1543,
+   "page1_rows": 50,
+   "registered": 174,
+   "error": null
+  },
+  {
+   "query": [
+    "检测报告",
+    "餐饮"
+   ],
+   "result_count": 480,
+   "page1_rows": 50,
+   "registered": 151,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证明",
+    "餐饮"
+   ],
+   "result_count": 1454,
+   "page1_rows": 50,
+   "registered": 91,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "农产品"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "检验报告",
+    "农产品"
+   ],
+   "result_count": 323,
+   "page1_rows": 50,
+   "registered": 186,
+   "error": null
+  },
+  {
+   "query": [
+    "检测报告",
+    "农产品"
+   ],
+   "result_count": 90,
+   "page1_rows": 50,
+   "registered": 39,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证明",
+    "农产品"
+   ],
+   "result_count": 127,
+   "page1_rows": 50,
+   "registered": 48,
+   "error": null
+  },
+  {
+   "query": [
+    "伪造",
+    "保健食品"
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "保健食品"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "检验报告",
+    "保健食品"
+   ],
+   "result_count": 15,
+   "page1_rows": 15,
+   "registered": 5,
+   "error": null
+  },
+  {
+   "query": [
+    "检测报告",
+    "保健食品"
+   ],
+   "result_count": 8,
+   "page1_rows": 8,
+   "registered": 1,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证明",
+    "保健食品"
+   ],
+   "result_count": 12,
+   "page1_rows": 12,
+   "registered": 7,
+   "error": null
+  },
+  {
+   "query": [
+    "虚假",
+    "预包装"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 1,
+   "error": null
+  },
+  {
+   "query": [
+    "篡改",
+    "预包装"
+   ],
+   "result_count": 0,
+   "page1_rows": 0,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "检验报告",
+    "预包装"
+   ],
+   "result_count": 2,
+   "page1_rows": 2,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "检测报告",
+    "预包装"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  },
+  {
+   "query": [
+    "合格证明",
+    "预包装"
+   ],
+   "result_count": 1,
+   "page1_rows": 1,
+   "registered": 0,
+   "error": null
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+  "variants": {
+    "high": {
+      "n_nodes": 134,
+      "n_edges": 9,
+      "density": 0.00101,
+      "n_components": 125,
+      "gcc_size": 2,
+      "gcc_frac": 0.0149,
+      "modularity": 0.8889,
+      "max_kcore": 1,
+      "mean_degree": 0.134,
+      "node_types": {
+        "END_USER": 125,
+        "SERVICE_PROVIDER": 9
+      },
+      "at_utc": "2026-11-05T03:54:11Z",
+      "tiers": [
+        "high"
+      ],
+      "note": "main estimate (Plan §5.2 high-confidence tier)",
+      "n_docs": 128
+    },
+    "high_medium": {
+      "n_nodes": 530,
+      "n_edges": 102,
+      "density": 0.000728,
+      "n_components": 447,
+      "gcc_size": 6,
+      "gcc_frac": 0.0113,
+      "modularity": 0.9623,
+      "max_kcore": 5,
+      "mean_degree": 0.385,
+      "node_types": {
+        "END_USER": 439,
+        "SERVICE_PROVIDER": 91
+      },
+      "at_utc": "2026-11-05T03:54:11Z",
+      "tiers": [
+        "high",
+        "medium"
+      ],
+      "note": "pre-registered sensitivity (+ floor band)",
+      "n_docs": 481,
+      "delta_vs_main": {
+        "n_nodes": 396,
+        "n_edges": 93,
+        "density": -0.000282,
+        "gcc_frac": -0.0036,
+        "modularity": 0.0734
+      }
+    },
+    "all_tiers": {
+      "n_nodes": 1030,
+      "n_edges": 979,
+      "density": 0.001847,
+      "n_components": 768,
+      "gcc_size": 34,
+      "gcc_frac": 0.033,
+      "modularity": 0.6507,
+      "max_kcore": 33,
+      "mean_degree": 1.901,
+      "node_types": {
+        "END_USER": 730,
+        "SERVICE_PROVIDER": 300
+      },
+      "at_utc": "2026-11-05T03:54:11Z",
+      "tiers": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "note": "exploratory only (adds low tier)",
+      "n_docs": 872,
+      "delta_vs_main": {
+        "n_nodes": 896,
+        "n_edges": 970,
+        "density": 0.000837,
+        "gcc_frac": 0.0181,
+        "modularity": -0.2382
+      }
+    }
+  },
+  "at_utc": "2026-11-05T03:54:11Z",
+  "taxonomy": {
+    "actors": {
+      "n_nodes": 134,
+      "n_edges": 9,
+      "density": 0.00101,
+      "n_components": 125,
+      "gcc_size": 2,
+      "gcc_frac": 0.0149,
+      "modularity": 0.8889,
+      "max_kcore": 1,
+      "mean_degree": 0.134,
+      "node_types": {
+        "END_USER": 125,
+        "SERVICE_PROVIDER": 9
+      },
+      "at_utc": "2026-11-05T03:54:11Z",
+      "node_types_allowed": [
+        "SERVICE_PROVIDER",
+        "END_USER"
+      ],
+      "n_docs": 128
+    },
+    "all_entity_types": {
+      "n_nodes": 330,
+      "n_edges": 511,
+      "density": 0.009413,
+      "n_components": 49,
+      "gcc_size": 167,
+      "gcc_frac": 0.5061,
+      "modularity": 0.8514,
+      "max_kcore": 4,
+      "mean_degree": 3.097,
+      "node_types": {
+        "JURISDICTION": 107,
+        "END_USER": 125,
+        "DOCUMENT": 30,
+        "TACTIC": 59,
+        "SERVICE_PROVIDER": 9
+      },
+      "at_utc": "2026-11-05T03:54:11Z",
+      "node_types_allowed": [
+        "SERVICE_PROVIDER",
+        "END_USER",
+        "TACTIC",
+        "DOCUMENT",
+        "JURISDICTION"
+      ],
+      "n_docs": 128
+    }
+  },
+  "main_variant": "high",
+  "status": "ok"
+}

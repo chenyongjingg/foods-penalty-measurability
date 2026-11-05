@@ -1,0 +1,176 @@
+P001 [Heading 1] 《数据黑产”韧性”生成机制及治理对策研究》论文写作计划书（终稿）
+P002 [First Paragraph] 目标期刊： MDPI Foods（ISSN 2304-8158），Communication 类型 依托课题： 数据黑产”韧性”生成机制及治理对策研究（25CSH113） 计算条件： 单台 RTX 4090（24GB VRAM）+ 100GB 数据盘（实际用量 ≤70GB） 计划周期： 2026 年 11 月 — 2027 年 1 月（约 2.5 个月），2027 年 1 月投稿 终稿性质： 整合 v1–v6 全部迭代的执行定稿。数据全自动采集、标注全自动（零人工金标准）、实验全自动触发；人工仅存在于研究设计（提示词、法条映射表、假设）与论文写作本身
+P003 [Heading 2] 第一部分 选题定位与期刊匹配
+P004 [Heading 3] 1.1 期刊画像与载体选择
+P005 [First Paragraph] Foods 2025 年 JCR 影响因子 6.0，食品科技 Q1（39/187）（2026 年 6 月 Clarivate 发布）；一审中位数约 15 天，小修窗口 5 天、大修 10 天，APC CHF 2,900，持续出版。文章类型为 Article / Review / Communication 等——该刊未开通 Brief Report，短篇选择 Communication。
+P006 [Body Text] Communication 官方定义：“呈现突破性初步结果或多年期大型研究中的关键发现，可含前沿方法的短篇论文”。本论文与其三点契合：
+P007 [Compact] “多年期大型研究的一部分”——Cover Letter 明示本研究是课题 25CSH113 的关键前期发现，这是 Communication 的正当身份；
+P008 [Compact] “单一干净结果”——核心结果只有一个：首个食品安全数据黑产生态系统的实证画像与韧性测度；
+P009 [Compact] “前沿方法”——全自动政府公开数据管线 + LLM 银标准抽取，对 Foods 读者群是方法上新。
+P010 [Heading 3] 1.2 核心定位决策
+P011 [First Paragraph] Foods 编辑预审要求稿件”真正属于食品科学”，纯治理学的”数据黑产”稿件必被桌拒。研究对象锁定为食品安全数据黑产（Food-Safety Data Black Industry, FS-DBI）：伪造食品检验检测报告、篡改食品溯源数据/溯源码、虚假食品认证材料等环节形成的黑产服务链条与生态系统。既承接课题”数据黑产”的理论关切，又落入 Foods 的 Food Fraud / Safety / Traceability 版块。
+P012 [Body Text] 拟定标题： Measuring the Resilience of the Food-Safety Data Black Industry: A Cross-Jurisdictional Study Based on Automated Government Data Pipelines
+P013 [Body Text] 备选： How Does Food-Safety Data Fraud Survive Crackdowns? Evidence from Fully Automated Pipelines over Chinese, US and EU Government Data
+P014 [Heading 2] 第二部分 查新结论与创新性确认
+P015 [Heading 3] 2.1 已有工作五条线索与共性缺口
+P016 [Table Row] 线索 | 代表工作 | 缺口
+P017 [Table Row] 犯罪网络韧性（国际犯罪学） | Duijn 2014；Duxbury & Haynie 2019/2020；Diviák 2023；MADTOR 2024；MS-13 主动韧性研究 | 对象是毒品网络/帮派；韧性结论全部来自规则主体仿真推断，无真实数据实证；从未涉及”数据黑产”
+P018 [Table Row] 网络黑产治理（中文） | 中国传媒大学《网络黑产协同治理研究报告》等 | 描述性、对策性，无量化韧性测度，无实证建模范式
+P019 [Table Row] 食品欺诈检测（食品科学） | Food Control 2025 综述（2020 年代食品欺诈检测技术）；J. Agric. Eng. Res. 2022（AI 溯源防欺诈） | 对象是物质掺假与检测技术；不研究数据造假黑产的组织生态与打击后再生
+P020 [Table Row] 司法数据 + 食品安全实证 | J. Food Protection 2023（裁判文书网羊肉案件计数 DID）；Frontiers in Nutrition 2026（677 起食品安全刑附民公益诉讼程序回顾） | 计数/程序层面，无文本挖掘、无网络、无韧性、无 LLM
+P021 [Table Row] LLM + 中文司法文书 | CAEC_LLM（ISPRS Int. J. Geo-Inf. 2026，RTX 4090D + LoRA 抽取盗窃案件地址） | 方法先例存在但任务不同；提供关键性能标定：零样本 7B 级模型三指标约 70% F1，领域微调后约 82%
+P022 [Body Text] 另查得可对话的理论与政策文献：犯罪学位移（displacement）系统综述（69 项干预研究、38 项观察到位移，六种位移类型）——本研究迁移分析的直接理论框架；Cybercrime journeys 框架（Crime Science, 2026）——网络空间 offender 迁移的系统刻画；两高 2024 年发布食品安全犯罪从严惩处典型案例、CFIA 2024–25 年度拦截 15 万+公斤假冒食品——政策时效性证据。
+P023 [Heading 3] 2.2 创新性五角度确认
+P024 [Table Row] 角度 | 声明 | verdict
+P025 [Table Row] 对象 | 首次界定并实证 FS-DBI | ✅ 成立（该对象无任何学术实证先例）
+P026 [Table Row] 数据 | 首个 FS-DBI 生态网络数据集；且为全自动政府公开数据管线（工程方法本身也是可发表贡献） | ✅ 成立
+P027 [Table Row] 方法 | LLM 抽取用于食品黑产研究 | ⚠️ 半成立（有先例，降为 enabling tool，不作第一卖点）
+P028 [Table Row] 理论 | 犯罪学韧性/位移理论首次引入食品数据治理；中美欧跨境对照为国际读者提供普遍意义 | ✅ 成立
+P029 [Table Row] 政策 | 为中国及域外食品数据治理提供”打击中介节点、阻断迁移通道”的实证依据 | ✅ 成立
+P030 [Body Text] 贡献排序（写作时严格遵守）：对象与结果 > 数据 > 理论 > 方法。 审稿人质疑方法新颖性的应答口径：方法沿用已验证管线，贡献在于首次将其用于食品黑产生态并产出首个实证韧性测度。
+P031 [Heading 2] 第三部分 研究问题与假设
+P032 [First Paragraph] RQ1（唯一核心问题）： FS-DBI 生态系统的网络结构如何？在治理冲击下表现出怎样的韧性（抗打击、恢复、迁移）？其韧性由哪些可观测机制支撑？治理对策的含义是什么？
+P033 [Body Text] 理论框架： 迁移分析采用位移理论六类型编码（空间/时间/目标/战术/功能/实施者），与 69 项干预研究的经典文献直接对话。
+P034 [Body Text] 工作假设：
+P035 [Compact] H1： FS-DBI 网络呈”松散核心 + 模块化分工”结构，对随机打击鲁棒、对中介型节点（数据造假服务提供者）定向打击脆弱；
+P036 [Compact] H2： 治理冲击后呈”抑制—迁移—再生”三阶段，再生节奏可用 Hawkes 自激过程刻画，迁移以战术型（更换造假手法）与功能型（转向相邻造假服务）为主、空间型次之；
+P037 [Compact] H3： 中介服务节点对系统韧性的贡献大于终端使用者。
+P038 [Heading 2] 第四部分 数据方案（全自动，零人工下载）
+P039 [Block Text] 本节经 2026-11-03 两轮共 20 个端点/接口实测验证。核心原则：全部数据经自动化接口或静态公开页获取，管线中不存在任何”人工下载后投放”环节。
+P040 [Heading 3] 4.1 数据源总表
+P041 [Table Row] 编号 | 数据 | 获取方式 | 实测验证 | 预计规模
+P042 [Table Row] D1’ | 国内市监局行政处罚文书（主量源） | 约 50 个省市监局”处罚公示”静态栏目全自动爬取（requests 优先、Playwright 兜底）；关键词过滤：伪造/虚假 + 检验检测报告、认证、溯源码、合格证明等 | ✅ 北京（253KB）、上海（37KB）实测可达 | 过滤后 1,500–3,000 件
+P043 [Table Row] D2 | 市场监管总局通告 | 总局官网”铁拳”行动、食品抽检通告列表页全自动爬取 | ✅ 实测可达（93KB） | 千级条目
+P044 [Table Row] D3a | FDA 食品执法报告（外国源 1） | openFDA 官方 API（api.fda.gov/food/enforcement.json），无需密钥、JSON 直取；欺诈相关子集关键词实测：adulterated 156 + misbranded 207 + labeling fraud 434 | ✅ 实测连通，总记录 29,586 | ~800 件欺诈相关
+P045 [Table Row] D3b | 欧盟 RASFF 通报（外国源 2） | EU 开放数据门户 restored_rasff 数据集全自动下载（含 hazard category 字段，离线筛 fraud 类）；欧委会无官方 API（已查证），2022 年后窗口页轻量抓取作补充，抓不到不阻塞 | ✅ 数据集入口确认 | pre-2021 全量 CSV + fraud 子集
+P046 [Table Row] D4 | 治理事件时间线 | D2 + 两高典型案例发布页（court.gov.cn / spp.gov.cn，静态）自动抽取 + LLM 自动判定事件类型与日期，无人工核对 | ✅ 可达 | 百级事件
+P047 [Table Row] （可选） | 人民法院案例库 | Playwright 带凭据自动登录检索导出（凭据一次配置、长期自动）；登录受阻自动跳过，不影响主线 | ✅ 首页可达 | 数十–百件
+P048 [Heading 3] 4.2 已排除的数据源（实测否决，留档备查）
+P049 [Table Row] 源 | 实测结果 | 处置
+P050 [Table Row] 裁判文书网 | 搜索接口 code:9 拒绝（瑞数动态令牌 + 登录态） | ❌ 不可自动化，且违反平台协议，移出
+P051 [Table Row] 北大法宝 / 威科先行 | 单位无订阅（用户确认） | ❌ 排除（有订阅本可作首选）
+P052 [Table Row] 最高检 12309 法律文书公开栏目 | 三个候选路径全部 404（网站改版下线） | ❌ 排除
+P053 [Table Row] 国家企业信用信息公示系统 / 信用中国 | 521 拦截 / API 40001 | ❌ 弃用
+P054 [Table Row] 聚法案例 / 把手案例 | 面向律师付费体系 / 已转型 | ⚠️ 暂不纳入
+P055 [Table Row] CFIA | URL 失效（410） | ⚠️ 弃用（由 openFDA/RASFF 覆盖境外数据）
+P056 [Table Row] FDA 网页 / MSU | 反爬拦截 / 超时 | ❌ 弃用
+P057 [Heading 3] 4.3 外国数据在论文中的角色（工作量控制）
+P058 [First Paragraph] D3a/D3b 只做两件事：① 与 D1’ 的类型学对照（中美欧 FS-DBI 手法、环节分布差异，卡方/Fisher 检验）；② 同一套 LLM 抽取提示的境外样本外验证（英文文本上跑通并报告性能）。不额外做境外韧性测度（样本量不足），Discussion 以”未来工作”交代。这样回应国际期刊对普遍性的期待而不膨胀工作量，标题因此升级为跨境研究。
+P059 [Heading 3] 4.4 合规优势（写入 Method）
+P060 [First Paragraph] D1’/D2/D4 全部是行政机关依法主动公开的政府信息；D3a/D3b 是官方开放数据/API；全程不绕过访问控制、不违反平台条款，采集日志留档。比爬裁判文书网在伦理审查中显著更干净。
+P061 [Heading 3] 4.5 磁盘预算（100GB 内）
+P062 [First Paragraph] 原始数据 ≤10GB／中间层 ≤10GB／向量索引 ≤5GB／模型权重 ≤35GB／结果与备份 ≤10GB，合计 ≤70GB。
+P063 [Heading 2] 第五部分 全自动化后台流水线
+P064 [Heading 3] 5.1 七层架构（零人工介入）
+P065 [Source Code] L0 调度：cron / systemd timer（每日 02:00 增量，GPU 任务夜间窗口）
+L1 采集：adpenalty_collectors（50 站适配器）│ samr_notices │ openfda_api │
+        rasff_downloader │ spc_spp_cases │ alk_auto（可选）
+L2 清洗：去重（标题+案号 hash）│ 分类 │ 正文抽取 │ 时间规范化 │ PII 脱敏
+L3 存储：raw（只追加）│ clean │ SQLite manifest 状态机 │ faiss 向量索引
+L4 标注+抽取：双 LLM 交叉标注 → 一致/分歧分流 → 银标准数据集
+        （含逐实体置信度）→ vLLM(Qwen2.5-7B) 全量抽取 → 自训练/自一致性阶梯
+L5 分析：网络构建(PyG) → 攻击容忍度/恢复曲线 → Cox 生存 → Hawkes →
+        位移六类型编码 → 中美欧对照
+L6 产出：Foods 风格图表模板 → 英文稿 LaTeX/Word → 每日 webhook 日报
+P066 [Heading 3] 5.2 全自动标注管线（v6 核心：三重独立证据链替代人工金标准）
+P067 [First Paragraph] 审稿人最可能的质疑是循环论证（LLM 产生的标签评估 LLM）。破解方式是让证据来源相互独立：
+P068 [Table Row] 证据 | 来源 | 独立性
+P069 [Table Row] ① 双 LLM 交叉标注一致性 | 两个不同模型族（或独立编写的提示词 + 不同温度）互盲标注，实体级 span 重叠 F1（阈值 τ=0.5） | 模型间独立
+P070 [Table Row] ② 程序化规则锚点 | 处罚文书结构化字段是确定性真值：法条依据（如《食品安全法》第 124/125 条）规则映射到违规类别表；当事人/日期/金额格式校验。规则引擎评测抽取 F1 | 与 LLM 完全独立（确定性程序）
+P071 [Table Row] ③ 文献性能标定 | CAEC_LLM 已发表数据（零样本 ~70% / 微调 ~82%）作外部参照 | 与本文系统独立
+P072 [Body Text] 三重证据交叉的逻辑同构于流行病学”无金标准时以复合参照标准（composite reference standard）替代”的成熟框架，Method 中如此表述。
+P073 [Body Text] 管线流程：
+P074 [Source Code] D1'/D3 原始文书
+  ├─ 通道A：LLM₁ 抽取（prompt-α，temp=0）
+  ├─ 通道B：LLM₂ 抽取（不同模型或 prompt-β，temp=0.3）   ← 独立盲标
+  ▼ 实体级对齐（span 重叠 τ=0.5）
+  ├─ 一致实体 → 高置信银标准（进入主分析语料）
+  ├─ 分歧实体 → 第三通道裁决（更强模型单次 / 5 次温度采样多数投票）
+  ▼ 程序化规则锚点引擎（确定性，非 LLM）
+  ├─ 法条→违规类别映射表（一次性研究设计，公开可复核）
+  ▼ 输出：银标准数据集（逐实体置信度）+ 评测报告
+     （①双LLM一致率 ②锚点F1 ③文献对照 ④低置信类型降级清单）
+P075 [First Paragraph] 关键设计： 主分析只跑高置信子集（双通道一致 + 锚点通过），全量结果作敏感性分析——银标准质量成为可量化、可报告的分析变量；QLoRA 改为自训练（高置信银标准为伪标签微调，置信度达标才自动触发），提升不显著则回退自一致性解码（5 次采样多数投票，零训练）。
+P076 [Heading 3] 5.3 工程要点
+P077 [Compact] 断点续传：SQLite manifest 状态机（raw→clean→labeled→extracted→analyzed），崩溃后从断点恢复；
+P078 [Compact] 限速合规：政府站点 ≤1 req/2s + 指数退避；openFDA 申请免费 key（240 req/min）；
+P079 [Compact] 失败告警：3 次指数退避失败 webhook/邮件；GPU 显存不足自动降 batch；
+P080 [Compact] 磁盘配额：分层监控，超 80% 告警、超 95% 自动清理可重建中间产物；
+P081 [Compact] 部署：docker-compose（CPU 管线 + GPU worker），用户服务器仅需 NVIDIA 驱动 + Docker；
+P082 [Compact] 规模：约 3,500 行代码，搭建 2–3 周（50 站适配器模板化后每站 <30 行，先 10 个重点站后扩展）。
+P083 [Heading 3] 5.4 人工边界的最终定义
+P084 [First Paragraph] 人工仅存在于研究设计与写作本身：提示词与 schema 设计、法条映射表设计（一次性、随论文公开）、假设提出、论文撰写。数据、标注、评测、微调触发、分析、图表、日报全流程零人工介入。论文措辞规范：全文使用 silver standard，Method 明示无人工金标准及理由，局限段主动声明。
+P085 [Heading 2] 第六部分 实验设计与三档失败预案
+P086 [Heading 3] 6.1 实验矩阵
+P087 [Table Row] 实验 | 内容 | 判定标准（全自动版）
+P088 [Table Row] E1 | LLM 抽取（中英双语同一管线） | 标杆：双 LLM 一致率 ≥0.85 且锚点 F1 ≥0.80；底线：≥0.75 / ≥0.70
+P089 [Table Row] E2 | 生态网络构建 | 标杆 800 节点 / 底线 400 / 降级 <400 转案例链类型学
+P090 [Table Row] E3 | 韧性测度 | 攻击容忍度对比（定向 vs 随机移除）、Cox 生存（bootstrap CI）、Hawkes 再生拟合
+P091 [Table Row] E4 | 位移六类型编码 | 标杆 ≥15 事件 / 底线 ≥8 / 降级并入定性
+P092 [Table Row] E5 | 中美欧类型学对照 | 描述性 + 卡方/Fisher 检验；境外抽取性能报告
+P093 [Table Row] （附加） | 置信度分层稳健性 | 高置信子集 vs 全量结果对比（银标准设计带来的净增益）
+P094 [Heading 3] 6.2 失败预案（未达标仍可接收）
+P095 [Compact] E1 不达标：管线自动触发自训练/自一致性阶梯；仍不达标 → 一致率 <0.75 时缩小实体类型集，论文重心平移至”银标准构建方法与极限评测”（Communication 官方接受 cutting-edge methods / preliminary results）；
+P096 [Compact] E2 样本不足：扩年份/扩站点由管线自动执行；仍不足 → 深描类型学替代复杂网络指标；
+P097 [Compact] E3 效应不显著：负结果即发现（首个基线测度本身成立）；不显著诚实报告 + 司法/政务数据可见性偏差讨论；Hawkes 拟合差改非参数方法；
+P098 [Compact] E4/E5 数据薄：并入 Discussion 定性支持；
+P099 [Compact] 全局兜底：所有定量同时失败的极端情形，降级为”数据集 + 基线 + 方法评测”型 Communication，完全不依赖统计显著性，且为后续 Article 版（补 LLM-Agent ABM 仿真，约 2 个月增量）铺路。
+P100 [Heading 2] 第七部分 可实现性验证结果（2026-11-03 全部实测）
+P101 [Table Row] 验证项 | 结果
+P102 [Table Row] 20 个端点/接口实测 | 主路径（市监局、总局、两高、openFDA、RASFF 门户）全部可达；反爬源（裁判文书网、gsxt、信用中国、FDA 网页、MSU）全部识别并排除；12309 栏目确认下线
+P103 [Table Row] openFDA API | ✅ 连通，29,586 条食品执法记录，欺诈子集关键词命中实测（adulterated 156 / misbranded 207 / labeling fraud 434）
+P104 [Table Row] RASFF | ✅ 开放数据门户数据集入口确认；欧委会无官方 API 已查证，备选路径明确
+P105 [Table Row] M2/M3 代码级冒烟 | ✅ 模拟数据跑通网络构建与攻击容忍度（定向移除衰减快于随机移除，H1 检验逻辑正确）
+P106 [Table Row] 全自动标注三组件 | ✅ 双标注实体级一致率计算（含噪声样本输出 0.889）、法条规则锚点命中（F1=1.000）、自一致性多数投票收敛——代码级验证通过
+P107 [Table Row] Python 环境 | torch 2.8 / networkx 3.5 / pandas 2.3 / playwright 就绪；transformers / vllm / lifelines 部署时一行 pip 安装
+P108 [Table Row] LLM 抽取实测 | ⚠️ 本环境无 GPU 且无聊天权限，采用外部标定（CAEC_LLM：零样本 ~70% / 微调 ~82%，同款 RTX 4090 硬件先例）
+P109 [Body Text] 可行性结论：计划整体可实现，无未验证的致命依赖。 部署当天先用同一套探测脚本在用户服务器复测端点（尤其 50 个市监局站点列表），确认国内网络访问无差异后全量上线。
+P110 [Heading 2] 第八部分 提高录用概率的策略
+P111 [Compact] 投稿前编辑部预评估：标题 + 250 词摘要发官方渠道确认 fit（零成本排除最大风险）；
+P112 [Compact] 预审四问自检（最快的拒稿发生在学术编辑预审）：① 锁定单一版块（Food Fraud / Safety 方向），Introduction 首段锚定食品公共健康（假报告/假溯源直接危害消费者知情权与安全）；② 方法在食品情境验证（标注与评测全部来自食品数据造假文书）；③ 外部可懂（摘要与图文摘要用”食品欺诈的供给侧是谁、为何打而不绝”叙事，不堆砌犯罪学术语）；④ 四声明齐备（Data Availability / Funding 25CSH113 / Author Contributions / COI）；
+P113 [Compact] Communication 身份包装：Cover Letter 明示”多年期课题的关键发现”；核心结果单一聚焦；
+P114 [Compact] 写作：贡献排序 对象>数据>理论>方法；图文摘要一张图讲清供给链 + 打击再生；Discussion 三段式（理论段：真实数据是否支持犯罪网络仿真研究”中介节点脆弱”的结论——令犯罪学读者兴奋的比较；政策段：中美欧治理含义；方法段：LLM for food fraud research 可迁移性）；局限主动写（文书可见性偏差、银标准性质）；
+P115 [Compact] 严谨性低成本项：20% 双通道重叠一致率报告、零样本/微调（自训练）对比、关键词敏感性、固定种子、代码与银标准数据集开放；
+P116 [Compact] 审稿节奏准备：修改窗口紧（小修 5 天/大修 10 天），图表模板与回复信模板提前预置，收到意见 72 小时内出修改方案；
+P117 [Compact] 政策时效：Introduction 引两高 2024 从严惩处典型案例、CFIA 2024–25 拦截 15 万+公斤假冒食品，证明问题处于全球治理高压期。
+P118 [Heading 2] 第九部分 进度安排（约 2.5 个月）
+P119 [Table Row] 阶段 | 时间 | 交付物
+P120 [Table Row] P0 流水线搭建 | 2026.11 上旬–下旬（2–3 周） | docker-compose 全套；10 个重点市监局站先行跑通；make smoke 通过；日报/告警联通；openFDA/RASFF 采集器上线
+P121 [Table Row] P1 数据到位 + 全自动标注 | 2026.11 下旬–12 上旬 | 全量采集完成（含境外 API）；银标准数据集产出（约 4–6 小时机时）；评测报告
+P122 [Table Row] P2 全自动抽取 | 2026.12 中旬 | 中英双语抽取 + 三证据链评测；未达标自动触发自训练
+P123 [Table Row] P3 全自动分析 | 2026.12 下旬–2027.01 上旬 | E2–E5 + 置信度分层稳健性结果；按第六部分档位表自检
+P124 [Table Row] P3.5 预评估 | 2027.01 上旬 | 编辑部预评估邮件；等待期间备投稿包
+P125 [Table Row] P4 写作投稿 | 2027.01 中旬 | 全文 + 图文摘要 + 声明，SuSy 提交
+P126 [Body Text] 全流程人工时间：研究设计与写作主导 + 部署半天，其余后台自动运行，每日看日报即可。
+P127 [Heading 2] 第十部分 风险登记册（定稿）
+P128 [Table Row] 风险 | 等级 | 缓解
+P129 [Table Row] 市监局站点结构各异/改版 | 🟡 中 | 适配器模板化 + 隔离；manifest 断点；先 10 站后扩展
+P130 [Table Row] 处罚文书信息密度低于判决书 | 🟡 中 | 实体集聚焦处罚文书稳定字段；境外 API 字段规整互补；案例库自动登录可选补充
+P131 [Table Row] 政府站点采集合规争议 | 🟢 低 | 全部依法主动公开信息，限速留档，Method 主动声明
+P132 [Table Row] 审稿人质疑”无人工金标准” | 🟡 中 | 复合参照标准框架 + 三重证据链 + 局限主动声明；兜底：修改阶段可选补 100 条双人审计（约半天，非前置条件）
+P133 [Table Row] 双 LLM 系统性同偏 | 🟡 中 | 锚点证据独立；同偏类型在锚点 F1 上暴露，自动触发实体类型降级
+P134 [Table Row] LLM 抽取持续不达标 | 🟡 中 | 自训练/自一致性自动阶梯；降级预案 E1
+P135 [Table Row] RASFF 2022+ 抓取失效 | 🟢 低 | 已降级为可选；pre-2021 开放数据集不受影响
+P136 [Table Row] Desk rejection | 🟡 中 | 预评估 + 预审四问自检；备选 Food Control / Trends Food Sci. Technol.
+P137 [Table Row] 审稿后拒稿 | 🟡 中 | 按原因分流：补实验回投 / 转 Crime Science、AI & Law / 扩为 Article（补 LLM-Agent ABM）回投
+P138 [Heading 2] 第十一部分 投稿检查清单
+P139 [Compact] ☐ 预评估获 fit 确认
+P140 [Compact] ☐ 单一版块 + Introduction 首段食品公共健康锚定
+P141 [Compact] ☐ 核心结果单一聚焦
+P142 [Compact] ☐ 银标准数据集与代码打包补充材料
+P143 [Compact] ☐ 四声明齐备（含课题号 25CSH113）
+P144 [Compact] ☐ 图文摘要完成
+P145 [Compact] ☐ 局限段含可见性偏差 + silver standard 声明
+P146 [Compact] ☐ MDPI 英文润色
+P147 [Compact] ☐ 推荐审稿人 2–3 位（食品欺诈 + 计算犯罪学方向，无利益冲突）
+P148 [Compact] ☐ 修改回复模板预置
+P149 [Heading 2] 附：版本迭代总记录
+P150 [Table Row] 版本 | 关键变更
+P151 [Table Row] v1 | 选题定位与期刊匹配：识别 Foods 桌拒风险，确立 FS-DBI 落点
+P152 [Table Row] v2 | 深度查新确认创新性并修正贡献排序；Communication 载体定案；三档失败预案；提接受率策略；位移六类型理论引入
+P153 [Table Row] v3 | 全自动化流水线设计；数据端点首批实测（裁判文书网反爬 code:9 排除）；可实现性代码级验证
+P154 [Table Row] v4 | 无订阅条件触发：主源切换为市监局处罚公示；12309 栏目实测下线排除；gsxt/信用中国弃用
+P155 [Table Row] v5 | 零人工下载：删除全部人工投放环节；新增境外自动化数据（openFDA API 实测 ~800 件欺诈相关 + RASFF 开放数据集）；标题升级跨境研究
+P156 [Table Row] v6 | 零人工标注：三重独立证据链（双 LLM 一致率 + 程序化规则锚点 + 文献标定）替代金标准；QLoRA 改自动触发自训练 + 自一致性回退；总周期压缩至约 2.5 个月
+P157 [Table Row] 终稿 | 整合 v1–v6 为单一自洽文档，仅保留各条款的最终形态
+P158 [Body Text] 终稿达成状态：研究设计由人完成，数据、标注、评测、微调触发、分析、图表全流程 AI 自动化；工作量对齐 Communication 标准（约 2.5 个月、单卡 4090、磁盘 ≤70GB）；创新性经五角度查新确认；每个实验均具备”未达标仍可接收”的降级路径。

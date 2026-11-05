@@ -1,0 +1,731 @@
+{
+  "at_utc": "2026-11-05T03:57:02Z",
+  "corpus": {
+    "tier": "high",
+    "lang": "zh",
+    "n": 128,
+    "n_scored": 128,
+    "n_llm_error": 0
+  },
+  "codebook": {
+    "hazard": {
+      "FOOD_SAFETY": "文书认定的行为直接危及食品安全（病原、非法添加、超范围超限量使用添加剂、过期原料、掺假掺杂）",
+      "CONSUMER_DECEPTION": "文书认定的行为主要是欺骗性信息（虚假标签、伪造检验报告、虚假认证、溯源造假），未直接危及食品安全",
+      "MARKET_ORDER": "文书认定的行为主要扰乱市场秩序（无证经营、商标侵权、虚假广告），与食品安全或信息真伪均不直接相关",
+      "MIXED": "同时包含上述两类以上的实质危害",
+      "UNCLEAR": "文书内容不足以判断"
+    },
+    "methods": [
+      "FORGED_REPORT",
+      "TAMPERED_TRACEABILITY",
+      "FAKE_CERTIFICATION",
+      "FALSE_LABELING",
+      "UNLICENSED",
+      "ADULTERATION",
+      "EXPIRED_MATERIAL",
+      "ILLEGAL_ADDITIVE",
+      "TRADEMARK",
+      "FALSE_ADVERTISING"
+    ],
+    "roles": [
+      "END_USER_ONLY",
+      "PROVIDER_ONLY",
+      "BOTH",
+      "NEITHER"
+    ],
+    "method_source": "deterministic keyword rules over the document's fact segment",
+    "entry_rule": "support >= 3 documents; smaller groups are singletons"
+  },
+  "protocol": {
+    "channels": [
+      "alpha",
+      "beta"
+    ],
+    "adjudicator_samples": 5,
+    "prompt_sha": {
+      "alpha": "6b80c9b1384c",
+      "beta": "48707c3bfc7c"
+    },
+    "model": "qwen2.5-7b-instruct",
+    "text_cap": 20000
+  },
+  "dual_channel_agreement": 0.8203,
+  "n_adjudicated": 23,
+  "thresholds": {
+    "target": 0.8,
+    "floor": 0.7
+  },
+  "status": "target_met",
+  "entries": [
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 28,
+      "dual_channel_agreement": 0.8571,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 16,
+      "dual_channel_agreement": 0.875,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 14,
+      "dual_channel_agreement": 0.7857,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 11,
+      "dual_channel_agreement": 0.8182,
+      "status": "entry"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 4,
+      "dual_channel_agreement": 1.0,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 3,
+      "dual_channel_agreement": 0.3333,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING"
+      ],
+      "role": "BOTH",
+      "n_docs": 3,
+      "dual_channel_agreement": 0.6667,
+      "status": "entry"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|-|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|EXPIRED_MATERIAL+FALSE_LABELING|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_ADVERTISING+FALSE_LABELING+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_ADVERTISING",
+        "FALSE_LABELING",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT|NEITHER",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT"
+      ],
+      "role": "NEITHER",
+      "n_docs": 2,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+ILLEGAL_ADDITIVE|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 0.5,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FORGED_REPORT|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FORGED_REPORT"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 0.5,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|EXPIRED_MATERIAL+FALSE_LABELING+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 2,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|ADULTERATION+FALSE_LABELING+ILLEGAL_ADDITIVE|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "ADULTERATION",
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|EXPIRED_MATERIAL+FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|EXPIRED_MATERIAL+FALSE_LABELING+FORGED_REPORT|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "FORGED_REPORT"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|EXPIRED_MATERIAL+FALSE_LABELING+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_ADVERTISING+FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_ADVERTISING",
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_ADVERTISING+FALSE_LABELING+FORGED_REPORT+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_ADVERTISING",
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE+TAMPERED_TRACEABILITY|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE",
+        "TAMPERED_TRACEABILITY"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE+UNLICENSED|NEITHER",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "NEITHER",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+TRADEMARK+UNLICENSED|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "TRADEMARK",
+        "UNLICENSED"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+TRADEMARK+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "TRADEMARK",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+UNLICENSED|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "UNLICENSED"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+ILLEGAL_ADDITIVE+TAMPERED_TRACEABILITY+TRADEMARK|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE",
+        "TAMPERED_TRACEABILITY",
+        "TRADEMARK"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+ILLEGAL_ADDITIVE+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+TAMPERED_TRACEABILITY+TRADEMARK+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "TAMPERED_TRACEABILITY",
+        "TRADEMARK",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 0.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+TAMPERED_TRACEABILITY+TRADEMARK|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "TAMPERED_TRACEABILITY",
+        "TRADEMARK"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+TAMPERED_TRACEABILITY+UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "TAMPERED_TRACEABILITY",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+UNLICENSED|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FALSE_LABELING",
+        "UNLICENSED"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FORGED_REPORT|BOTH",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "FORGED_REPORT"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|UNLICENSED|END_USER_ONLY",
+      "hazard": "CONSUMER_DECEPTION",
+      "methods": [
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|-|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|ADULTERATION+FALSE_LABELING|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "ADULTERATION",
+        "FALSE_LABELING"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|ADULTERATION+TAMPERED_TRACEABILITY+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "ADULTERATION",
+        "TAMPERED_TRACEABILITY",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|EXPIRED_MATERIAL+FALSE_LABELING+FORGED_REPORT+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|EXPIRED_MATERIAL+FALSE_LABELING+FORGED_REPORT|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING",
+        "FORGED_REPORT"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|EXPIRED_MATERIAL+FALSE_LABELING|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "EXPIRED_MATERIAL",
+        "FALSE_LABELING"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FAKE_CERTIFICATION|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FAKE_CERTIFICATION"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE|BOTH",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "BOTH",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+FORGED_REPORT+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+FORGED_REPORT|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "FORGED_REPORT"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+ILLEGAL_ADDITIVE+UNLICENSED|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING+ILLEGAL_ADDITIVE|END_USER_ONLY",
+      "hazard": "FOOD_SAFETY",
+      "methods": [
+        "FALSE_LABELING",
+        "ILLEGAL_ADDITIVE"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "MARKET_ORDER|ADULTERATION+FORGED_REPORT+TRADEMARK+UNLICENSED|END_USER_ONLY",
+      "hazard": "MARKET_ORDER",
+      "methods": [
+        "ADULTERATION",
+        "FORGED_REPORT",
+        "TRADEMARK",
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    },
+    {
+      "entry": "MARKET_ORDER|UNLICENSED|END_USER_ONLY",
+      "hazard": "MARKET_ORDER",
+      "methods": [
+        "UNLICENSED"
+      ],
+      "role": "END_USER_ONLY",
+      "n_docs": 1,
+      "dual_channel_agreement": 1.0,
+      "status": "singleton"
+    }
+  ],
+  "needs_human_audit": [
+    "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+ILLEGAL_ADDITIVE|END_USER_ONLY",
+    "CONSUMER_DECEPTION|FALSE_LABELING|BOTH"
+  ],
+  "quotes": [
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING|END_USER_ONLY",
+      "doc_id": "cfws:420606202507210001",
+      "quote": "…当事人购进上述商品时未查验并索要供货商资质、检验合格证明等材料。"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT|END_USER_ONLY",
+      "doc_id": "cfws:2056182381317160960",
+      "quote": "…1588千焦/100g，脂肪标注为0.5g/100g，检测为7.5g/100g，钠标注为0mg/100g，检测为50mg/100g，都超过了GB28050中允许的误差范围。"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+UNLICENSED|END_USER_ONLY",
+      "doc_id": "cfws:d732cca4d92440518bf962377ee623c8",
+      "quote": "…件为免费赠品，该产品和上述腰片串都是当事人按照速冻工艺生产的速冻食品，但包装袋上产品类别由于印刷时未能及时更改模板信息，都被标注为冷冻预制调理类，非超范围生产，系错误标注信息。"
+    },
+    {
+      "entry": "CONSUMER_DECEPTION|FALSE_LABELING+FORGED_REPORT+UNLICENSED|END_USER_ONLY",
+      "doc_id": "cfws:a8a0a8264765a7ba4d77e514d90b097d",
+      "quote": "…），故可以认定当事人：生*经营标签含有虚假内容的食品的事实。"
+    },
+    {
+      "entry": "FOOD_SAFETY|FALSE_LABELING|END_USER_ONLY",
+      "doc_id": "cfws:c9cca52cf967427595a691e1510e0fb9",
+      "quote": "…A.1“食品标签营养素参考值（NRV）”和A.3“计算”，执法人员计算涉案食品《营养成分表》中“碳水化合物”的NRV%值为1.4%，应当标注为1%，而涉案食品《营养成分表》中“碳水化合物”的NRV%值标注为3%。"
+    }
+  ],
+  "hazard_distribution": {
+    "CONSUMER_DECEPTION": 107,
+    "FOOD_SAFETY": 19,
+    "MARKET_ORDER": 2
+  },
+  "role_distribution": {
+    "BOTH": 9,
+    "END_USER_ONLY": 116,
+    "NEITHER": 3
+  },
+  "method_distribution": {
+    "ADULTERATION": 4,
+    "EXPIRED_MATERIAL": 10,
+    "FAKE_CERTIFICATION": 1,
+    "FALSE_ADVERTISING": 4,
+    "FALSE_LABELING": 117,
+    "FORGED_REPORT": 52,
+    "ILLEGAL_ADDITIVE": 17,
+    "TAMPERED_TRACEABILITY": 6,
+    "TRADEMARK": 6,
+    "UNLICENSED": 49
+  }
+}

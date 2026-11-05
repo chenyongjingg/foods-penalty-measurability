@@ -1,0 +1,887 @@
+{
+  "at_utc": "2026-11-05T03:54:28Z",
+  "silver": {
+    "path": "/opt/foods/data/silver/silver.jsonl",
+    "sha256": "a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e",
+    "n": 875
+  },
+  "map_version": 2,
+  "food_dict_version": 1,
+  "n_docs": 875,
+  "frame": "Chinese penalty decisions (silver lang=zh); US recalls are E8's population",
+  "excluded_non_cn": 253,
+  "by_lang": {
+    "zh": 875
+  },
+  "category_distribution": {
+    "FALSE_LABELING": 375,
+    "UNRESOLVED": 271,
+    "PROCEDURAL_NONCOMPLIANCE": 66,
+    "TRADEMARK_INFRINGEMENT": 57,
+    "FALSE_ADVERTISING": 38,
+    "FORGED_INSPECTION_REPORT": 33,
+    "UNLICENSED_OPERATION": 26,
+    "PRODUCT_QUALITY": 5,
+    "FAKE_CERTIFICATION": 4
+  },
+  "basis_distribution": {
+    "penalty_statute": 322,
+    "statute+fact": 160,
+    "none": 100,
+    "ambiguous_statute": 96,
+    "ambiguous_facts": 75,
+    "cited_statute": 61,
+    "fact_only": 61
+  },
+  "resolved_share": 0.6903,
+  "unresolved_none": {
+    "n": 100,
+    "penalty_clause_only_administrative_penalty_law": 19,
+    "law_mentioned_doc_counts": {
+      "中华人民共和国行政处罚法": 90,
+      "反不正当竞争法": 35,
+      "经营者违反本法": 29,
+      "中华人民共和国消费者权益保护法": 16,
+      "侵害消费者权益行为处罚办法": 12,
+      "食品安全法": 11,
+      "本法": 8,
+      "消费者权益保护法": 8,
+      "经营者有本办法": 8,
+      "中华人民共和国计量法": 7,
+      "商品条码管理办法": 6,
+      "广告法": 6,
+      "本条例": 6,
+      "第一款经营者违反本法": 6,
+      "市场监督管理行政处罚案件违法所得认定办法": 4
+    },
+    "note": "Documents whose cited statutes miss the v2 map entirely. Two readings, both descriptive: a formal mechanism (penalty clause invokes only the Administrative Penalty Law) and the subject matter they actually cite (e.g. measurement law, bar code, patent, trade secrets -- outside the five fraud categories). Neither is used to move a document into a category (D-81)."
+  },
+  "year_distribution": {
+    "2023": 6,
+    "2024": 94,
+    "2025": 167,
+    "2026": 608
+  },
+  "year_category_counts": {
+    "2023": {
+      "FAKE_CERTIFICATION": 2,
+      "FALSE_ADVERTISING": 1,
+      "UNRESOLVED": 3
+    },
+    "2024": {
+      "FAKE_CERTIFICATION": 1,
+      "FALSE_ADVERTISING": 3,
+      "FALSE_LABELING": 36,
+      "FORGED_INSPECTION_REPORT": 4,
+      "PROCEDURAL_NONCOMPLIANCE": 14,
+      "TRADEMARK_INFRINGEMENT": 8,
+      "UNLICENSED_OPERATION": 3,
+      "UNRESOLVED": 25
+    },
+    "2025": {
+      "FALSE_ADVERTISING": 8,
+      "FALSE_LABELING": 52,
+      "FORGED_INSPECTION_REPORT": 13,
+      "PROCEDURAL_NONCOMPLIANCE": 7,
+      "PRODUCT_QUALITY": 3,
+      "TRADEMARK_INFRINGEMENT": 16,
+      "UNLICENSED_OPERATION": 9,
+      "UNRESOLVED": 59
+    },
+    "2026": {
+      "FAKE_CERTIFICATION": 1,
+      "FALSE_ADVERTISING": 26,
+      "FALSE_LABELING": 287,
+      "FORGED_INSPECTION_REPORT": 16,
+      "PROCEDURAL_NONCOMPLIANCE": 45,
+      "PRODUCT_QUALITY": 2,
+      "TRADEMARK_INFRINGEMENT": 33,
+      "UNLICENSED_OPERATION": 14,
+      "UNRESOLVED": 184
+    }
+  },
+  "food_category": {
+    "multi_label": {
+      "PREPACKAGED_FOOD": 223,
+      "FOOD_ADDITIVE": 200,
+      "EDIBLE_AGRICULTURAL": 93,
+      "GRAIN_BAKERY": 84,
+      "ALCOHOL": 75,
+      "MEAT_PRODUCT": 67,
+      "CATERING_RAW_MATERIAL": 65,
+      "CONDIMENT": 58,
+      "OIL": 47,
+      "BEVERAGE": 46,
+      "DAIRY": 34,
+      "FROZEN": 32,
+      "HEALTH_FOOD": 28,
+      "TEA": 16,
+      "INFANT_FOOD": 7
+    },
+    "primary": {
+      "UNMATCHED": 272,
+      "FOOD_ADDITIVE": 85,
+      "PREPACKAGED_FOOD": 74,
+      "MEAT_PRODUCT": 66,
+      "ALCOHOL": 63,
+      "GRAIN_BAKERY": 61,
+      "CONDIMENT": 44,
+      "EDIBLE_AGRICULTURAL": 42,
+      "BEVERAGE": 36,
+      "DAIRY": 28,
+      "OIL": 28,
+      "HEALTH_FOOD": 22,
+      "FROZEN": 18,
+      "CATERING_RAW_MATERIAL": 17,
+      "TEA": 12,
+      "INFANT_FOOD": 7
+    },
+    "match_source": {
+      "fact_segment": 815,
+      "penalty_content": 260
+    },
+    "unmatched_share": 0.3109
+  },
+  "region": {
+    "level": {
+      "county": 578,
+      "city": 251,
+      "province_named": 35,
+      "other": 11
+    },
+    "province": {
+      "unresolved": 840,
+      "福建": 20,
+      "北京": 9,
+      "四川": 2,
+      "河北": 2,
+      "天津": 1,
+      "新疆": 1
+    },
+    "city_top": {
+      "unresolved": 614,
+      "晋江市": 11,
+      "南安市": 8,
+      "广汉市": 8,
+      "鄂州市": 8,
+      "巢湖市": 7,
+      "射洪市": 6,
+      "广德市": 6,
+      "仙桃市": 5,
+      "南昌市": 5,
+      "安庆市": 5,
+      "莆田市": 5,
+      "赣州市": 5,
+      "黄石市": 5,
+      "太仓市": 4,
+      "成都市邛崃市": 4,
+      "鹰潭市": 4,
+      "什邡市": 3,
+      "六安市": 3,
+      "北京市": 3,
+      "德阳市": 3,
+      "恩施市": 3,
+      "成都市": 3,
+      "抚州市": 3,
+      "洪湖市": 3,
+      "滁州市": 3,
+      "漳州市": 3,
+      "福建省建瓯市": 3,
+      "福清市": 3,
+      "自贡市": 3
+    },
+    "note": "The national portal does not publish a province field; municipal sites (the planned region source) are uncalibrated, 1 of 50 with 1 admitted document. Region is therefore read from the issuing authority string: province when named, otherwise city/county as written. No province is imputed from a city name."
+  },
+  "penalty": {
+    "fine_quantiles": {
+      "n": 565,
+      "min": 2.0,
+      "p25": 1700.0,
+      "median": 5000.0,
+      "p75": 15000.0,
+      "p90": 55000.0,
+      "max": 805231.0,
+      "mean": 23889.72
+    },
+    "by_category": {
+      "FAKE_CERTIFICATION": {
+        "n": 3,
+        "min": 36.0,
+        "p25": 36.0,
+        "median": 3827.1,
+        "p75": 311000.0,
+        "p90": 311000.0,
+        "max": 311000.0,
+        "mean": 104954.37
+      },
+      "FALSE_ADVERTISING": {
+        "n": 21,
+        "min": 100.0,
+        "p25": 600.0,
+        "median": 2000.0,
+        "p75": 5520.97,
+        "p90": 15501.0,
+        "max": 100000.0,
+        "mean": 8902.03
+      },
+      "FALSE_LABELING": {
+        "n": 235,
+        "min": 40.0,
+        "p25": 2000.0,
+        "median": 5000.0,
+        "p75": 10000.0,
+        "p90": 50000.0,
+        "max": 600000.0,
+        "mean": 19438.66
+      },
+      "FORGED_INSPECTION_REPORT": {
+        "n": 26,
+        "min": 800.0,
+        "p25": 2775.0,
+        "median": 10000.0,
+        "p75": 55000.0,
+        "p90": 100000.0,
+        "max": 202725.0,
+        "mean": 38090.0
+      },
+      "PROCEDURAL_NONCOMPLIANCE": {
+        "n": 44,
+        "min": 100.0,
+        "p25": 1000.0,
+        "median": 1800.0,
+        "p75": 5000.0,
+        "p90": 37000.0,
+        "max": 805231.0,
+        "mean": 31593.04
+      },
+      "PRODUCT_QUALITY": {
+        "n": 3,
+        "min": 280.0,
+        "p25": 280.0,
+        "median": 915.0,
+        "p75": 85905.8,
+        "p90": 85905.8,
+        "max": 85905.8,
+        "mean": 29033.6
+      },
+      "TRADEMARK_INFRINGEMENT": {
+        "n": 32,
+        "min": 280.0,
+        "p25": 2925.0,
+        "median": 5384.0,
+        "p75": 17175.0,
+        "p90": 25820.0,
+        "max": 73872.0,
+        "mean": 11995.8
+      },
+      "UNLICENSED_OPERATION": {
+        "n": 18,
+        "min": 3000.0,
+        "p25": 7500.0,
+        "median": 20000.0,
+        "p75": 60000.0,
+        "p90": 260000.0,
+        "max": 482600.0,
+        "mean": 80050.0
+      },
+      "UNRESOLVED": {
+        "n": 183,
+        "min": 2.0,
+        "p25": 1050.21,
+        "median": 5000.0,
+        "p75": 15000.0,
+        "p90": 52000.0,
+        "max": 600000.0,
+        "mean": 22598.37
+      }
+    },
+    "unit": "CNY"
+  },
+  "llm_cross_tab": {
+    "FAKE_CERTIFICATION": {
+      "FAKE_CERTIFICATION": 2,
+      "FALSE_LABELING": 2,
+      "UNRESOLVED": 10
+    },
+    "FALSE_LABELING": {
+      "FALSE_ADVERTISING": 38,
+      "FALSE_LABELING": 289,
+      "FORGED_INSPECTION_REPORT": 13,
+      "PROCEDURAL_NONCOMPLIANCE": 25,
+      "PRODUCT_QUALITY": 1,
+      "TRADEMARK_INFRINGEMENT": 10,
+      "UNLICENSED_OPERATION": 6,
+      "UNRESOLVED": 171
+    },
+    "FORGED_INSPECTION_REPORT": {
+      "FALSE_LABELING": 4,
+      "FORGED_INSPECTION_REPORT": 15,
+      "PROCEDURAL_NONCOMPLIANCE": 4,
+      "PRODUCT_QUALITY": 2,
+      "TRADEMARK_INFRINGEMENT": 8,
+      "UNLICENSED_OPERATION": 3,
+      "UNRESOLVED": 15
+    },
+    "OTHER": {
+      "FALSE_LABELING": 33,
+      "FORGED_INSPECTION_REPORT": 3,
+      "PROCEDURAL_NONCOMPLIANCE": 7,
+      "PRODUCT_QUALITY": 1,
+      "TRADEMARK_INFRINGEMENT": 26,
+      "UNRESOLVED": 25
+    },
+    "TAMPERED_TRACEABILITY": {
+      "FALSE_LABELING": 1,
+      "PROCEDURAL_NONCOMPLIANCE": 1,
+      "TRADEMARK_INFRINGEMENT": 1,
+      "UNRESOLVED": 1
+    },
+    "UNLICENSED_OPERATION": {
+      "FAKE_CERTIFICATION": 2,
+      "FALSE_LABELING": 46,
+      "FORGED_INSPECTION_REPORT": 2,
+      "PROCEDURAL_NONCOMPLIANCE": 29,
+      "PRODUCT_QUALITY": 1,
+      "TRADEMARK_INFRINGEMENT": 12,
+      "UNLICENSED_OPERATION": 17,
+      "UNRESOLVED": 49
+    }
+  },
+  "llm_cross_tab_note": "Rows are the frozen silver (LLM) category, columns the deterministic v2 category. Descriptive only; on conflict the deterministic result is the one reported (D-77).",
+  "coarse_distribution": {
+    "DATA_FALSIFICATION": 412,
+    "UNDETERMINED": 271,
+    "MARKET_ORDER": 100,
+    "PROCEDURAL": 66,
+    "UNLICENSED": 26
+  },
+  "negative_control": {
+    "n_requested": 50,
+    "n_scored": 50,
+    "seed": 20261104,
+    "doc_ids": [
+      "cfws:01f6f266ceea0840bce422e60626ef6b",
+      "cfws:0a8a17b9bf534ca2af9da667a95f6e3e",
+      "cfws:0db50168-cdfd-490c-8abc-59113cc4421b",
+      "cfws:1a8c7a5e659848ee98104a576ea39beb",
+      "cfws:21BB52420F14B8B2E063BB831DAC7338",
+      "cfws:230712000000125158557",
+      "cfws:230712000000428381186",
+      "cfws:2dde21ace07c7cc2df7269d04f7f51dc",
+      "cfws:2e493e9c1690451fbeda8bfbe92c5f08",
+      "cfws:3301130320231100023301840000305562",
+      "cfws:3307820820240800453307823004330836",
+      "cfws:410c0d5cb2054bf3bbdf7bbb8077958e",
+      "cfws:420105202604290002",
+      "cfws:420324202606110018",
+      "cfws:420324202608050004",
+      "cfws:422801202606170009",
+      "cfws:422827202410300004",
+      "cfws:43C202400000036698",
+      "cfws:43bb06775b1f35d3a214115beb024363",
+      "cfws:58eeead5198d4f5cad75db572099f91f",
+      "cfws:5d2861c62873a37deadf0ae99f40c2da",
+      "cfws:62C202600000002035",
+      "cfws:67b4274dea9a590e19c5b93b9e2f5a7a",
+      "cfws:68ed6d7332acef85f257cb9e97ef8fe6",
+      "cfws:69512bb87f1b43cc83d54b1b2b04abfe",
+      "cfws:6ab0d5fb693d858e621ed5f7af1a8ccd",
+      "cfws:70ff5b0747fb44c4a4efd08d2300683e",
+      "cfws:7375d50243514a1fbb825f839d2d843d",
+      "cfws:79ee6c0bfc15e8bf2bd3f832193624d6",
+      "cfws:7d42bea0cbf1a6a11a11903ed9e36a81",
+      "cfws:7df7e612-1ddf-4898-85b9-9ef9e6c4f746",
+      "cfws:905bb5a7c2c5770fc8cf520e1d7923b3",
+      "cfws:9176998d2464a0693e7881a50810e733",
+      "cfws:9fd080b757c94d1abdc890d5093a6f4c",
+      "cfws:a13451eb-fba9-427b-aab9-b0c4b7a34242",
+      "cfws:a6af533577a448239cffe7166356850d",
+      "cfws:b51e0430ce3d408293a9812a1869073e",
+      "cfws:b552c61127bf0ba37466b9ace5a2d5ec",
+      "cfws:b7e9f4dc15475c91b7e934bb39082368",
+      "cfws:bbd7ed363cffbcbe24b0d71cceb17416",
+      "cfws:bf2aa64cfcac42abab0603f9d5c65823",
+      "cfws:cd5ce2dee5ee40d89e892c87a52d30ea",
+      "cfws:da4695ea45acfc9b60438f60e02165a8",
+      "cfws:dd915f25e57a413782b2c6eb42490f3f",
+      "cfws:de4a0fda2564d20f82d5252d6f565fc9",
+      "cfws:eb1b041c033bb9c231bb557d9808f534",
+      "cfws:ebb984efa87f4266b3ca2954d647f8d6",
+      "cfws:ef6fd3cd91eb43818def0da8a17d93e1",
+      "cfws:f5bd714b786bee09e3ed075595b48701",
+      "cfws:f8d145dd40e9894e708611c9f5ddc53e"
+    ],
+    "rows": [
+      {
+        "doc_id": "cfws:01f6f266ceea0840bce422e60626ef6b",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "TRADEMARK_INFRINGEMENT",
+        "b": "TRADEMARK_INFRINGEMENT",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:0a8a17b9bf534ca2af9da667a95f6e3e",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:0db50168-cdfd-490c-8abc-59113cc4421b",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:1a8c7a5e659848ee98104a576ea39beb",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:21BB52420F14B8B2E063BB831DAC7338",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:230712000000125158557",
+        "rule": "PRODUCT_QUALITY",
+        "basis": "penalty_statute",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:230712000000428381186",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:2dde21ace07c7cc2df7269d04f7f51dc",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:2e493e9c1690451fbeda8bfbe92c5f08",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:3301130320231100023301840000305562",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "FALSE_LABELING",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": true,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:3307820820240800453307823004330836",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:410c0d5cb2054bf3bbdf7bbb8077958e",
+        "rule": "UNLICENSED_OPERATION",
+        "basis": "statute+fact",
+        "a": "FORGED_INSPECTION_REPORT",
+        "b": "FORGED_INSPECTION_REPORT",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:420105202604290002",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "PROCEDURAL_NONCOMPLIANCE",
+        "rule_vs_a": false,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:420324202606110018",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:420324202608050004",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "FALSE_LABELING",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": true,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:422801202606170009",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:422827202410300004",
+        "rule": null,
+        "basis": "none",
+        "a": "UNLICENSED_OPERATION",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:43C202400000036698",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "TRADEMARK_INFRINGEMENT",
+        "b": "TRADEMARK_INFRINGEMENT",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:43bb06775b1f35d3a214115beb024363",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:58eeead5198d4f5cad75db572099f91f",
+        "rule": "FALSE_ADVERTISING",
+        "basis": "penalty_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:5d2861c62873a37deadf0ae99f40c2da",
+        "rule": null,
+        "basis": "ambiguous_facts",
+        "a": "UNLICENSED_OPERATION",
+        "b": "UNLICENSED_OPERATION",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:62C202600000002035",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_LABELING",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:67b4274dea9a590e19c5b93b9e2f5a7a",
+        "rule": "TRADEMARK_INFRINGEMENT",
+        "basis": "cited_statute",
+        "a": "FORGED_INSPECTION_REPORT",
+        "b": "UNLICENSED_OPERATION",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:68ed6d7332acef85f257cb9e97ef8fe6",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "UNLICENSED_OPERATION",
+        "b": "PROCEDURAL_NONCOMPLIANCE",
+        "rule_vs_a": false,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:69512bb87f1b43cc83d54b1b2b04abfe",
+        "rule": null,
+        "basis": "ambiguous_facts",
+        "a": "FORGED_INSPECTION_REPORT",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:6ab0d5fb693d858e621ed5f7af1a8ccd",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:70ff5b0747fb44c4a4efd08d2300683e",
+        "rule": null,
+        "basis": "ambiguous_facts",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:7375d50243514a1fbb825f839d2d843d",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:79ee6c0bfc15e8bf2bd3f832193624d6",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "UNLICENSED_OPERATION",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:7d42bea0cbf1a6a11a11903ed9e36a81",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:7df7e612-1ddf-4898-85b9-9ef9e6c4f746",
+        "rule": "FALSE_ADVERTISING",
+        "basis": "penalty_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:905bb5a7c2c5770fc8cf520e1d7923b3",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "TRADEMARK_INFRINGEMENT",
+        "b": "TRADEMARK_INFRINGEMENT",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:9176998d2464a0693e7881a50810e733",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:9fd080b757c94d1abdc890d5093a6f4c",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:a13451eb-fba9-427b-aab9-b0c4b7a34242",
+        "rule": null,
+        "basis": "ambiguous_facts",
+        "a": "UNLICENSED_OPERATION",
+        "b": "UNLICENSED_OPERATION",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:a6af533577a448239cffe7166356850d",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "UNLICENSED_OPERATION",
+        "b": "UNLICENSED_OPERATION",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:b51e0430ce3d408293a9812a1869073e",
+        "rule": "UNLICENSED_OPERATION",
+        "basis": "fact_only",
+        "a": "FORGED_INSPECTION_REPORT",
+        "b": "OTHER",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:b552c61127bf0ba37466b9ace5a2d5ec",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "penalty_statute",
+        "a": "FORGED_INSPECTION_REPORT",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:b7e9f4dc15475c91b7e934bb39082368",
+        "rule": "FALSE_LABELING",
+        "basis": "cited_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:bbd7ed363cffbcbe24b0d71cceb17416",
+        "rule": "FALSE_LABELING",
+        "basis": "statute+fact",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:bf2aa64cfcac42abab0603f9d5c65823",
+        "rule": "PROCEDURAL_NONCOMPLIANCE",
+        "basis": "cited_statute",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:cd5ce2dee5ee40d89e892c87a52d30ea",
+        "rule": "FALSE_LABELING",
+        "basis": "fact_only",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:da4695ea45acfc9b60438f60e02165a8",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:dd915f25e57a413782b2c6eb42490f3f",
+        "rule": "FALSE_LABELING",
+        "basis": "penalty_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:de4a0fda2564d20f82d5252d6f565fc9",
+        "rule": null,
+        "basis": "ambiguous_facts",
+        "a": "FALSE_LABELING",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:eb1b041c033bb9c231bb557d9808f534",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "PRODUCT_QUALITY",
+        "b": "PRODUCT_QUALITY",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:ebb984efa87f4266b3ca2954d647f8d6",
+        "rule": null,
+        "basis": "none",
+        "a": "FALSE_ADVERTISING",
+        "b": "FALSE_ADVERTISING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:ef6fd3cd91eb43818def0da8a17d93e1",
+        "rule": "FALSE_LABELING",
+        "basis": "fact_only",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": true,
+        "rule_vs_b": true
+      },
+      {
+        "doc_id": "cfws:f5bd714b786bee09e3ed075595b48701",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      },
+      {
+        "doc_id": "cfws:f8d145dd40e9894e708611c9f5ddc53e",
+        "rule": null,
+        "basis": "ambiguous_statute",
+        "a": "FALSE_LABELING",
+        "b": "FALSE_LABELING",
+        "rule_vs_a": false,
+        "rule_vs_b": false
+      }
+    ],
+    "rule_vs_a": 0.28,
+    "rule_vs_b": 0.28,
+    "agreement_primary": 0.28,
+    "agreement_definition": "mean of (rule==channel_a) and (rule==channel_b), exact category match, documents the rule leaves unresolved count as disagreements",
+    "llm_a_vs_b": 0.74,
+    "thresholds": {
+      "target": 0.85,
+      "floor": 0.75
+    },
+    "status": "below_floor",
+    "diagnostic": {
+      "rule_coverage": 0.64,
+      "agreement_on_decided": {
+        "n": 32,
+        "rule_vs_a": 0.4375,
+        "rule_vs_b": 0.4375
+      },
+      "label": "post-hoc diagnostic, not the gate (D-79)"
+    }
+  },
+  "granularity": "coarse"
+}
