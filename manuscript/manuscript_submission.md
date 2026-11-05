@@ -1,5 +1,11 @@
 # What Chinese Food-Safety Penalty Records Measure: An Audited Baseline, a Commodity-Term Audit, and an Estimability Ladder
 
+Yongjin Chen^1^, Chenrui Yang^1^, Ziying Xue^1^, Xiyuan Wang^1^ and Songze Zhu^1^,\*
+
+^1^ People’s Public Security University of China, Beijing, China
+
+\* Correspondence: 20196846@ppsuc.edu.cn
+
 **Article type:** Article (Foods)
 
 ---
@@ -308,10 +314,17 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 
 ## Statements
 
-**Funding.** Supported by 25CSH113.
+**Author Contributions.** All authors have read and agreed to the published version of the manuscript. CRediT roles are to be assigned by the author team at submission.
+
+**Funding.** Supported by 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market), 25CSH113.
+
+**Institutional Review Board Statement.** Not applicable. The study analyses administrative documents published by government agencies; it involves no human participants, human material or animals.
+
+**Informed Consent Statement.** Not applicable.
+
 **Data Availability.** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. Alongside it the supplementary material carries the product files underlying every reported statistic, the deviation register and the pipeline source. The product files include the commodity index, its 270-document adjudication sample, the crosstab behind Supplementary Table S1, the three-reader coding files, the per-document predictions of the three automated attempts in Table 4, and the segmentation sensitivity of the lexicon. The bundle’s `MANIFEST.md` lists all twenty-five files with their sha256 and a verification block that checks every one. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included.
+
 **Conflicts of Interest.** The authors declare no conflict of interest.
-**Author Contributions.** To be completed at submission.
 
 ---
 
