@@ -133,3 +133,19 @@
 - 第 6 项的 ORCID 与 CRediT 五人确认：仍是代拟，须作者本人逐条确认。
 - **补充包与正文已不同步**：正文现为 **29 条参考文献**，而 `supplementary/refs_crossref.json` 仍是 **12 条**（6,311 B），`supplementary/MANIFEST.md` 仍是 v2 的 25/25 校验块。本轮按作者指示**未动补充包**；投稿前必须同步，否则正文引用的 17 条新文献在补充包里没有登记记录。
 - 第 2 项的 Luscombe 年份（2021 online-first / 2022 print）与第 1、3、5 项（移出确认、presubmission 邮件、Results 问句形式）维持原推荐，等作者一句话即可。
+
+---
+
+## 收口（2026-11-06 晚）
+
+**第 6 项（CRediT）已有作者授权并落地**：作者指示「CRediT 作者贡献分工我授权你自动完成」。
+原 v3 草拟表（14 个角色 × 五人）**角色分配不变**，改写为 MDPI 模板要求的**单段式**：
+`Conceptualization, Y.C. and S.Z.; …; writing—review and editing, Y.C., C.Y., Z.X., X.W. and S.Z.
+All authors have read and agreed to the published version of the manuscript.`
+删去表格式与末尾首字母对照（首字母在作者列表下唯一可解），删去注释性的 "CRediT roles are
+assigned as follows" 引导句。**ORCID 仍按作者指示不处理。**
+
+**补充包不同步一项已解除**：见 `MANIFEST.md` 的 11-06 Revision 节（refs 12→29、numbers 584→588、
+新增 `analysis/e16_denominator.json`、26/26 校验）。
+
+**余项**：仅 ORCID（作者自行处理）与第 2、1、3、5 项（可选择采纳，不阻塞投稿）。

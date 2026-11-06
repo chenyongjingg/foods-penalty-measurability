@@ -1,0 +1,27 @@
+name: verify
+
+# The repository makes one promise that a machine can check without any data download:
+# every shipped supplementary file matches the sha256 in its manifest, the provenance sheet
+# carries the number of rows the manifest claims, and every product path the sheet names
+# resolves inside the repository. That check runs here on every push.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify the supplementary bundle against its manifest
+        run: python tools/verify_bundle.py
+      - name: Compile the pipeline and tools (syntax only, no data needed)
+        run: python -m compileall -q foods_pipeline scripts tools

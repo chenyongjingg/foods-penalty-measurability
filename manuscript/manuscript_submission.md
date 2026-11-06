@@ -302,24 +302,7 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 
 **Supplementary Materials:** The bundle `supplementary_20261106.zip` (twenty-six product files plus `MANIFEST.md`) carries the product files underlying every reported statistic: the commodity index and its 270-document adjudication sample, the crosstab behind Supplementary Table S1, the three-reader coding files, the per-document predictions of the three automated attempts in Table 4, the segmentation sensitivity of the lexicon, the analysis scripts and the deviation register. `MANIFEST.md` lists every file with its sha256 and a verification block that checks each one.
 
-**Author Contributions:** All authors have read and agreed to the published version of the manuscript. CRediT roles are assigned as follows; initials: Y.C., Yongjin Chen; C.Y., Chenrui Yang; Z.X., Ziying Xue; X.W., Xiyuan Wang; S.Z., Songze Zhu.
-
-| CRediT role | Author initials |
-|---|---|
-| Conceptualization | Y.C., S.Z. |
-| Data curation | Y.C., C.Y. |
-| Formal analysis | Y.C., C.Y. |
-| Funding acquisition | S.Z. |
-| Investigation | Y.C., Z.X., X.W. |
-| Methodology | Y.C., C.Y., X.W. |
-| Project administration | S.Z. |
-| Resources | S.Z. |
-| Software | Y.C., X.W. |
-| Supervision | S.Z. |
-| Validation | Z.X., X.W. |
-| Visualization | Z.X. |
-| Writing – original draft | Y.C. |
-| Writing – review & editing | Y.C., C.Y., Z.X., X.W., S.Z. |
+**Author Contributions:** Conceptualization, Y.C. and S.Z.; data curation, Y.C. and C.Y.; formal analysis, Y.C. and C.Y.; funding acquisition, S.Z.; investigation, Y.C., Z.X. and X.W.; methodology, Y.C., C.Y. and X.W.; project administration, S.Z.; resources, S.Z.; software, Y.C. and X.W.; supervision, S.Z.; validation, Z.X. and X.W.; visualization, Z.X.; writing—original draft preparation, Y.C.; writing—review and editing, Y.C., C.Y., Z.X., X.W. and S.Z. All authors have read and agreed to the published version of the manuscript.
 
 **Funding:** This research was funded by 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market), grant number 25CSH113.
 

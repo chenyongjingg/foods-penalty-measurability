@@ -1,0 +1,17 @@
+{
+ "at_utc": "2026-11-06T00:29:01Z",
+ "product": "E16 denominator audit (v3.1 CR-4 adjudication)",
+ "inputs": {
+  "e16_preds.jsonl": "data/analysis/e16_preds.jsonl",
+  "sha256": "ccd766f1d482d74028064fc1dace2079034ac28faaec5c6219a34d03d1738c77"
+ },
+ "rule": "phrase == '无' is a decline; unmapped means mapped_category == 0",
+ "n_docs": 1128,
+ "n_named": 896,
+ "n_declined": 232,
+ "n_unmapped_all": 818,
+ "n_unmapped_of_named": 586,
+ "share_unmapped_of_named": 0.6540178571428571,
+ "n_mapped": 310,
+ "consistency": "n_unmapped_of_named + n_declined == n_unmapped_all"
+}

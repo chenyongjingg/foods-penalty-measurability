@@ -372,3 +372,18 @@ Discussion 整章 999 → **810** 词（−189，−18.9%），优先删去复�
 | `v3_metrics.py` | 7,200 词 / 摘要 199 / 15 项必备数字在位 |
 
 **未做（按作者指示）** 补充包未更新（`refs_crossref.json` 仍 12 条、MANIFEST 未 bump），仓库未提交。这两项必须在投稿前完成。
+
+---
+
+## CRediT 落地（2026-11-06 晚）
+
+- **改动** Statements 的 Author Contributions：`表格式（15×2）+ 引导句 + 首字母对照` → **MDPI 单段式**，
+  角色↔作者映射逐项不变（Conceptualization Y.C./S.Z.；Data curation、Formal analysis Y.C./C.Y.；
+  Funding acquisition、Project administration、Resources、Supervision S.Z.；Investigation Y.C./Z.X./X.W.；
+  Methodology Y.C./C.Y./X.W.；Software Y.C./X.W.；Validation Z.X./X.W.；Visualization Z.X.；
+  Writing – original draft Y.C.；Writing – review & editing 五人）。
+- **影响面**：docx 表格 6→5（4 正文表 + 1 模板编辑块），`check_docx_template` 的
+  `tables: 5 (expected 4 manuscript + 1 editorial block)` 通过；Statements 词数 280→317（**不计入 7,200**）。
+- **终值**：md `0f2b2b3d…` 61,684 B；docx `40d69160…` 425,384 B；阅读版 PDF 16 页 `6e9365cd…`。
+- **四检**：check_numbers 488/0；check_docx_template 0 失败；sweep_4b none；v3_metrics 7,200 / 199 / 15-15。
+- ★没有任何数字变动：数字多重集与 v3.1 完全一致（`0.654`/`586`/`896` 在，`0.7252`/`818` 不在）。

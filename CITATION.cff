@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "foods-penalty-measurability: instrument audit, products and pre-registration register for a measurement audit of Chinese food-safety penalty records"
+abstract: >-
+  Code, frozen products, provenance sheet and append-only pre-registration register for a
+  measurement audit of 1,128 food-safety documents (875 Chinese administrative penalty
+  decisions, 253 US recall records). The repository supports one question — what can this
+  record measure? — and reports agreement, within-frame composition, commodity precision,
+  and the three axes (prevalence, trend, case-chain structure) that the record cannot
+  support, each with the measurement that shows why.
+authors:
+  - family-names: "Chen"
+    given-names: "Yongjin"
+  - family-names: "Yang"
+    given-names: "Chenrui"
+  - family-names: "Xue"
+    given-names: "Ziying"
+  - family-names: "Wang"
+    given-names: "Xiyuan"
+  - family-names: "Zhu"
+    given-names: "Songze"
+type: software
+version: "3.1.0"
+date-released: "2026-11-06"
+license: MIT
+repository-code: "https://github.com/chenyongjingg/foods-penalty-measurability"
+keywords:
+  - food safety
+  - measurement validity
+  - administrative penalty records
+  - reproducibility
+  - pre-registration
+  - commodity classification
