@@ -1,4 +1,4 @@
-# foods-penalty-audit
+# foods-penalty-measurability
 
 Code, products and pre-registration register for a measurement audit of **1,128
 food-safety documents** — 875 Chinese administrative penalty decisions and 253 US
@@ -14,9 +14,9 @@ prevalence, trend and case-chain structure are not.
 
 | path | what it is |
 |---|---|
-| `manuscript/` | `manuscript_submission.md` (the submission source), the built `.docx`, and the estimability-ladder figure |
-| `supplementary/` | the 25 files shipped with the paper, plus `MANIFEST.md` — every file with its sha256 and a self-checking verification block (25/25) |
-| `numbers.csv` | provenance sheet: **584 rows**, each naming the product file, the JSON path inside it, the UTC timestamp and the product's sha256 |
+| `manuscript/` | `manuscript_submission.md` (the submission source, v3.1), the built `.docx`, the estimability-ladder figure, and the three adjudication records behind v3.1 (`CONFLICT_REVIEW_v3.md`, `HUMAN_DECISIONS_v3.md`, `EDIT_LOG_v3.md`) |
+| `supplementary/` | the 26 files shipped with the paper, plus `MANIFEST.md` — every file with its sha256 and a self-checking verification block (26/26) |
+| `numbers.csv` | provenance sheet: **588 rows**, each naming the product file, the JSON path inside it, the UTC timestamp and the product's sha256 |
 | `DEVIATIONS.md` | the append-only pre-registration register, **D-1 … D-131** (129 distinct numbers in 137 headings; `D-111`/`D-112` are canonical labels assigned by `D-110`, and a few numbers appear twice because renumbering would break existing citations) |
 | `data/analysis/`, `data/metrics/`, `data/reports/`, `data/events/` | every product file the manuscript cites |
 | `data/silver/silver.jsonl` | the frozen corpus index (sha256 `a1deda2c…`) — the file every reported count is computed from |
@@ -42,9 +42,11 @@ prevalence, trend and case-chain structure are not.
 Nothing in the manuscript is asserted from memory. Each reported value appears in
 `numbers.csv` with the product file it came from, and the product files are here.
 `scripts/verify_numbers.py` resolves each row against the product it names: on the final
-sheet it re-derives **534 of 584 rows exactly, with 0 mismatches**. The remaining 50 are
+sheet it re-derives **538 of 588 rows exactly, with 0 mismatches**. The remaining 50 are
 enumerated by class — 27 composite paths, 11 serialised tables, 10 deliberate arithmetic
-combinations, 2 rows pointing at a markdown file — and were checked by hand.
+combinations, 2 rows pointing at a markdown file — and were checked by hand. (Of the 538,
+534 were re-derived against the corpus snapshot and 4 against
+`supplementary/analysis/e16_denominator.json`, which is in this repository.)
 
 Read the register before reading any result. Where a claim was withdrawn, the entry says
 so and gives the measurement that withdrew it. The three attempts to automate the
@@ -53,5 +55,7 @@ reported as failures: gate, numbers, and the cap that stopped further attempts.
 
 ## Status
 
-Prepared for submission to *Foods* (MDPI). The register is append-only: entries are
-never edited after the fact, including the ones that record mistakes.
+Prepared for submission to *Foods* (MDPI). Current manuscript: **v3.1** (2026-11-06) —
+7,200 words of prose, a 199-word abstract, 29 references, and a 588-row provenance
+sheet. The register is append-only: entries are never edited after the fact, including
+the ones that record mistakes.

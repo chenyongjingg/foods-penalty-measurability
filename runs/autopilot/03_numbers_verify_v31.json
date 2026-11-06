@@ -1,0 +1,76 @@
+{
+ "sheet": "D:\\Foods\\numbers.csv",
+ "n_rows": 588,
+ "n_ok": 534,
+ "n_mismatch": 0,
+ "n_unresolved": 27,
+ "n_missing_product": 4,
+ "n_composite": 11,
+ "n_derived_rows": 10,
+ "n_text_product": 2,
+ "text_product_ids": [
+  "gate.kappa",
+  "gate.ba"
+ ],
+ "mismatches": [],
+ "unresolved_ids": [
+  "e1.tau03",
+  "e1.tau05",
+  "e1.tau07",
+  "t1.q.jianyan_result",
+  "t1.q.jianyan_registered",
+  "t1.q.xujia_result",
+  "t1.q.xujia_registered",
+  "t1.q.maoyong_result",
+  "t1.q.maoyong_registered",
+  "t1.q.cuangai_result",
+  "t1.q.cuangai_registered",
+  "anchor.macro_ge20_computed",
+  "t1tab.body",
+  "e11.human_other_share_s1",
+  "e11.n_coders",
+  "e16.mapped",
+  "e16.unmapped_share",
+  "d.e15_e13.kappa",
+  "d.e15_e13.tpr",
+  "d.e15_e13.tnr",
+  "d.gate.kappa",
+  "d.gate.ba",
+  "e6.share_market",
+  "e6.share_procedural",
+  "net.share_two_plus",
+  "e17.lost_docs",
+  "e17.delta_subject_prec"
+ ],
+ "composite_ids": [
+  "e1.type.n_types",
+  "e7.n_entries",
+  "t1.sum_result_counts_over_200",
+  "t1tab.rows",
+  "anchor.ge20_classes",
+  "anchor.ge20_support_sum",
+  "t1tab.totals",
+  "e11.n_coders_total",
+  "e11.coders_independent_branches",
+  "e11.leak_guard_triggered",
+  "e17.fish_lost"
+ ],
+ "missing": [
+  {
+   "id": "e16.n_named",
+   "product": "data/analysis/e16_denominator.json"
+  },
+  {
+   "id": "e16.n_declined",
+   "product": "data/analysis/e16_denominator.json"
+  },
+  {
+   "id": "e16.n_unmapped_named",
+   "product": "data/analysis/e16_denominator.json"
+  },
+  {
+   "id": "e16.unmapped_share_named",
+   "product": "data/analysis/e16_denominator.json"
+  }
+ ]
+}

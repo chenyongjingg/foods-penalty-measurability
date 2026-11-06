@@ -1,11 +1,88 @@
 {
- "10.2139/ssrn.3658748": {
-  "title": "Food Safety Regulatory Enforcement in China: A Data-Driven Approach",
-  "container": "SSRN Electronic Journal",
-  "year": "2020",
+ "10.1016/j.foodcont.2020.107516": {
+  "doi": "10.1016/j.foodcont.2020.107516",
+  "ref_number": 1,
+  "title": "A comprehensive review of food fraud terminologies and food fraud mitigation guides",
+  "authors": [
+   "Robson, K.",
+   "Dean, M.",
+   "Haughey, S.",
+   "Elliott, C."
+  ],
+  "container": "Food Control",
+  "short": "Food Control",
+  "year": 2021,
+  "volume": "120",
+  "issue": null,
+  "page": "107516",
+  "article_number": "107516",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.foodcont.2020.107516"
+ },
+ "10.1145/3442188.3445901": {
+  "doi": "10.1145/3442188.3445901",
+  "ref_number": 2,
+  "title": "Measurement and Fairness",
+  "authors": [
+   "Jacobs, A.Z.",
+   "Wallach, H."
+  ],
+  "container": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+  "short": "",
+  "year": 2021,
   "volume": null,
   "issue": null,
+  "page": "375-385",
+  "article_number": null,
+  "type": "proceedings-article",
+  "publisher": "ACM",
+  "url": "https://doi.org/10.1145/3442188.3445901"
+ },
+ "10.1111/j.1750-3841.2011.02417.x": {
+  "doi": "10.1111/j.1750-3841.2011.02417.x",
+  "ref_number": 3,
+  "title": "Defining the Public Health Threat of Food Fraud",
+  "authors": [
+   "Spink, John",
+   "Moyer, Douglas C."
+  ],
+  "container": "Journal of Food Science",
+  "short": null,
+  "year": 2011,
+  "volume": "76",
+  "issue": "9",
   "page": null,
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Wiley",
+  "url": "https://doi.org/10.1111/j.1750-3841.2011.02417.x"
+ },
+ "10.1016/j.jfp.2024.100227": {
+  "doi": "10.1016/j.jfp.2024.100227",
+  "ref_number": 4,
+  "title": "Database of Food Fraud Records: Summary of Data from 1980 to 2022",
+  "authors": [
+   "Everstine, Karen D.",
+   "Chin, Henry B.",
+   "Lopes, Fernando A.",
+   "Moore, Jeffrey C."
+  ],
+  "container": "Journal of Food Protection",
+  "short": null,
+  "year": 2024,
+  "volume": "87",
+  "issue": "3",
+  "page": "100227",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.jfp.2024.100227"
+ },
+ "10.2139/ssrn.3658748": {
+  "doi": "10.2139/ssrn.3658748",
+  "ref_number": 5,
+  "title": "Food Safety Regulatory Enforcement in China: A Data-Driven Approach",
   "authors": [
    "Gao, Qihua",
    "Huang, Yasheng",
@@ -13,36 +90,39 @@
    "Sui, Yuze",
    "Zheng, Yanchong"
   ],
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "url": "https://doi.org/10.2139/ssrn.3658748",
-  "license": false
- },
- "10.18653/v1/2025.justnlp-main.6": {
-  "title": "LLM Driven Legal Text Analytics: A Case Study For Food Safety Violation Cases",
-  "container": "Proceedings of the 1st Workshop on NLP for Empowering Justice (JUST-NLP 2025)",
-  "year": "2025",
+  "container": "SSRN Electronic Journal",
+  "short": null,
+  "year": 2020,
   "volume": null,
   "issue": null,
-  "page": "41-52",
-  "authors": [
-   "Joshi, Suyog",
-   "Basu, Soumyajit",
-   "Dey, Lipika",
-   "Das, Partha Pratim"
-  ],
-  "type": "proceedings-article",
-  "publisher": "Association for Computational Linguistics",
-  "url": "https://doi.org/10.18653/v1/2025.justnlp-main.6",
-  "license": false
+  "page": null,
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.2139/ssrn.3658748"
  },
- "10.4315/0362-028X.JFP-19-457": {
+ "10.1016/j.foodcont.2020.107232": {
+  "doi": "10.1016/j.foodcont.2020.107232",
+  "ref_number": 6,
+  "title": "Application of bayesian network modelling to predict food fraud products from China",
+  "authors": [
+   "Soon, J.M."
+  ],
+  "container": "Food Control",
+  "short": "Food Control",
+  "year": 2020,
+  "volume": "114",
+  "issue": null,
+  "page": "107232",
+  "article_number": "107232",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.foodcont.2020.107232"
+ },
+ "10.4315/0362-028x.jfp-19-457": {
+  "doi": "10.4315/0362-028x.jfp-19-457",
+  "ref_number": 7,
   "title": "Regional Character, Restaurant Size, and Food Safety Risk: Evidence from Food Safety Violation Data in Gansu Province, China",
-  "container": "Journal of Food Protection",
-  "year": "2020",
-  "volume": "83",
-  "issue": "4",
-  "page": "677-685",
   "authors": [
    "Sha, Yongzhong",
    "Song, Xiangrong",
@@ -51,119 +131,77 @@
    "Zhang, Qingxia",
    "Lu, Yao"
   ],
+  "container": "Journal of Food Protection",
+  "short": null,
+  "year": 2020,
+  "volume": "83",
+  "issue": "4",
+  "page": "677-685",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "Elsevier BV",
-  "url": "https://doi.org/10.4315/0362-028x.jfp-19-457",
-  "license": true
+  "url": "https://doi.org/10.4315/0362-028x.jfp-19-457"
  },
  "10.1111/ajae.12484": {
+  "doi": "10.1111/ajae.12484",
+  "ref_number": 8,
   "title": "Regulatory decentralization and food safety: evidence from China",
-  "container": "American Journal of Agricultural Economics",
-  "year": "2024",
-  "volume": "107",
-  "issue": "1",
-  "page": "54-80",
   "authors": [
    "Lin, Wen",
    "Liang, Jiangyuan"
   ],
+  "container": "American Journal of Agricultural Economics",
+  "short": null,
+  "year": 2024,
+  "volume": "107",
+  "issue": "1",
+  "page": "54-80",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "Wiley",
-  "url": "https://doi.org/10.1111/ajae.12484",
-  "license": true
+  "url": "https://doi.org/10.1111/ajae.12484"
  },
  "10.1177/0020852321992110": {
+  "doi": "10.1177/0020852321992110",
+  "ref_number": 9,
   "title": "Governance capacity and regulatory enforcement: street-level organizations in Beijing’s food safety reform",
-  "container": "International Review of Administrative Sciences",
-  "year": "2021",
-  "volume": "87",
-  "issue": "2",
-  "page": "256-274",
   "authors": [
    "Yee, Wai-Hang",
    "Liu, Peng"
   ],
+  "container": "International Review of Administrative Sciences",
+  "short": null,
+  "year": 2021,
+  "volume": "87",
+  "issue": "2",
+  "page": "256-274",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "SAGE Publications",
-  "url": "https://doi.org/10.1177/0020852321992110",
-  "license": true
+  "url": "https://doi.org/10.1177/0020852321992110"
  },
- "10.12677/ds.2022.83056": {
-  "title": "Administrative Penalty Decision Disclosure Limit",
-  "container": "Dispute Settlement",
-  "year": "2022",
-  "volume": "08",
-  "issue": "03",
-  "page": "424-430",
+ "10.1016/j.foodcont.2019.106752": {
+  "doi": "10.1016/j.foodcont.2019.106752",
+  "ref_number": 10,
+  "title": "Food safety governance in China: Change and continuity",
   "authors": [
-   "刘, 文静"
+   "Kang, Y."
   ],
-  "type": "journal-article",
-  "publisher": "Hans Publishers",
-  "url": "https://doi.org/10.12677/ds.2022.83056",
-  "license": false
- },
- "10.1007/s12571-024-01461-0": {
-  "title": "How is food safety regulation implemented? The key role of meso-institutions assessed through a cross-country comparison",
-  "container": "Food Security",
-  "year": "2024",
-  "volume": "16",
-  "issue": "4",
-  "page": "1045-1058",
-  "authors": [
-   "Menard, Claude",
-   "Martino, Gaetano",
-   "de Oliveira, Gustavo Magalhães",
-   "Royer, Annie",
-   "Schnaider, Paula Sarita Bigio",
-   "Saes, Maria Sylvia Macchione"
-  ],
-  "type": "journal-article",
-  "publisher": "Springer Science and Business Media LLC",
-  "url": "https://doi.org/10.1007/s12571-024-01461-0",
-  "license": true
- },
- "10.1111/j.1750-3841.2011.02417.x": {
-  "title": "Defining the Public Health Threat of Food Fraud",
-  "container": "Journal of Food Science",
-  "year": "2011",
-  "volume": "76",
-  "issue": "9",
-  "page": null,
-  "authors": [
-   "Spink, John",
-   "Moyer, Douglas C."
-  ],
-  "type": "journal-article",
-  "publisher": "Wiley",
-  "url": "https://doi.org/10.1111/j.1750-3841.2011.02417.x",
-  "license": null
- },
- "10.1016/j.jfp.2024.100227": {
-  "title": "Database of Food Fraud Records: Summary of Data from 1980 to 2022",
-  "container": "Journal of Food Protection",
-  "year": "2024",
-  "volume": "87",
-  "issue": "3",
-  "page": "100227",
-  "authors": [
-   "Everstine, Karen D.",
-   "Chin, Henry B.",
-   "Lopes, Fernando A.",
-   "Moore, Jeffrey C."
-  ],
+  "container": "Food Control",
+  "short": "Food Control",
+  "year": 2019,
+  "volume": "106",
+  "issue": null,
+  "page": "106752",
+  "article_number": "106752",
   "type": "journal-article",
   "publisher": "Elsevier BV",
-  "url": "https://doi.org/10.1016/j.jfp.2024.100227",
-  "license": null
+  "url": "https://doi.org/10.1016/j.foodcont.2019.106752"
  },
  "10.1016/j.foohum.2026.101354": {
+  "doi": "10.1016/j.foohum.2026.101354",
+  "ref_number": 11,
   "title": "Food safety enforcement in Zimbabwe: Evidence from published judicial decisions and publicly documented enforcement records (1990–2025)",
-  "container": "Food and Humanity",
-  "year": "2026",
-  "volume": "7",
-  "issue": null,
-  "page": "101354",
   "authors": [
    "Macheka, Lesley",
    "Mubaiwa, Juliet",
@@ -173,43 +211,381 @@
    "Ntuli, Victor",
    "Manditsera, Faith Angeline"
   ],
+  "container": "Food and Humanity",
+  "short": null,
+  "year": 2026,
+  "volume": "7",
+  "issue": null,
+  "page": "101354",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "Elsevier BV",
-  "url": "https://doi.org/10.1016/j.foohum.2026.101354",
-  "license": null
+  "url": "https://doi.org/10.1016/j.foohum.2026.101354"
+ },
+ "10.1007/s12571-024-01461-0": {
+  "doi": "10.1007/s12571-024-01461-0",
+  "ref_number": 12,
+  "title": "How is food safety regulation implemented? The key role of meso-institutions assessed through a cross-country comparison",
+  "authors": [
+   "Menard, Claude",
+   "Martino, Gaetano",
+   "de Oliveira, Gustavo Magalhães",
+   "Royer, Annie",
+   "Schnaider, Paula Sarita Bigio",
+   "Saes, Maria Sylvia Macchione"
+  ],
+  "container": "Food Security",
+  "short": null,
+  "year": 2024,
+  "volume": "16",
+  "issue": "4",
+  "page": "1045-1058",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "url": "https://doi.org/10.1007/s12571-024-01461-0"
+ },
+ "10.12677/ds.2022.83056": {
+  "doi": "10.12677/ds.2022.83056",
+  "ref_number": 13,
+  "title": "Administrative Penalty Decision Disclosure Limit",
+  "authors": [
+   "刘, 文静"
+  ],
+  "container": "Dispute Settlement",
+  "short": null,
+  "year": 2022,
+  "volume": "08",
+  "issue": "03",
+  "page": "424-430",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Hans Publishers",
+  "url": "https://doi.org/10.12677/ds.2022.83056"
+ },
+ "10.18653/v1/2025.justnlp-main.6": {
+  "doi": "10.18653/v1/2025.justnlp-main.6",
+  "ref_number": 14,
+  "title": "LLM Driven Legal Text Analytics: A Case Study For Food Safety Violation Cases",
+  "authors": [
+   "Joshi, Suyog",
+   "Basu, Soumyajit",
+   "Dey, Lipika",
+   "Das, Partha Pratim"
+  ],
+  "container": "Proceedings of the 1st Workshop on NLP for Empowering Justice (JUST-NLP 2025)",
+  "short": null,
+  "year": 2025,
+  "volume": null,
+  "issue": null,
+  "page": "41-52",
+  "article_number": null,
+  "type": "proceedings-article",
+  "publisher": "Association for Computational Linguistics",
+  "url": "https://doi.org/10.18653/v1/2025.justnlp-main.6"
+ },
+ "10.1257/jel.20181020": {
+  "doi": "10.1257/jel.20181020",
+  "ref_number": 15,
+  "title": "Text as Data",
+  "authors": [
+   "Gentzkow, M.",
+   "Kelly, B.",
+   "Taddy, M."
+  ],
+  "container": "Journal of Economic Literature",
+  "short": "Journal of Economic Literature",
+  "year": 2019,
+  "volume": "57",
+  "issue": "3",
+  "page": "535-574",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "American Economic Association",
+  "url": "https://doi.org/10.1257/jel.20181020"
+ },
+ "10.1093/pan/mps028": {
+  "doi": "10.1093/pan/mps028",
+  "ref_number": 16,
+  "title": "Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts",
+  "authors": [
+   "Grimmer, J.",
+   "Stewart, B.M."
+  ],
+  "container": "Political Analysis",
+  "short": "Polit. anal.",
+  "year": 2013,
+  "volume": "21",
+  "issue": "3",
+  "page": "267-297",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Cambridge University Press (CUP)",
+  "url": "https://doi.org/10.1093/pan/mps028"
  },
  "10.1057/s41599-025-05834-4": {
+  "doi": "10.1057/s41599-025-05834-4",
+  "ref_number": 17,
   "title": "LLMs as annotators: the effect of party cues on labelling decisions by large language models",
-  "container": "Humanities and Social Sciences Communications",
-  "year": "2025",
-  "volume": "12",
-  "issue": "1",
-  "page": "1530",
   "authors": [
    "Vallejo Vera, Sebastián",
    "Driggers, Hunter"
   ],
+  "container": "Humanities and Social Sciences Communications",
+  "short": null,
+  "year": 2025,
+  "volume": "12",
+  "issue": "1",
+  "page": "1530",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "Springer Science and Business Media LLC",
-  "url": "https://doi.org/10.1057/s41599-025-05834-4",
-  "license": null
+  "url": "https://doi.org/10.1057/s41599-025-05834-4"
  },
  "10.1016/j.tifs.2020.04.002": {
+  "doi": "10.1016/j.tifs.2020.04.002",
+  "ref_number": 18,
   "title": "Food fraud vulnerability assessment: Towards a global consensus on procedures to manage and mitigate food fraud",
-  "container": "Trends in Food Science & Technology",
-  "year": "2020",
-  "volume": "100",
-  "issue": null,
-  "page": "131-137",
   "authors": [
    "Barrere, Virginie",
    "Everstine, Karen",
    "Théolier, Jérémie",
    "Godefroy, Samuel"
   ],
+  "container": "Trends in Food Science & Technology",
+  "short": null,
+  "year": 2020,
+  "volume": "100",
+  "issue": null,
+  "page": "131-137",
+  "article_number": null,
   "type": "journal-article",
   "publisher": "Elsevier BV",
-  "url": "https://doi.org/10.1016/j.tifs.2020.04.002",
-  "license": null
+  "url": "https://doi.org/10.1016/j.tifs.2020.04.002"
+ },
+ "10.1371/journal.pone.0356620": {
+  "doi": "10.1371/journal.pone.0356620",
+  "ref_number": 19,
+  "title": "High-risk food recalls in the United States: Temporal trends and structural characteristics based on FDA enforcement data, 2012–2024",
+  "authors": [
+   "Chen, H.",
+   "Xue, Z.",
+   "Sun, Z.",
+   "Chen, J.",
+   "Xue, Q.",
+   "Han, K."
+  ],
+  "container": "PLOS One",
+  "short": "PLoS One",
+  "year": 2026,
+  "volume": "21",
+  "issue": "8",
+  "page": "e0356620",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Public Library of Science (PLoS)",
+  "url": "https://doi.org/10.1371/journal.pone.0356620"
+ },
+ "10.1007/s11135-021-01164-0": {
+  "doi": "10.1007/s11135-021-01164-0",
+  "ref_number": 20,
+  "title": "Algorithmic thinking in the public interest: navigating technical, legal, and ethical hurdles to web scraping in the social sciences",
+  "authors": [
+   "Luscombe, A.",
+   "Dick, K.",
+   "Walby, K."
+  ],
+  "container": "Quality & Quantity",
+  "short": "Qual Quant",
+  "year": 2021,
+  "volume": "56",
+  "issue": "3",
+  "page": "1023-1044",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "url": "https://doi.org/10.1007/s11135-021-01164-0"
+ },
+ "10.1162/coli_a_00502": {
+  "doi": "10.1162/coli_a_00502",
+  "ref_number": 21,
+  "title": "Can Large Language Models Transform Computational Social Science?",
+  "authors": [
+   "Ziems, C.",
+   "Held, W.",
+   "Shaikh, O.",
+   "Chen, J.",
+   "Zhang, Z.",
+   "Yang, D."
+  ],
+  "container": "Computational Linguistics",
+  "short": "",
+  "year": 2024,
+  "volume": "50",
+  "issue": "1",
+  "page": "237-291",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "MIT Press",
+  "url": "https://doi.org/10.1162/coli_a_00502"
+ },
+ "10.3310/hta11500": {
+  "doi": "10.3310/hta11500",
+  "ref_number": 22,
+  "title": "Evaluation of diagnostic tests when there is no gold standard. A review of methods",
+  "authors": [
+   "Rutjes, A.",
+   "Reitsma, J.",
+   "Coomarasamy, A.",
+   "Khan, K.",
+   "Bossuyt, P."
+  ],
+  "container": "Health Technology Assessment",
+  "short": "Health Technol Assess",
+  "year": 2007,
+  "volume": "11",
+  "issue": "50",
+  "page": null,
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "National Institute for Health and Care Research",
+  "url": "https://doi.org/10.3310/hta11500"
+ },
+ "10.1002/sim.6218": {
+  "doi": "10.1002/sim.6218",
+  "ref_number": 23,
+  "title": "Estimation of diagnostic test accuracy without full verification: a review of latent class methods",
+  "authors": [
+   "Collins, J.",
+   "Huynh, M."
+  ],
+  "container": "Statistics in Medicine",
+  "short": "Statist. Med.",
+  "year": 2014,
+  "volume": "33",
+  "issue": "24",
+  "page": "4141-4169",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Wiley",
+  "url": "https://doi.org/10.1002/sim.6218"
+ },
+ "10.1371/journal.pone.0223832": {
+  "doi": "10.1371/journal.pone.0223832",
+  "ref_number": 24,
+  "title": "Diagnostic test evaluation methodology: A systematic review of methods employed to evaluate diagnostic tests in the absence of gold standard – An update",
+  "authors": [
+   "Umemneku Chikere, C.M.",
+   "Wilson, K.",
+   "Graziadio, S.",
+   "Vale, L.",
+   "Allen, A.J."
+  ],
+  "container": "PLOS ONE",
+  "short": "PLoS ONE",
+  "year": 2019,
+  "volume": "14",
+  "issue": "10",
+  "page": "e0223832",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Public Library of Science (PLoS)",
+  "url": "https://doi.org/10.1371/journal.pone.0223832"
+ },
+ "10.1037/h0031619": {
+  "doi": "10.1037/h0031619",
+  "ref_number": 25,
+  "title": "Measuring nominal scale agreement among many raters.",
+  "authors": [
+   "Fleiss, J.L."
+  ],
+  "container": "Psychological Bulletin",
+  "short": "Psychological Bulletin",
+  "year": 1971,
+  "volume": "76",
+  "issue": "5",
+  "page": "378-382",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "American Psychological Association (APA)",
+  "url": "https://doi.org/10.1037/h0031619"
+ },
+ "10.2307/2529310": {
+  "doi": "10.2307/2529310",
+  "ref_number": 26,
+  "title": "The Measurement of Observer Agreement for Categorical Data",
+  "authors": [
+   "Landis, J.R.",
+   "Koch, G.G."
+  ],
+  "container": "Biometrics",
+  "short": "Biometrics",
+  "year": 1977,
+  "volume": "33",
+  "issue": "1",
+  "page": "159",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "JSTOR",
+  "url": "https://doi.org/10.2307/2529310"
+ },
+ "10.1016/0895-4356(93)90018-v": {
+  "doi": "10.1016/0895-4356(93)90018-v",
+  "ref_number": 27,
+  "title": "Bias, prevalence and kappa",
+  "authors": [
+   "Byrt, T.",
+   "Bishop, J.",
+   "Carlin, J.B."
+  ],
+  "container": "Journal of Clinical Epidemiology",
+  "short": "Journal of Clinical Epidemiology",
+  "year": 1993,
+  "volume": "46",
+  "issue": "5",
+  "page": "423-429",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/0895-4356(93)90018-v"
+ },
+ "10.1073/pnas.1708274114": {
+  "doi": "10.1073/pnas.1708274114",
+  "ref_number": 28,
+  "title": "The preregistration revolution",
+  "authors": [
+   "Nosek, B.A.",
+   "Ebersole, C.R.",
+   "DeHaven, A.C.",
+   "Mellor, D.T."
+  ],
+  "container": "Proceedings of the National Academy of Sciences",
+  "short": "Proc. Natl. Acad. Sci. U.S.A.",
+  "year": 2018,
+  "volume": "115",
+  "issue": "11",
+  "page": "2600-2606",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "National Academy of Sciences",
+  "url": "https://doi.org/10.1073/pnas.1708274114"
+ },
+ "10.1016/j.cortex.2012.12.016": {
+  "doi": "10.1016/j.cortex.2012.12.016",
+  "ref_number": 29,
+  "title": "Registered Reports: A new publishing initiative at Cortex",
+  "authors": [
+   "Chambers, C.D."
+  ],
+  "container": "Cortex",
+  "short": "Cortex",
+  "year": 2013,
+  "volume": "49",
+  "issue": "3",
+  "page": "609-610",
+  "article_number": null,
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "url": "https://doi.org/10.1016/j.cortex.2012.12.016"
  }
 }

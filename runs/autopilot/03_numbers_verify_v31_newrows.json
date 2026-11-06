@@ -1,0 +1,16 @@
+{
+ "sheet": "D:\\Foods\\_verify_root_v31\\numbers.csv",
+ "n_rows": 4,
+ "n_ok": 4,
+ "n_mismatch": 0,
+ "n_unresolved": 0,
+ "n_missing_product": 0,
+ "n_composite": 0,
+ "n_derived_rows": 0,
+ "n_text_product": 0,
+ "text_product_ids": [],
+ "mismatches": [],
+ "unresolved_ids": [],
+ "composite_ids": [],
+ "missing": []
+}

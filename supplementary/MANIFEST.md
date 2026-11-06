@@ -2,11 +2,37 @@
 
 Manuscript: *What Chinese Food-Safety Penalty Records Measure: An Audited Baseline, a Commodity-Term Audit, and an Estimability Ladder*
 Article type: Article (Foods)
-Bundle assembled: 2026-11-05 ｜ **revised 2026-11-05** (see Revision below)
+Bundle assembled: 2026-11-05 ｜ **revised 2026-11-06** (see Revision below)
 
 ## Revision
 
-One file was replaced after assembly: `refs_crossref.json` grew from 3,896 to 6,311
+**2026-11-06 — bundle synchronised with manuscript v3.1.** Three changes, all of them
+synchronisation rather than new analysis:
+
+1. `refs_crossref.json` grew from twelve to **twenty-nine** records, because the v3
+   manuscript cites 29 references and the bundle had registered only the twelve of v2.
+   The seventeen added records were fetched from the Crossref API when the reference
+   list was rewritten, and the twelve existing records were carried over unchanged.
+   Container names and titles are HTML-decoded (`Quality &amp; Quantity` →
+   `Quality & Quantity`), which is how the 2026-11-05 records were already stored and
+   how the manuscript prints them; no other field is altered. The three records that
+   were fetched but are **not** cited (DOIs `10.1007/s00217-019-03341-w`,
+   `10.1126/science.aaz8170`, `10.1073/pnas.2305016120`) are named here rather than
+   shipped, so the registry holds exactly the cited set and nothing else.
+2. `numbers.csv` grew from 584 to **588** rows and `analysis/e16_denominator.json` was
+   added. Both come from the adjudication of the Section 3.4 denominator: E16 produced a
+   name for 896 documents and **declined on 232**, so the 818 documents with no lexicon
+   match are 586 named-but-unmapped plus 232 declines. The manuscript's claim was
+   restated as `586 of the 896 (0.654)`; the four new rows license that restatement
+   (`e16.n_named`, `e16.n_declined`, `e16.n_unmapped_named`,
+   `e16.unmapped_share_named`). The superseded rows `e16.n_unmapped` (818) and
+   `e16.unmapped_share` (0.7252) remain in the sheet and are no longer cited.
+3. The same correction is applied to one sentence below ("818 of 1,128" → "586 of the
+   896, with 232 declines") and to the description of `analysis/e16_preds.jsonl`.
+
+No script, threshold, corpus file or gate verdict changed, and no other number moved.
+
+**2026-11-05 — first revision.** One file was replaced after assembly: `refs_crossref.json` grew from 3,896 to 6,311
 bytes (seven DOIs → twelve; sha `081823a4…` → `0d970111…`) when five references were
 added to the related-work subsection of the manuscript. The added records were fetched
 from the Crossref API on 2026-11-05 and appended; **no existing record was rewritten**.
@@ -27,8 +53,8 @@ ship here.
 | File | Bytes | sha256 | What it is |
 |---|---:|---|---|
 | `DEVIATIONS.md` | 251972 | `11bd5349ca6a3c7cebe3a1aa0e78fe6d18e5227dc663e7349a1b1c5f5e8821c9` | Append-only register. **129 unique entry numbers** (`D-1 … D-131`, with `D-111` and `D-112` existing only as canonical labels assigned by D-110) in **137 headings**. Byte-identical to the register on the compute host at transfer time (`sha256sum` compared, not eyeballed). Numbering irregularity is disclosed in full below. |
-| `numbers.csv` | 120621 | `43255b10d98948a93992beba054ab58fd1f78befbe0f78785b6bc37df39cf896` | Number provenance sheet: **584 rows**. Each row carries `id,value,description,product,field,at_utc,sha256`. Every numeric token in the manuscript body is licensed by a row here or is explicitly structural (section numbers, protocol constants, calendar years). |
-| `refs_crossref.json` | 6311 | `0d970111834274d2b8ff138a6fa4830b279709ee52b3633f5fb566bd046e7ecd` | Crossref records for the **twelve** cited DOIs, retrieved 2026-11-05. The reference list is reprinted from these records, not paraphrased (D-94). Seven records were present at bundle assembly; five were fetched and appended when the related-work subsection was written, and existing records were never rewritten. |
+| `numbers.csv` | 121457 | `68e734bd5583bc70c8281c00886b3d5f3a68ea477542b22acfba7cc20d855e51` | Number provenance sheet: **588 rows**. Each row carries `id,value,description,product,field,at_utc,sha256`. Every numeric token in the manuscript body is licensed by a row here or is explicitly structural (section numbers, protocol constants, calendar years). |
+| `refs_crossref.json` | 16806 | `2b056b0f67d00d84897f26df2aae80f27e747302fdb819121f0730701cd3a4dc` | Crossref records for the **twenty-nine** cited DOIs, retrieved 2026-11-05 (twelve, as v2 shipped them) and at the v3 reference rewrite (seventeen). Keyed by DOI, each record carrying its printed reference number. The reference list is reprinted from these records, not paraphrased (D-94). Seven records were present at bundle assembly, five were appended when the related-work subsection was written, and seventeen when the v3 reference list was built; existing records were never rewritten. Titles and container names are HTML-decoded; no other field is altered. |
 | `analysis/e12_commodity_index.json` | 66971 | `52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e` | Commodity-term presence index over all 1,128 cleaned full texts (D-111, D-113, D-114). Carries the lexicon, per-category counts, the negative control, the orphan-file list and the input shas. |
 | `analysis/e12_precision_sample.json` | 299726 | `85d90fed0b90890e299eb5aabbfa8235ef126ea792f9512f3a016de10f789e55` | The 270-item adjudication sample: 15 documents per category, selected in `sha256(document_id)` order, each with its ±120-character context windows (D-114). |
 | `analysis/e12_commodity_precision.json` | 57959 | `11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8` | Per-hit verdicts (`S`/`I`/`T`/`F`) and the two precision columns with Wilson intervals (D-115). Every verdict appears in the per-hit list, so the counts in Table 3 can be re-derived line by line. |
@@ -37,7 +63,8 @@ ship here.
 | `analysis/e15_validation.json` | 35669 | `5b961f5c27a7b6bce9bd052ffaab8c8bca377519790fcf696b8ca2bbc8567ab9` | Attempt 2 of 3 (D-121, D-122, D-123): eighteen per-category binary questions, document first and question last. 270 items, gate result `not_validated`, with the E13 comparison embedded in the product. |
 | `analysis/e15_preds.jsonl` | 38567 | `027c897510605244899c271a7052c1f7e14f496f885a52ac8ca2843a0d62dd20` | The 270 raw one-character answers behind the E15 row of Table 4. |
 | `analysis/e16_validation.json` | 48993 | `0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e` | Attempt 3 of 3 (D-124, D-125): free-text commodity name, mapped to the 18 categories by the same frozen lexicon. 270 items, gate result `not_validated`. |
-| `analysis/e16_preds.jsonl` | 222828 | `ccd766f1d482d74028064fc1dace2079034ac28faaec5c6219a34d03d1738c77` | One line per document for E16: the extracted name, the lexicon term it matched (if any) and the resulting category. The 818 unmapped rows are the evidence for the binding-failure claim in Section 3.4. |
+| `analysis/e16_preds.jsonl` | 222828 | `ccd766f1d482d74028064fc1dace2079034ac28faaec5c6219a34d03d1738c77` | One line per document for E16: the extracted name, the lexicon term it matched (if any) and the resulting category. The 818 rows with no category are the evidence for the binding-failure claim in Section 3.4: 586 rows name a commodity that the lexicon cannot bind, and 232 rows are the model declining (the literal `无`). |
+| `analysis/e16_denominator.json` | 588 | `c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff` | Recomputation of the E16 denominator from `analysis/e16_preds.jsonl` (input sha `ccd766f1…`, `at_utc` 2026-11-06T00:29:01Z): 896 named, 232 declined, 586 of the 896 unmapped (0.6540), 310 mapped, with the identity `586 + 232 = 818`. Source of the Section 3.4 restatement. The frozen validation product's `n_empty_extraction = 0` counts empty strings only — a decline is the literal `无`, not an empty string, which is why the two counts do not contradict. |
 | `analysis/e11c_three_coder.json` | 2233 | `24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4` | Three-reader reliability for the violation typology: Fleiss' κ, the three pairwise agreements with Wilson intervals, and the pre-registered verdict (D-102, D-106). |
 | `analysis/e11c_decomposition.json` | 1836 | `cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0` | Abstention decomposition of the pairwise agreements: how many agreements are both-readers-`OTHER`, the substantive rate that remains, and each reader's `OTHER` share (D-106). |
 | `analysis/table1_coarse_by_food.json` | 4004 | `6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3` | The coarse-violation × food-category crosstab (at 2026-11-05T04:22:13Z), with the frozen mappings it was built from and the document-level totals. Source of Supplementary Table S1. |
@@ -49,14 +76,14 @@ ship here.
 | `scripts/e16_extract_commodity.py` | 10318 | `a4d9e2262f9c020eb03e6da6f90dcf9f6ec278239f6a97e9d198dd4aa0e1938f` | E16's instrument (`criterion_register = "D-124"`). Imports the system prompt from `e13_commodity_subject.py` rather than copying it, so the prompt cannot drift between attempts. |
 | `analysis/e17_segmentation.json` | 5460 | `9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3` | Segmentation sensitivity (D-127, D-129): the same lexicon under a token-boundary rule, both directions. R0 reproduces the frozen counts exactly (the script aborts if it does not); per-category losses and gains, and the 270-item 2×2 with the verdicts of the items each rule loses. |
 | `scripts/e17_segmentation.py` | 7340 | `bed9011849d2ffbe9bd24a773445cdd61194c4b1cc1671b1a7a718befd0cea26` | E17's instrument (`criterion_register = "D-127"`). Segments each document once and tests all 18 term lists against the same token boundary set; imports jieba from `/opt/foods/third_party` so the project venv is untouched. |
-| `scripts/verify_numbers.py` | 4968 | `e2ab8acf32ea2e886ec4d4a38ad752f9678dfade6665b22e18edf5d29ff9c96e` | Machine re-derivation of every `numbers.csv` row from the product and JSON path it names (D-128 stage 3): **584 rows, 534 re-derived and equal, 0 mismatches**; the remainder are 27 unresolvable composite paths, 11 serialised tables, 2 rows pointing at the register itself (a text product, not resolvable and not a failure) and 10 derived arithmetic rows. |
+| `scripts/verify_numbers.py` | 4968 | `e2ab8acf32ea2e886ec4d4a38ad752f9678dfade6665b22e18edf5d29ff9c96e` | Machine re-derivation of every `numbers.csv` row from the product and JSON path it names (D-128 stage 3): **588 rows, 538 re-derived and equal, 0 mismatches**; the remainder are 27 unresolvable composite paths, 11 serialised tables, 2 rows pointing at the register itself (a text product, not resolvable and not a failure) and 10 derived arithmetic rows. The 538 are 534 rows re-derived against the frozen corpus products plus the 4 rows that point at `analysis/e16_denominator.json`, which is part of this bundle. |
 | `scripts/autopilot.sh` | 3499 | `e5ca89046c31bf5874d50d10c0c95ab2c7a61553130fddab55afc8126fe964ba` | The unattended pipeline (D-128): preflight, E17, provenance verification, receipt, then heartbeat and a vLLM watchdog that restarts the server only after three consecutive failed health checks. |
 
 The frozen corpus itself (1128 records, sha256
 `a1deda2c57ccf5eeb2cf3b27782d30087747dfa208264f9b2ec68dcd7b4a077e`), the derived
 metrics, and the pipeline source are distributed as the separate release bundle
 `foods_silver_20261105` (built 2026-11-05T03:57:03Z; 25 files, verified **25/25** by
-`sha256sum -c` after transfer). The thirteen `analysis/` products and eight `scripts/` here
+`sha256sum -c` after transfer). The fourteen `analysis/` products and eight `scripts/` here
 post-date that bundle (produced 07:50–08:46Z) and are therefore shipped with this
 supplementary material rather than inside it.
 
@@ -65,8 +92,8 @@ supplementary material rather than inside it.
 ```sh
 sha256sum -c <<'EOF'
 11bd5349ca6a3c7cebe3a1aa0e78fe6d18e5227dc663e7349a1b1c5f5e8821c9  DEVIATIONS.md
-43255b10d98948a93992beba054ab58fd1f78befbe0f78785b6bc37df39cf896  numbers.csv
-0d970111834274d2b8ff138a6fa4830b279709ee52b3633f5fb566bd046e7ecd  refs_crossref.json
+68e734bd5583bc70c8281c00886b3d5f3a68ea477542b22acfba7cc20d855e51  numbers.csv
+2b056b0f67d00d84897f26df2aae80f27e747302fdb819121f0730701cd3a4dc  refs_crossref.json
 52e3ca41db38102da29c15bdb8190fd351b1db12a73c6e6e2b54f2c5e16a5c2e  analysis/e12_commodity_index.json
 85d90fed0b90890e299eb5aabbfa8235ef126ea792f9512f3a016de10f789e55  analysis/e12_precision_sample.json
 11108382db41aac741bf121c9376e88732dc977f947251c2072c6e017ed77ff8  analysis/e12_commodity_precision.json
@@ -76,6 +103,7 @@ fc60b4fa7245d90e331eef1356cfde62d6b56834e72192ca91df91d06098dcf7  analysis/e13_c
 027c897510605244899c271a7052c1f7e14f496f885a52ac8ca2843a0d62dd20  analysis/e15_preds.jsonl
 0e560f5ae95a1c41e3170fca832e0515ef8c6bd3823c1a3b45693b118a34ae4e  analysis/e16_validation.json
 ccd766f1d482d74028064fc1dace2079034ac28faaec5c6219a34d03d1738c77  analysis/e16_preds.jsonl
+c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff  analysis/e16_denominator.json
 24da181906e149f781c8729e119e51cea69cfaefdc7deb3b2d0e69f62bb763f4  analysis/e11c_three_coder.json
 cf836f4c928d6ab1568648aa446ae53fde519b165c25a528dfffc3161ae135d0  analysis/e11c_decomposition.json
 6ba11dc8309f3d386e7bf0aea97214f79b3c606697db7ecb386b7c47c2b043a3  analysis/table1_coarse_by_food.json
@@ -165,8 +193,8 @@ numbers numerically rather than by counting headings.
   and 0.75 (D-123, D-125). The gate was never moved. The comparison across constructs is
   the substantive part: converting the forced choice into per-category binaries raised
   sensitivity from 0.4423 to 0.6346 while specificity stayed near 0.85, and free-text
-  extraction failed instead at the binding step (818 of 1,128 extracted names contain no
-  lexicon term). **No share, coverage or "X% of cases about food C" statement may be
+  extraction failed instead at the binding step (586 of the 896 names E16 produced contain
+  no lexicon term; on a further 232 documents it declined outright). **No share, coverage or "X% of cases about food C" statement may be
   derived from these files.** The manual fallback that D-121 and D-124 had held in
   reserve was cancelled by D-126 before any zero-hit document was read: a single reader
   on a task where three readers reached Fleiss' κ 0.0881 would produce a number whose

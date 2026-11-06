@@ -583,3 +583,7 @@ e17.subject_prec_R1,0.3966,R1 下的 subject 精确率,data/analysis/e17_segment
 e17.lost_docs,201,逐类合计的文档层面损失（派生，18 类相加）,data/analysis/e17_segmentation.json,sum(per_category.lost_docs),2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
 e17.delta_subject_prec,0.0114,E17 相对 E12 的 subject 精确率变化（派生）,data/analysis/e17_segmentation.json,0.3966-0.3852,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
 e17.fish_lost,52,R1 下词条「鱼」丢失的篇数（被并进草鱼/鱿鱼等词）,data/analysis/e17_segmentation.json,per_category.5.terms_lost,2026-11-05T08:43:50Z,9f5432ccdcf3036cf577d8c8e3a5e17f9c830230820ddaac30482ad36afae5e3
+e16.n_named,896,E16 写出商品名的篇数（phrase != 无）,data/analysis/e16_denominator.json,n_named,2026-11-06T00:29:01Z,c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff
+e16.n_declined,232,E16 拒答篇数（phrase == 无）,data/analysis/e16_denominator.json,n_declined,2026-11-06T00:29:01Z,c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff
+e16.n_unmapped_named,586,E16 写出名称但无词表命中的篇数,data/analysis/e16_denominator.json,n_unmapped_of_named,2026-11-06T00:29:01Z,c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff
+e16.unmapped_share_named,0.6540178571428571,E16 写出名称者中的未映射份额（派生）,data/analysis/e16_denominator.json,share_unmapped_of_named,2026-11-06T00:29:01Z,c250ae5014c478c8b075d189fe61d713c6f147e95f686c9374cafba31131c6ff

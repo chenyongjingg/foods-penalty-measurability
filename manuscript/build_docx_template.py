@@ -45,8 +45,10 @@ from docx.shared import Inches
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 TEMPLATE = ROOT / "foods-template.dot"
-SRC = HERE / "manuscript_submission.md"
-OUT = HERE / "manuscript_submission.docx"
+# Defaults reproduce the v1 build; a v2 build passes its own source and output so the
+# archived v1 artefact is never overwritten.
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "manuscript_submission.md"
+OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else HERE / "manuscript_submission.docx"
 FIG = HERE / "figure1_estimability.png"
 
 # text width of the template's page (twips): A4 minus its 0.5 in side margins.
@@ -90,7 +92,13 @@ def read_source() -> dict:
     affiliation = next(l for l in fm if l.startswith("^1^"))
     correspondence = next(l for l in fm if l.startswith("\\*"))
     article = next(l for l in fm if l.startswith("**Article type:**"))
-    for probe in ("Public Security University", "ppsuc.edu.cn", "Article"):
+    # "Article type: Brief Report (Foods)" -> the template slot wants just "Brief Report";
+    # the journal name in parentheses is a note to us, not part of the printed line.
+    article_type = re.sub(r"\s*\((?:Foods)\)\s*$", "",
+                          article.replace("**Article type:**", "").strip()).strip()
+    if not article_type:
+        raise SystemExit("empty article type")
+    for probe in ("Public Security University", "ppsuc.edu.cn", "Article type"):
         if probe not in " ".join(fm):
             raise SystemExit(f"front matter no longer contains {probe!r}")
 
@@ -114,6 +122,7 @@ def read_source() -> dict:
 
     return dict(title=title, authors=authors, affiliation=affiliation,
                 correspondence=correspondence, article=article,
+                article_type=article_type,
                 abstract=abstract, keywords=kw_line[len("**Keywords:**"):].strip(),
                 body=body, statements=statements, references=references)
 
@@ -337,6 +346,30 @@ def add_figure(doc, caption: str, image: Path) -> None:
     para(doc, "MDPI_5.1_figure_caption", caption)
 
 
+def disable_numbering(par) -> None:
+    """Turn off list numbering for one paragraph, keeping its style.
+
+    `MDPI_8.1_references` carries `numPr numId=23`, so a paragraph in that style
+    consumes a number from Word's counter. The italic source note above the reference
+    list is in the same style and was therefore taking number 1, which is why the
+    first numbered entry rendered as "2. 1. Gao …". numId 0 is the OOXML way to say
+    "this paragraph belongs to no list". Inserted after pStyle to keep schema order.
+    """
+    pPr = par._p.get_or_add_pPr()
+    numPr = OxmlElement("w:numPr")
+    ilvl = OxmlElement("w:ilvl")
+    ilvl.set(qn("w:val"), "0")
+    numId = OxmlElement("w:numId")
+    numId.set(qn("w:val"), "0")
+    numPr.append(ilvl)
+    numPr.append(numId)
+    style = pPr.find(qn("w:pStyle"))
+    if style is not None:
+        style.addnext(numPr)
+    else:
+        pPr.insert(0, numPr)
+
+
 # ----------------------------------------------------------------------------- main
 
 def main() -> int:
@@ -362,7 +395,7 @@ def main() -> int:
             body.remove(child)
 
     # ---- front matter -----------------------------------------------------
-    para(doc, "MDPI_1.1_article_type", "Article")
+    para(doc, "MDPI_1.1_article_type", src["article_type"])
     para(doc, "MDPI_1.2_title", src["title"])
 
     p = doc.add_paragraph(style="MDPI_1.3_authornames")
@@ -406,9 +439,19 @@ def main() -> int:
             raise SystemExit(f"unknown block {kind}")
 
     # ---- back matter ------------------------------------------------------
-    for line in src["statements"]:
-        s = line.strip()
+    st = src["statements"]
+    i = 0
+    while i < len(st):
+        s = st[i].strip()
         if not s or s == "---":
+            i += 1
+            continue
+        if s.startswith("|"):                 # a table inside the back matter (CRediT)
+            rows = []
+            while i < len(st) and st[i].strip().startswith("|"):
+                rows.append(st[i].strip())
+                i += 1
+            add_table(doc, rows)
             continue
         m = re.match(r"\*\*(.+?):\*\*\s*(.*)$", s, re.S)
         if not m:
@@ -416,15 +459,28 @@ def main() -> int:
         p = doc.add_paragraph(style="MDPI_6.2_back_matter")
         p.add_run(m.group(1) + ":").bold = True
         add_runs(p, " " + m.group(2))
+        i += 1
 
     # ---- references -------------------------------------------------------
+    # The list style numbers itself (%1. in abstractNum 6), so the literal "1." that
+    # markdown needs for the PDF must not be written into the Word file as well.
     para(doc, "MDPI_2.1_heading1", "References")
+    ref_no = 0
     for line in src["references"]:
         s = line.strip()
         if not s or s == "---":
             continue
+        m = re.match(r"^(\d+)\.\s+(.*)$", s)
+        if not m:
+            p = doc.add_paragraph(style="MDPI_8.1_references")
+            disable_numbering(p)              # the source note takes no list number
+            add_paragraph_text(p, s)
+            continue
+        ref_no += 1
+        if int(m.group(1)) != ref_no:
+            raise SystemExit(f"reference numbering not contiguous at {m.group(1)}")
         p = doc.add_paragraph(style="MDPI_8.1_references")
-        add_paragraph_text(p, s)
+        add_paragraph_text(p, m.group(2))
 
     body.insert(list(body).index(sectPr), disclaimer)
 
