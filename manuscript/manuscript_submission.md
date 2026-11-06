@@ -310,7 +310,7 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 
 **Informed Consent Statement:** Not applicable.
 
-**Data Availability Statement:** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included.
+**Data Availability Statement:** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included. The analysis code, the frozen products, the provenance sheet and the pre-registration register are archived at https://github.com/chenyongjingg/foods-penalty-measurability, where a single command re-verifies every shipped file against its recorded sha256.
 
 **Conflicts of Interest:** The authors declare no conflict of interest.
 
