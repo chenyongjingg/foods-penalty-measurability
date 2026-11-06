@@ -416,3 +416,22 @@ Discussion 整章 999 → **810** 词（−189，−18.9%），优先删去复�
 - **不做**：不写「first」类首创断言、不引未经核实的期刊指标、不承诺录用。
 - **交付两份**：`cover_letter.md` 4,263 B `4268dc87…`（存档）；`cover_letter_paste.txt` 4,236 B `50d1e4e8…`
   （**粘文本框用**：去 markdown 标记、段内不硬换行，避免 `statute-` 这类断字）。
+
+## Statements 补两段（2026-11-06 深夜，投稿声明页前置）
+
+- **缘起**：MDPI 提交页三个必填项（GenAI、Published materials、Funding）与稿件 Statements 不一致之处须先消灭。
+- **改动 1 — Use of Generative AI（新增，置于 Conflicts of Interest 之后）**：披露 LLM 助手（Claude, Anthropic）
+  用于撰写/修改正文、编写与修订分析与构建脚本、组装补充包与公开仓库；并写明全部作者复核、每个数字由脚本
+  对 `numbers.csv` 重验、作者承担全部责任；并区分「§2.3 的语言模型标注层是研究方法，不是写作工具」。
+- **改动 2 — Funding**：原行只有项目名 + `25CSH113`，**无基金机构名**；补为
+  「funded by the National Social Science Fund of China (Youth Project), grant number 25CSH113,
+  under the project 数据黑产"韧性"…」。
+  ★**机构名的核实过程**：nopss.gov.cn 可访问但 2025 年度项目立项名单不在通知公告/资料下载/重大专项分类页；
+  `xm.npopss-cn.cn` 项目查询需登录；百度/搜狗 302、360 与 Bing RSS（含 site: 检索）对 `25CSH113` 与项目名
+  均无命中；本地 D:\Foods、D:\MIR、D:\CAAI、D:\CIS 全盘 grep 只有项目标题与编号。**机构名由作者确认后写入，
+  非由我推断**（编号 25CSH113 的构型只是旁证）。
+- **未改动**：COI 仍为 no conflict（系统里同样选 No）；正文数字零变动。
+- **新指纹**：md 62,662 B `8ac6707e…`；docx 425,739 B `6476aefd…`（425,479 → 425,739）。
+- **四检**：check_numbers 488/0；check_docx_template 0 失败（grant number present 仍通过）；
+  sweep_4b none；v3_metrics 7,200 / 199 / 15-15（Statements 不计入正文词数）。
+- **仓库**：已同步 `manuscript/manuscript_submission.md/.docx` 并推送 `212170d`。
