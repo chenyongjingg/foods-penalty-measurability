@@ -304,7 +304,7 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 
 **Author Contributions:** Conceptualization, Y.C. and S.Z.; data curation, Y.C. and C.Y.; formal analysis, Y.C. and C.Y.; funding acquisition, S.Z.; investigation, Y.C., Z.X. and X.W.; methodology, Y.C., C.Y. and X.W.; project administration, S.Z.; resources, S.Z.; software, Y.C. and X.W.; supervision, S.Z.; validation, Z.X. and X.W.; visualization, Z.X.; writing—original draft preparation, Y.C.; writing—review and editing, Y.C., C.Y., Z.X., X.W. and S.Z. All authors have read and agreed to the published version of the manuscript.
 
-**Funding:** This research was funded by 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market), grant number 25CSH113.
+**Funding:** This research was funded by the National Social Science Fund of China (Youth Project), grant number 25CSH113, under the project 数据黑产“韧性”生成机制及治理对策研究 (Research on the Generation Mechanisms of and Governance Countermeasures for the “Resilience” of the Data Black Market).
 
 **Institutional Review Board Statement:** Not applicable. The study analyses administrative documents published by government agencies; it involves no human participants, human material or animals. The three readers described in Section 2.6 are members of the research team; they coded documents that the publishing agencies had already made public, and no personal information was collected from them or about any individual named in the corpus.
 
@@ -313,6 +313,8 @@ Pre-registered criterion: a gain of 3 points or more in anchor macro-F1 on the c
 **Data Availability Statement:** The frozen corpus is released as a content-addressed document index (sha256 `a1deda2c…`), in which each record carries the agency, publication date and identifier needed to retrieve the document from the publishing portal; the source PDFs themselves are not redistributed. The corpus contains only documents published by government agencies; no personal data beyond what the publishing agency disclosed is included. The analysis code, the frozen products, the provenance sheet and the pre-registration register are archived at https://github.com/chenyongjingg/foods-penalty-measurability, where a single command re-verifies every shipped file against its recorded sha256.
 
 **Conflicts of Interest:** The authors declare no conflict of interest.
+
+**Use of Generative AI:** The authors used a large-language-model assistant (Claude, Anthropic) during the preparation of this manuscript: for drafting and editing prose, for writing and revising the analysis and build scripts, and for assembling the supplementary bundle and the public repository. All authors reviewed and edited the content, and every reported number was re-verified by script against the provenance sheet that licenses it. The authors take full responsibility for the content of the manuscript. The language-model annotation layer described in Section 2.3 is part of the study's method, not a tool used to write the text.
 
 ---
 

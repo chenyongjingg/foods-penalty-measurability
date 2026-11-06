@@ -387,3 +387,32 @@ Discussion 整章 999 → **810** 词（−189，−18.9%），优先删去复�
 - **终值**：md `0f2b2b3d…` 61,684 B；docx `40d69160…` 425,384 B；阅读版 PDF 16 页 `6e9365cd…`。
 - **四检**：check_numbers 488/0；check_docx_template 0 失败；sweep_4b none；v3_metrics 7,200 / 199 / 15-15。
 - ★没有任何数字变动：数字多重集与 v3.1 完全一致（`0.654`/`586`/`896` 在，`0.7252`/`818` 不在）。
+
+## 图形摘要副标题纠错（2026-11-06 深夜，投稿页面前）
+
+- **发现路径**：为上传生成 2048×1024 RGB 合规副本后**目视复核**原图，见副标题
+  「An estimability audit of 1,128 Chinese food-safety administrative decisions」。
+- **证伪**：`corpus_counts.json`（sha `ed3ad7c9…`，2026-11-05T04:22:43Z）记
+  `silver.n = 1128`、`by_lang.zh = 875`、`by_lang.en = 253` ⇒ 该 1,128 篇**不是**「Chinese decisions」，
+  其中 253 篇为 openFDA 美国召回记录（`e6_descriptive.json` 亦记 `excluded_non_cn = 253`）。
+  正文摘要与 §2 一直是「1,128 documents (875 Chinese decisions, 253 US recalls)」，图形摘要与之不一致。
+- **改动**：副标题 →「An estimability audit of 1,128 documents: 875 Chinese penalty decisions,
+  253 US recall records」；页脚 `a1deda2c… (n = 1,128)` 保留（sha 与 n 本就同源同值）。
+- **影响面**：仅图形摘要，**正文/表格/numbers.csv 一个数都没动**；未重建 docx。
+- **新指纹**：`graphical_abstract.png` 196,217 B `69ba8533…`；
+  上传用合规副本 `graphical_abstract_2048.png` 368,015 B `0b0cde13…`（2048×1024、RGB、白底）。
+- **教训**：图注里的「语料构成」与正文一样是**可被证伪的陈述**，必须回产品核；目视复核非装饰步骤。
+
+## 投稿信重写（2026-11-06 深夜，降桌拒风险）
+
+- **结构**：开头补「Article + Food Quality and Safety 分栏」→ 新增 **Fit with the journal** 段（把研究问题
+  挂到本刊 scope：执法/召回文本里的"食品维度"；并说明语料为何取中国、结论如何外推）→ **Three contributions**
+  三段（审计后基线 / 品类审计 / 可估计性阶梯）→ **Checkability**（588 行溯源表、偏离登记、产物随稿）→
+  **Funding and its boundary**（明说不测 resilience）→ **Declarations**。
+- **降险理由**：桌拒最常见的两条是 in-scope 与 unverifiable；前者用 scope 段正面回答，后者用可核查段回答。
+- **数字零新增**：机器核过信内每个数值 token 均在 `numbers.csv` 有行（0.7460 / 0.7825 / 0.4195 / 14 / 50 /
+  18 / 679 / 270 / 0.9296 / 0.3852 / 0.4885 / 0.7390 / 1,128 / 875 / 253）；`588` 是溯源表自身行数、
+  `25CSH113` 与邮箱为结构串。
+- **不做**：不写「first」类首创断言、不引未经核实的期刊指标、不承诺录用。
+- **交付两份**：`cover_letter.md` 4,263 B `4268dc87…`（存档）；`cover_letter_paste.txt` 4,236 B `50d1e4e8…`
+  （**粘文本框用**：去 markdown 标记、段内不硬换行，避免 `statute-` 这类断字）。
