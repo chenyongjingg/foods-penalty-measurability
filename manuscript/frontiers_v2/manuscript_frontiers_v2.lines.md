@@ -23,10 +23,10 @@ Ziying Xue^1^, Yongjin Chen^2^ and Songze Zhu^2^,\*
 ^2^ School of Police Administration, People’s Public Security University of China, Beijing, China
 
 <!-- L 4-4 -->
-E-mail addresses: 15620821066@163.com (Z.X.); 202420610006@stu.ppsuc.edu.cn (Y.C.)
+E-mail addresses: 15620821066@163.com (Z.X.); 3337851329@qq.com (Y.C.)
 
 <!-- L 5-5 -->
-\* Correspondence: Songze Zhu, 20196846@ppsuc.edu.cn
+\* Correspondence: Songze Zhu, 18513826980@163.com
 
 ---
 

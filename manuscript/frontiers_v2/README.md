@@ -39,8 +39,11 @@ failure, so they can be used in CI as they stand.
 
 ## What the gates actually assert
 
-- **C1** every numeric token in the v1 body survives in v2. The only permitted losses are the
-  local parts of the two removed authors' e-mail addresses, and each one is printed by name.
+- **C1** every numeric token in the v1 body survives in v2. The only permitted losses are four
+  e-mail local parts, listed by name rather than matched by a pattern: the two removed authors'
+  addresses, and the two addresses the surviving authors replaced on 2026-11-11. Each exemption
+  must still occur exactly once in v1 as the local part of an address; anything else is a lost
+  number. The two new tokens the replacement introduced are printed for review.
 - **C2** Tables 1–4 are byte-identical to v1 (1,634 / 678 / 1,285 / 419 characters).
 - **C4** abstract ≤ 250 words with all 15 mandated numbers.
 - **C9/D5** no single numeric token is wider than the column it sits in at 9 pt.
@@ -69,9 +72,15 @@ values, and the four tables are byte-identical.
 Prose only. The Discussion's four aphoristic openers now start from their own numbers; two of
 them were rewritten a second time because the first rewrite reproduced Methods and Results
 **verbatim**; and three sentences tie the audit to public-health surveillance. No numeric
-token, table cell, p-value or interval changed — C1 (258 tokens, the same two e-mail
+token, table cell, p-value or interval changed — C1 (258 tokens, four named e-mail
 exemptions) and C2 (four tables byte-identical) are the proof. Word reports 19 pages and
 8,847 words.
+
+**Author e-mail change (2026-11-11, on instruction).** Yongjin Chen's address became
+`3337851329@qq.com` and the corresponding author's became `18513826980@163.com`. This is the
+only edit to the file that touches a digit outside prose: the two old local parts leave the
+body, the two new ones enter it, and both are printed by the gate. §7.10 of
+`CHANGES_frontiers_v2.md` records it.
 
 Three of the four instructed deletions were **not** carried out as written, because
 measurement contradicted their premise; §7.1 of `CHANGES_frontiers_v2.md` records each with

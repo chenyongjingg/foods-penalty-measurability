@@ -67,18 +67,26 @@ def main() -> int:
 
     # ---- C1 -------------------------------------------------------------
     s1, s2 = set(tokens(b1)), set(tokens(b2))
-    # A token may leave the body only if the object that carried it was deleted on
-    # instruction: it must occur exactly once in v1 and that occurrence must be the
-    # local part of a PPSUC e-mail address. This is how the two removed authors'
-    # addresses (X.W. 202321440020, C.Y. 2024111033) drop out; nothing else can.
+    # A token may leave the body only if the thing that carried it was removed on
+    # instruction. The list is named rather than patterned: a general "it looked
+    # like an e-mail address" rule would also swallow a real number that happened
+    # to sit in one. Each entry must still occur exactly once in v1, as the local
+    # part of an address, or it is not exempt.
+    EMAIL_EXEMPT = {
+        "202321440020": "Xiyuan Wang, author removed",
+        "2024111033": "Chenrui Yang, author removed",
+        "202420610006": "Yongjin Chen, address replaced 2026-11-11",
+        "20196846": "Songze Zhu, address replaced 2026-11-11",
+    }
     exempted = [tok for tok in sorted(s1 - s2)
-                if re.fullmatch(r"\d{9,12}", tok) and t1.count(tok) == 1
-                and f"{tok}@stu.ppsuc.edu.cn" in t1]
+                if tok in EMAIL_EXEMPT and t1.count(tok) == 1
+                and re.search(rf"(?<![\w.]){re.escape(tok)}@", t1)]
     gone = sorted(s1 - s2 - set(exempted))
     extra = sorted(s2 - s1)
     print(f"C1 number freeze : v1 {len(s1)} distinct tokens, v2 {len(s2)}")
     if exempted:
-        print("   exempt (removed authors' e-mail local parts):", " | ".join(exempted))
+        print("   exempt (e-mail local parts, once in v1):",
+              " | ".join(f"{t} ({EMAIL_EXEMPT[t]})" for t in exempted))
     if gone:
         print("   LOST VALUES:", " | ".join(gone))
         fails.append(f"C1 {len(gone)} lost")
@@ -163,8 +171,10 @@ def main() -> int:
     dept_ok = all(re.search(r"\^%s\^ %s, People’s Public Security University of China" % (k, v), t2)
                   for k, v in AFFIL.items())
     email_ok = all(s in t2 for s in ("15620821066@163.com (Z.X.)",
-                                     "202420610006@stu.ppsuc.edu.cn (Y.C.)")) and \
-        not any(s in t2 for s in ("(C.Y.)", "(X.W.)", "Chenrui", "Xiyuan"))
+                                     "3337851329@qq.com (Y.C.)",
+                                     "Correspondence: Songze Zhu, 18513826980@163.com")) and \
+        not any(s in t2 for s in ("(C.Y.)", "(X.W.)", "Chenrui", "Xiyuan",
+                                  "202420610006", "20196846"))
     credit_ok = ("Z.X. curated the data, performed the formal analysis, wrote the software and "
                  "prepared the original draft" in t2) and "All three authors" in t2 \
         and "designed its method (methodology)" in t2

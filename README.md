@@ -141,11 +141,13 @@ Manuscript **v3.1** (2026-11-06): 7,200 words of prose, 199-word abstract, 29 re
 retargeted to *Frontiers in Public Health* (Original Research) and laid out on the publisher's
 Word template. Three authors (Chenrui Yang and Xiyuan Wang were removed on instruction),
 237-word abstract, tables at the end of the manuscript, 19 pages and 8,847 words. The
-numeric-token freeze holds at 258 of the 260 tokens the previous build carried; the two
-absent ones are the local parts of the removed authors' e-mail addresses, and the gate prints
-both by name. `check_v2.py` and `check_docx_v2.py` in that folder re-verify both layers.
-The 2026-11-11 pre-submission polish changed prose only: §7 of that folder's change log
-records every edit, and C2 shows the four tables still byte-identical.
+numeric-token freeze: 256 of the 260 tokens the previous build carried survive, and the four
+that do not are e-mail local parts — two from the removed authors, two superseded when the
+surviving authors' addresses were changed on instruction — each printed by name. Two new
+local parts entered with the change, leaving 258 distinct tokens in v2. `check_v2.py` and
+`check_docx_v2.py` in that folder re-verify both layers. The 2026-11-11 pre-submission polish
+changed prose only: §7 of that folder's change log records every edit, and C2 shows the four
+tables still byte-identical.
 
 ## Citation
 
@@ -171,5 +173,5 @@ not redistributed here.
 ## Contact
 
 Songze Zhu (corresponding author), People's Public Security University of China —
-20196846@ppsuc.edu.cn. Issues and pull requests about reproducibility are welcome; if a number
+18513826980@163.com. Issues and pull requests about reproducibility are welcome; if a number
 here does not re-derive, that is a defect in this repository, not a matter of interpretation.
