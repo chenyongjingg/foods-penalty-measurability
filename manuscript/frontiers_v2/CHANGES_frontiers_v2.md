@@ -463,7 +463,7 @@ Word 导出：`pages 19  words 8847  chars 48601`。PDF 文本断言：含 `1 In
 | `line_map_v2.py` | **新增**，行号映射（五点锚定校准，偏移不唯一即中止） |
 | `build_docx_template_v2.py` | 表 1 列宽 2.30→2.50；节编号钉到段落级 `numPr` |
 | `check_docx_v2.py` | 新增 D11（行号连续 + 1–6 编号） |
-| `COVER_LETTER.md` | 重写，194 词，并写明投 `Public Health Policy` 版块 |
-| `COVER_LETTER.docx` | **新增**，投稿用 Word 版（Times New Roman 12 pt，Letter 页面，1 in 边距，1 页 199 词；由 `build_cover_letter_docx.py` 从 `.md` 生成，措辞不在两处各写一遍） |
+| `COVER_LETTER.md` | 重写，正文 206 词（含落款 227 词），写明投 `Public Health Policy` 版块；第二段删去 `1,128`（`875 + 253` 已隐含），第三段末补一句把每条统计量系到产物文件与 sha256 |
+| `COVER_LETTER.docx` | **新增**，投稿用 Word 版（Times New Roman 12 pt，Letter 页面，1 in 边距，1 页；由 `build_cover_letter_docx.py` 从 `.md` 生成，措辞不在两处各写一遍；落款三行是一个段落内的换行，不是三个段落，避免出现段落间距） |
 | `AI_TELLS_RESIDUAL.md` | **新增**，残余 AI 痕迹实测清单（由 `ai_tells_v2.py` 生成） |
 

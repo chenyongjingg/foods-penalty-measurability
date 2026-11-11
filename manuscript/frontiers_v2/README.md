@@ -24,7 +24,7 @@ failure, so they can be used in CI as they stand.
 | `figure1_estimability.pdf` | Figure 1 as a standalone **vector** file (4 font objects, no raster objects) |
 | `figure1_estimability.png` | Figure 1 as a raster file for systems that will not take a PDF (2,280 × 1,950 px) |
 | `manuscript_frontiers_v2.lines.md` | the same text with `<!-- L n-m -->` markers giving the line numbers each block occupies in the docx |
-| `COVER_LETTER.md` | cover letter, 194 words, naming the Public Health Policy section |
+| `COVER_LETTER.md` | cover letter, 206 words of body text, naming the Public Health Policy section |
 | `COVER_LETTER.docx` | the same letter as a Word file for upload: Times New Roman 12 pt, Letter page, 1 in margins, one page |
 | `CHANGES_frontiers_v2.md` | the change log: every edit with its measured effect, including the edits that turned out to be no-ops |
 | `SHA256SUMS` | digests of every file in this folder except this list itself |

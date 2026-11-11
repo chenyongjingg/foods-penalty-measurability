@@ -50,14 +50,14 @@ def smart(text: str) -> str:
 
 def main() -> int:
     paras = [p.strip() for p in SRC.read_text(encoding="utf-8").split("\n\n") if p.strip()]
-    # A closing name is not a paragraph of prose; keep it tight against the
-    # sign-off rather than after a full blank line.
-    blocks: list[tuple[str, int]] = []
-    for p in paras:
-        lines = [l for l in p.split("\n") if l.strip()]
-        for i, line in enumerate(lines):
-            after = 12 if not (line.startswith("Sincerely") or i > 0) else 0
-            blocks.append((line, after))
+    # A block separated by a blank line is one Word paragraph; a single newline
+    # inside a block is a line break within it. The signature block depends on
+    # this: name, affiliation and "on behalf of" must sit tight, while the
+    # blank line after "Sincerely," keeps the gap a signature needs.
+    blocks: list[tuple[list[str], int]] = []
+    for i, p in enumerate(paras):
+        lines = [l.strip() for l in p.split("\n") if l.strip()]
+        blocks.append((lines, 12 if i < len(paras) - 1 else 0))
 
     d = docx.Document()
     s = d.sections[0]
@@ -72,12 +72,17 @@ def main() -> int:
     pf.space_before = Pt(0)
     pf.line_spacing = 1.0
 
-    for text, after in blocks:
-        p = d.add_paragraph(smart(text))
+    for lines, after in blocks:
+        p = d.add_paragraph()
+        for i, line in enumerate(lines):
+            run = p.add_run(smart(line))
+            if i < len(lines) - 1:
+                run.add_break()
         p.paragraph_format.space_after = Pt(after)
 
     d.save(str(OUT))
-    words = len(re.findall(r"[A-Za-z][A-Za-z’'\-]*", SRC.read_text(encoding="utf-8")))
+    src = SRC.read_text(encoding="utf-8")
+    words = len(re.findall(r"[A-Za-z][A-Za-z’'\-]*", src))
     print(f"wrote {OUT.name}: {len(blocks)} paragraphs, source {words} words")
     return 0
 
