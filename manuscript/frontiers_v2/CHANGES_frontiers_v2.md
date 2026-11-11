@@ -378,19 +378,19 @@ manuscript_frontiers_v2.docx  pages 19  words 8740  chars 48087
 
 1. **图 1 独立矢量件**：`figure1_estimability.pdf`（34,091 B，`%PDF-1.4`，**0 个位图对象 / 4 个字体对象**，MediaBox 547.2×468 pt）已放入本目录；正文保留 Caption 样式的图题。docx 内的位图仍是 2280×1950 px、印制宽 6.60 in ⇒ 345 dpi。
 2. **表 1 路径断行**：成因实测——该串 9 pt Times 下宽 **2.20 in**，单元格左右默认内边距各 0.08 in，列宽 2.30 in 只剩 2.14 in 可用 ⇒ Word 在 `jso` 与 `n` 之间断开。列宽 2.30 → **2.50**（0.20 从相邻说明列让出，总宽仍 6.79）。Word 实测：11 个产品路径单元格现在**全部 1 行**。
-3. **表 3 Tea 0.8667**：确认不加粗正确。加粗的四格是 0.1333（Condiments）、0.0667（Health food）、0.9333（Soy）、0.0667（FSDU）——即正文点名讨论的四类。**表格本身没有给加粗的图例**，加一句会破坏 C2（表 1–4 与 v1 逐字节相同），故未改，列入 §7.8。
+3. **表 3 的加粗**：加粗的四格是 0.1333（Condiments）、0.0667（Health food）、0.9333（Soy）、0.0667（FSDU）——正文点名讨论的四类；Tea 的 0.8667 未加粗是对的。原稿没有给加粗的图例，正文明明写着"Three rows are not commodity spectra and are bold"却有**四行**加粗，两处互相矛盾。**作者拍板后已改**：题注加一句 `Bold marks the total row and the four subject-matter precisions the text quotes.`，正文那句删去 `and are bold` 并去掉三个类别序号 `(15) (16) (18)`（它们是 `e12_commodity_precision.json` 的键，不是样本量，紧挨着 `15 sampled` 会被读成计数）。**C2 只比对表体**（`table_block()` 取的是 `|` 行），题注改动不影响表 1–4 的逐字节断言。
 4. **缩写**：CI 首现（Results §commodity）展开、OR 首现（Results §cross-genre）展开、TPR/TNR 在表 4 题注定义；κ 的展开与出处写在 Results §"Human readers"（比"无需定义"更强）。四项**已合规，未改**。
 5. **行号**：Word 实测 `LineNumbering.Active = -1`、`RestartMode = 0`（continuous），全篇连续；新增 **D11** 断言该属性与"带编号的 Heading 1 恰为 1–6"。
-6. **词数**：Word `ComputeStatistics(0)` = **8,840**（上限 12,000）；正文口径（C5）7,324。
+6. **词数**：Word `ComputeStatistics(0)` = **8,847**（上限 12,000）；正文口径（C5）7,328。
 7. **节编号**：模板 Heading 1 引用 `numId 17`，而 pandoc 写出的 `numbering.xml` 里 num 17 **存在但样式级引用缺 `ilvl`**，Word 对这种引用不渲染——直接改样式无效。修法是把 `ilvl/numId` 钉在**段落**上：六个实质章节 → `numId 17`，其余十个（Appendix A、七条声明、References、Tables）→ `numId 0`。PDF 实测：`1 Introduction` … `6 Conclusion` 在，`7 Appendix` / `8 Ethics` / `16 Tables` 不在。
 
 ### 7.6 数字与长度（改前 → 改后）
 
 | 量 | 改前 | 改后 | 说明 |
 |---|---|---|---|
-| Word 词数 | 8,740 | **8,840** | +100，来自 §7.3 的三句、长句拆分与 §7.2 的两处去重 |
+| Word 词数 | 8,740 | **8,847** | +107，来自 §7.3 的三句、§7.2 的两处去重、表 3 题注的加粗图例 |
 | Word 页数 | 19 | **19** | 不变 |
-| C5 正文词数 | 7,220 | **7,318** | +98；对 v1 的降幅由 9.6% 变为 8.3% |
+| C5 正文词数 | 7,220 | **7,328** | +108；对 v1 的降幅由 9.6% 变为 8.2% |
 | 摘要词数 | 237 | **237** | 未动 |
 | C1 数值 token | 258 | **258** | 新增的每个数字都取自稿内已有值，token 集合未扩张 |
 | 表 1–4 | 1,634 / 678 / 1,285 / 419 字符 | 同左，逐字节相同 | C2 全绿 |
@@ -409,8 +409,8 @@ C2 Table 3       : PASS byte-identical (1285 vs 1285 chars)
 C2 Table 4       : PASS byte-identical (419 vs 419 chars)
 C3 anchors       : PASS (11/11)
 C4 abstract      : 237 words (limit 250), 4/4 sub-headings, 15/15 mandated numbers
-C5 length        : v1 7984 -> v2 7318 words (8.3% below), limit 12,000 -> PASS
-   15% trim target: NOT MET (8.3%)
+C5 length        : v1 7984 -> v2 7328 words (8.2% below), limit 12,000 -> PASS
+   15% trim target: NOT MET (8.2%)
 C6 cross-refs    : PASS none
 C7 citations     : 29 distinct, first-appearance ordered PASS, list entries 29 PASS
 C8 authorship    : order PASS, departments PASS, emails PASS, CRediT draft to Z.X. PASS
@@ -439,26 +439,30 @@ D11 numbering    : line numbers continuous, numbered sections 6 of 16 PASS 1-6
 RESULT: ALL CHECKS PASS
 ```
 
-Word 导出：`pages 19  words 8840  chars 48555`。PDF 文本断言：含 `1 Introduction` / `3.1 Agreement` / `6 Conclusion`，不含 `7 Appendix` / `8 Ethics` / `16 Tables`。
+Word 导出：`pages 19  words 8847  chars 48601`。PDF 文本断言：含 `1 Introduction` / `3.1 Agreement` / `6 Conclusion`，不含 `7 Appendix` / `8 Ethics` / `16 Tables`。
 
-### 7.8 待人工裁决（三项，均未擅自改）
+### 7.8 作者拍板的三项（2026-11-11，均由作者授权决定）
 
-1. **表 3 的加粗没有图例。** 四个加粗单元格对应正文讨论的四类（Condiments 0.1333、Health food 0.0667、Soy 0.9333、FSDU 0.0667），但表格题注与表体都没说加粗表示什么。补一句题注会改 C2 的字节；删掉加粗同样会改。**需要作者一句授权**，二选一。
-2. **Methods 有一句 93 词**（`Each hit was read in a ±120-character window…`），是判定协议的四段枚举。拆开会让协议读起来像四条独立规定，故保留。**建议保留**，但若审稿人提"句子过长"，这是唯一需要动的地方。
-3. **`Three …` 排比 15 处、`rather than` 26 处**（实测）。前者集中在 Results 的"三构念／三读者／三粒度"，是真实的三项设计，不是修辞凑数；后者的每一次都带着被否掉的那一项的内容。逐条判据见 `AI_TELLS_RESIDUAL.md`，供人工抽查，**不建议机械削减**。
+1. **表 3 的加粗**：**改题注，不动表体**。题注加 `Bold marks the total row and the four subject-matter precisions the text quotes.`；同时删去正文里与之矛盾的 `and are bold` 和三个类别序号 `(15) (16) (18)`。理由是原文一句话同时声称"三行加粗"而实际四行加粗，且三个序号是 JSON 的键、紧挨 `15 sampled` 会被读成样本量。C2 只比对 `|` 行，题注改动不影响表 1–4 的逐字节断言（改后实测 C2 四项仍 PASS）。
+2. **Methods 那句 93 词的判定协议**：**保留**。它是一条规则的四段，拆开会读成四条独立规定。若审稿人点名，这是全稿唯一需要动的地方。
+3. **`Three …` 15 处 / `rather than` 26 处**：**不削减**。`AI_TELLS_RESIDUAL.md` 逐条给了判据：15 处落在七个真实的三项设计上，26 处中 20 处带着被否掉那一项的内容、6 处是立场压缩；机械削减会让句子失去与通行做法的区分。
+
+### 7.8.1 投稿版块：Frontiers in Public Health — **Public Health Policy**
+
+选定 **Public Health Policy**。依据：本稿的对象是**行政执法文书与召回记录**（制定法映射、处罚条款、执法机构），不是营养学结局；三条结论的出口是监测表与政策简报（§7.3 新增的三句正是这样写的）。未选 `Public Health and Nutrition`：该版块要求膳食或营养结局，而本稿不测任何健康结局；未选 `Digital Public Health`：LLM 在这里只是工具，抽掉它审计结论不变，把它当卖点会误导审稿人。若编辑建议转投 `Public Health and Nutrition`（食物安全在该版块同样在范围内），迁移成本为零——稿件没有按版块定制的格式要求。
 
 ### 7.9 本轮新增/改动的文件
 
 | 文件 | 变化 |
 |---|---|
 | `manuscript_frontiers_v2.src.md` | 工作源稿（本轮全部文字改动的落点） |
-| `manuscript_frontiers_v2.docx` | 重建：19 页 / 8,840 词 |
+| `manuscript_frontiers_v2.docx` | 重建：19 页 / 8,847 词（表 3 题注定稿后） |
 | `manuscript_frontiers_v2.pdf` | 重建（Word 导出） |
 | `manuscript_frontiers_v2.lines.md` | **新增**，带 `<!-- L n-m -->` 行号标记（150 块映射，8 块无标记：封面 5 行 + 图行 + 表行） |
 | `figure1_estimability.pdf` | **新增**，矢量图件，34,091 B `f671dc68…` |
 | `line_map_v2.py` | **新增**，行号映射（五点锚定校准，偏移不唯一即中止） |
 | `build_docx_template_v2.py` | 表 1 列宽 2.30→2.50；节编号钉到段落级 `numPr` |
 | `check_docx_v2.py` | 新增 D11（行号连续 + 1–6 编号） |
-| `COVER_LETTER.md` | 重写，193 词 |
+| `COVER_LETTER.md` | 重写，194 词，并写明投 `Public Health Policy` 版块 |
 | `AI_TELLS_RESIDUAL.md` | **新增**，残余 AI 痕迹实测清单（由 `ai_tells_v2.py` 生成） |
 

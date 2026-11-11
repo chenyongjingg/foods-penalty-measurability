@@ -24,7 +24,7 @@ failure, so they can be used in CI as they stand.
 | `figure1_estimability.pdf` | Figure 1 as a standalone **vector** file (4 font objects, no raster objects) |
 | `figure1_estimability.png` | Figure 1 as a raster file for systems that will not take a PDF (2,280 × 1,950 px) |
 | `manuscript_frontiers_v2.lines.md` | the same text with `<!-- L n-m -->` markers giving the line numbers each block occupies in the docx |
-| `COVER_LETTER.md` | cover letter, 193 words |
+| `COVER_LETTER.md` | cover letter, 194 words, naming the Public Health Policy section |
 | `CHANGES_frontiers_v2.md` | the change log: every edit with its measured effect, including the edits that turned out to be no-ops |
 | `SHA256SUMS` | digests of every file in this folder except this list itself |
 | `AI_TELLS_RESIDUAL.md` | measured residual AI-writing patterns, each with the judgement made for it, for a human to overrule |
@@ -69,7 +69,7 @@ them were rewritten a second time because the first rewrite reproduced Methods a
 **verbatim**; and three sentences tie the audit to public-health surveillance. No numeric
 token, table cell, p-value or interval changed — C1 (258 tokens, the same two e-mail
 exemptions) and C2 (four tables byte-identical) are the proof. Word reports 19 pages and
-8,840 words.
+8,847 words.
 
 Three of the four instructed deletions were **not** carried out as written, because
 measurement contradicted their premise; §7.1 of `CHANGES_frontiers_v2.md` records each with

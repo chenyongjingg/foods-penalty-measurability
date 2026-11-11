@@ -1,6 +1,6 @@
 Dear Editors,
 
-We submit "What Administrative Penalty Documents Measure: A Validation Audit of Food-Safety Enforcement Data in China" as an Original Research article.
+We submit "What Administrative Penalty Documents Measure: A Validation Audit of Food-Safety Enforcement Data in China" as an Original Research article for the Public Health Policy section.
 
 Chinese administrative penalty decisions are the most abundant machine-readable record of food-safety enforcement, and studies count them without establishing what they measure. We audited the record as an instrument on a frozen corpus of 1,128 documents: 875 Chinese penalty decisions and 253 US recall records.
 

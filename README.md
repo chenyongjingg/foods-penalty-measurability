@@ -140,7 +140,7 @@ Manuscript **v3.1** (2026-11-06): 7,200 words of prose, 199-word abstract, 29 re
 **Current submission build (2026-11-11)**: `manuscript/frontiers_v2/` — the same study,
 retargeted to *Frontiers in Public Health* (Original Research) and laid out on the publisher's
 Word template. Three authors (Chenrui Yang and Xiyuan Wang were removed on instruction),
-237-word abstract, tables at the end of the manuscript, 19 pages and 8,840 words. The
+237-word abstract, tables at the end of the manuscript, 19 pages and 8,847 words. The
 numeric-token freeze holds at 258 of the 260 tokens the previous build carried; the two
 absent ones are the local parts of the removed authors' e-mail addresses, and the gate prints
 both by name. `check_v2.py` and `check_docx_v2.py` in that folder re-verify both layers.

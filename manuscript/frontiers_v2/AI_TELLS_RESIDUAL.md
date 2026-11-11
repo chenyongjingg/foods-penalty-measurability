@@ -1,6 +1,6 @@
 # 残余 AI 腔实测清单（Frontiers v2）
 
-- 源稿：`manuscript_frontiers_v2.src.md`，53,399 B，sha256 `8a8afcdd10426ec6…`
+- 源稿：`manuscript_frontiers_v2.src.md`，53,452 B，sha256 `809714d1211c9a18…`
 - 生成：`ai_tells_v2.py`。**计数可复现，判定不可复现**——判定逐条写在下面，供人推翻。
 - 范围：去掉 YAML、表格行、参考文献行、HTML 注释后的正文；标题与题注计入。
 
@@ -15,7 +15,7 @@
 | `pre-registered` | 3 | 从 8 处减到 3 处（摘要、Appendix A、表 4 题注）；其余 5 处改为 `registered in advance` 等表述 |
 | 破折号 `—` | 2 | 均在**表 2 的两个单元格**内（2 处），正文 0 处 |
 | 连字符号 `–` | 17 | 全部为数值区间或复合名词（2019–2024、0.8927–0.9545、1–2 类、behaviour–hazard），保留 |
-| 句首 `The` | 96 / 341 句（28%） | 偏高但非可机械修的病：英文测量学论文的主体就是"这个量"，换主语会变成被动堆叠。**仅在本轮改写的四段里主动换了主语** |
+| 句首 `The` | 96 / 342 句（28%） | 偏高但非可机械修的病：英文测量学论文的主体就是"这个量"，换主语会变成被动堆叠。**仅在本轮改写的四段里主动换了主语** |
 | >40 词的长句 | 27 | 逐条见 §4；其中 3 条是题注（2 条的表体受 C2 冻结），1 条是已知最长的判定协议句 |
 
 ## 2　`Three …` 的 15 处（按指向归类）
@@ -47,8 +47,8 @@
 | 行 | 词数 | 类型 | 开头 | 判定 |
 |---|---|---|---|---|
 | 86 | 93 | 正文 | Each hit was read in a ±120-character window, and in the ful… | **已知最长**：判定协议四段枚举，拆开会读成四条独立规定 |
-| 128 | 91 | 题注 | Three rows are not commodity spectra and are bold: condime… | **表 3 题注**（C2 冻结，不得改） |
 | 48 | 87 | 正文 | Three things come out: a provenance arrangement in which eve… | **本轮新增**：三项贡献的前置句；冒号后是三件事，可拆成两句 |
+| 128 | 85 | 题注 | Three rows are not commodity spectra: condiments, health f… | **表 3 题注**（C2 冻结，不得改） |
 | 246 | 58 | 正文 | The bundle supplementary_20261106.zip (twenty-six product … | 提交件清单，路径与计数 |
 | 92 | 56 | 正文 | Fleiss’ κ (chance-corrected agreement) {fleiss1971} is the p… | κ 的出处与切点惯例 |
 | 120 | 55 | 正文 | The 19 false matches are not one phenomenon: seven are place… | 19 个假匹配的分类，七/五/七 |
