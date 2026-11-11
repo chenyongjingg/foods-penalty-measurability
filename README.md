@@ -2,9 +2,10 @@
 
 **What can a national food-safety penalty record actually measure?** This repository is the
 instrument audit, the frozen products and the append-only pre-registration register behind a
-manuscript submitted to *Foods* (MDPI). It is built so that every claim in the paper can be
-re-derived from a file here, and so that the claims that **could not** be established are
-shipped as visibly as the ones that were.
+manuscript prepared for *Foods* (MDPI), now retargeted to *Frontiers in Public Health*
+(Original Research). It is built so that every claim in the paper can be re-derived from a
+file here, and so that the claims that **could not** be established are shipped as visibly as
+the ones that were.
 
 [![verify](https://github.com/chenyongjingg/foods-penalty-measurability/actions/workflows/verify.yml/badge.svg)](https://github.com/chenyongjingg/foods-penalty-measurability/actions/workflows/verify.yml)
 ![license](https://img.shields.io/badge/license-MIT%20(code)%20%2B%20CC%20BY%204.0%20(text%2Fdata)-blue)
@@ -147,9 +148,14 @@ Word template. Three authors (Chenrui Yang and Xiyuan Wang were removed on instr
 `CITATION.cff` is the machine-readable form. Until the article is published, cite this
 repository:
 
-> Chen, Y.; Yang, C.; Xue, Z.; Wang, X.; Zhu, S. *foods-penalty-measurability: instrument
-> audit, products and pre-registration register for a measurement audit of Chinese food-safety
-> penalty records* (v3.1). 2026. https://github.com/chenyongjingg/foods-penalty-measurability
+> Xue, Z.; Chen, Y.; Zhu, S. *foods-penalty-measurability: instrument audit, products and
+> pre-registration register for a measurement audit of Chinese food-safety penalty records*
+> (v3.2). 2026. https://github.com/chenyongjingg/foods-penalty-measurability
+
+The v3.1 release, which carried five authors, is what commit `f1c5a1e` describes; the
+five-author citation for it is preserved in that commit's `CITATION.cff` and in the v3.1
+manuscript under `manuscript/`, which is left exactly as it was. Nothing in this repository
+was deleted to change authorship: the earlier release remains readable at its own commit.
 
 ## License
 

@@ -9,19 +9,15 @@ abstract: >-
   and the three axes (prevalence, trend, case-chain structure) that the record cannot
   support, each with the measurement that shows why.
 authors:
-  - family-names: "Chen"
-    given-names: "Yongjin"
-  - family-names: "Yang"
-    given-names: "Chenrui"
   - family-names: "Xue"
     given-names: "Ziying"
-  - family-names: "Wang"
-    given-names: "Xiyuan"
+  - family-names: "Chen"
+    given-names: "Yongjin"
   - family-names: "Zhu"
     given-names: "Songze"
 type: software
-version: "3.1.0"
-date-released: "2026-11-06"
+version: "3.2.0"
+date-released: "2026-11-11"
 license: MIT
 repository-code: "https://github.com/chenyongjingg/foods-penalty-measurability"
 keywords:
