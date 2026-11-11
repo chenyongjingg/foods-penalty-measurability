@@ -74,6 +74,7 @@ is therefore reported as **instrument output, not as an estimate of the underlyi
 | path | what it is |
 |---|---|
 | `manuscript/` | `manuscript_submission.md` (the submission source, v3.1) and the built `.docx`; the estimability-ladder figure; the three adjudication records behind the current revision (`CONFLICT_REVIEW_v3.md`, `HUMAN_DECISIONS_v3.md`, `EDIT_LOG_v3.md`) |
+| `manuscript/frontiers_v2/` | the current submission build: Frontiers template, three authors, tables at the end, with its own gates and `SHA256SUMS` (see the README there) |
 | `supplementary/` | the 26 files shipped with the paper plus `MANIFEST.md`, which lists each file with its sha256 and a self-checking verification block (26/26) |
 | `numbers.csv` | provenance sheet: **588 rows**, each naming the product file, the JSON path inside it, the UTC timestamp and the product's sha256 |
 | `DEVIATIONS.md` | the append-only register, D-1 … D-131 (129 distinct numbers in 137 headings; collisions are disclosed and adjudicated in D-104 and D-110) |
@@ -134,6 +135,12 @@ markdown's sha and by the template checker, not by the docx hash.**
 Manuscript **v3.1** (2026-11-06): 7,200 words of prose, 199-word abstract, 29 references,
 588-row provenance sheet, 26 shipped supplementary files. Prepared for submission to *Foods*
 (MDPI) as an Article. The register and the adjudication records are append-only.
+
+**Current submission build (2026-11-11)**: `manuscript/frontiers_v2/` — the same study,
+retargeted to *Frontiers in Public Health* (Original Research) and laid out on the publisher's
+Word template. Three authors (Chenrui Yang and Xiyuan Wang were removed on instruction),
+237-word abstract, tables at the end of the manuscript, all 260 numeric tokens preserved.
+`check_v2.py` and `check_docx_v2.py` in that folder re-verify both layers.
 
 ## Citation
 
