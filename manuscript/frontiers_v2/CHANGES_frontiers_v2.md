@@ -314,3 +314,151 @@ manuscript_frontiers_v2.docx  pages 19  words 8740  chars 48087
 ```
 
 两版版式不同（v1 为 Word 默认 Letter + 1.5 倍行距，v2 为模板 Letter + 单倍行距），**页数差不可当压缩量**；版式无关的读数只有词数：−7.5%。
+
+---
+
+## 7　投稿前最后精修（2026-11-11 第三轮：去 AI 腔 · 公卫口径 · 文献重合 · 格式终检）
+
+本节记录本轮改动。§1–§6 是同一份稿子上一轮（模板改造）的记录，其闸门输出反映的是那一轮的构建；本轮输出见 §7.7。
+
+### 7.1 四条指令与实测不符之处（三条按原文执行会伤到结果）
+
+| 请求条目 | 实测 | 实际处置 |
+|---|---|---|
+| 删 `"instrument output rather than an estimate"` | 正文 **0 次**。最近的实体是 Limitations 的 `records what that layer produced and not a validated estimate`（1 次）；另一处在**图 1 位图内部**的烤死文字，不是正文 | 不删不存在的短语。真正的重复是 `instrument` 一词（现 10 次）；逐处判定均为同一构念的一致指称，保留 |
+| 删 `"reliability is not accuracy"` | 正文 **1 次**（Introduction 第 3 段，全文唯一的定义处）；另 1 次在表 1 冻结单元格 | 保留。删掉它，`reliability` 与 `accuracy` 的分野在正文里就没有落点 |
+| 删第 3 次及以后的 `"pre-registered"` | 正文 8 处 | 保留 3 处（摘要 L28 的做法声明、Appendix A L218 的判据句、表 4 题注 L308，后者受 C2 冻结），其余 5 处改为 `registered in advance` / `fixed in advance` / `the registered comparison` / `the quantity the criterion fixed`——**事实全部保留，只去掉标签** |
+| 删第 3 个 `"14 of 50"` | 3 次：摘要、Methods、Results。**Results 那一处是负对照的结果陈述本身** | 删 Methods 那一处，改写为「0.28 在两个粒度上同值；条件于规则已判定的部分为 14 of 32（0.4375），18 件弃判全是分歧」。14 / 32 / 0.4375 / 18 / 50 全部在位，C1 不受影响 |
+
+另两条前提也不成立：**图 1 不是截图**（仓库里已有矢量 PDF，见 §7.5）；**表 1 的 `jso n` 是 Word 断行**，源文本一直是完整的 `data/analysis/e12_commodity_precision.json`。
+
+### 7.2 阶段一：Discussion / Limitations 去 AI 腔
+
+四处格言式开场均已换成从数字起句。四句受保护的"人味"原句一字未动。
+
+| 位置 | 原开场 | 新开场 | 新增可见的数字（均取自稿内已有值） |
+|---|---|---|---|
+| Discussion 第 2 段 | `An audited instrument is usable at whatever reliability it has…` | `Two-channel agreement is 0.7460 over the 1,128 documents…` | 0.7460 / 1,128 / 423 / 0.7825 / 0.2693 / 0.4195 |
+| Discussion 第 3 段 | `The commodity dimension is measurable and mostly not what it looks like.` | `A lexicon any research group could write in an afternoon matches 679 of the 1,128 documents.`（保护句逐字保留，改为段首） | 679 / 1,128 / 0.9296 / 0.3852 / 0.0667 |
+| Discussion 第 4 段 | `The commodity role is not recoverable by asking a general model nicely.` | `All three constructs failed the same gate; the best missed κ = 0.60 by 0.1115…` | 0.60 / 0.1115 / 0.75 / 0.0110（原值） |
+| Discussion 第 5 段 | `Human agreement is not a formality.` | `The three readers produced Fleiss' κ 0.0881 over the same 80 documents…` | 80 / 0.0881 / 0.8000 |
+
+- **逐字重复**：改写稿最初让这两段以 `Three constructs registered in advance…` / `Three readers coded the same 80 documents…` 起句，与 Methods 的 L92、Results 的 L132 **一字不差**——这是全稿最硬的两处重复。最终改为 `All three constructs…` / `The three readers…`，两句都不再与别处同形。
+
+- **合段**：`An audited instrument…` 与 `Two-channel agreement on its own…` 实测**已在同一段**，无需并段；该段的问题是"两个开场"，改写后只剩一个。
+- **`since` 逐处**：8 处全部为真实因果（无一处误用为时间义），仅把 Discussion 第 4 段的两处改写成直接陈述（`Format mattered: sensitivity rose 0.1923…` / `The mapping step mattered too: 586 of the 896 names…`）。
+- **`which is why`**：1 处（Discussion 末段），因与果都带内容，保留。
+- **长句**：Discussion 与 Limitations 现无 >40 词句（实测最长 40 词）；本轮另拆了 Conclusion 首句与新增句（42 → 两段）。Methods 仍有一句 93 词（`Each hit was read in a ±120-character window…`），是判定协议的四段枚举，**未动，列入 §7.8**。
+
+### 7.3 阶段二：public-health 口径（三句）
+
+1. Introduction 末段首句前加：`Public-health surveillance that draws on these records inherits their limits, so what the text can measure is settled before a number enters a trend table or a policy brief.`
+2. Discussion 比较段末加：`Any jurisdiction building a food-category table from enforcement or recall text should run the same audit before the table is used, because a table of mentions and a table of subject matter support different conclusions.`
+3. Conclusion 末加：`The protocol behind this audit can be reused as it stands. The gate is fixed before the first call, agreement is reported with its negative control beside it, and commodity precision is reported separately for what a document is about and what it merely mentions.`
+
+`public health` 一词在正文的出现次数：0 → 3（含关键词行）。全稿未使用 `novel contribution` 一类兜售语。
+
+### 7.4 阶段三：文献重合与核源
+
+- **Discussion 比较段压缩**：{barrere2020} / {menard2024} / {macheka2026} 三处逐一描写的复述，压成一句构造对比；完整评述留在 Introduction 第 4 段。三处引用编号（[18] / [12] / [11]）位置未变，`0 of 253` 保留。
+- **核源结果**（逐条对摘要，不是对题名）：
+
+| 引文 | 稿件原句 | 核源结论 | 处置 |
+|---|---|---|---|
+| {joshi2025} | `782 Indian food-violation judgments from 2022–2024` | ACL Anthology `2025.justnlp-main.6` 摘要逐字为 "782 Indian food safety violation cases filed between 2022-2024" | 保留 |
+| {robson2021} | `terminologies and populations that differ from study to study` | 摘要只支持"定义/术语因研究者和监管机构而异"，未提 population | 改为 `its terminologies differ between studies and regulators` |
+| {barrere2020} | `European food-fraud vulnerability assessment…` | 摘要无"欧洲"这一限定 | 压缩时删去 `European` |
+| {everstine2024} | `a four-decade curated database` | 题名 "Summary of Data from 1980 to 2022"；摘要 "covering 1980-present" | 保留 |
+| {chen2026} | `a source already used to analyse recall severity` | 摘要以 Class I 召回为高风险的严重度结局（2012–2024） | 保留 |
+| {macheka2026}、{menard2024} | 全国图景 / 中观制度跨国比较 | Semantic Scholar 无摘要，只能核到题名 | 保留，**列入"仅题名可核"** |
+
+- **关键词**：`estimability` → `public health surveillance`（仍 6 个）。不另加 `measurement validity`——`construct validity` 已在列，两者在本稿里指同一件事。
+
+### 7.5 阶段四：格式与技术终检
+
+1. **图 1 独立矢量件**：`figure1_estimability.pdf`（34,091 B，`%PDF-1.4`，**0 个位图对象 / 4 个字体对象**，MediaBox 547.2×468 pt）已放入本目录；正文保留 Caption 样式的图题。docx 内的位图仍是 2280×1950 px、印制宽 6.60 in ⇒ 345 dpi。
+2. **表 1 路径断行**：成因实测——该串 9 pt Times 下宽 **2.20 in**，单元格左右默认内边距各 0.08 in，列宽 2.30 in 只剩 2.14 in 可用 ⇒ Word 在 `jso` 与 `n` 之间断开。列宽 2.30 → **2.50**（0.20 从相邻说明列让出，总宽仍 6.79）。Word 实测：11 个产品路径单元格现在**全部 1 行**。
+3. **表 3 Tea 0.8667**：确认不加粗正确。加粗的四格是 0.1333（Condiments）、0.0667（Health food）、0.9333（Soy）、0.0667（FSDU）——即正文点名讨论的四类。**表格本身没有给加粗的图例**，加一句会破坏 C2（表 1–4 与 v1 逐字节相同），故未改，列入 §7.8。
+4. **缩写**：CI 首现（Results §commodity）展开、OR 首现（Results §cross-genre）展开、TPR/TNR 在表 4 题注定义；κ 的展开与出处写在 Results §"Human readers"（比"无需定义"更强）。四项**已合规，未改**。
+5. **行号**：Word 实测 `LineNumbering.Active = -1`、`RestartMode = 0`（continuous），全篇连续；新增 **D11** 断言该属性与"带编号的 Heading 1 恰为 1–6"。
+6. **词数**：Word `ComputeStatistics(0)` = **8,840**（上限 12,000）；正文口径（C5）7,324。
+7. **节编号**：模板 Heading 1 引用 `numId 17`，而 pandoc 写出的 `numbering.xml` 里 num 17 **存在但样式级引用缺 `ilvl`**，Word 对这种引用不渲染——直接改样式无效。修法是把 `ilvl/numId` 钉在**段落**上：六个实质章节 → `numId 17`，其余十个（Appendix A、七条声明、References、Tables）→ `numId 0`。PDF 实测：`1 Introduction` … `6 Conclusion` 在，`7 Appendix` / `8 Ethics` / `16 Tables` 不在。
+
+### 7.6 数字与长度（改前 → 改后）
+
+| 量 | 改前 | 改后 | 说明 |
+|---|---|---|---|
+| Word 词数 | 8,740 | **8,840** | +100，来自 §7.3 的三句、长句拆分与 §7.2 的两处去重 |
+| Word 页数 | 19 | **19** | 不变 |
+| C5 正文词数 | 7,220 | **7,318** | +98；对 v1 的降幅由 9.6% 变为 8.3% |
+| 摘要词数 | 237 | **237** | 未动 |
+| C1 数值 token | 258 | **258** | 新增的每个数字都取自稿内已有值，token 集合未扩张 |
+| 表 1–4 | 1,634 / 678 / 1,285 / 419 字符 | 同左，逐字节相同 | C2 全绿 |
+
+### 7.7 本轮闸门输出
+
+`python check_v2.py`（源稿闸门，逐字）：
+
+```
+C1 number freeze : v1 260 distinct tokens, v2 258
+   exempt (removed authors' e-mail local parts): 202321440020 | 2024111033
+   PASS - no numeric token from v1 is absent from v2
+C2 Table 1       : PASS byte-identical (1634 vs 1634 chars)
+C2 Table 2       : PASS byte-identical (678 vs 678 chars)
+C2 Table 3       : PASS byte-identical (1285 vs 1285 chars)
+C2 Table 4       : PASS byte-identical (419 vs 419 chars)
+C3 anchors       : PASS (11/11)
+C4 abstract      : 237 words (limit 250), 4/4 sub-headings, 15/15 mandated numbers
+C5 length        : v1 7984 -> v2 7318 words (8.3% below), limit 12,000 -> PASS
+   15% trim target: NOT MET (8.3%)
+C6 cross-refs    : PASS none
+C7 citations     : 29 distinct, first-appearance ordered PASS, list entries 29 PASS
+C8 authorship    : order PASS, departments PASS, emails PASS, CRediT draft to Z.X. PASS
+C9 column fit    : PASS
+C10 prose        : meta-discourse PASS 0, 'which is why' 1 (<=3), 'instrument output' 0 (<=1)
+C11 statements   : PASS Frontiers order
+
+RESULT: ALL CHECKS PASS
+```
+
+`python check_docx_v2.py`（成品 docx 闸门，逐字）：
+
+```
+D1 page          : 8.50 x 11.00 in PASS Letter, margins L0.89 R0.82 T0.79 in PASS template, usable 6.79 in
+D2 spacing       : body single PASS; cells 1.0 PASS
+D3 styles        : Title 1 PASS 16 pt bold centred, Heading 1 16 PASS, Heading 2 17, fonts ['Times New Roman'] PASS
+D4 tables        : widths [6.79, 6.79, 6.79, 6.79] (usable 6.79) PASS
+D5 column fit    : PASS
+D6 cells         : 9 pt PASS; numeric right-aligned PASS
+D7 figure        : 1 image(s) in body, 2280x1950 px at 6.60 in wide -> 345 dpi, Caption style PASS PASS
+D8 rules         : 0 paragraph borders PASS
+D9 text          : markdown body 257 numeric tokens, docx 355, missing 0 PASS
+D10 package      : 'provisional file' in 0 part(s) PASS, even footer ref PASS absent
+D11 numbering    : line numbers continuous, numbered sections 6 of 16 PASS 1-6
+
+RESULT: ALL CHECKS PASS
+```
+
+Word 导出：`pages 19  words 8840  chars 48555`。PDF 文本断言：含 `1 Introduction` / `3.1 Agreement` / `6 Conclusion`，不含 `7 Appendix` / `8 Ethics` / `16 Tables`。
+
+### 7.8 待人工裁决（三项，均未擅自改）
+
+1. **表 3 的加粗没有图例。** 四个加粗单元格对应正文讨论的四类（Condiments 0.1333、Health food 0.0667、Soy 0.9333、FSDU 0.0667），但表格题注与表体都没说加粗表示什么。补一句题注会改 C2 的字节；删掉加粗同样会改。**需要作者一句授权**，二选一。
+2. **Methods 有一句 93 词**（`Each hit was read in a ±120-character window…`），是判定协议的四段枚举。拆开会让协议读起来像四条独立规定，故保留。**建议保留**，但若审稿人提"句子过长"，这是唯一需要动的地方。
+3. **`Three …` 排比 15 处、`rather than` 26 处**（实测）。前者集中在 Results 的"三构念／三读者／三粒度"，是真实的三项设计，不是修辞凑数；后者的每一次都带着被否掉的那一项的内容。逐条判据见 `AI_TELLS_RESIDUAL.md`，供人工抽查，**不建议机械削减**。
+
+### 7.9 本轮新增/改动的文件
+
+| 文件 | 变化 |
+|---|---|
+| `manuscript_frontiers_v2.src.md` | 工作源稿（本轮全部文字改动的落点） |
+| `manuscript_frontiers_v2.docx` | 重建：19 页 / 8,840 词 |
+| `manuscript_frontiers_v2.pdf` | 重建（Word 导出） |
+| `manuscript_frontiers_v2.lines.md` | **新增**，带 `<!-- L n-m -->` 行号标记（150 块映射，8 块无标记：封面 5 行 + 图行 + 表行） |
+| `figure1_estimability.pdf` | **新增**，矢量图件，34,091 B `f671dc68…` |
+| `line_map_v2.py` | **新增**，行号映射（五点锚定校准，偏移不唯一即中止） |
+| `build_docx_template_v2.py` | 表 1 列宽 2.30→2.50；节编号钉到段落级 `numPr` |
+| `check_docx_v2.py` | 新增 D11（行号连续 + 1–6 编号） |
+| `COVER_LETTER.md` | 重写，193 词 |
+| `AI_TELLS_RESIDUAL.md` | **新增**，残余 AI 痕迹实测清单（由 `ai_tells_v2.py` 生成） |
+

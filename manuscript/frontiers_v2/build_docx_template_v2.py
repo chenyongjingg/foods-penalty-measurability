@@ -39,11 +39,22 @@ OUT = HERE / "manuscript_frontiers_v2.docx"
 # Every table fills that width; the extra half inch goes to the widest prose
 # column, numeric columns keep the widths the column-fit check validated.
 COLUMN_WIDTHS = {
-    0: [1.30, 0.72, 1.05, 1.42, 2.30],          # Product column carries file paths
+    0: [1.30, 0.72, 1.05, 1.22, 2.50],          # Product column carries file paths
     1: [1.55, 0.80, 0.90, 3.54],
     2: [1.42, 1.10, 0.72, 0.72, 1.16, 1.67],
     3: [0.85, 2.37, 0.72, 0.95, 0.95, 0.95],
 }
+# Table 1's product column must hold one unbroken token:
+# data/analysis/e12_commodity_precision.json measures 2.20 in at 9 pt Times,
+# and a cell loses 0.16 in to its default left/right margins. At 2.30 in Word
+# broke it mid-word ("...precision.jso n"); 2.50 in leaves 2.34 in of text
+# width. The 0.20 in comes from the prose column beside it, which wraps freely.
+
+# Section numbers come from the Heading 1 style (numId 17). Only the six
+# substantive sections keep one; the appendix, the statements, References and
+# Tables are numbered differently by the publisher, so they carry numId 0.
+NUMBERED_H1 = ["Introduction", "Materials and Methods", "Results",
+               "Discussion", "Limitations", "Conclusion"]
 NUMERIC_COLS = {0: [1], 1: [1, 2], 2: [1, 2, 3, 4, 5], 3: [2, 3, 4, 5]}
 
 
@@ -64,6 +75,80 @@ def pandoc_input() -> None:
     # Bare --- lines are section separators; pandoc would render them as rules.
     text = "\n".join(l for l in text.split("\n") if l.strip() not in ("---",))
     FLAT.write_text(text, encoding="utf-8")
+
+
+def ensure_section_numbering(d) -> None:
+    """Define the list the Heading 1 style points at.
+
+    The template's Heading 1 carries <w:numPr><w:numId w:val="17"/></w:numPr>,
+    but pandoc writes its own numbering.xml and numId 17 is not in it, so the
+    reference dangles and Word renders no section numbers at all. Define a
+    plain decimal "1." list for that id so the six substantive sections print a
+    number; the paragraphs that must not are pinned to numId 0 below.
+    """
+    numbering = d.part.numbering_part.element
+    for n in numbering.findall(qn("w:num")):
+        if n.get(qn("w:numId")) == "17":
+            return
+    abs_id = 900
+    abstract = OxmlElement("w:abstractNum")
+    abstract.set(qn("w:abstractNumId"), str(abs_id))
+    lvl = OxmlElement("w:lvl")
+    lvl.set(qn("w:ilvl"), "0")
+    for tag, val in (("w:start", "1"), ("w:numFmt", "decimal"),
+                     ("w:lvlText", "%1."), ("w:lvlJc", "left"), ("w:suff", "space")):
+        el = OxmlElement(tag)
+        el.set(qn("w:val"), val)
+        lvl.append(el)
+    pPr = OxmlElement("w:pPr")
+    ind = OxmlElement("w:ind")
+    ind.set(qn("w:left"), "0")
+    ind.set(qn("w:firstLine"), "0")
+    pPr.append(ind)
+    lvl.append(pPr)
+    abstract.append(lvl)
+    first_num = numbering.find(qn("w:num"))
+    if first_num is not None:
+        first_num.addprevious(abstract)   # abstractNum elements precede all num
+    else:
+        numbering.append(abstract)
+    num = OxmlElement("w:num")
+    num.set(qn("w:numId"), "17")
+    an = OxmlElement("w:abstractNumId")
+    an.set(qn("w:val"), str(abs_id))
+    num.append(an)
+    numbering.append(num)
+
+
+def set_numbering(p, num_id: str) -> None:
+    """Pin a paragraph's list id directly (numId 0 = no numbering).
+
+    The Heading 1 style's own numPr is not enough: Word renders nothing for a
+    style-level reference that carries no ilvl, so the six numbered sections
+    state ilvl and numId on the paragraph itself. numPr has to sit before the
+    other pPr children the schema orders after it, so insert rather than append
+    when any successor element is already present.
+    """
+    pPr = p._p.get_or_add_pPr()
+    numPr = pPr.find(qn("w:numPr"))
+    if numPr is None:
+        numPr = OxmlElement("w:numPr")
+        successors = ("w:suppressLineNumbers", "w:pBdr", "w:shd", "w:tabs",
+                      "w:spacing", "w:ind", "w:contextualSpacing", "w:jc",
+                      "w:outlineLvl", "w:rPr", "w:sectPr", "w:pPrChange")
+        for tag in successors:
+            el = pPr.find(qn(tag))
+            if el is not None:
+                el.addprevious(numPr)
+                break
+        else:
+            pPr.append(numPr)
+    for tag, val in (("w:ilvl", "0"), ("w:numId", num_id)):
+        el = numPr.find(qn(tag))
+        if el is None:
+            el = OxmlElement(tag)
+            numPr.append(el)
+        el.set(qn("w:val"), val)
 
 
 def set_table_layout_fixed(table) -> None:
@@ -129,6 +214,12 @@ def main() -> None:
     heads = [p for p in d.paragraphs if p.style.name == "Heading 1"]
     if heads:
         heads[0].style = d.styles["Title"]           # article title
+
+    # ---- section numbering: six sections, the rest unnumbered ------------
+    ensure_section_numbering(d)
+    for p in heads:
+        if p.style.name == "Heading 1":
+            set_numbering(p, "17" if p.text.strip() in NUMBERED_H1 else "0")
     for p in d.paragraphs:
         txt = p.text.strip()
         if p.style.name == "Heading 1" and txt == "Abstract":

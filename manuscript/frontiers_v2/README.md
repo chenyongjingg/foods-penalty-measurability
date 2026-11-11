@@ -6,7 +6,7 @@ scripts run here without any other path in the repository.
 
 ```sh
 python check_v2.py        # content gate C1-C11
-python check_docx_v2.py   # layout gate D1-D10
+python check_docx_v2.py   # layout gate D1-D11
 ```
 
 Both print every measured count and end with `ALL CHECKS PASS`. They exit non-zero on
@@ -21,11 +21,16 @@ failure, so they can be used in CI as they stand.
 | `manuscript_frontiers_v2.src.md` | working source, citation markers unresolved (`{key}`) |
 | `manuscript_frontiers_v2.md` | resolved markdown: 29 references, `[1]`–`[29]` in first-appearance order |
 | `manuscript_frontiers_v1.src.md` | the baseline the gates compare against; shipped so `check_v2.py` runs here |
-| `figure1_estimability.png` | Figure 1 as a standalone high-resolution file (2,280 × 1,950 px) |
-| `COVER_LETTER.md` | cover letter, 129 words |
+| `figure1_estimability.pdf` | Figure 1 as a standalone **vector** file (4 font objects, no raster objects) |
+| `figure1_estimability.png` | Figure 1 as a raster file for systems that will not take a PDF (2,280 × 1,950 px) |
+| `manuscript_frontiers_v2.lines.md` | the same text with `<!-- L n-m -->` markers giving the line numbers each block occupies in the docx |
+| `COVER_LETTER.md` | cover letter, 193 words |
 | `CHANGES_frontiers_v2.md` | the change log: every edit with its measured effect, including the edits that turned out to be no-ops |
 | `SHA256SUMS` | digests of every file in this folder except this list itself |
+| `AI_TELLS_RESIDUAL.md` | measured residual AI-writing patterns, each with the judgement made for it, for a human to overrule |
 | `check_v2.py`, `check_docx_v2.py` | the two gates |
+| `ai_tells_v2.py` | produces `AI_TELLS_RESIDUAL.md` (counts are reproducible; the judgements are not) |
+| `line_map_v2.py` | produces `manuscript_frontiers_v2.lines.md` from Word's own line count, calibrated against five printed anchors |
 | `build_docx_template_v2.py` | lays the resolved markdown into the template with pandoc `--reference-doc` |
 | `resolve_refs_v2.py` | substitutes `{key}` markers for `[n]` and emits the reference list |
 | `move_tables_to_end.py` | lifts Tables 1–4 to the end, as the template asks, without touching a byte inside them |
@@ -40,6 +45,9 @@ failure, so they can be used in CI as they stand.
 - **D1/D2/D3** Letter page with the template's own margins, single spacing, template styles.
 - **D7** exactly one image in the document body, ≥ 300 dpi at its printed width.
 - **D10** the template's "provisional file" footer sentence appears nowhere in the package.
+- **D11** line numbers run continuously (Word reports `RestartMode = 0`), and exactly the six
+  substantive sections carry a section number — Appendix A, the statements, References and
+  Tables do not.
 
 ## What changed from the shipped v3.1
 
@@ -53,6 +61,21 @@ failure, so they can be used in CI as they stand.
 No numeric value in the manuscript changed, so the provenance chain recorded in `numbers.csv`
 is untouched by this build: the counts, denominators, p-values and intervals are the same
 values, and the four tables are byte-identical.
+
+## Latest round (2026-11-11): pre-submission polish
+
+Prose only. The Discussion's four aphoristic openers now start from their own numbers; two of
+them were rewritten a second time because the first rewrite reproduced Methods and Results
+**verbatim**; and three sentences tie the audit to public-health surveillance. No numeric
+token, table cell, p-value or interval changed — C1 (258 tokens, the same two e-mail
+exemptions) and C2 (four tables byte-identical) are the proof. Word reports 19 pages and
+8,840 words.
+
+Three of the four instructed deletions were **not** carried out as written, because
+measurement contradicted their premise; §7.1 of `CHANGES_frontiers_v2.md` records each with
+what was found in its place.
+`AI_TELLS_RESIDUAL.md` lists what remains and the three items that need an author's decision
+(the unstated bold key in Table 3, the 93-word protocol sentence, and the `Three …` repetition).
 
 ## Rebuilding
 

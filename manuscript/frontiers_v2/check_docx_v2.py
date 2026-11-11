@@ -21,6 +21,9 @@ D8  rules       : no paragraph borders
 D9  text        : the docx carries every numeric token the markdown body carries
 D10 package     : the template's "provisional file" sentence appears nowhere in
                   the package and the even-page footer is not referenced
+D11 numbering   : line numbers run continuously across the page; exactly the six
+                  substantive sections carry a section number (the appendix, the
+                  statements, References and Tables are suppressed with numId 0)
 """
 from __future__ import annotations
 
@@ -247,6 +250,34 @@ def main() -> int:
           f"even footer ref {'FAIL present' if even_ref else 'PASS absent'}")
     if parts_with_text or even_ref:
         fails.append("D10 package")
+
+    # ---- D11 -------------------------------------------------------------
+    # Line numbering is continuous, not restarted per page. The template's
+    # sectPr carries <w:lnNumType>; a "restart" of anything but "continuous"
+    # (or a missing element) would renumber every page from 1.
+    ln = re.search(r"<w:lnNumType[^>]*/>", sect.group(0)) if sect else None
+    restart = re.search(r'w:restart="([^"]+)"', ln.group(0)) if ln else None
+    cont = bool(ln) and (restart is None or restart.group(1) == "continuous")
+
+    # Section numbers come from the Heading 1 style's numId; a paragraph-level
+    # numId 0 overrides it. Exactly the six substantive sections keep a number.
+    SIX = ["Introduction", "Materials and Methods", "Results", "Discussion",
+           "Limitations", "Conclusion"]
+    numbered = []
+    for p in h1:
+        pPr = p._p.pPr
+        numPr = pPr.find(qn("w:numPr")) if pPr is not None else None
+        nid = None
+        if numPr is not None and numPr.find(qn("w:numId")) is not None:
+            nid = numPr.find(qn("w:numId")).get(qn("w:val"))
+        if nid != "0":
+            numbered.append(p.text.strip())
+    print(f"D11 numbering    : line numbers "
+          f"{'continuous' if cont else 'ABSENT / restart=' + (restart.group(1) if restart else 'none')}, "
+          f"numbered sections {len(numbered)} of {len(h1)} "
+          f"{'PASS 1-6' if numbered == SIX else 'FAIL ' + str(numbered)}")
+    if not cont or numbered != SIX:
+        fails.append("D11 numbering")
 
     print("\nRESULT:", "ALL CHECKS PASS" if not fails else "FAILURES: " + "; ".join(fails))
     return 0 if not fails else 1
