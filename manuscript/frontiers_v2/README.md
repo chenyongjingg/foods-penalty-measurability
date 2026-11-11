@@ -25,10 +25,12 @@ failure, so they can be used in CI as they stand.
 | `figure1_estimability.png` | Figure 1 as a raster file for systems that will not take a PDF (2,280 × 1,950 px) |
 | `manuscript_frontiers_v2.lines.md` | the same text with `<!-- L n-m -->` markers giving the line numbers each block occupies in the docx |
 | `COVER_LETTER.md` | cover letter, 194 words, naming the Public Health Policy section |
+| `COVER_LETTER.docx` | the same letter as a Word file for upload: Times New Roman 12 pt, Letter page, 1 in margins, one page |
 | `CHANGES_frontiers_v2.md` | the change log: every edit with its measured effect, including the edits that turned out to be no-ops |
 | `SHA256SUMS` | digests of every file in this folder except this list itself |
 | `AI_TELLS_RESIDUAL.md` | measured residual AI-writing patterns, each with the judgement made for it, for a human to overrule |
 | `check_v2.py`, `check_docx_v2.py` | the two gates |
+| `build_cover_letter_docx.py` | renders `COVER_LETTER.md` to `COVER_LETTER.docx` |
 | `ai_tells_v2.py` | produces `AI_TELLS_RESIDUAL.md` (counts are reproducible; the judgements are not) |
 | `line_map_v2.py` | produces `manuscript_frontiers_v2.lines.md` from Word's own line count, calibrated against five printed anchors |
 | `build_docx_template_v2.py` | lays the resolved markdown into the template with pandoc `--reference-doc` |
